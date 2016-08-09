@@ -45,6 +45,14 @@ module.exports = function(grunt) {
 				dest: 'dist/',
 				filter: 'isFile'
 			},
+			assets: {
+				expand: true,
+				cwd: 'src/',
+				// Copy everything in the assets folder
+				src: ['assets/**/*'],
+				dest: 'dist/',
+				filter: 'isFile'
+			},
 			develop: {
 				expand: true,
 				cwd: 'src/',
@@ -275,6 +283,15 @@ module.exports = function(grunt) {
 			images: {
 				files: 'src/images/**/*',
 				tasks: ['newer:copy:images', 'beepOnError'],
+				options: {
+					livereload: true,
+					nospawn: true
+				}
+			},
+
+			assets: {
+				files: 'src/images/**/*',
+				tasks: ['newer:copy:assets', 'beepOnError'],
 				options: {
 					livereload: true,
 					nospawn: true
