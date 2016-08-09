@@ -99,7 +99,7 @@ module.exports = function(grunt) {
 		concat: {
 			options: {},
 			build: {
-				src: ['src/scripts/vendor/jquery-1.12.4.min.js', 'src/scripts/vendor/**/*.js'],
+				src: ['src/scripts/vendor/jquery-3.1.0.min.js', 'src/scripts/vendor/**/*.js'],
 				dest: 'dist/scripts/vendor.min.js'
 			}
 		},
