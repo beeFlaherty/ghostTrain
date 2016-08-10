@@ -12,15 +12,28 @@
 		<a-assets>
 		</a-assets>
 
-		<a-plane
+		<a-entity
 			v-for="room in user.rooms"
 			id="room_{{ $index }}"
-			rotation="-90 0 0"
 			position="0 0 {{ $index * -1 * system.room.height }}"
-			width="{{ system.room.width }}"
-			height="{{ system.room.height }}"
-			color="{{ room.colour }}"
-		></a-plane>
+		>
+			<a-plane
+				rotation="-90 0 0"
+				position="0 0 0"
+				width="{{ system.room.width }}"
+				height="{{ system.room.height }}"
+				color="{{ room.colour }}"
+			></a-plane>
+
+			<a-light
+				type="point"
+				intensity="0.75"
+				distance="15"
+				decay="2"
+				position="0 3 0"
+			></a-light>
+		</a-entity>
+
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
 	</a-scene>
