@@ -12,49 +12,78 @@
 		<a-assets>
 		</a-assets>
 
-		<a-entity
-			v-for="room in user.rooms"
-			id="room_{{ $index }}"
-			position="0 0 {{ $index * -1 * system.room.height }}"
-		>
-			<a-plane
-				rotation="-90 0 0"
-				position="0 0 0"
-				width="{{ system.room.width }}"
-				height="{{ system.room.height }}"
-				color="{{ room.colour }}"
-			></a-plane>
-
-			<a-light
-				type="point"
-				intensity="0.75"
-				distance="15"
-				decay="2"
-				position="0 3 0"
-			>
-				<a-animation
-					v-if="room.light === 'flicker'"
-					attribute="intensity"
-					dur="300"
-					fill="forwards"
-					from="1"
-					to="0"
-					direction="alternate"
-					repeat="indefinite"></a-animation>
-				<a-animation
-					v-if="room.light === 'glow'"
-					attribute="intensity"
-					dur="1000"
-					fill="forwards"
-					from="1"
-					to="0"
-					direction="alternate"
-					easing="ease"
-					repeat="indefinite"></a-animation>
-			</a-light>
-		</a-entity>
-
-
 		<a-sky color="{{system.sky.colour}}"></a-sky>
+
+		<gt-room
+			v-for="room in user.rooms"
+			v-bind:index="$index"
+			v-bind:room="room"
+			v-bind:system="system"
+		/>
 	</a-scene>
+</script>
+
+<script id="room_template" type="x-template">
+	<a-entity
+		id="room_{{ index }}"
+		position="0 0 {{ index * -1 * system.room.height }}"
+	>
+		<a-plane
+			rotation="-90 0 0"
+			position="0 0 0"
+			width="{{ system.room.width }}"
+			height="{{ system.room.height }}"
+			color="{{ room.colour }}"
+		></a-plane>
+
+		<gt-light v-bind:type="room.light"/>
+
+		<gt-monster
+			v-for="monster in room.monsters"
+			v-bind:index="$index"
+			v-bind:type="monster.type"
+			v-bind:sound="monster.sound"
+			v-bind:animation="monster.animation"
+			v-bind:system="system"
+		/>
+
+	</a-entity>
+</script>
+
+<script id="monster_template" type="x-template">
+	<a-entity
+		v-if="type !== 'none'"
+	>
+	</a-entity>
+</script>
+
+<script id="light_template" type="x-template">
+	<a-light
+		v-if="type !== 'none'"
+		type="point"
+		intensity="0.75"
+		distance="15"
+		decay="2"
+		position="0 3 0"
+	>
+		<a-animation
+			v-if="type === 'flicker'"
+			attribute="intensity"
+			dur="300"
+			fill="forwards"
+			from="1"
+			to="0"
+			direction="alternate"
+			repeat="indefinite"></a-animation>
+		<a-animation
+			v-if="type === 'glow'"
+			attribute="intensity"
+			dur="1000"
+			fill="forwards"
+			from="1"
+			to="0"
+			direction="alternate"
+			easing="ease"
+			repeat="indefinite"></a-animation>
+	</a-light>
 </script>
