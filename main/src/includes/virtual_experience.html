@@ -1,1 +1,27 @@
 <h2>Virtual experience</h2>
+
+<div id="virtual_experience">
+	<div id="ride_output">
+	</div>
+</div>
+
+<script id="ride_template" type="x-template">
+	<h3>{{ user.trainsettings.name }}</h3>
+
+	<a-scene>
+		<a-assets>
+		</a-assets>
+
+		<a-plane
+			v-for="room in user.rooms"
+			id="room_{{ $index }}"
+			rotation="-90 0 0"
+			position="0 0 {{ $index * -1 * system.room.height }}"
+			width="{{ system.room.width }}"
+			height="{{ system.room.height }}"
+			color="{{ room.colour }}"
+		></a-plane>
+
+		<a-sky color="{{system.sky.colour}}"></a-sky>
+	</a-scene>
+</script>
