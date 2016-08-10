@@ -10,11 +10,11 @@
 			'name':'train name'
 		},
 		'rooms':[
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00' },
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0' },
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F' },
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0' },
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF' }
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00', 'light': 'static'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0', 'light': 'glow'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F', 'light': 'static'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0', 'light': 'flicker'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF', 'light': 'static'}
 		]
 	};
 
