@@ -6,14 +6,14 @@
 			'music':'aa',
 			'name':'train name'
 		},
-		'rooms': [
+		'rooms': [ // This will go soon
 			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00', 'light': 'static'},
 			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0', 'light': 'glow'},
 			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F', 'light': 'static'},
 			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0', 'light': 'flicker'},
 			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF', 'light': 'static'}
 		],
-		'new_rooms': [
+		'new_rooms': [ // This is the final format
 			{
 				'theme': '', // castle, forest, graveyard
 				'lighting': '', // dark, light, flickering, glowing, red, green, purple

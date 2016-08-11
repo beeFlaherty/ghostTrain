@@ -25,7 +25,8 @@
 			template: '#ride_template',
 			data: {
 				user: userData,
-				system: systemData
+				system: systemData,
+				configurable: configurableData
 			}
 		});
 	};
