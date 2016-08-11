@@ -9,28 +9,30 @@
 			'width': 5,
 			'height': 10
 		},
+		'monster': {
+			'width': 1,
+			'height': 2
+		},
 
 		'configurables': {
-			'music': [
-				{
-					'id': '',
+			'music': {
+				'm1': {
 					'name': 'Creepy Music Box',
 					'mp3': ''
 				},
-				{
+				'm2': {
 					'id': '',
 					'name': 'Ride of the Valkyries',
 					'mp3': ''
 				},
-				{
+				'm3': {
 					'id': '',
 					'name': 'Heavy Metal',
 					'mp3': ''
 				}
-			],
-			'themes': [
-				{
-					'id': '',
+			},
+			'themes': {
+				't1': {
 					'name': 'Castle',
 					'textures': {
 						'floor': '',
@@ -38,8 +40,7 @@
 						'roof': ''
 					}
 				},
-				{
-					'id': '',
+				't2': {
 					'name': 'Forest',
 					'textures': {
 						'floor': '',
@@ -47,8 +48,7 @@
 						'roof': ''
 					}
 				},
-				{
-					'id': '',
+				't3': {
 					'name': 'Graveyard',
 					'textures': {
 						'floor': '',
@@ -56,76 +56,63 @@
 						'roof': ''
 					}
 				}
-			],
-			'lighting': [
-				{
-					'id': '',
+			},
+			'lighting': {
+				'l1': {
 					'name': 'Dark'
 				},
-				{
-					'id': '',
+				'l2': {
 					'name': 'Bright'
 				},
-				{
-					'id': '',
+				'l3': {
 					'name': 'Flickering'
 				},
-			],
-			'monsters': [
-				{
-					'id': '',
+			},
+			'monsters': {
+				'm1': {
 					'name': 'Zombie',
 					'model': '',
 					'texture': ''
 				},
-				{
-					'id': '',
+				'm2': {
 					'name': 'Mummy',
 					'model': '',
 					'texture': ''
 				},
-				{
-					'id': '',
+				'm3': {
 					'name': 'Vampire',
 					'model': '',
 					'texture': ''
 				},
-			],
-			'sounds': [
-				{
-					'id': '',
+			},
+			'sounds': {
+				's1': {
 					'name': 'Moan',
 					'mp3': ''
 				},
-				{
-					'id': '',
+				's2': {
 					'name': 'Scream',
 					'mp3': ''
 				},
-				{
-					'id': '',
+				's3': {
 					'name': 'Cackle',
 					'mp3': ''
 				}
-			],
-			'animations': [
-				{
-					'id': '',
+			},
+			'animations': {
+				'a1': {
 					'name': 'Pop-up'
 				},
-				{
-					'id': '',
+				'a2': {
 					'name': 'Drop-down'
 				},
-				{
-					'id': '',
+				'a3': {
 					'name': 'Slide-in'
 				},
-				{
-					'id': '',
+				'a4': {
 					'name': 'Slide-right'
 				}
-			]
+			}
 		}
 	};
 }());
