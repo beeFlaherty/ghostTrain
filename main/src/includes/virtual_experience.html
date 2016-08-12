@@ -59,7 +59,7 @@
 
 <script id="light_template" type="x-template">
 	<a-light
-		v-if="type !== 'none'"
+		v-if="type !== 'dark'"
 		type="point"
 		intensity="0.75"
 		distance="15"
@@ -67,7 +67,7 @@
 		position="0 3 0"
 	>
 		<a-animation
-			v-if="type === 'flicker'"
+			v-if="type === 'flickering'"
 			attribute="intensity"
 			dur="300"
 			fill="forwards"
@@ -76,7 +76,7 @@
 			direction="alternate"
 			repeat="indefinite"></a-animation>
 		<a-animation
-			v-if="type === 'glow'"
+			v-if="type === 'glowing'"
 			attribute="intensity"
 			dur="1000"
 			fill="forwards"

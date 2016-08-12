@@ -44,7 +44,7 @@
 				}
 			}
 		},
-		'lighting': {
+		'light': {
 			'l1': {
 				'name': 'Dark'
 			},
@@ -54,6 +54,9 @@
 			'l3': {
 				'name': 'Flickering'
 			},
+			'l4': {
+				'name': 'Glowing'
+			}
 		},
 		'monsters': {
 			'm1': {
