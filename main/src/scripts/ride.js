@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	module.exports = function(userData, systemData) {
+	module.exports = function(userData, systemData, configurableData) {
 		var RoomComponent = Vue.extend({
 			template: '#room_template',
 			props: ['index', 'room', 'system']
