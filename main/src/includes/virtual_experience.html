@@ -19,6 +19,7 @@
 			v-bind:index="$index"
 			v-bind:room="room"
 			v-bind:system="system"
+			v-bind:configurable="configurable"
 		/>
 	</a-scene>
 </script>
@@ -33,8 +34,9 @@
 			position="0 0 0"
 			width="{{ system.room.width }}"
 			height="{{ system.room.height }}"
-			color="{{ room.colour }}"
-		></a-plane>
+			color="{{ configurable.themes[room.theme].colour }}"
+		>
+		</a-plane>
 
 		<gt-light v-bind:type="room.light"/>
 

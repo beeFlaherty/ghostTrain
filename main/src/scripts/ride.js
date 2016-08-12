@@ -4,7 +4,7 @@
 	module.exports = function(userData, systemData, configurableData) {
 		var RoomComponent = Vue.extend({
 			template: '#room_template',
-			props: ['index', 'room', 'system']
+			props: ['index', 'room', 'system', 'configurable']
 		});
 		Vue.component('gt-room', RoomComponent);
 

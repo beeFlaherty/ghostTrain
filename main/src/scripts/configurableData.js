@@ -21,6 +21,7 @@
 		'themes': {
 			't1': {
 				'name': 'Castle',
+				'colour': '#808080',
 				'textures': {
 					'floor': '',
 					'walls': '',
@@ -29,6 +30,7 @@
 			},
 			't2': {
 				'name': 'Forest',
+				'colour': '#007F46',
 				'textures': {
 					'floor': '',
 					'walls': '',
@@ -37,6 +39,7 @@
 			},
 			't3': {
 				'name': 'Graveyard',
+				'colour': '#682900',
 				'textures': {
 					'floor': '',
 					'walls': '',
