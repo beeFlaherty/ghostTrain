@@ -64,16 +64,25 @@
 		'monsters': {
 			'zombie': {
 				'name': 'Zombie',
+				'colour': '#0F0',
 				'model': '',
 				'texture': ''
 			},
 			'mummy': {
 				'name': 'Mummy',
+				'colour': '#F00',
 				'model': '',
 				'texture': ''
 			},
 			'vampire': {
 				'name': 'Vampire',
+				'colour': '#000',
+				'model': '',
+				'texture': ''
+			},
+			'skeleton': {
+				'name': 'Skeleton',
+				'colour': '#FFF',
 				'model': '',
 				'texture': ''
 			},

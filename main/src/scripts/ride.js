@@ -8,11 +8,11 @@
 		});
 		Vue.component('gt-room', RoomComponent);
 
-		var MonsterComponent = Vue.extend({
-			template: '#monster_template',
-			props: ['type', 'sound', 'animation']
+		var ScareComponent = Vue.extend({
+			template: '#scare_template',
+			props: ['index', 'monster', 'sound', 'animation', 'system', 'configurable']
 		});
-		Vue.component('gt-monster', MonsterComponent);
+		Vue.component('gt-scare', ScareComponent);
 
 		var LightComponent = Vue.extend({
 			template: '#light_template',

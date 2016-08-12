@@ -39,23 +39,31 @@
 		</a-plane>
 
 		<gt-light v-bind:type="room.light"/>
-
-		<gt-monster
-			v-for="monster in room.monsters"
-			v-bind:index="$index"
-			v-bind:type="monster.type"
-			v-bind:sound="monster.sound"
-			v-bind:animation="monster.animation"
-			v-bind:system="system"
-		/>
-
 	</a-entity>
 </script>
 
-<script id="monster_template" type="x-template">
-	<a-entity
-		v-if="type !== 'none'"
-	>
+<!--
+		<gt-scare
+			v-for="scare in room.scares"
+			v-bind:index="$index"
+			v-bind:monster="scare.monster"
+			v-bind:sound="scare.sound"
+			v-bind:animation="scare.animation"
+			v-bind:system="system"
+			v-bind:configurable="configurable"
+		/>
+-->
+
+<script id="scare_template" type="x-template">
+	<a-entity v-if="monster !== 'none'">
+		<a-plane
+			rotation="0 0 0"
+			position="{{ -1 + index s}} {{ system.monster.height / 2 }} {{ index * 2 }}"
+			width="{{ system.monster.width }}"
+			height="{{ system.monster.height }}"
+			color="#F00"
+		>
+		</a-plane>
 	</a-entity>
 </script>
 
