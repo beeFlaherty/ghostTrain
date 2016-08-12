@@ -8,50 +8,50 @@
 		},
 		'rooms': [
 			{
-				'theme': 't1', // castle, forest, graveyard
+				'theme': 'castle', // castle, forest, graveyard
 				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
 				'scares': [
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					},
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					}
 				]
 			},
 			{
-				'theme': 't2', // castle, forest, graveyard
+				'theme': 'forest', // castle, forest, graveyard
 				'light': 'flickering', // dark, bright, flickering, glowing, red, green, purple
 				'scares': [
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'none', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					},
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'vampire', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					}
 				]
 			},
 			{
-				'theme': 't3', // castle, forest, graveyard
+				'theme': 'graveyard', // castle, forest, graveyard
 				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
 				'scares': [
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'none', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					},
 					{
-						'monster': '', // none, zombie, mummy, vampire, skeleton
+						'monster': 'skeleton', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // pop-up, drop-down, slide-left, slide-right
+						'animation': '' // popup, dropdown, fromleft, fromright
 					}
 				]
 			}

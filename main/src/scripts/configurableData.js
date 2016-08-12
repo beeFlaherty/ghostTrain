@@ -3,23 +3,23 @@
 
 	module.exports = {
 		'music': {
-			'm1': {
+			'creepymusicbox': {
 				'name': 'Creepy Music Box',
 				'mp3': ''
 			},
-			'm2': {
+			'rideofthevalkyries': {
 				'id': '',
 				'name': 'Ride of the Valkyries',
 				'mp3': ''
 			},
-			'm3': {
+			'heavymetal': {
 				'id': '',
 				'name': 'Heavy Metal',
 				'mp3': ''
 			}
 		},
 		'themes': {
-			't1': {
+			'castle': {
 				'name': 'Castle',
 				'colour': '#808080',
 				'textures': {
@@ -28,7 +28,7 @@
 					'roof': ''
 				}
 			},
-			't2': {
+			'forest': {
 				'name': 'Forest',
 				'colour': '#007F46',
 				'textures': {
@@ -37,7 +37,7 @@
 					'roof': ''
 				}
 			},
-			't3': {
+			'graveyard': {
 				'name': 'Graveyard',
 				'colour': '#682900',
 				'textures': {
@@ -48,62 +48,62 @@
 			}
 		},
 		'light': {
-			'l1': {
+			'dark': {
 				'name': 'Dark'
 			},
-			'l2': {
+			'bright': {
 				'name': 'Bright'
 			},
-			'l3': {
+			'flickering': {
 				'name': 'Flickering'
 			},
-			'l4': {
+			'glowing': {
 				'name': 'Glowing'
 			}
 		},
 		'monsters': {
-			'm1': {
+			'zombie': {
 				'name': 'Zombie',
 				'model': '',
 				'texture': ''
 			},
-			'm2': {
+			'mummy': {
 				'name': 'Mummy',
 				'model': '',
 				'texture': ''
 			},
-			'm3': {
+			'vampire': {
 				'name': 'Vampire',
 				'model': '',
 				'texture': ''
 			},
 		},
 		'sounds': {
-			's1': {
+			'moan': {
 				'name': 'Moan',
 				'mp3': ''
 			},
-			's2': {
+			'scream': {
 				'name': 'Scream',
 				'mp3': ''
 			},
-			's3': {
+			'cackle': {
 				'name': 'Cackle',
 				'mp3': ''
 			}
 		},
 		'animations': {
-			'a1': {
+			'popup': {
 				'name': 'Pop-up'
 			},
-			'a2': {
+			'dropdown': {
 				'name': 'Drop-down'
 			},
-			'a3': {
-				'name': 'Slide-in'
+			'fromleft': {
+				'name': 'From-left'
 			},
-			'a4': {
-				'name': 'Slide-right'
+			'fromright': {
+				'name': 'From-right'
 			}
 		}
 	};
