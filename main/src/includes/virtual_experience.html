@@ -54,14 +54,15 @@
 
 <script id="scare_template" type="x-template">
 	<a-entity v-if="monster !== 'none'">
-		<a-plane
+		<a-box
 			rotation="0 0 0"
 			position="{{ -1 + index }} {{ system.monster.height / 2 }} {{ index * 2 }}"
 			width="{{ system.monster.width }}"
 			height="{{ system.monster.height }}"
-			color="#F00"
+			depth="0.1"
+			color="{{ configurable.monsters[monster].colour }}"
 		>
-		</a-plane>
+		</a-box>
 
 End screen
 
