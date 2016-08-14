@@ -14,12 +14,12 @@
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // popup, dropdown, fromleft, fromright
+						'animation': 'popup' // popup, dropdown, fromleft, fromright
 					},
 					{
 						'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // popup, dropdown, fromleft, fromright
+						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
 					}
 				]
 			},
@@ -35,7 +35,7 @@
 					{
 						'monster': 'vampire', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // popup, dropdown, fromleft, fromright
+						'animation': 'popup' // popup, dropdown, fromleft, fromright
 					}
 				]
 			},
@@ -51,7 +51,7 @@
 					{
 						'monster': 'skeleton', // none, zombie, mummy, vampire, skeleton
 						'sound': '', // moan, scream, snarl, manic laughter
-						'animation': '' // popup, dropdown, fromleft, fromright
+						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
 					}
 				]
 			}

@@ -53,15 +53,50 @@
 
 
 <script id="scare_template" type="x-template">
-	<a-entity v-if="monster !== 'none'">
+	<a-entity
+		v-if="monster !== 'none'"
+		position="{{ -1 + index }} {{ system.monster.height / 2 }} {{ index * 2 }}"
+	>
 		<a-box
 			rotation="0 0 0"
-			position="{{ -1 + index }} {{ system.monster.height / 2 }} {{ index * 2 }}"
 			width="{{ system.monster.width }}"
 			height="{{ system.monster.height }}"
 			depth="0.1"
 			color="{{ configurable.monsters[monster].colour }}"
 		>
+			<a-animation
+				v-if="animation === 'popup'"
+				attribute="rotation"
+				from="-90 0 0"
+				to="0 0 0"
+				dur="2000"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="-1"
+			>
+			</a-animation>
+			<a-animation
+				v-if="animation === 'popup'"
+				attribute="position"
+				from="0 {{ system.monster.height * -1 }} 0"
+				to="0 0 0"
+				dur="2000"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="-1"
+			>
+			</a-animation>
+			<a-animation
+				v-if="animation === 'dropdown'"
+				attribute="position"
+				from="0 {{ system.monster.height * 3 }} 0"
+				to="0 0 0"
+				dur="2000"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="-1"
+			>
+			</a-animation>
 		</a-box>
 
 End screen
