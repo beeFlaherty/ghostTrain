@@ -20,7 +20,7 @@
 			v-bind:room="room"
 			v-bind:system="system"
 			v-bind:configurable="configurable"
-		/>
+		></gt-room>
 	</a-scene>
 </script>
 
@@ -29,20 +29,16 @@
 		id="room_{{ index }}"
 		position="0 0 {{ index * -1 * system.room.height }}"
 	>
+		<gt-light v-bind:type="room.light"></gt-light>
+
 		<a-plane
 			rotation="-90 0 0"
 			position="0 0 0"
 			width="{{ system.room.width }}"
 			height="{{ system.room.height }}"
 			color="{{ configurable.themes[room.theme].colour }}"
-		>
-		</a-plane>
+		></a-plane>
 
-		<gt-light v-bind:type="room.light"/>
-	</a-entity>
-</script>
-
-<!--
 		<gt-scare
 			v-for="scare in room.scares"
 			v-bind:index="$index"
@@ -51,19 +47,25 @@
 			v-bind:animation="scare.animation"
 			v-bind:system="system"
 			v-bind:configurable="configurable"
-		/>
--->
+		></gt-scare>
+	</a-entity>
+</script>
+
 
 <script id="scare_template" type="x-template">
 	<a-entity v-if="monster !== 'none'">
 		<a-plane
 			rotation="0 0 0"
-			position="{{ -1 + index s}} {{ system.monster.height / 2 }} {{ index * 2 }}"
+			position="{{ -1 + index }} {{ system.monster.height / 2 }} {{ index * 2 }}"
 			width="{{ system.monster.width }}"
 			height="{{ system.monster.height }}"
 			color="#F00"
 		>
 		</a-plane>
+
+End screen
+
+
 	</a-entity>
 </script>
 
