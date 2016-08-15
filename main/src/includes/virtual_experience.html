@@ -55,7 +55,7 @@
 <script id="scare_template" type="x-template">
 	<a-entity
 		v-if="monster !== 'none'"
-		position="{{ -1 + index }} {{ system.monster.height / 2 }} {{ index * 2 }}"
+		position="0 {{ system.monster.height / 2 }} {{ (system.room.height * 0.5) - ((system.room.height / (system.monster.perroom + 1)) * (index + 1)) }}"
 	>
 		<a-box
 			rotation="0 0 0"
