@@ -12,6 +12,10 @@
 		'monster': {
 			'width': 1,
 			'height': 2
+		},
+		'animation': {
+			'duration': 2000,
+			'repeat': 0
 		}
 	};
 }());

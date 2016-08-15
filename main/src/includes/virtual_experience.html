@@ -69,39 +69,85 @@
 				attribute="rotation"
 				from="-90 0 0"
 				to="0 0 0"
-				dur="2000"
+				dur="{{ system.animation.duration }}"
 				fill="both"
 				easing="ease-out-bounce"
-				repeat="-1"
-			>
-			</a-animation>
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
 			<a-animation
 				v-if="animation === 'popup'"
 				attribute="position"
 				from="0 {{ system.monster.height * -1 }} 0"
 				to="0 0 0"
-				dur="2000"
+				dur="{{ system.animation.duration }}"
 				fill="both"
 				easing="ease-out-bounce"
-				repeat="-1"
-			>
-			</a-animation>
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+
 			<a-animation
 				v-if="animation === 'dropdown'"
 				attribute="position"
 				from="0 {{ system.monster.height * 3 }} 0"
 				to="0 0 0"
-				dur="2000"
+				dur="{{ system.animation.duration }}"
 				fill="both"
 				easing="ease-out-bounce"
-				repeat="-1"
-			>
-			</a-animation>
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+			<a-animation
+				v-if="animation === 'dropdown'"
+				attribute="rotation"
+				from="0 0 30"
+				to="0 0 0"
+				dur="{{ system.animation.duration }}"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+
+			<a-animation
+				v-if="animation === 'fromleft'"
+				attribute="rotation"
+				from="0 90 0"
+				to="0 0 0"
+				dur="{{ system.animation.duration }}"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+			<a-animation
+				v-if="animation === 'fromleft'"
+				attribute="position"
+				from="{{ system.monster.width * -0.5 }} 0 0"
+				to="0 0 0"
+				dur="{{ system.animation.duration }}"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+
+			<a-animation
+				v-if="animation === 'fromright'"
+				attribute="rotation"
+				from="0 -90 0"
+				to="0 0 0"
+				dur="{{ system.animation.duration }}"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
+			<a-animation
+				v-if="animation === 'fromright'"
+				attribute="position"
+				from="{{ system.monster.width * 0.5 }} 0 0"
+				to="0 0 0"
+				dur="{{ system.animation.duration }}"
+				fill="both"
+				easing="ease-out-bounce"
+				repeat="{{ system.animation.repeat }}"
+			></a-animation>
 		</a-box>
-
-End screen
-
-
 	</a-entity>
 </script>
 
