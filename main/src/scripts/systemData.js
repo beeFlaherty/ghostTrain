@@ -16,7 +16,7 @@
 		},
 		'animation': {
 			'duration': 2000,
-			'repeat': 0
+			'repeat': -1
 		}
 	};
 }());

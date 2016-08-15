@@ -4,13 +4,21 @@
 	module.exports = function(userData, systemData, configurableData) {
 		var RoomComponent = Vue.extend({
 			template: '#room_template',
-			props: ['index', 'room', 'system', 'configurable']
+			props: ['index', 'room']
 		});
 		Vue.component('gt-room', RoomComponent);
 
 		var ScareComponent = Vue.extend({
 			template: '#scare_template',
-			props: ['index', 'monster', 'sound', 'animation', 'system', 'configurable']
+			props: ['index', 'monster', 'sound', 'animation'],
+			methods: {
+				getPosition: function(index) {
+					return  (this.$root.system.room.height * 0.5) - // Offset from center of room
+						(
+							(this.$root.system.room.height / (this.$root.system.monster.perroom + 1)) * (index + 1)
+						);
+				}
+			}
 		});
 		Vue.component('gt-scare', ScareComponent);
 
