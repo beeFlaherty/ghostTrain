@@ -10,7 +10,7 @@
 
 	<a-scene>
 		<a-assets>
-
+			<img id="monster_zombie_texture" src="/assets/monsters/zombie.png">
 		</a-assets>
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
@@ -54,15 +54,14 @@
 		v-if="monster !== 'none'"
 		position="0 {{ $root.system.monster.height / 2 }} {{ getPosition(index) }}"
 	>
-		<a-box
+		<a-obj-model
 			rotation="0 0 0"
-			width="{{ $root.system.monster.width }}"
-			height="{{ $root.system.monster.height }}"
-			depth="0.1"
-			color="{{ $root.configurable.monsters[monster].colour }}"
+			scale="0.3 0.3 0.3"
+			src="/assets/monsters/zombie.obj" format="obj"
+			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_zombie_texture"
 		>
 			<gt-animation v-bind:type="animation"></gt-animation>
-		</a-box>
+		</a-obj-model>
 	</a-entity>
 </script>
 
@@ -91,7 +90,7 @@
 	<a-animation
 		v-if="type === 'dropdown'"
 		attribute="position"
-		from="0 {{ $root.system.monster.height * 3 }} 0"
+		from="0 5 0"
 		to="0 0 0"
 		dur="{{ $root.system.animation.duration }}"
 		fill="both"

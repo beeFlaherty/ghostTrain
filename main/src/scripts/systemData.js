@@ -11,7 +11,7 @@
 		},
 		'monster': {
 			'width': 1,
-			'height': 2,
+			'height': 0.1,
 			'perroom': 2
 		},
 		'animation': {
