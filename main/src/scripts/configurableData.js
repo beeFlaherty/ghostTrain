@@ -65,26 +65,26 @@
 			'zombie': {
 				'name': 'Zombie',
 				'colour': '#0F0',
-				'model': '',
-				'texture': ''
+				'model': '/assets/monsters/zombie.obj',
+				'texture': '/assets/monsters/zombie.png'
 			},
 			'mummy': {
 				'name': 'Mummy',
 				'colour': '#F00',
-				'model': '',
-				'texture': ''
+				'model': '/assets/monsters/zombie.obj',
+				'texture': '/assets/monsters/zombie.png'
 			},
 			'vampire': {
 				'name': 'Vampire',
 				'colour': '#000',
-				'model': '',
-				'texture': ''
+				'model': '/assets/monsters/zombie.obj',
+				'texture': '/assets/monsters/zombie.png'
 			},
 			'skeleton': {
 				'name': 'Skeleton',
 				'colour': '#FFF',
-				'model': '',
-				'texture': ''
+				'model': '/assets/monsters/zombie.obj',
+				'texture': '/assets/monsters/zombie.png'
 			},
 		},
 		'sounds': {

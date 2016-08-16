@@ -10,8 +10,16 @@
 
 	<a-scene>
 		<a-assets>
-			<a-asset-item id="monster_zombie_model" src="/assets/monsters/zombie.obj"></a-asset-item>
-			<img id="monster_zombie_texture" src="/assets/monsters/zombie.png"></img>
+			<a-asset-item
+				v-for="monster in configurable.monsters"
+				id="monster_{{ $key }}_model"
+				src="{{ monster.model }}"
+			></a-asset-item>
+			<img
+				v-for="monster in configurable.monsters"
+				id="monster_{{ $key }}_texture"
+				src="{{ monster.texture }}"
+			></img>
 		</a-assets>
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
@@ -58,8 +66,8 @@
 		<a-obj-model
 			rotation="0 0 0"
 			scale="0.3 0.3 0.3"
-			src="#monster_zombie_model"
-			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_zombie_texture"
+			src="#monster_{{ monster }}_model"
+			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
 		>
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
