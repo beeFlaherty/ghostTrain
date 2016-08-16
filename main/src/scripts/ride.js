@@ -22,6 +22,12 @@
 		});
 		Vue.component('gt-scare', ScareComponent);
 
+		var AnimationComponent = Vue.extend({
+			template: '#animation_template',
+			props: ['type']
+		});
+		Vue.component('gt-animation', AnimationComponent);
+
 		var LightComponent = Vue.extend({
 			template: '#light_template',
 			props: ['type']

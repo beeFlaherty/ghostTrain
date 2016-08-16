@@ -10,6 +10,7 @@
 
 	<a-scene>
 		<a-assets>
+
 		</a-assets>
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
@@ -60,91 +61,95 @@
 			depth="0.1"
 			color="{{ $root.configurable.monsters[monster].colour }}"
 		>
-			<a-animation
-				v-if="animation === 'popup'"
-				attribute="rotation"
-				from="-90 0 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-			<a-animation
-				v-if="animation === 'popup'"
-				attribute="position"
-				from="0 {{ $root.system.monster.height * -1 }} 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-
-			<a-animation
-				v-if="animation === 'dropdown'"
-				attribute="position"
-				from="0 {{ $root.system.monster.height * 3 }} 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-			<a-animation
-				v-if="animation === 'dropdown'"
-				attribute="rotation"
-				from="0 0 30"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-
-			<a-animation
-				v-if="animation === 'fromleft'"
-				attribute="rotation"
-				from="0 90 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-			<a-animation
-				v-if="animation === 'fromleft'"
-				attribute="position"
-				from="{{ $root.system.monster.width * -1 }} 0 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-
-			<a-animation
-				v-if="animation === 'fromright'"
-				attribute="rotation"
-				from="0 -90 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
-			<a-animation
-				v-if="animation === 'fromright'"
-				attribute="position"
-				from="{{ $root.system.monster.width * 1 }} 0 0"
-				to="0 0 0"
-				dur="{{ $root.system.animation.duration }}"
-				fill="both"
-				easing="ease-out-bounce"
-				repeat="{{ $root.system.animation.repeat }}"
-			></a-animation>
+			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-box>
 	</a-entity>
+</script>
+
+<script id="animation_template" type="x-template">
+	<a-animation
+		v-if="type === 'popup'"
+		attribute="rotation"
+		from="-90 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'popup'"
+		attribute="position"
+		from="0 {{ $root.system.monster.height * -1 }} 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'dropdown'"
+		attribute="position"
+		from="0 {{ $root.system.monster.height * 3 }} 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'dropdown'"
+		attribute="rotation"
+		from="0 0 30"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'fromleft'"
+		attribute="rotation"
+		from="0 90 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'fromleft'"
+		attribute="position"
+		from="{{ $root.system.monster.width * -1 }} 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'fromright'"
+		attribute="rotation"
+		from="0 -90 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'fromright'"
+		attribute="position"
+		from="{{ $root.system.monster.width * 1 }} 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
 </script>
 
 <script id="light_template" type="x-template">
