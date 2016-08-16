@@ -12,11 +12,12 @@
 		'monster': {
 			'width': 1,
 			'height': 0.1,
-			'perroom': 2
+			'perroom': 2,
+			'triggerDistance': 6
 		},
 		'animation': {
 			'duration': 2000,
-			'repeat': -1
+			'repeat': 0
 		}
 	};
 }());

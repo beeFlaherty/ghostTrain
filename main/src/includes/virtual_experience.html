@@ -23,7 +23,7 @@
 		</a-assets>
 
 		<a-entity position="0 1.5 7">
-			<a-camera></a-camera>
+			<a-camera collider></a-camera>
 		</a-entity>
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
@@ -72,6 +72,7 @@
 			scale="0.3 0.3 0.3"
 			src="#monster_{{ monster }}_model"
 			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
+			collidable
 		>
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
@@ -81,6 +82,7 @@
 <script id="animation_template" type="x-template">
 	<a-animation
 		v-if="type === 'popup'"
+		begin="hit"
 		attribute="rotation"
 		from="-90 0 0"
 		to="0 0 0"
@@ -91,6 +93,7 @@
 	></a-animation>
 	<a-animation
 		v-if="type === 'popup'"
+		begin="hit"
 		attribute="position"
 		from="0 {{ $root.system.monster.height * -1 }} 0"
 		to="0 0 0"
@@ -102,6 +105,7 @@
 
 	<a-animation
 		v-if="type === 'dropdown'"
+		begin="hit"
 		attribute="position"
 		from="0 5 0"
 		to="0 0 0"
@@ -112,6 +116,7 @@
 	></a-animation>
 	<a-animation
 		v-if="type === 'dropdown'"
+		begin="hit"
 		attribute="rotation"
 		from="0 0 30"
 		to="0 0 0"
@@ -123,6 +128,7 @@
 
 	<a-animation
 		v-if="type === 'fromleft'"
+		begin="hit"
 		attribute="rotation"
 		from="0 90 0"
 		to="0 0 0"
@@ -133,6 +139,7 @@
 	></a-animation>
 	<a-animation
 		v-if="type === 'fromleft'"
+		begin="hit"
 		attribute="position"
 		from="{{ $root.system.monster.width * -1 }} 0 0"
 		to="0 0 0"
@@ -145,6 +152,7 @@
 	<a-animation
 		v-if="type === 'fromright'"
 		attribute="rotation"
+		begin="hit"
 		from="0 -90 0"
 		to="0 0 0"
 		dur="{{ $root.system.animation.duration }}"
@@ -155,6 +163,7 @@
 	<a-animation
 		v-if="type === 'fromright'"
 		attribute="position"
+		begin="hit"
 		from="{{ $root.system.monster.width * 1 }} 0 0"
 		to="0 0 0"
 		dur="{{ $root.system.animation.duration }}"
