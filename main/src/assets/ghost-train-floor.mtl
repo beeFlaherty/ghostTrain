@@ -1,0 +1,24 @@
+# Blender MTL File: 'ghost-train.blend'
+# Material Count: 2
+
+newmtl floor2
+Ns 94.117647
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\joe\\Documents\\UnityProjects\\GhostTrain\\Assets\\Dungeon_Kit\\Models\\textures\\stone_floor_01_atlas_1024.tga
+
+newmtl lambert44
+Ns 94.117647
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\joe\\Documents\\UnityProjects\\GhostTrain\\Assets\\Dungeon_Kit\\Models\\textures\\stone_floor_01_atlas_1024.tga
