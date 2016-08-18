@@ -1,27 +1,10 @@
 (function() {
 	'use strict';
 
-<<<<<<< HEAD
-	// Data that will come from the user input form
-	var userData = {
-		'trainsettings': {
-			'music':'aa',
-			'name':'train name'
-		},
-		'rooms':[
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00', 'light': 'static', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0', 'light': 'glow', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F', 'light': 'static', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0', 'light': 'flicker', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF', 'light': 'static', 'material': 'img/gt-floor-atlas.png'}
-		]
-	};
-=======
 	module.exports = function(userData, systemData, configurableData) {
 
 	AFRAME.registerComponent('collider', {
 		schema: {},
->>>>>>> origin/master
 
 		init: function() {
 			this.el.sceneEl.addBehavior(this);

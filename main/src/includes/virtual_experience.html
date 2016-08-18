@@ -39,29 +39,16 @@
 <script id="room_template" type="x-template">
 	<a-entity
 		id="room_{{ index }}"
-<<<<<<< HEAD
-		position="0 0 {{ index * -1 * system.room.height }}"
-		material="src: '{{ room.material }}'"
-=======
 		position="0 0 {{ index * -1 * $root.system.room.height }}"
->>>>>>> origin/master
 	>
 		<gt-light v-bind:type="room.light"></gt-light>
 
 		<a-plane
 			rotation="-90 0 0"
 			position="0 0 0"
-<<<<<<< HEAD
-			width="{{ system.room.width }}"
-			height="{{ system.room.height }}"
-			//color="{{ room.colour }}"
-
-
-=======
 			width="{{ $root.system.room.width }}"
 			height="{{ $root.system.room.height }}"
 			color="{{ $root.configurable.themes[room.theme].colour }}"
->>>>>>> origin/master
 		></a-plane>
 
 		<gt-scare
