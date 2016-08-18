@@ -27,13 +27,16 @@
 	<a-entity
 		id="room_{{ index }}"
 		position="0 0 {{ index * -1 * system.room.height }}"
+		material="src: '{{ room.material }}'"
 	>
 		<a-plane
 			rotation="-90 0 0"
 			position="0 0 0"
 			width="{{ system.room.width }}"
 			height="{{ system.room.height }}"
-			color="{{ room.colour }}"
+			//color="{{ room.colour }}"
+
+
 		></a-plane>
 
 		<gt-light v-bind:type="room.light"/>
