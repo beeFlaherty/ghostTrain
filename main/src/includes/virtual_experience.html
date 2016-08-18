@@ -10,7 +10,21 @@
 
 	<a-scene>
 		<a-assets>
+			<a-asset-item
+				v-for="monster in configurable.monsters"
+				id="monster_{{ $key }}_model"
+				src="{{ monster.model }}"
+			></a-asset-item>
+			<img
+				v-for="monster in configurable.monsters"
+				id="monster_{{ $key }}_texture"
+				src="{{ monster.texture }}"
+			></img>
 		</a-assets>
+
+		<a-entity position="0 1.5 7">
+			<a-camera collider></a-camera>
+		</a-entity>
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
 
@@ -18,51 +32,163 @@
 			v-for="room in user.rooms"
 			v-bind:index="$index"
 			v-bind:room="room"
-			v-bind:system="system"
-		/>
+		></gt-room>
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
 	<a-entity
 		id="room_{{ index }}"
+<<<<<<< HEAD
 		position="0 0 {{ index * -1 * system.room.height }}"
 		material="src: '{{ room.material }}'"
+=======
+		position="0 0 {{ index * -1 * $root.system.room.height }}"
+>>>>>>> origin/master
 	>
+		<gt-light v-bind:type="room.light"></gt-light>
+
 		<a-plane
 			rotation="-90 0 0"
 			position="0 0 0"
+<<<<<<< HEAD
 			width="{{ system.room.width }}"
 			height="{{ system.room.height }}"
 			//color="{{ room.colour }}"
 
 
+=======
+			width="{{ $root.system.room.width }}"
+			height="{{ $root.system.room.height }}"
+			color="{{ $root.configurable.themes[room.theme].colour }}"
+>>>>>>> origin/master
 		></a-plane>
 
-		<gt-light v-bind:type="room.light"/>
-
-		<gt-monster
-			v-for="monster in room.monsters"
+		<gt-scare
+			v-for="scare in room.scares"
 			v-bind:index="$index"
-			v-bind:type="monster.type"
-			v-bind:sound="monster.sound"
-			v-bind:animation="monster.animation"
-			v-bind:system="system"
-		/>
-
+			v-bind:monster="scare.monster"
+			v-bind:sound="scare.sound"
+			v-bind:animation="scare.animation"
+		></gt-scare>
 	</a-entity>
 </script>
 
-<script id="monster_template" type="x-template">
+
+<script id="scare_template" type="x-template">
 	<a-entity
-		v-if="type !== 'none'"
+		v-if="monster !== 'none'"
+		position="0 {{ $root.system.monster.height / 2 }} {{ getPosition(index) }}"
 	>
+		<a-obj-model
+			rotation="0 0 0"
+			scale="0.3 0.3 0.3"
+			src="#monster_{{ monster }}_model"
+			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
+			collidable
+		>
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
 	</a-entity>
+</script>
+
+<script id="animation_template" type="x-template">
+	<a-animation
+		v-if="type === 'popup'"
+		begin="hit"
+		attribute="rotation"
+		from="-90 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'popup'"
+		begin="hit"
+		attribute="position"
+		from="0 {{ $root.system.monster.height * -1 }} 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'dropdown'"
+		begin="hit"
+		attribute="position"
+		from="0 5 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'dropdown'"
+		begin="hit"
+		attribute="rotation"
+		from="0 0 30"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'fromleft'"
+		begin="hit"
+		attribute="rotation"
+		from="0 90 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'fromleft'"
+		begin="hit"
+		attribute="position"
+		from="{{ $root.system.monster.width * -1 }} 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+	<a-animation
+		v-if="type === 'fromright'"
+		attribute="rotation"
+		begin="hit"
+		from="0 -90 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+	<a-animation
+		v-if="type === 'fromright'"
+		attribute="position"
+		begin="hit"
+		from="{{ $root.system.monster.width * 1 }} 0 0"
+		to="0 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
 </script>
 
 <script id="light_template" type="x-template">
 	<a-light
-		v-if="type !== 'none'"
+		v-if="type !== 'dark'"
 		type="point"
 		intensity="0.75"
 		distance="15"
@@ -70,7 +196,7 @@
 		position="0 3 0"
 	>
 		<a-animation
-			v-if="type === 'flicker'"
+			v-if="type === 'flickering'"
 			attribute="intensity"
 			dur="300"
 			fill="forwards"
@@ -79,7 +205,7 @@
 			direction="alternate"
 			repeat="indefinite"></a-animation>
 		<a-animation
-			v-if="type === 'glow'"
+			v-if="type === 'glowing'"
 			attribute="intensity"
 			dur="1000"
 			fill="forwards"
