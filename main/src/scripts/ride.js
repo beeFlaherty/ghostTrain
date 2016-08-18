@@ -9,11 +9,11 @@
 			'name':'train name'
 		},
 		'rooms':[
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00', 'light': 'static', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0', 'light': 'glow', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F', 'light': 'static', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0', 'light': 'flicker', 'material': 'img/gt-floor-atlas.png'},
-			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF', 'light': 'static', 'material': 'img/gt-floor-atlas.png'}
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#F00', 'light': 'static'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0F0', 'light': 'glow'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#00F', 'light': 'static'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#FF0', 'light': 'flicker'},
+			{'monster':'ma', 'sound':'sa', 'position':'pa', 'colour': '#0FF', 'light': 'static'}
 		]
 	};
 =======
