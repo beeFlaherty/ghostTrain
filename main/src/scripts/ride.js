@@ -38,8 +38,9 @@
 				var otherPosition = getGlobalPosition(other.object3D);
 				var distance = distanceVector(thisPosition, otherPosition);
 
-				if (distance < systemData.monster.triggerDistance) {
+				if (distance < systemData.monster.triggerDistance && !other.is('hit')) {
 					other.addState('hit');
+					other.emit('hit');
 					other.setAttribute('visible', 'true');
 				}
 			});
