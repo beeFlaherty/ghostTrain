@@ -20,9 +20,11 @@
 				id="monster_{{ $key }}_texture"
 				src="{{ monster.texture }}"
 			></img>
+			<img id="forest" src="/assets/textures/forest/walls.jpg"></img>
+			<img id="castle" src="/assets/textures/castle/walls.jpg"></img>
 		</a-assets>
 
-		<a-entity position="0 1.5 10">
+		<a-entity position="0 1.5 5">
 			<a-camera collider>
 				<a-entity
 					v-if="$root.system.sound.chain"
@@ -42,19 +44,25 @@
 </script>
 
 <script id="room_template" type="x-template">
+
 	<a-entity
 		id="room_{{ index }}"
 		position="0 0 {{ index * -1 * $root.system.room.height }}"
+		rotation: "0 90 0"
 	>
 		<gt-light v-bind:type="room.light"></gt-light>
 
-		<a-plane
-			rotation="-90 0 0"
-			position="0 0 0"
-			width="{{ $root.system.room.width }}"
-			height="{{ $root.system.room.height }}"
-			color="{{ $root.configurable.themes[room.theme].colour }}"
-		></a-plane>
+		<a-entity
+		 obj-model="obj: url(/assets/theme-room-floor.obj);"
+			material="src:#floor-texture"
+		>
+
+		<a-entity
+		 obj-model="obj: url(assets/theme-room-walls.obj);"
+		 material="src: #{{ room.theme }}"
+		 side="double">
+		 </a-entity>
+
 
 		<gt-scare
 			v-for="scare in room.scares"
@@ -70,7 +78,7 @@
 <script id="scare_template" type="x-template">
 	<a-entity
 		v-if="monster !== 'none'"
-		position="0 {{ $root.system.monster.height / 2 }} {{ getPosition(index) }}"
+		position="0 {{ $root.system.monster.height / 2 }} {{ getPosition(index) }} "
 	>
 		<a-obj-model
 			rotation="0 0 0"

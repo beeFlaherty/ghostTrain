@@ -40,7 +40,7 @@
 				]
 			},
 			{
-				'theme': 'graveyard', // castle, forest, graveyard
+				'theme': 'castle', // castle, forest, graveyard
 				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
 				'scares': [
 					{
