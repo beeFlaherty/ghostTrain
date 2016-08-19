@@ -40,6 +40,7 @@
 
 				if (distance < systemData.monster.triggerDistance) {
 					other.addState('hit');
+					other.setAttribute('visible', 'true');
 				}
 			});
 		}
