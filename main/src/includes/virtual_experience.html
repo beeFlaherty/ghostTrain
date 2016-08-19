@@ -70,6 +70,7 @@
 		<a-obj-model
 			rotation="0 0 0"
 			scale="0.3 0.3 0.3"
+			opacity="0"
 			src="#monster_{{ monster }}_model"
 			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
 			collidable
@@ -80,6 +81,16 @@
 </script>
 
 <script id="animation_template" type="x-template">
+	<a-animation
+		begin="hit"
+		attribute="opacity"
+		from="0"
+		to="1"
+		dur="1"
+		fill="both"
+		repeat="0"
+	></a-animation>
+
 	<a-animation
 		v-if="type === 'popup'"
 		begin="hit"
