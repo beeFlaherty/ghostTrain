@@ -79,7 +79,7 @@
 			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
 			collidable
 			visible="false"
-			sound="src: /assets/sounds/scream.mp3; on:hit;"
+			sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;"
 		>
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>

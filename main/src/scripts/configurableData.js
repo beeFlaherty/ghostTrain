@@ -88,17 +88,17 @@
 			},
 		},
 		'sounds': {
-			'moan': {
-				'name': 'Moan',
-				'mp3': ''
+			'zombie': {
+				'name': 'Zombie',
+				'mp3': '/assets/sounds/zombie.mp3'
 			},
 			'scream': {
 				'name': 'Scream',
-				'mp3': ''
+				'mp3': '/assets/sounds/scream.mp3'
 			},
 			'cackle': {
 				'name': 'Cackle',
-				'mp3': ''
+				'mp3': '/assets/sounds/cackle.mp3'
 			}
 		},
 		'animations': {

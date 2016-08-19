@@ -13,12 +13,12 @@
 				'scares': [
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-						'sound': '', // moan, scream, snarl, manic laughter
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
 						'animation': 'popup' // popup, dropdown, fromleft, fromright
 					},
 					{
 						'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
-						'sound': '', // moan, scream, snarl, manic laughter
+						'sound': 'cackle', // moan, scream, snarl, manic laughter
 						'animation': 'fromright' // popup, dropdown, fromleft, fromright
 					}
 				]
@@ -34,7 +34,7 @@
 					},
 					{
 						'monster': 'vampire', // none, zombie, mummy, vampire, skeleton
-						'sound': '', // moan, scream, snarl, manic laughter
+						'sound': 'scream', // moan, scream, snarl, manic laughter
 						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
 					}
 				]
@@ -50,7 +50,7 @@
 					},
 					{
 						'monster': 'skeleton', // none, zombie, mummy, vampire, skeleton
-						'sound': '', // moan, scream, snarl, manic laughter
+						'sound': 'cackle', // moan, scream, snarl, manic laughter
 						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
 					}
 				]
