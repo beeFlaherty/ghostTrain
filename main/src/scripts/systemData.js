@@ -5,6 +5,9 @@
 		'sky': {
 			'colour': '#000000'
 		},
+		'sound': {
+			'chain': false
+		},
 		'room': {
 			'width': 5,
 			'height': 10
