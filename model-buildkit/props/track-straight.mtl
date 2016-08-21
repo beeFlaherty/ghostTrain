@@ -1,0 +1,14 @@
+# Blender MTL File: 'ghost-train-build-kit.blend'
+# Material Count: 1
+
+newmtl track
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.039642 0.014072 0.013013
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd C:\Users\Joe\Pictures\Textures\rusty-metal\metall003-new-tileable_0.png
+map_Bump -bm -2.000000 C:\\Users\\Joe\\Pictures\\Textures\\rusty-metal\\nrm1.jpg
