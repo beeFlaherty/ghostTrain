@@ -55,7 +55,7 @@
 
 		var ScareComponent = Vue.extend({
 			template: '#scare_template',
-			props: ['index', 'monster', 'sound', 'animation'],
+			props: ['index', 'monster', 'sound', 'animation', 'pos'],
 			methods: {
 				getPosition: function(index) {
 					return  (this.$root.system.room.height * 0.5) - // Offset from center of room

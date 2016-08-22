@@ -20,15 +20,16 @@
 				id="monster_{{ $key }}_texture"
 				src="{{ monster.texture }}"
 			></img>
-			<img id="forest" src="/assets/textures/forest/walls.jpg"></img>
-			<img id="castle" src="/assets/textures/castle/walls.jpg"></img>
+			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
+			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
+			<img id="floor" src="assets/textures/floor-tiles.jpg"></img>
 		</a-assets>
 
-		<a-entity position="0 1.5 5">
+		<a-entity position="16 4 5">
 			<a-camera collider>
 				<a-entity
 					v-if="$root.system.sound.chain"
-					sound="src: /assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.4;"
+					sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.4;"
 				></a-entity>
 			</a-camera>
 		</a-entity>
@@ -40,58 +41,191 @@
 			v-bind:index="$index"
 			v-bind:room="room"
 		></gt-room>
+
+		<a-entity>
+		<!--<a-box position="0 2 0" color="green"></a-box>-->
+
+
+
+
+	</a-entity>
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
-	<a-box position="0 0 0" color="green"></a-box>
-
-	<a-entity obj-model="obj: url(/assets/model-buildkit/walls/wall_default_4x4.obj);"
-		position="0 0 0"
-		material="src:#castle"
-		color="red">
-	</a-entity>
-
-	<a-entity obj-model="obj: url(/assets/model-buildkit/walls/wall_default_8x4.obj);"
-		position="0 0 0"
-		material="src:#castle"
-		color="red">
-	</a-entity>
-
-	<a-entity obj-model="obj: url(/assets/model-buildkit/walls/corner_default_1x1-2.obj);"
-		position="0 0 0"
-		rotation="0 180 0"
-		material="src:#castle"
-		color="red">
-	</a-entity>
-
-	<!-- <a-entity obj-model="obj: url(/assets/model-buildkit/walls/wall_default_8x4.obj);"
-		position="5 0 -5"
-		material="src:#castle"
-		rotation="0 90 0"
-		color="red">
-	</a-entity> -->
 
 
 
-	<!-- <a-entity
+
+	 <a-entity
 		id="room_{{ index }}"
-		position="0 0 {{ index * -1 * $root.system.room.height }}"
+		position="0 0 0" <!--{{ index * -1 * $root.system.room.height }}" -->
 		rotation: "0 90 0"
 	>
-		<gt-light v-bind:type="room.light"></gt-light>
 
-		<a-entity
-		 obj-model="obj: url(/assets/theme-room-floor.obj);"
-			material="src:#floor-texture"
-		>
+		<a-entity id="floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="8 0 2"
+				material="src:#floor">
+			</a-entity>
 
-		<a-entity
-		 obj-model="obj: url(assets/theme-room-walls.obj);"
-		 material="src: #{{ room.theme }}"
-		 side="double">
-		 </a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="16 0 2"
+				material="src:#floor">
+			</a-entity>
 
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="24 0 2"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="32 0 2"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="40 0 2"
+				material="src:#floor">
+			</a-entity>
+
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="8 0 -6"
+				material="src:#floor">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="16 0 -6"
+				material="src:#floor">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="24 0 -6"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="32 0 -6"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="40 0 -6"
+				material="src:#floor">
+			</a-entity>
+
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="8 0 -14"
+				material="src:#floor">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="16 0 -14"
+				material="src:#floor">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="24 0 -14"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="32 0 -14"
+				material="src:#floor">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
+				position="40 0 -14"
+				material="src:#floor">
+			</a-entity>
+		</a-entity>
+
+		<a-entity id="inner-wall-1">
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
+				position="16 0 -6"
+			 	rotation="0 90 0"
+			 	material="src:#castle">
+			</a-entity>
+
+		</a-entity>
+
+		<a-entity id="west-wall">
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
+				position="0 0 0"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+				position="0 0 -16"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+				position="2 0 2"
+				rotation="0 90 0"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+		</a-entity>
+
+		<a-entity id="south-wall">
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+				position="6 0 -18"
+			 	rotation="0 90 0"
+			 	material="src:#castle">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"
+				position="24 0 -18"
+			 	rotation="0 90 0"
+			 	material="src:#castle">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+				position="28 0 -18"
+			 	rotation="0 90 0"
+			 	material="src:#castle">
+			</a-entity>
+		</a-entity>
+
+		<a-entity id="east-wall" rotation="0 180 0" position="34 0 -16">
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
+				position="0 0 0"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+				position="0 0 -16"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+				position="2 0 2"
+				rotation="0 90 0"
+				material="src:#castle"
+				color="red">
+			</a-entity>
+		</a-entity>
+
+		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+				position="6 0 0"
+			 	rotation="0 270 0"
+			 	material="src:#castle">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"
+				position="10 0 0"
+			 	rotation="0 270 0"
+			 	material="src:#castle">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+				position="28 0 0"
+			 	rotation="0 270 0"
+			 	material="src:#castle">
+			</a-entity>
+		</a-entity>
 
 		<gt-scare
 			v-for="scare in room.scares"
@@ -99,19 +233,36 @@
 			v-bind:monster="scare.monster"
 			v-bind:sound="scare.sound"
 			v-bind:animation="scare.animation"
+			v-bind:pos="scare.position"
 		></gt-scare>
-	</a-entity> -->
+
+		<!--<gt-light v-bind:type="room.light"></gt-light>
+
+		<a-entity
+		 obj-model="obj: url(assets/theme-room-floor.obj);"
+			material="src:#floor-texture"
+		>
+
+		<a-entity
+		 obj-model="obj: url(assets/theme-room-walls.obj);"
+		 material="src: #{{ room.theme }}"
+		 side="double">
+		 </a-entity>-->
+
+
+
+	</a-entity>
 </script>
 
 
 <script id="scare_template" type="x-template">
 	<a-entity
 		v-if="monster !== 'none'"
-		position="0 {{ $root.system.monster.height / 2 }} {{ getPosition(index) }} "
+		id="monster_{{ $parent.room.number }}_{{ animation }}" position="{{ pos }}"
 	>
 		<a-obj-model
 			rotation="0 0 0"
-			scale="0.3 0.3 0.3"
+			scale="0.9 0.9 0.9"
 			src="#monster_{{ monster }}_model"
 			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
 			collidable
@@ -185,7 +336,7 @@
 		v-if="type === 'fromleft'"
 		begin="hit"
 		attribute="position"
-		from="{{ $root.system.monster.width * -1 }} 0 0"
+		from="{{ $root.system.monster.width * -8 }} 0 0"
 		to="0 0 0"
 		dur="{{ $root.system.animation.duration }}"
 		fill="both"
@@ -215,6 +366,20 @@
 		easing="ease-out-bounce"
 		repeat="{{ $root.system.animation.repeat }}"
 	></a-animation>
+
+	<a-animation
+		v-if="type === 'slideleft'"
+		begin="hit"
+		attribute="position"
+		from="0 0 0"
+		to="3 0 0"
+		dur="{{ $root.system.animation.duration }}"
+		fill="both"
+		easing="ease-out-bounce"
+		repeat="{{ $root.system.animation.repeat }}"
+	></a-animation>
+
+
 </script>
 
 <script id="light_template" type="x-template">
