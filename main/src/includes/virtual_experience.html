@@ -22,7 +22,7 @@
 			></img>
 			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
 			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
-			<img id="floor" src="assets/textures/floor-tiles.jpg"></img>
+			<img id="floor" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></img>
 		</a-assets>
 
 		<a-entity position="16 4 5">
@@ -59,80 +59,126 @@
 
 	 <a-entity
 		id="room_{{ index }}"
-		position="0 0 0" <!--{{ index * -1 * $root.system.room.height }}" -->
+		position="0 0 0"
 		rotation: "0 90 0"
 	>
+		<gt-light
+			v-bind:type="room.light"
+			v-bind:lightcolor="room.lightcolor">
+		</gt-light>
+
+		<!--<a-entity light="color: blue; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 2"></a-entity>
+		<a-entity light="color: green; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 -8"></a-entity>-->
 
 		<a-entity id="floor">
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="8 0 2"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl);" position="8 0 2" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="16 0 2"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)" position="16 0 2" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="24 0 2"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 2" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="32 0 2"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 2" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="40 0 2"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 2" metalness="0">
 			</a-entity>
 
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="8 0 -6"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="8 0 -6" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="16 0 -6"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="16 0 -6" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="24 0 -6"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 -6" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="32 0 -6"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 -6" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="40 0 -6"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 -6" metalness="0">
 			</a-entity>
 
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="8 0 -14"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="8 0 -14" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="16 0 -14"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="16 0 -14" metalness="0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="24 0 -14"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 -14" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="32 0 -14"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 -14" metalness="0">
 			</a-entity>
-			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"
-				position="40 0 -14"
-				material="src:#floor">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 -14" metalness="0">
+			</a-entity>
+		</a-entity>
+
+		<a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)" position="8 0 2">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)" position="16 0 2">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 2">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 2">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 2">
+			</a-entity>
+
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="8 0 -6">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="16 0 -6">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 -6">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 -6">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 -6">
+			</a-entity>
+
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="8 0 -14">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="16 0 -14">
+			</a-entity>
+
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="24 0 -14">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="32 0 -14">
+			</a-entity>
+			<a-entity obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj); mtl: url(assets/model-buildkit/floors/floor-default-4x4.mtl)"
+				position="40 0 -14">
 			</a-entity>
 		</a-entity>
 
@@ -148,21 +194,18 @@
 		<a-entity id="west-wall">
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
 				position="0 0 0"
-				material="src:#castle"
-				color="red">
+				material="src:#castle">
 			</a-entity>
 
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
 				position="0 0 -16"
-				material="src:#castle"
-				color="red">
+				material="src:#castle">
 			</a-entity>
 
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
 				position="2 0 2"
 				rotation="0 90 0"
-				material="src:#castle"
-				color="red">
+				material="src:#castle">
 			</a-entity>
 		</a-entity>
 
@@ -186,24 +229,22 @@
 			</a-entity>
 		</a-entity>
 
-		<a-entity id="east-wall" rotation="0 180 0" position="34 0 -16">
+		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
 				position="0 0 0"
-				material="src:#castle"
-				color="red">
+				material="src:#castle">
 			</a-entity>
 
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
-				position="0 0 -16"
-				material="src:#castle"
-				color="red">
+				position="-2 0 -18"
+				rotation="0 -90 0"
+				material="src:#castle">
 			</a-entity>
 
 			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
-				position="2 0 2"
-				rotation="0 90 0"
-				material="src:#castle"
-				color="red">
+				position="0 0 0"
+				rotation="0 -180 0"
+				material="src:#castle">
 			</a-entity>
 		</a-entity>
 
@@ -236,7 +277,7 @@
 			v-bind:pos="scare.position"
 		></gt-scare>
 
-		<!--<gt-light v-bind:type="room.light"></gt-light>
+		<!--
 
 		<a-entity
 		 obj-model="obj: url(assets/theme-room-floor.obj);"
@@ -264,14 +305,18 @@
 			rotation="0 0 0"
 			scale="0.9 0.9 0.9"
 			src="#monster_{{ monster }}_model"
-			material="color: {{ $root.configurable.monsters[monster].colour }}; src: #monster_{{ monster }}_texture"
+			material="src: #monster_{{ monster }}_texture; shader: standard;"
 			collidable
 			visible="false"
 			sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;"
-		>
+			>
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
+
+
 	</a-entity>
+
+
 </script>
 
 <script id="animation_template" type="x-template">
@@ -386,15 +431,16 @@
 	<a-light
 		v-if="type !== 'dark'"
 		type="point"
-		intensity="0.75"
-		distance="15"
+		intensity="5"
+		distance="25"
 		decay="2"
-		position="0 3 0"
+		position="18 4 -2"
+		color="{{ lightcolor }}"
 	>
 		<a-animation
 			v-if="type === 'flickering'"
 			attribute="intensity"
-			dur="300"
+			dur="1300"
 			fill="forwards"
 			from="1"
 			to="0"

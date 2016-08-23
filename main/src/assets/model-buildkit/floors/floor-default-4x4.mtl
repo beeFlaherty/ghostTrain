@@ -10,4 +10,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 1
-map_Kd C:\\Users\\joe\\Documents\\GitHub\\Pictures\\Textures\\wood-floors\\floor_18.png
+map_Kd ../../textures/floor_18.png

@@ -11,6 +11,7 @@
 				'number': 1,
 				'theme': 'castle', // castle, forest, graveyard
 				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
+				'lightcolor': 'purple'
 				'scares': [
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton

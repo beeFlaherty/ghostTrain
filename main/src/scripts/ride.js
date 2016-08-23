@@ -75,7 +75,7 @@
 
 		var LightComponent = Vue.extend({
 			template: '#light_template',
-			props: ['type']
+			props: ['type', 'lightcolor']
 		});
 		Vue.component('gt-light', LightComponent);
 
