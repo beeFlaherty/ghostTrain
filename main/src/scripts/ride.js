@@ -25,23 +25,52 @@
       // .distanceTo( v ) ?
     }
 
+    function compareOrder(a, b) {
+      if (a.order < b.order) {
+        return -1;
+      } else if (a.order > b.order) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+
     AFRAME.registerComponent('kart', {
       schema: {},
       init: function() {
         this.element = this.el.object3D;
-        this.element.position.set(17, 4, 15);
-        this.target = new THREE.Vector3(17, 4, -5);
-        this.startTime = 0;
-        this.timeSinceStart = 0;
-        this.first = false;
         this.closeEnoughDistance = 0.015;
+        this.first = false;
+        this.trackPosition = 0;
+
+
+        var trackElements = document.querySelectorAll('a-entity[track]');
+        var track = [];
+        var position;
+
+        //get all track elements- build a list and sort them to create a track
+        for (var i = 0; i < trackElements.length; i++) {
+          position = trackElements[i].getAttribute("position");
+          track.push({
+            order: parseInt(trackElements[i].getAttribute("order")),
+            position: new THREE.Vector3(position.x, position.y, position.z),
+            duration:  parseInt(trackElements[i].getAttribute("duration"))
+          });
+        }
+
+        track.sort(compareOrder);
+        this.track = track;
+
+        this.startTime = new Date();
+        this.timeSinceStart = 0;
         this.startPosition = this.element.position.clone();
-        this.endPosition = this.target.clone();
+        this.endPosition = this.track[this.trackPosition].position.clone();
         this.percentComplete = 0;
         this.duration = 10;
+
       },
       tick: function(time) {
-        this.distance = distanceVector(this.element.position, this.target);
+        this.distance = distanceVector(this.element.position, this.endPosition);
 
         if (this.distance > this.closeEnoughDistance) {
           if (!this.first) {
@@ -54,8 +83,16 @@
           this.element.position.lerpVectors(this.startPosition, this.endPosition, this.percentComplete);
 
         } else {
-        //  this.target = new THREE.Vector3(17, 4, -15);
-          //this.startTime = new Date();
+          if (this.trackPosition + 1 < this.track.length) {
+            this.trackPosition++;
+
+            this.startTime = new Date();
+            this.timeSinceStart = 0;
+            this.startPosition = this.element.position.clone();
+            this.endPosition = this.track[this.trackPosition].position.clone();
+            this.percentComplete = 0;
+            this.duration = this.track[this.trackPosition].duration;
+          }
         }
       }
     });

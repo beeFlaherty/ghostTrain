@@ -22,7 +22,7 @@
 			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
 
 			<a-mixin id="castle-wall" material="src:#castle"></a-mixin>
-			<a-mixin id="forest-wall" obj-model="src="assets/textures/forest/walls.jpg"></a-mixin>
+	  	<a-mixin id="forest-wall" obj-model="src="assets/textures/forest/walls.jpg"></a-mixin>
 			<a-mixin id="floor" obj-model="src="assets/assets/model-buildkit/floors/floor-default-4x4.mtl"></a-mixin>
 
 			<a-asset-item
@@ -40,7 +40,7 @@
 			<img id="floor" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></img>
 		</a-assets>
 
-		<a-entity position="16 4 5" kart="">
+		<a-entity position="16 4 15" kart="">
 			<a-camera collider>
 				<a-entity
 					v-if="$root.system.sound.chain"
@@ -48,6 +48,17 @@
 				></a-entity>
 			</a-camera>
 		</a-entity>
+
+		<a-entity track="" position="16 4 0" order="0" duration="7">
+			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		</a-entity>
+		<a-entity track="" position="24 4 -10" order="1" duration="5">
+			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		</a-entity>
+		<a-entity track="" position="8 4 -10" order="1" duration="8">
+			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		</a-entity>
+		
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
 
