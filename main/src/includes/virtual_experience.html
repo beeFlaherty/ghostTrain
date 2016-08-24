@@ -10,6 +10,21 @@
 
 	<a-scene>
 		<a-assets>
+			<!-- walls -->
+			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
+			<a-mixin id="wall-md" obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"></a-mixin>
+			<a-mixin id="wall-sm" obj-model="obj: url(assets/model-buildkit/walls/wall_default_2x4.obj);"></a-mixin>
+
+			<!-- corners -->
+			<a-mixin id="corner-sm" obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"></a-mixin>
+
+			<!-- door -->
+			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
+
+			<a-mixin id="castle-wall" material="src:#castle"></a-mixin>
+			<a-mixin id="forest-wall" obj-model="src="assets/textures/forest/walls.jpg"></a-mixin>
+			<a-mixin id="floor" obj-model="src="assets/assets/model-buildkit/floors/floor-default-4x4.mtl"></a-mixin>
+
 			<a-asset-item
 				v-for="monster in configurable.monsters"
 				id="monster_{{ $key }}_model"
@@ -20,8 +35,8 @@
 				id="monster_{{ $key }}_texture"
 				src="{{ monster.texture }}"
 			></img>
-			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
 			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
+			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
 			<img id="floor" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></img>
 		</a-assets>
 
@@ -183,26 +198,26 @@
 		</a-entity>
 
 		<a-entity id="inner-wall-1">
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
+			<a-entity mixin="wall-lg castle-wall"
 				position="16 0 -6"
 			 	rotation="0 90 0"
-			 	material="src:#castle">
+			 	>
 			</a-entity>
 
 		</a-entity>
 
 		<a-entity id="west-wall">
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
+			<a-entity mixin="wall-lg castle-wall"
 				position="0 0 0"
-				material="src:#castle">
+			>
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+			<a-entity mixin="corner-sm castle-wall"
 				position="0 0 -16"
 				material="src:#castle">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+			<a-entity mixin="corner-sm castle-wall"
 				position="2 0 2"
 				rotation="0 90 0"
 				material="src:#castle">
@@ -210,61 +225,53 @@
 		</a-entity>
 
 		<a-entity id="south-wall">
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+			<a-entity mixin="wall-md castle-wall"
 				position="6 0 -18"
-			 	rotation="0 90 0"
-			 	material="src:#castle">
+			 	rotation="0 90 0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"
+			<a-entity mixin="door castle-wall"
 				position="24 0 -18"
 			 	rotation="0 90 0"
-			 	material="src:#castle">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+			<a-entity mixin="wall-md castle-wall"
 				position="28 0 -18"
-			 	rotation="0 90 0"
-			 	material="src:#castle">
+			 	rotation="0 90 0">
 			</a-entity>
 		</a-entity>
 
 		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"
-				position="0 0 0"
-				material="src:#castle">
+			<a-entity mixin="wall-lg castle-wall"
+				position="0 0 0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+			<a-entity mixin="corner-sm castle-wall"
 				position="-2 0 -18"
-				rotation="0 -90 0"
-				material="src:#castle">
+				rotation="0 -90 0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"
+			<a-entity mixin="corner-sm castle-wall"
 				position="0 0 0"
-				rotation="0 -180 0"
-				material="src:#castle">
+				rotation="0 -180 0">
 			</a-entity>
 		</a-entity>
 
 		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+			<a-entity mixin="wall-md castle-wall"
 				position="6 0 0"
-			 	rotation="0 270 0"
-			 	material="src:#castle">
+			 	rotation="0 270 0">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"
+			<a-entity mixin="door castle-wall"
 				position="10 0 0"
 			 	rotation="0 270 0"
 			 	material="src:#castle">
 			</a-entity>
 
-			<a-entity obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"
+			<a-entity mixin="wall-md castle-wall"
 				position="28 0 0"
-			 	rotation="0 270 0"
-			 	material="src:#castle">
+			 	rotation="0 270 0">
 			</a-entity>
 		</a-entity>
 
