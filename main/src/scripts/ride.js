@@ -1,20 +1,63 @@
 (function() {
   'use strict';
 
+
+  function distanceVector(v1, v2) {
+    var dx = v1.x - v2.x;
+    var dy = v1.y - v2.y;
+    var dz = v1.z - v2.z;
+
+    return Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+    // .distanceTo( v ) ?
+  }
+
+
   module.exports = function(userData, systemData, configurableData) {
+
+    function distanceVector(v1, v2) {
+      var dx = v1.x - v2.x;
+      var dy = v1.y - v2.y;
+      var dz = v1.z - v2.z;
+
+      return Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+      // .distanceTo( v ) ?
+    }
 
     AFRAME.registerComponent('kart', {
       schema: {},
       init: function() {
-				this.element = this.el.object3D;
-				this.element.position.set(17, 4, 10);
-				this.target = new THREE.Vector3(17,4,-5);
-				this.time = 0;
-			},
+        this.element = this.el.object3D;
+        this.element.position.set(17, 4, 15);
+        this.target = new THREE.Vector3(17, 4, -5);
+        this.startTime = 0;
+        this.timeSinceStart = 0;
+        this.first = false;
+        this.closeEnoughDistance = 0.015;
+        this.startPosition = this.element.position.clone();
+        this.endPosition = this.target.clone();
+        this.percentComplete = 0;
+        this.duration = 10;
+      },
       tick: function(time) {
-				this.time += 0.0001;
-				this.element.position.lerp(this.target, this.time);
-			}
+        this.distance = distanceVector(this.element.position, this.target);
+
+        if (this.distance > this.closeEnoughDistance) {
+          if (!this.first) {
+            this.startTime = new Date();
+            this.first = true;
+          }
+
+          this.timeSinceStart = (new Date() - this.startTime) / 1000;
+          this.percentComplete = this.timeSinceStart / this.duration;
+          this.element.position.lerpVectors(this.startPosition, this.endPosition, this.percentComplete);
+
+        } else {
+        //  this.target = new THREE.Vector3(17, 4, -15);
+          //this.startTime = new Date();
+        }
+      }
     });
 
     AFRAME.registerComponent('collider', {
