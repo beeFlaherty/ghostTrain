@@ -18,8 +18,11 @@
 			<!-- corners -->
 			<a-mixin id="corner-sm" obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"></a-mixin>
 
+			<!-- doorframe -->
+			<a-mixin id="doorframe" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
+
 			<!-- door -->
-			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
+			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);"></a-mixin>
 
 			<a-mixin id="castle-wall" material="src:#castle"></a-mixin>
 	  	<a-mixin id="forest-wall" obj-model="src="assets/textures/forest/walls.jpg"></a-mixin>
@@ -40,7 +43,7 @@
 			<img id="floor" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></img>
 		</a-assets>
 
-		<a-entity position="16 4 15" kart="">
+		<a-entity position="16 4 15">
 			<a-camera collider>
 				<a-entity
 					v-if="$root.system.sound.chain"
@@ -55,10 +58,10 @@
 		<a-entity track="" position="24 4 -10" order="1" duration="5">
 			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
-		<a-entity track="" position="8 4 -10" order="1" duration="8">
+		<a-entity track="" position="8 4 -10" order="2" duration="8">
 			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
-		
+
 
 		<a-sky color="{{system.sky.colour}}"></a-sky>
 
@@ -83,7 +86,7 @@
 
 
 
-	 <a-entity
+	<a-entity
 		id="room_{{ index }}"
 		position="0 0 0"
 		rotation: "0 90 0"
@@ -217,6 +220,8 @@
 
 		</a-entity>
 
+		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" mixin="castle-wall" position="18 0 -8.5"></a-entity>
+
 		<a-entity id="west-wall">
 			<a-entity mixin="wall-lg castle-wall"
 				position="0 0 0"
@@ -241,9 +246,11 @@
 			 	rotation="0 90 0">
 			</a-entity>
 
-			<a-entity mixin="door castle-wall"
+			<a-entity mixin="doorframe castle-wall"
 				position="24 0 -18"
 			 	rotation="0 90 0">
+
+
 			</a-entity>
 
 			<a-entity mixin="wall-md castle-wall"
@@ -274,11 +281,13 @@
 			 	rotation="0 270 0">
 			</a-entity>
 
-			<a-entity mixin="door castle-wall"
+			<a-entity mixin="doorframe castle-wall"
 				position="10 0 0"
-			 	rotation="0 270 0"
-			 	material="src:#castle">
+			 	rotation="0 270 0">
+
+
 			</a-entity>
+
 
 			<a-entity mixin="wall-md castle-wall"
 				position="28 0 0"
@@ -311,6 +320,10 @@
 
 
 	</a-entity>
+
+
+
+
 </script>
 
 
