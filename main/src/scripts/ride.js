@@ -66,7 +66,11 @@
         this.startPosition = this.element.position.clone();
         this.endPosition = this.track[this.trackPosition].position.clone();
         this.percentComplete = 0;
-        this.duration = 10;
+        this.speed = 1;
+        var duration = distanceVector(this.startPosition, this.endPosition) / this.speed ;
+
+        this.duration = this.track[this.trackPosition].duration || duration;
+
 
       },
       tick: function(time) {
@@ -91,7 +95,9 @@
             this.startPosition = this.element.position.clone();
             this.endPosition = this.track[this.trackPosition].position.clone();
             this.percentComplete = 0;
-            this.duration = this.track[this.trackPosition].duration;
+            var duration = distanceVector(this.startPosition, this.endPosition) / this.speed ;
+
+            this.duration = this.track[this.trackPosition].duration || duration;
           }
         }
       }
