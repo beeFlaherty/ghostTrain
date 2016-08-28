@@ -43,24 +43,49 @@
 			<img id="floor" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></img>
 		</a-assets>
 
-		<a-entity position="16 4 15">
-			<a-camera collider>
+		<a-entity id="rotation-helper" position="0 0 0" rotation="0 0 0">
+		<!--	<a-box position="0 0 2" color="blue"></a-box> -->
+		</a-entity>
+
+		<a-entity position="16 4 15" kart="">
+		<!--  <a-entity id="rotation-helper"></a-entity> -->
+			<a-entity obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" metalness="0"></a-entity>
+
+			<a-entity rotation="0 180 0">
+			<a-camera collider  position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="false">
 				<a-entity
 					v-if="$root.system.sound.chain"
 					sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.4;"
 				></a-entity>
 			</a-camera>
 		</a-entity>
+	</a-entity>
 
-		<a-entity track="" position="18 4 0" order="0" >
+	<!--	<a-camera collider  position="8 4 -2" rotation="0 90 0">
+			<a-entity
+				v-if="$root.system.sound.chain"
+				sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.4;"
+			></a-entity>
+		</a-camera>-->
+
+		<a-entity track="" position="17 4 0" order="0" >
 			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
-		<a-entity track="" position="24 4 -10" order="1" >
+
+		<a-entity track="" position="19 4 -5" order="1" >
 			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
 
-		<a-entity track="" position="8 4 -10" order="2" duration="8">
 
+		<a-entity track="" position="20 4 -12" order="2" >
+			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="blue"></a-box>
+		</a-entity>
+
+		<a-entity track="" position="17 4 -14" order="3" >
+			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		</a-entity>
+
+		<a-entity track="" position="17 4 -18" order="4" >
 			<a-sphere  position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
 
