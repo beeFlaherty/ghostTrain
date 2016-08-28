@@ -6,4 +6,5 @@
 	var configurableData = require('./configurableData');
 
 	var ride = require('./ride')(userData, systemData, configurableData);
+	
 }());

@@ -1,1 +1,102 @@
-<h2>Creation form</h2>
+<div id="settings">
+    <h2>Creation form</h2>
+
+    <form>
+        <!-- text -->
+        <h2>train settings </h2>
+        <p>
+            <label>train name</label>
+            <br>
+            <input type="text" v-model="trainsettings.name">
+        </p>
+
+        <!-- radio buttons -->
+        <p>
+            <label>music</label>
+            <br>
+            <input type="radio" name="music" value="creepymusicbox" v-model="trainsettings.music">
+            <span>Creepy Music Box</span>
+            <br>
+            <input type="radio" name="music" value="rideofthevalkyries" v-model="trainsettings.music">
+            <span>Ride of the Valkyries</span>
+            <br>
+            <input type="radio" name="music" value="heavymetal" v-model="trainsettings.music">
+            <span>Heavy Metal</span>
+            <br>
+        </p>
+        <!-- select -->
+
+        <h2>Room</h2>
+        <p>
+            <label>Theme</label>
+            <br>
+            <input type="radio" name="theme" value="castle" v-model="rooms[0].theme">
+            <span>Castle</span>
+            <br>
+            <input type="radio" name="theme" value="forest" v-model="rooms[0].theme">
+            <span>Forrest</span>
+            <br>
+            <input type="radio" name="theme" value="graveyard" v-model="rooms[0].theme">
+            <span>Graveyard</span>
+            <br>
+        </p>
+        <p>
+            <label>Light</label>
+            <br>
+            <input type="radio" name="light" value="dark" v-model="rooms[0].light">
+            <span>Dark</span>
+            <br>
+            <input type="radio" name="light" value="bright" v-model="rooms[0].light">
+            <span>Bright</span>
+            <br>
+            <input type="radio" name="light" value="flickering" v-model="rooms[0].light">
+            <span>Flickering</span>
+            <br>
+            <input type="radio" name="light" value="glowing" v-model="rooms[0].light">
+            <span>Glowing</span>
+        </p>
+        <p>
+            <label>Monster</label>
+            <br>
+            <input type="radio" name="monster" value="zombie" v-model="rooms[0].scares[0].monster">
+            <span>Zombie</span>
+            <br>
+            <input type="radio" name="monster" value="mummy" v-model="rooms[0].scares[0].monster">
+            <span>Mummy</span>
+            <br>
+            <input type="radio" name="monster" value="vampire" v-model="rooms[0].scares[0].monster">
+            <span>Vampire</span>
+            <br>
+            <input type="radio" name="monster" value="skeleton" v-model="rooms[0].scares[0].monster">
+            <span>Skeleton</span>
+        </p>
+        <p>
+            <label>Sound</label>
+            <br>
+            <input type="radio" name="sound" value="zombie" v-model="rooms[0].scares[0].sound">
+            <span>Zombie</span>
+            <br>
+            <input type="radio" name="sound" value="scream" v-model="rooms[0].scares[0].sound">
+            <span>Scream</span>
+            <br>
+            <input type="radio" name="sound" value="cackle" v-model="rooms[0].scares[0].sound">
+            <span>Cackle</span>
+        </p>
+        <p>
+            <label>Animation</label>
+            <br>
+            <input type="radio" name="position" value="popup" v-model="rooms[0].scares[0].animation">
+            <span>Popup</span>
+            <br>
+            <input type="radio" name="position" value="dropdown" v-model="rooms[0].scares[0].animation">
+            <span>Dropdown</span>
+            <br>
+            <input type="radio" name="position" value="fromleft" v-model="rooms[0].scares[0].animation">
+            <span>From left</span>
+            <input type="radio" name="position" value="fromright" v-model="rooms[0].scares[0].animation">
+            <span>From right</span>
+        </p>
+
+        <p style="position:absolute; top:0; right:0; background:grey; opacity:0.4; color:#fff; width:25%; padding:15px;">data: {{$data | json 2}}</p>
+    </form>
+</div>
