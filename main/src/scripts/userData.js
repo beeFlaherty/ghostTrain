@@ -3,7 +3,7 @@
 
 	module.exports = {
 		'trainsettings': {
-			'music':'aa',
+			'music':'none',
 			'name':'train name'
 		},
 		'rooms': [

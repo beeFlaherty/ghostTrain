@@ -5,17 +5,11 @@
 		'music': {
 			'creepymusicbox': {
 				'name': 'Creepy Music Box',
-				'mp3': ''
+				'mp3': '/assets/music/creepy.mp3'
 			},
-			'rideofthevalkyries': {
-				'id': '',
-				'name': 'Ride of the Valkyries',
-				'mp3': ''
-			},
-			'heavymetal': {
-				'id': '',
-				'name': 'Heavy Metal',
-				'mp3': ''
+			'mountainking': {
+				'name': 'Hall of the Mountain King',
+				'mp3': '/assets/music/mountainking.mp3'
 			}
 		},
 		'themes': {
