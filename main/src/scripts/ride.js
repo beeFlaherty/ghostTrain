@@ -23,7 +23,9 @@
       // .distanceTo( v ) ?
     }
 
-    function lerp(a, b, f) { return (a * (1 - f)) + (b * f); }
+    function lerp(a, b, f) {
+      return (a * (1 - f)) + (b * f);
+    }
 
     function compareOrder(a, b) {
       if (a.order < b.order) {
@@ -35,12 +37,22 @@
       }
     }
 
+    // Converts from degrees to radians.
+    Math.radians = function(degrees) {
+      return degrees * Math.PI / 180;
+    };
+
+    // Converts from radians to degrees.
+    Math.degrees = function(radians) {
+      return radians * 180 / Math.PI;
+    };
+
     AFRAME.registerComponent('kart', {
-      schema : {},
-      init : function() {
+      schema: {},
+      init: function() {
         this.element = this.el.object3D;
         this.rotationHelper =
-            document.getElementById('rotation-helper').object3D;
+          document.getElementById('rotation-helper').object3D;
 
         this.closeEnoughDistance = 0.1;
         this.first = false;
@@ -54,9 +66,9 @@
         for (var i = 0; i < trackElements.length; i++) {
           position = trackElements[i].getAttribute("position");
           track.push({
-            order : parseInt(trackElements[i].getAttribute("order")),
-            position : new THREE.Vector3(position.x, position.y, position.z),
-            duration : parseInt(trackElements[i].getAttribute("duration"))
+            order: parseInt(trackElements[i].getAttribute("order")),
+            position: new THREE.Vector3(position.x, position.y, position.z),
+            duration: parseInt(trackElements[i].getAttribute("duration"))
           });
         }
 
@@ -71,21 +83,33 @@
         this.percentComplete = 0;
         this.speed = 1.5;
         var duration =
-            distanceVector(this.startPosition, this.endPosition) / this.speed;
+          distanceVector(this.startPosition, this.endPosition) / this.speed;
 
         this.duration = this.track[this.trackPosition].duration || duration;
         this.startRotation = this.element.rotation.clone();
         this.rotationHelper.position.set(this.element.position.x,
-                                         this.element.position.y,
-                                         this.element.position.z);
+          this.element.position.y,
+          this.element.position.z);
         this.rotationHelper.lookAt(this.endPosition);
-        this.rotation = this.rotationHelper.rotation.clone();
+        var value = Math.degrees(this.rotationHelper.rotation.y);
+
+        if (value < 0) {
+           value = 360 + value;
+        }
+
+        if (value > 360) {
+           value = 360 - value;
+        }
+
+        value = Math.radians(value);
+
+        this.rotation = new THREE.Vector3(0,value,0);
 
       },
-      tick : function(time) {
+      tick: function(time) {
         this.rotationHelper.position.set(this.element.position.x,
-                                         this.element.position.y,
-                                         this.element.position.z);
+          this.element.position.y,
+          this.element.position.z);
         this.distance = distanceVector(this.element.position, this.endPosition);
 
         if (this.distance > this.closeEnoughDistance) {
@@ -99,20 +123,24 @@
 
           //    this.element.quaternion.slerp(this.rotation, 1);
           var value = lerp(
-              this.startRotation.y, this.rotation.y,
-              (this.percentComplete * 3) > 1 ? 1 : this.percentComplete * 3);
+            this.startRotation.y, this.rotation.y,
+            (this.percentComplete * 3) > 1 ? 1 : this.percentComplete * 3);
 
-          //  value = value * (Math.PI / 180);
-          console.log(value);
+          value = Math.degrees(value);
 
           if (value < 0) {
-            // value = (360 * (Math.PI / 2)) + value;
+             value = 360 + value;
           }
 
+          if (value > 360) {
+             value = 360 - value;
+          }
+
+          value = Math.radians(value);
           this.element.rotation.set(0, value, 0);
 
           this.element.position.lerpVectors(
-              this.startPosition, this.endPosition, this.percentComplete);
+            this.startPosition, this.endPosition, this.percentComplete);
 
         } else {
           if (this.trackPosition + 1 < this.track.length) {
@@ -124,23 +152,38 @@
             this.endPosition = this.track[this.trackPosition].position.clone();
             this.percentComplete = 0;
             var duration =
-                distanceVector(this.startPosition, this.endPosition) /
-                this.speed;
+              distanceVector(this.startPosition, this.endPosition) /
+              this.speed;
 
             this.duration = this.track[this.trackPosition].duration || duration;
             this.rotationHelper.lookAt(this.endPosition.clone());
-            this.rotation = this.rotationHelper.rotation.clone();
+
+            var value = Math.degrees(this.rotationHelper.rotation.y);
+
+            if (value < 0) {
+               value = 360 + value;
+            }
+
+            if (value > 360) {
+               value = 360 - value;
+            }
+
+            value = Math.radians(value);
+
+            this.rotation = new THREE.Vector3(0,value,0);
           }
         }
       }
     });
 
     AFRAME.registerComponent('collider', {
-      schema : {},
+      schema: {},
 
-      init : function() { this.el.sceneEl.addBehavior(this); },
+      init: function() {
+        this.el.sceneEl.addBehavior(this);
+      },
 
-      tick : function() {
+      tick: function() {
         var scene = this.el.sceneEl.object3D;
         scene.updateMatrixWorld();
 
@@ -169,7 +212,7 @@
           var distance = distanceVector(thisPosition, otherPosition);
 
           if (distance < systemData.monster.triggerDistance &&
-              !other.is('hit')) {
+            !other.is('hit')) {
             other.addState('hit');
             other.emit('hit');
             other.setAttribute('visible', 'true');
@@ -179,39 +222,48 @@
     });
 
     var RoomComponent =
-        Vue.extend({template : '#room_template', props : [ 'index', 'room' ]});
+      Vue.extend({
+        template: '#room_template',
+        props: ['index', 'room']
+      });
     Vue.component('gt-room', RoomComponent);
 
     var ScareComponent = Vue.extend({
-      template : '#scare_template',
-      props : [ 'index', 'monster', 'sound', 'animation', 'pos' ],
-      methods : {
-        getPosition : function(index) {
+      template: '#scare_template',
+      props: ['index', 'monster', 'sound', 'animation', 'pos'],
+      methods: {
+        getPosition: function(index) {
           return (this.$root.system.room.height *
-                  0.5) - // Offset from center of room
-                 ((this.$root.system.room.height /
-                   (this.$root.system.monster.perroom + 1)) *
-                  (index + 1));
+              0.5) - // Offset from center of room
+            ((this.$root.system.room.height /
+                (this.$root.system.monster.perroom + 1)) *
+              (index + 1));
         }
       }
     });
     Vue.component('gt-scare', ScareComponent);
 
     var AnimationComponent =
-        Vue.extend({template : '#animation_template', props : [ 'type' ]});
+      Vue.extend({
+        template: '#animation_template',
+        props: ['type']
+      });
     Vue.component('gt-animation', AnimationComponent);
 
     var LightComponent =
-        Vue.extend({template : '#light_template', props : [ 'type' ]});
+      Vue.extend({
+        template: '#light_template',
+        props: ['type']
+      });
     Vue.component('gt-light', LightComponent);
 
     var ride = new Vue({
-      el : '#ride_output',
-      template : '#ride_template',
-      data : {
-        user : userData,
-        system : systemData,
-        configurable : configurableData
+      el: '#ride_output',
+      template: '#ride_template',
+      data: {
+        user: userData,
+        system: systemData,
+        configurable: configurableData
       }
     });
   };
