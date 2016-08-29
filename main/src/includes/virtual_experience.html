@@ -52,47 +52,26 @@
 			</a-entity>
 		</a-entity>
 
-		<a-entity track="" position="17 4 0" order="0">
-			<a-sphere position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		<a-entity
+			v-for="point in system.track.points"
+			track
+			position="{{ point }}"
+			order="{{ $index }}"
+		>
+			<a-sphere v-if="system.track.showPoints" position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 		</a-entity>
 
-		<a-entity track="" position="19 4 -5" order="1">
-			<a-sphere position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
-		</a-entity>
-
-
-		<a-entity track="" position="20 4 -8" order="2">
-			<a-sphere position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="blue"></a-box>
-		</a-entity>
-
-		<a-entity track="" position="17 4 -14" order="3">
-			<a-sphere position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
-		</a-entity>
-
-		<a-entity track="" position="17 4 -18" order="4">
-			<a-sphere position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
-		</a-entity>
-
-
-		<a-sky color="{{system.sky.colour}}"></a-sky>
+		<a-sky color="{{ system.sky.colour }}"></a-sky>
 
 		<gt-room v-for="room in user.rooms" v-bind:index="$index" v-bind:room="room"></gt-room>
 
 		<a-entity>
 			<!--<a-box position="0 2 0" color="green"></a-box>-->
-
-
-
-
 		</a-entity>
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
-
-
-
-
 	<a-entity id="room_{{ index }}" position="0 0 0" rotation: "0 90 0">
 		<gt-light v-bind:type="room.light" v-bind:lightcolor="room.lightcolor">
 		</gt-light>
@@ -273,11 +252,7 @@
 		<a-obj-model rotation="0 0 0" scale="0.9 0.9 0.9" src="#monster_{{ monster }}_model" material="src: #monster_{{ monster }}_texture; shader: standard;" collidable visible="false" sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
-
-
 	</a-entity>
-
-
 </script>
 
 <script id="animation_template" type="x-template">
@@ -294,8 +269,6 @@
 	<a-animation v-if="type === 'fromright'" attribute="position" begin="hit" from="{{ $root.system.monster.width * 1 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
 	<a-animation v-if="type === 'slideleft'" begin="hit" attribute="position" from="0 0 0" to="3 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
-
-
 </script>
 
 <script id="light_template" type="x-template">

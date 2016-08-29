@@ -21,6 +21,16 @@
 		'animation': {
 			'duration': 2000,
 			'repeat': 0
+		},
+		'track': {
+			'showPoints': true,
+			'points': [
+				'17 4 0',
+				'19 4 -5',
+				'20 4 -8',
+				'17 4 -14',
+				'17 4 -18'
+			]
 		}
 	};
 }());
