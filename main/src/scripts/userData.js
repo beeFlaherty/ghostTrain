@@ -2,8 +2,9 @@
 	'use strict';
 
 	module.exports = {
+		'active': true,
 		'trainsettings': {
-			'music':'aa',
+			'music':'none',
 			'name':'train name'
 		},
 		'rooms': [
@@ -17,7 +18,7 @@
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft', // popup, dropdown, fromleft, fromright
-						'position': "18 0 -8.5"
+						'position': '18 0 -8.5'
 					},
 					// {
 					// 	'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
