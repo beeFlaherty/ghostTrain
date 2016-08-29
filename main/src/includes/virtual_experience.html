@@ -8,7 +8,9 @@
 <script id="ride_template" type="x-template">
 	<h3>{{ user.trainsettings.name }}</h3>
 
-	<a-scene>
+	<a-scene
+		v-if="user.active"
+	>
 		<a-assets>
 			<!-- walls -->
 			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
