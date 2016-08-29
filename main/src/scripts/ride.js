@@ -99,7 +99,7 @@
 
         value = Math.radians(value);
 
-        this.rotation = new THREE.Vector3(0,value,0);
+        this.rotation = new THREE.Vector3(0, value, 0);
 
       },
       tick: function(time) {
