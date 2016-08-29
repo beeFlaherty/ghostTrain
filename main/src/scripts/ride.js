@@ -96,6 +96,8 @@
 
       },
       tick: function(time) {
+        var value;
+
         this.rotationHelper.position.set(this.element.position.x,
           this.element.position.y,
           this.element.position.z);
@@ -111,7 +113,7 @@
           this.percentComplete = this.timeSinceStart / this.duration;
 
           //    this.element.quaternion.slerp(this.rotation, 1);
-          var value = lerp(
+          value = lerp(
             this.startRotation.y, this.rotation.y,
             (this.percentComplete * 3) > 1 ? 1 : this.percentComplete * 3);
 
@@ -147,7 +149,7 @@
             this.duration = this.track[this.trackPosition].duration || duration;
             this.rotationHelper.lookAt(this.endPosition.clone());
 
-            var value = Math.degrees(this.rotationHelper.rotation.y);
+            value = Math.degrees(this.rotationHelper.rotation.y);
 
             if (value < 0) {
                value = 360 + value;
