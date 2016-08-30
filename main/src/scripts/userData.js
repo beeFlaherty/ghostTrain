@@ -26,7 +26,21 @@
 					// 	'animation': 'fromright' // popup, dropdown, fromleft, fromright
 					// }
 				]
-			}//,
+			},
+			{
+				'number': 2,
+				'theme': 'forest', // castle, forest, graveyard
+				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
+				'lightcolor': 'purple',
+				'scares': [
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft', // popup, dropdown, fromleft, fromright
+						'position': '18 0 -8.5'
+					},
+				]
+			}
 			// {
 			// 	'theme': 'forest', // castle, forest, graveyard
 			// 	'light': 'flickering', // dark, bright, flickering, glowing, red, green, purple
