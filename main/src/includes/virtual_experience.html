@@ -30,6 +30,7 @@
 
 			<a-mixin id="forest-wall" obj-model="src=" assets/textures/forest/walls.jpg "></a-mixin>
 			<a-mixin id="generic-floor" obj-model="src="assets/assets/model-buildkit/floors/floor-default-4x4.mtl"></a-mixin>
+			<a-mixin id="generic-door" obj-model="src="assets/assets/model-buildkit/interactive/door-1.mtl"></a-mixin>
 
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
@@ -182,7 +183,7 @@
 
 		</a-entity>
 
-		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" mixin="castle-wall" position="18 4 -5"></a-entity>
+		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" material="color: red;" position="18 0 0"></a-entity>
 
 		<a-entity id="west-wall">
 			<a-entity mixin="wall-lg castle-wall" position="0 0 0">
@@ -236,6 +237,7 @@
 		<gt-scare v-for="scare in room.scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
 	</a-entity>
 
+<<<<<<< HEAD
 	<a-entity
 		id="room_{{ index }}"
 		position="0 0 -20"
@@ -427,6 +429,9 @@
 			v-bind:pos="scare.position"
 		></gt-scare>
 	</a-entity>
+=======
+
+>>>>>>> master
 </script>
 
 
