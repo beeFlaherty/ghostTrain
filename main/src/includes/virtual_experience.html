@@ -33,6 +33,7 @@
 
 			<a-mixin id="forest-wall" obj-model="src=" assets/textures/forest/walls.jpg "></a-mixin>
 			<a-mixin id="generic-floor" obj-model="src="assets/assets/model-buildkit/floors/floor-default-4x4.mtl"></a-mixin>
+			<a-mixin id="generic-door" obj-model="src="assets/assets/model-buildkit/interactive/door-1.mtl"></a-mixin>
 
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
@@ -185,7 +186,7 @@
 
 		</a-entity>
 
-		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" mixin="castle-wall" position="18 4 -5"></a-entity>
+		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" material="color: red;" position="18 0 0"></a-entity>
 
 		<a-entity id="west-wall">
 			<a-entity mixin="wall-lg castle-wall" position="0 0 0">
@@ -241,200 +242,6 @@
 
 
 	</a-entity>
-
-	<a-entity
-		id="room_{{ index }}"
-		position="0 0 -20"
-		rotation: "0 0 0">
-		<gt-light
-			v-bind:type="room.light"
-			v-bind:lightcolor="room.lightcolor">
-		</gt-light>
-
-		<a-entity light="color: blue; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 2"></a-entity>
-		<a-entity light="color: green; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 -8"></a-entity>
-
-		<a-entity id="floor">
-			<a-entity mixin="floor generic-floor" position="8 0 2" metalness="0">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 2" metalness="0">
-			</a-entity>
-
-			<a-entity  mixin="floor generic-floor" position="24 0 2" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 2" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 2" metalness="0">
-			</a-entity>
-
-
-			<a-entity mixin="floor generic-floor" position="8 0 -6" metalness="0">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 -6" metalness="0">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="24 0 -6" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -6" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -6" metalness="0">
-			</a-entity>
-
-
-			<a-entity mixin="floor generic-floor" position="8 0 -14" metalness="0">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 -14" metalness="0">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="24 0 -14" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -14" metalness="0">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -14" metalness="0">
-			</a-entity>
-		</a-entity>
-
-		<a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
-			<a-entity mixin="floor generic-floor" position="8 0 2">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 2">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="24 0 2">
-			</a-entity>
-			<a-entitymixin="floor generic-floor" position="32 0 2">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 2">
-			</a-entity>
-
-
-			<a-entity mixin="floor generic-floor" position="8 0 -6">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 -6">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="24 0 -6">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -6">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -6">
-			</a-entity>
-
-
-			<a-entity mixin="floor generic-floor" position="8 0 -14">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="16 0 -14">
-			</a-entity>
-
-			<a-entity mixin="floor generic-floor" position="24 0 -14">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -14">
-			</a-entity>
-			<a-entity mixin="floor generic-floor" wposition="40 0 -14">
-			</a-entity>
-		</a-entity>
-
-		<a-entity id="inner-wall-1">
-			<a-entity mixin="wall-lg castle-wall"
-				position="16 0 -6"
-			 	rotation="0 90 0"
-			 	>
-			</a-entity>
-
-		</a-entity>
-
-		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" mtl="url(assets/model-buildkit/interactive/door-1.mtl" position="1 0 0"></a-entity>
-
-		<a-entity id="west-wall">
-			<a-entity mixin="wall-lg castle-wall"
-				position="0 0 0"
-			>
-			</a-entity>
-
-			<a-entity mixin="corner-sm castle-wall"
-				position="0 0 -16"
-				material="src:#castle">
-			</a-entity>
-
-			<a-entity mixin="corner-sm castle-wall"
-				position="2 0 2"
-				rotation="0 90 0"
-				material="src:#castle">
-			</a-entity>
-		</a-entity>
-
-		<a-entity id="south-wall">
-			<a-entity mixin="wall-md castle-wall"
-				position="6 0 -18"
-			 	rotation="0 90 0">
-			</a-entity>
-
-			<a-entity mixin="doorframe castle-wall"
-				position="24 0 -18"
-			 	rotation="0 90 0">
-
-
-			</a-entity>
-
-			<a-entity mixin="wall-md castle-wall"
-				position="28 0 -18"
-			 	rotation="0 90 0">
-			</a-entity>
-		</a-entity>
-
-		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-			<a-entity mixin="wall-lg castle-wall"
-				position="0 0 0">
-			</a-entity>
-
-			<a-entity mixin="corner-sm castle-wall"
-				position="-2 0 -18"
-				rotation="0 -90 0">
-			</a-entity>
-
-			<a-entity mixin="corner-sm castle-wall"
-				position="0 0 0"
-				rotation="0 -180 0">
-			</a-entity>
-		</a-entity>
-
-		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
-			<a-entity mixin="wall-md castle-wall"
-				position="6 0 0"
-			 	rotation="0 270 0">
-			</a-entity>
-
-			<a-entity mixin="doorframe castle-wall"
-				position="10 0 0"
-			 	rotation="0 270 0">
-
-
-			</a-entity>
-
-
-			<a-entity mixin="wall-md castle-wall"
-				position="28 0 0"
-			 	rotation="0 270 0">
-			</a-entity>
-		</a-entity>
-
-		<gt-scare
-			v-for="scare in room.scares"
-			v-bind:index="$index"
-			v-bind:monster="scare.monster"
-			v-bind:sound="scare.sound"
-			v-bind:animation="scare.animation"
-			v-bind:pos="scare.position"
-		></gt-scare>
-	</a-entity>
-
-
 
 
 </script>
