@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function(userData, systemData, configurableData) {
+  module.exports = function(systemData) {
     var aframeKart = require('./aframe-kart')();
     var aframeCollider = require('./aframe-collider')(systemData.monster.triggerDistance);
 
@@ -41,14 +41,11 @@
       });
     Vue.component('gt-light', LightComponent);
 
-    var ride = new Vue({
-      el: '#ride_output',
-      template: '#ride_template',
-      data: {
-        user: userData,
-        system: systemData,
-        configurable: configurableData
-      }
-    });
+    var RideComponent =
+      Vue.extend({
+        template: '#ride_template',
+        props: ['user', 'system', 'configurable']
+      });
+    Vue.component('gt-ride', RideComponent);
   };
 }());

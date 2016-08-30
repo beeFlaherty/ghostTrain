@@ -1,9 +1,6 @@
 <h2>Virtual experience</h2>
 
-<div id="virtual_experience">
-	<div id="ride_output">
-	</div>
-</div>
+<gt-ride v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-ride>
 
 <script id="ride_template" type="x-template">
 	<h3>{{ user.trainsettings.name }}</h3>
@@ -237,9 +234,6 @@
 		</a-entity>
 
 		<gt-scare v-for="scare in room.scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
-
-
-
 	</a-entity>
 
 	<a-entity
@@ -433,10 +427,6 @@
 			v-bind:pos="scare.position"
 		></gt-scare>
 	</a-entity>
-
-
-
-
 </script>
 
 
@@ -458,8 +448,8 @@
 	<a-animation v-if="type === 'fromleft'" begin="hit" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 	<a-animation v-if="type === 'fromleft'" begin="hit" attribute="position" from="{{ $root.system.monster.width * -8 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
-	<a-animation v-if="type === 'fromright'" attribute="rotation" begin="hit" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
-	<a-animation v-if="type === 'fromright'" attribute="position" begin="hit" from="{{ $root.system.monster.width * 1 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+	<a-animation v-if="type === 'fromright'" begin="hit" attribute="rotation" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+	<a-animation v-if="type === 'fromright'" begin="hit" attribute="position" from="{{ $root.system.monster.width * 1 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
 	<a-animation v-if="type === 'slideleft'" begin="hit" attribute="position" from="0 0 0" to="3 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 </script>
