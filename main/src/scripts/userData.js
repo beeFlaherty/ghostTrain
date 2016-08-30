@@ -18,7 +18,8 @@
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft', // popup, dropdown, fromleft, fromright
-						'position': '18 0 -8.5'
+						'position': '18 0 -8.5',
+						'rotation': '0 0 0'
 					},
 					// {
 					// 	'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
@@ -36,8 +37,9 @@
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
-						'animation': 'fromleft', // popup, dropdown, fromleft, fromright
-						'position': '18 0 -8.5'
+						'animation': 'dropdown', // popup, dropdown, fromleft, fromright
+						'position': '22 0 -2',
+						'rotation': '0 270 0'
 					},
 				]
 			}

@@ -14,7 +14,7 @@
 
     var ScareComponent = Vue.extend({
       template: '#scare_template',
-      props: ['index', 'monster', 'sound', 'animation', 'pos'],
+      props: ['index', 'monster', 'sound', 'animation', 'pos', 'rotation'],
       methods: {
         getPosition: function(index) {
           return (this.$root.system.room.height *

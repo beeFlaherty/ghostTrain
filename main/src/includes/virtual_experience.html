@@ -62,7 +62,7 @@
 				</a-camera> -->
 			</a-entity>
 		</a-entity>
-		<a-camera collider  position="-0.75 4 0.3" rotation="0 0 0" wasd-controls-enabled="true">
+		<a-camera collider  position="10 4 -18" rotation="0 0 0" wasd-controls-enabled="true">
 					<a-entity
 						v-if="$root.system.sound.chain"
 						sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"
@@ -190,8 +190,6 @@
 			</a-entity>
 
 		</a-entity>
-
-		<a-entity obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);" material="color: red;" position="18 0 0"></a-entity>
 
 		<a-entity id="west-wall">
 			<a-entity mixin="wall-lg {{ room[0].theme }}-wall" position="0 0 0">
@@ -340,40 +338,41 @@
 		</a-entity>
 
 		<a-entity id="west-wall">
-			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="0 0 0">
+			<a-entity mixin="wall-sm {{ room[1].theme }}-wall" position="0 0 -2">
 			</a-entity>
 
-			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="0 0 -8">
+			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="2 0 2" rotation="0 90 0">
+			</a-entity>
+
+			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="0 0 -4">
 			</a-entity>
 		</a-entity>
 
 		<a-entity id="south-wall">
-			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="6 0 -18" rotation="0 90 0">
+			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="16 0 -6" rotation="0 90 0">
 			</a-entity>
 
-			<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="24 0 -18" rotation="0 90 0">
-
-
+			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 -6" rotation="0 90 0">
 			</a-entity>
 
-			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="28 0 -18" rotation="0 90 0">
+			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="32 0 -6" rotation="0 90 0">
 			</a-entity>
+
+			<a-entity mixin="wall-sm {{ room[1].theme }}-wall" position="34w 0 -6" rotation="0 90 0">
+			</a-entity>
+
 		</a-entity>
 
 		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="0 0 0">
+			<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="0 0 5">
 			</a-entity>
 
-			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="-2 0 -18" rotation="0 -90 0">
-			</a-entity>
 
-			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="0 0 0" rotation="0 -180 0">
-			</a-entity>
 		</a-entity>
 
 		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
 			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="6 0 0" rotation="0 270 0">
-			</a-entity>
+			 </a-entity>
 
 			<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="10 0 0" rotation="0 270 0">
 
@@ -381,18 +380,19 @@
 			</a-entity>
 
 
-			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="28 0 0" rotation="0 270 0">
+			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 0" rotation="0 270 0">
 			</a-entity>
 		</a-entity>
 
-		<gt-scare v-for="scare in room[1].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
+		<gt-scare v-for="scare in room[1].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position" v-bind:rotation="scare.rotation"></gt-scare>
 	</a-entity>
 
 </script>
 
 
 <script id="scare_template" type="x-template">
-	<a-entity v-if="monster !== 'none'" id="monster_{{ $parent.room.number }}_{{ animation }}" position="{{ pos }}">
+	<a-entity v-if="monster !== 'none'" id="monster_{{ animation }}" position="{{ pos }}" rotation="{{ rotation }}">
+
 		<a-obj-model rotation="0 0 0" scale="0.9 0.9 0.9" src="#monster_{{ monster }}_model" material="src: #monster_{{ monster }}_texture; shader: standard;" collidable visible="false" sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
