@@ -38,7 +38,7 @@
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
 						'animation': 'dropdown', // popup, dropdown, fromleft, fromright
-						'position': '22 0 -2',
+						'position': '28 0 -2',
 						'rotation': '0 270 0'
 					},
 				]
