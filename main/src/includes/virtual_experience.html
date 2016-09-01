@@ -95,9 +95,25 @@
 <script id="room_template" type="x-template">
 
 	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
-		<gt-light v-bind:type="room.light" v-bind:lightcolor="room.lightcolor" position="0 -1 0">
+		<a-light v-if="type !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
 
-		</gt-light>
+		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -2" color="green">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
+
+		<a-light v-if="type !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
+
+		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -16" color="white">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
 
 		<a-entity id="floor">
 			<a-entity mixin="floor generic-floor" position="8 0 2">
@@ -235,18 +251,34 @@
 
 			</a-entity>
 
-ceiling generic-ceiling
 			<a-entity mixin="wall-md {{ room[0].theme }}-wall" position="28 0 0" rotation="0 270 0">
 			</a-entity>
 		</a-entity>
 
 		<gt-scare v-for="scare in room[0].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
+
 	</a-entity>
 
 	<a-entity id="room_1" position="0 0 -20.5" rotation: "0 90 0">
-		<gt-light v-bind:type="room.light" v-bind:lightcolor="room.lightcolor">
+		<a-light v-if="type !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
 
-		</gt-light>
+		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -2" color="green">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
+
+		<a-light v-if="type !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
+
+		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -16" color="white">
+			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
 
 		<!--<a-entity light="color: blue; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 2"></a-entity>
 		<a-entity light="color: green; intensity: 3; type: point; distance: 50; decay: 2" position="18 4 -8"></a-entity>-->
@@ -415,23 +447,5 @@ ceiling generic-ceiling
 </script>
 
 <script id="light_template" type="x-template">
-	<a-light v-if="type !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
-		<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-		<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-	</a-light>
 
-	<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -2" color="green">
-		<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-		<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-	</a-light>
-
-	<a-light v-if="type !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
-		<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-		<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-	</a-light>
-
-	<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -16" color="white">
-		<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-		<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-	</a-light>
 </script>
