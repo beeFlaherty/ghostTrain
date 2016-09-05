@@ -74,7 +74,7 @@
 </script>
 
 <script id="room_template" type="x-template">
-	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
+	<a-entity id="room_0" position="0 0 0" rotation="0 90 0">
 		<gt-light v-bind:type="room.light" v-bind:lightcolor="room.lightcolor" position="0 -1 0"></gt-light>
 
 		<a-entity id="floor">
@@ -144,7 +144,7 @@
 		<gt-scare v-for="scare in room[0].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
 	</a-entity>
 
-	<a-entity id="room_1" position="0 0 -20.5" rotation: "0 90 0">
+	<a-entity id="room_1" position="0 0 -20.5" rotation="0 90 0">
 		<gt-light v-bind:type="room.light" v-bind:lightcolor="room.lightcolor">
 
 		</gt-light>
