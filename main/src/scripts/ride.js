@@ -3,7 +3,7 @@
 
   module.exports = function(systemData) {
     var aframeKart = require('./aframe-kart')();
-    var aframeCollider = require('./aframe-collider')(systemData.monster.triggerDistance);
+    var aframeCollider = require('./aframe-collider')();
 
     var RoomComponent =
       Vue.extend({
