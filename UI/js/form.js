@@ -44,13 +44,20 @@
      var form = $('.js-interface form');
      form.append(settingsFieldsetMarkup);
      var settingsFieldset = form.find(".train-settings");
- console.log(config.settings.trainsettings);
-     config.settings.trainsettings.forEach(function(setting){
+     console.log(config.settings.trainsettings);
+     config.settings.trainsettings.forEach(function(formItem){
 
-        if(setting[1] === "text") {
-          settingsFieldset.append('<label for="' + setting[0]+ '">' + setting[0] + '</label> <input type="text" name="'+ setting[0] + ' id="'+ setting[0] +'/>')
+        if(formItem[1] === "text") {
+          settingsFieldset.append('<p><label for="' + setting[0]+ '">' + setting[0] +
+          '</label> <input type="text" name="'+ setting[0] + '" id="'+ setting[0] +'"/></p>');
         }
-        if(setting[1] === "select") {
+        if(formItem[1] === "select" & typeof formItem[2] !== "undefined") {
+          settingsFieldset.append('<p><label for="' + setting[0]+ '">' + setting[0] +
+          '</label> <select name="'+ formItem[0] + '" id="'+formItem[0]+'"> </select></p>');
+
+          $.each(config.options[formItem[2]], function(index, value) {
+            $('#'+formItem[0]).append('<option value="'+ index +'">'+ value[0] + '</option>');
+          });
 
         }
      });
