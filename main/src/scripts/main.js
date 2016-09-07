@@ -5,7 +5,9 @@
 	var systemData = require('./systemData');
 	var configurableData = require('./configurableData');
 
-	var ride = require('./ride')(systemData);
+	var ui = require('./ride')(systemData, userData);
+	var ride = require('./ui')(systemData);
+
 
     var app = new Vue({
       el: '#app',

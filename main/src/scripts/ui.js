@@ -1,9 +1,7 @@
 (function() {
-    'use strict';
+  'use strict';
 
-// 	var userData = require('./userData');
-  	var systemData = require('./systemData');
-  	var configurableData = require('./configurableData');
+  module.exports = function(systemData, userData) {
 
   var userDataContainer = new Vue({
   el: '#settings',
@@ -35,6 +33,6 @@
 
 });
 
-
+};
 
 }());
