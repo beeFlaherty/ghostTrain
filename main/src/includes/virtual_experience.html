@@ -5,7 +5,7 @@
 <script id="ride_template" type="x-template">
 	<h3>{{ user.trainsettings.name }}</h3>
 
-	<a-scene v-if="user.active" stats>
+	<a-scene v-if="user.active" stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
 		<a-assets>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
