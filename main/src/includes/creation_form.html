@@ -1,9 +1,8 @@
 <div id="settings" class="userInterface">
-
     <form>
         <fieldset>
         <!-- text -->
-        <legend>train settings </legend>
+        <legend>Train settings</legend>
         <p>
             <label>train name</label>
             <input type="text" v-model="trainsettings.name">
@@ -97,7 +96,7 @@
             <span>From right</span>
         </p>
 
-        <button v-on:click="activate">Click me</button>
+        <button v-on:click="activate">Start ride</button>
     </fieldset>
     </form>
             <p style="position:absolute; top:0; right:0; background:grey; opacity:0.4; color:#fff; width:25%; padding:15px;">data: {{$data | json 2}}</p>
