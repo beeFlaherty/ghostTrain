@@ -13,15 +13,15 @@
         <p>
             <label>music</label>
             <br>
+
+            <input type="radio" name="music" value="none" v-model="trainsettings.music">
+            <span>None</span>
+
             <input type="radio" name="music" value="creepymusicbox" v-model="trainsettings.music">
             <span>Creepy Music Box</span>
 
-            <input type="radio" name="music" value="rideofthevalkyries" v-model="trainsettings.music">
-            <span>Ride of the Valkyries</span>
-
-            <input type="radio" name="music" value="heavymetal" v-model="trainsettings.music">
-            <span>Heavy Metal</span>
-
+            <input type="radio" name="music" value="mountainking" v-model="trainsettings.music">
+            <span>Hall of the Mountain King</span>
         </p>
     </fieldset>
     <fieldset>    <!-- select -->

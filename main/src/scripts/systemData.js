@@ -6,7 +6,7 @@
 			'colour': '#000000'
 		},
 		'sound': {
-			'chain': false
+			'chain': true
 		},
 		'room': {
 			'width': 5,
@@ -23,7 +23,7 @@
 			'repeat': 0
 		},
 		'track': {
-			'showPoints': true,
+			'showPoints': false,
 			'points': [
 				'17 4 0',
 				'18 4 -5',
