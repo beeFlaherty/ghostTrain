@@ -3,7 +3,7 @@
 @import 'common/_fonts';
 @import 'common/_variables';
 @import 'common/_mixins';
-
+@import 'vendor/skeleton';
 
 html,
 body {
@@ -26,4 +26,11 @@ a:active {
   width:50%;
   padding:20px;
   float:left;
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+  color: #4CBB17;
+  font-size: 4em;
+  text-align: center;
 }

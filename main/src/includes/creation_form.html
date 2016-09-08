@@ -1,103 +1,110 @@
-<div id="settings" class="userInterface">
-    <form>
-        <fieldset>
-        <!-- text -->
-        <legend>Train settings</legend>
-        <p>
-            <label>train name</label>
-            <input type="text" v-model="trainsettings.name">
-        </p>
+<div class="container">
 
-        <!-- radio buttons -->
-        <p>
-            <label>music</label>
-            <br>
+    <!-- columns should be the immediate child of a .row -->
+    <div class="row">
+        <div class="six columns">
+            <div id="settings" class="userInterface">
+                <form>
+                    <fieldset>
+                        <!-- text -->
+                        <legend>Build your train</legend>
 
-            <input type="radio" name="music" value="none" v-model="trainsettings.music">
-            <span>None</span>
+                            <label>name</label>
+                            <input type="text" v-model="trainsettings.name">
 
-            <input type="radio" name="music" value="creepymusicbox" v-model="trainsettings.music">
-            <span>Creepy Music Box</span>
+                            <label>Background music</label>
 
-            <input type="radio" name="music" value="mountainking" v-model="trainsettings.music">
-            <span>Hall of the Mountain King</span>
-        </p>
-    </fieldset>
-    <fieldset>    <!-- select -->
+                            <input type="radio" name="music" value="none" v-model="trainsettings.music">
+                            <span>None</span>
 
-        <legend>Room</legend>
-        <p>
-            <label>Theme</label>
-            <br>
-            <input type="radio" name="theme" value="castle" v-model="rooms[0].theme">
-            <span>Castle</span>
+                            <input type="radio" name="music" value="creepymusicbox" v-model="trainsettings.music">
+                            <span>Creepy Music Box</span>
 
-            <input type="radio" name="theme" value="forest" v-model="rooms[0].theme">
-            <span>Bricks</span>
+                            <input type="radio" name="music" value="mountainking" v-model="trainsettings.music">
+                            <span>Hall of the Mountain King</span>
 
-            <input type="radio" name="theme" value="dark" v-model="rooms[0].theme">
-            <span>Dark</span>
-        </p>
-        <p>
-            <label>Light</label>
-            <br>
-            <input type="radio" name="light" value="dark" v-model="rooms[0].light">
-            <span>Dark</span>
+                    </fieldset>
 
-            <input type="radio" name="light" value="bright" v-model="rooms[0].light">
-            <span>Bright</span>
+                    <fieldset>
+                        <!-- select -->
 
-            <input type="radio" name="light" value="flickering" v-model="rooms[0].light">
-            <span>Flickering</span>
+                        <legend>Design your room</legend>
 
-            <input type="radio" name="light" value="glowing" v-model="rooms[0].light">
-            <span>Glowing</span>
-        </p>
-        <p>
-            <label>Monster</label>
-            <br>
-            <input type="radio" name="monster" value="zombie" v-model="rooms[0].scares[0].monster">
-            <span>Zombie</span>
+                            <label>Theme</label>
 
-            <input type="radio" name="monster" value="mummy" v-model="rooms[0].scares[0].monster">
-            <span>Mummy</span>
+                            <input type="radio" name="theme" value="castle" v-model="rooms[0].theme">
+                            <span>Castle</span>
 
-            <input type="radio" name="monster" value="vampire" v-model="rooms[0].scares[0].monster">
-            <span>Vampire</span>
+                            <input type="radio" name="theme" value="forest" v-model="rooms[0].theme">
+                            <span>Bricks</span>
 
-            <input type="radio" name="monster" value="skeleton" v-model="rooms[0].scares[0].monster">
-            <span>Skeleton</span>
-        </p>
-        <p>
-            <label>Sound</label>
-            <br>
-            <input type="radio" name="sound" value="zombie" v-model="rooms[0].scares[0].sound">
-            <span>Zombie</span>
+                            <input type="radio" name="theme" value="dark" v-model="rooms[0].theme">
+                            <span>Dark</span>
 
-            <input type="radio" name="sound" value="scream" v-model="rooms[0].scares[0].sound">
-            <span>Scream</span>
+                            <label>Lighting effect</label>
 
-            <input type="radio" name="sound" value="cackle" v-model="rooms[0].scares[0].sound">
-            <span>Cackle</span>
-        </p>
-        <p>
-            <label>Animation</label>
-            <br/>
-            <input type="radio" name="position" value="popup" v-model="rooms[0].scares[0].animation">
-            <span>Popup</span>
+                            <input type="radio" name="light" value="dark" v-model="rooms[0].light">
+                            <span>Dark</span>
 
-            <input type="radio" name="position" value="dropdown" v-model="rooms[0].scares[0].animation">
-            <span>Dropdown</span>
+                            <input type="radio" name="light" value="bright" v-model="rooms[0].light">
+                            <span>Bright</span>
 
-            <input type="radio" name="position" value="fromleft" v-model="rooms[0].scares[0].animation">
-            <span>From left</span>
+                            <input type="radio" name="light" value="flickering" v-model="rooms[0].light">
+                            <span>Flickering</span>
 
-            <input type="radio" name="position" value="fromright" v-model="rooms[0].scares[0].animation">
-            <span>From right</span>
-        </p>
+                            <input type="radio" name="light" value="glowing" v-model="rooms[0].light">
+                            <span>Glowing</span>
 
-        <button v-on:click="activate">Start ride</button>
-    </fieldset>
-    </form>
-            <p style="position:absolute; top:0; right:0; background:grey; opacity:0.4; color:#fff; width:25%; padding:15px;">data: {{$data | json 2}}</p>
+                      </fieldset>
+                      <fieldset>
+                          <legend>Add a scare</legend>
+
+                            <label>Monster</label>
+                            <input type="radio" name="monster" value="zombie" v-model="rooms[0].scares[0].monster">
+                            <span>Zombie</span>
+
+                            <input type="radio" name="monster" value="mummy" v-model="rooms[0].scares[0].monster">
+                            <span>Mummy</span>
+
+                            <input type="radio" name="monster" value="vampire" v-model="rooms[0].scares[0].monster">
+                            <span>Vampire</span>
+
+                            <input type="radio" name="monster" value="skeleton" v-model="rooms[0].scares[0].monster">
+                            <span>Skeleton</span>
+
+                            <label>Sound</label>
+
+                            <input type="radio" name="sound" value="zombie" v-model="rooms[0].scares[0].sound">
+                            <span>Zombie</span>
+
+                            <input type="radio" name="sound" value="scream" v-model="rooms[0].scares[0].sound">
+                            <span>Scream</span>
+
+                            <input type="radio" name="sound" value="cackle" v-model="rooms[0].scares[0].sound">
+                            <span>Cackle</span>
+
+                            <label>Animation</label>
+                            <input type="radio" name="position" value="popup" v-model="rooms[0].scares[0].animation">
+                            <span>Popup</span>
+
+                            <input type="radio" name="position" value="dropdown" v-model="rooms[0].scares[0].animation">
+                            <span>Dropdown</span>
+
+                            <input type="radio" name="position" value="fromleft" v-model="rooms[0].scares[0].animation">
+                            <span>From left</span>
+
+                            <input type="radio" name="position" value="fromright" v-model="rooms[0].scares[0].animation">
+                            <span>From right</span>
+
+                    </fieldset>
+                    <p><button v-on:click="activate">Scare Me</button></p>
+                </form>
+
+            </div>
+        </div>
+        <div class="six columns">
+          <img src="http://placehold.it/350x150?text=Preview+here"/>
+        </div>
+    </div>
+    <p class="data-debug">data: {{$data | json 2}}</p>
 </div>

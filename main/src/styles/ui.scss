@@ -1,4 +1,25 @@
-.userInterface {
-    width:90%;
-    margin:0 auto;
+body {
+  background:#040707;
+  color:#bdbdbd;
+}
+.data-debug {
+  display:none;
+}
+
+legend {
+  font-family: 'Creepster', cursive;
+  color: #4CBB17;
+  font-size: 2em;
+}
+
+label {
+    color: #4CBB17;
+}
+
+button {
+  font-family: 'Creepster', cursive;
+  color: #4CBB17;
+  font-size: 2em;
+  float:right;
+  border-color:#4CBB17;
 }
