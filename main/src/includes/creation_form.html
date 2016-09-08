@@ -13,10 +13,10 @@
         <p>
             <label>music</label>
             <br>
-            <input type="radio" name="music" value="creepymusicbox" v-model="user.trainsettings.music">
+            <input type="radio" name="music" value="creepymusicbox" v-model="trainsettings.music">
             <span>Creepy Music Box</span>
 
-            <input type="radio" name="music" value="rideofthevalkyries" v-model="user.trainsettings.music">
+            <input type="radio" name="music" value="rideofthevalkyries" v-model="trainsettings.music">
             <span>Ride of the Valkyries</span>
 
             <input type="radio" name="music" value="heavymetal" v-model="trainsettings.music">
@@ -99,6 +99,8 @@
             <input type="radio" name="position" value="fromright" v-model="rooms[0].scares[0].animation">
             <span>From right</span>
         </p>
+
+        <button v-on:click="activate">Click me</button>
     </fieldset>
     </form>
             <p style="position:absolute; top:0; right:0; background:grey; opacity:0.4; color:#fff; width:25%; padding:15px;">data: {{$data | json 2}}</p>

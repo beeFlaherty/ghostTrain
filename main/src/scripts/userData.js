@@ -2,7 +2,7 @@
 	'use strict';
 
 	module.exports = {
-		'active': true,
+		'active': false,
 		'trainsettings': {
 			'music':'none',
 			'name':'train name'
