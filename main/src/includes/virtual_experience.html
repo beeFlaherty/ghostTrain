@@ -72,6 +72,8 @@
 
 <script id="room_template" type="x-template">
 	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
+
+
 		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
 			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
 			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
@@ -250,7 +252,6 @@
 
 <script id="scare_template" type="x-template">
 	<a-entity v-if="monster !== 'none'" id="monster_{{ animation }}" position="{{ pos }}" rotation="{{ rotation }}">
-
 		<a-obj-model rotation="0 0 0" scale="0.9 0.9 0.9" src="#monster_{{ monster }}_model" material="src: #monster_{{ monster }}_texture; shader: standard;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>

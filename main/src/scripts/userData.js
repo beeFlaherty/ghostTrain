@@ -5,7 +5,7 @@
 		'active': false,
 		'trainsettings': {
 			'music':'none',
-			'name':'train name'
+			'name':'Your spooky train name'
 		},
 		'rooms': [
 			{
