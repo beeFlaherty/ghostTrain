@@ -1,25 +1,23 @@
 (function() {
   'use strict';
 
-  module.exports = function(systemData, userData) {
-
-    var userDataContainer = new Vue({
-      el: '#settings',
-      data: userData,
-      methods: {
-        activate: function(event) {
-          userData.active = true;
-          event.preventDefault();
+  module.exports = function() {
+    var FormComponent =
+      Vue.extend({
+        template: '#form_template',
+        props: ['user', 'system', 'configurable'],
+        methods: {
+          activate: function(event) {
+            this.user.active = true;
+            event.preventDefault();
+          },
+          next: function(event){
+            event.preventDefault();
+            console.log(this);
+          }
         },
-        next: function(event){
-          event.preventDefault();
-          console.log(this);
-        }
-      },
-      ready: function() {
-      }
+      });
+    Vue.component('gt-form', FormComponent);
 
-    });
   };
-
 }());

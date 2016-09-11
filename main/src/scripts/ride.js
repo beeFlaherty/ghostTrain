@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function(systemData) {
+  module.exports = function() {
     var aframeKart = require('./aframe-kart')();
     var aframeCollider = require('./aframe-collider')();
 
