@@ -27,6 +27,22 @@
     });
     Vue.component('gt-scare', ScareComponent);
 
+    var LightComponent = Vue.extend({
+      template: '#light_template',
+      props: ['index', 'color', 'style', 'position']
+      // methods: {
+      //   getPosition: function(index) {
+      //     return (this.$root.system.room.height *
+      //         0.5) - // Offset from center of room
+      //       ((this.$root.system.room.height /
+      //           (this.$root.system.monster.perroom + 1)) *
+      //         (index + 1));
+      //   }
+      // }
+    });
+    Vue.component('gt-light', LightComponent);
+
+
     var AnimationComponent =
       Vue.extend({
         template: '#animation_template',
@@ -34,12 +50,12 @@
       });
     Vue.component('gt-animation', AnimationComponent);
 
-    var LightComponent =
-      Vue.extend({
-        template: '#light_template',
-        props: ['type']
-      });
-    Vue.component('gt-light', LightComponent);
+    // var LightComponent =
+    //   Vue.extend({
+    //     template: '#light_template',
+    //     props: ['type']
+    //   });
+    // Vue.component('gt-light', LightComponent);
 
     var RideComponent =
       Vue.extend({

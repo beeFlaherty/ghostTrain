@@ -11,8 +11,29 @@
 			{
 				'number': 1,
 				'theme': 'castle', // castle, forest, graveyard
-				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
-				'lightcolor': 'purple',
+				'lights': [
+					{
+						'style': 'bright', // dark, bright, flickering, glowing
+						'color': 'red', //red, green, purple
+						'position': '0.5 3 -2'
+					},
+					{
+						'style': 'bright', // dark, bright, flickering, glowing
+						'color': 'purple', //red, green, purple
+						'position': '22 3 -2'
+					},
+					{
+						'style': 'flickering', // dark, bright, flickering, glowing
+						'color': 'green', //red, green, purple
+						'position': '22 3 -10'
+					},
+					{
+						'style': 'flickering', // dark, bright, flickering, glowing
+						'color': 'white', //red, green, purple
+						'position': '0.5 3 -10'
+					}
+				],
+
 				'scares': [
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton

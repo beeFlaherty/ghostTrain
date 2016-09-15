@@ -73,26 +73,8 @@
 <script id="room_template" type="x-template">
 	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
 
+		<gt-light v-for="light in room[0].lights" v-bind:color="light.color" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
 
-		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
-			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -2" color="green">
-			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
-			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -16" color="white">
-			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
 
 		<a-entity id="floor">
 			<a-entity mixin="floor generic-floor" position="8 0 2"></a-entity>
@@ -246,6 +228,17 @@
 		<gt-scare v-for="scare in room[1].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position" v-bind:rotation="scare.rotation"></gt-scare>
 	</a-entity>
 
+</script>
+
+<script id="light_template" type="x-template">
+		<a-light v-if="style !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="{{ position }}" color="{{ color }}" id="test-search">
+			<a-animation v-if="style === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="style === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
+		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
+			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+		</a-light>
 </script>
 
 
