@@ -3,6 +3,9 @@
 
 	module.exports = {
 		'music': {
+			'none': {
+				'name': 'None'
+			},
 			'creepymusicbox': {
 				'name': 'Creepy Music Box',
 				'mp3': '/assets/music/creepy.mp3'
@@ -87,7 +90,7 @@
 				'texture': '/assets/monsters/devil.png'
 			},
 			'ghoul': {
-				'name': 'ghoul',
+				'name': 'Ghoul',
 				'colour': '#FFF',
 				'model': '/assets/monsters/zombie.obj',
 				'texture': '/assets/monsters/ghoul.png'

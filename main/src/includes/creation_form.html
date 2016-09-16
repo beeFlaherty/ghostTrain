@@ -16,15 +16,10 @@
 
                                 <label>Background music</label>
 
-                                <input type="radio" name="music" value="none" v-model="user.trainsettings.music">
-                                <span>None</span>
-
-                                <input type="radio" name="music" value="creepymusicbox" v-model="user.trainsettings.music">
-                                <span>Creepy Music Box</span>
-
-                                <input type="radio" name="music" value="mountainking" v-model="user.trainsettings.music">
-                                <span>Hall of the Mountain King</span>
-
+                                <span v-for="music in configurable.music">
+                                    <input type="radio" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
+                                    <span>{{ music.name }}</span>
+                                </span>
                         </fieldset>
 
                         <fieldset>
@@ -34,34 +29,23 @@
 
                                 <label>Theme</label>
 
-                                <input type="radio" name="theme" value="castle" v-model="user.rooms[0].theme">
-                                <span>Castle</span>
-
-                                <input type="radio" name="theme" value="forest" v-model="user.rooms[0].theme">
-                                <span>Bricks</span>
-
-                                <input type="radio" name="theme" value="dark" v-model="user.rooms[0].theme">
-                                <span>Cage</span>
+                                <span v-for="theme in configurable.themes">
+                                    <input type="radio" name="theme" value="{{ $key }}" v-model="user.rooms[0].theme">
+                                    <span>{{ theme.name }}</span>
+                                </span>
 
                                 <label>Lighting effect</label>
 
-                                <input type="radio" name="light" value="dark" v-model="user.rooms[0].light">
-                                <span>Dark</span>
-
-                                <input type="radio" name="light" value="bright" v-model="user.rooms[0].light">
-                                <span>Bright</span>
-
-                                <input type="radio" name="light" value="flickering" v-model="user.rooms[0].light">
-                                <span>Flickering</span>
-
-                                <input type="radio" name="light" value="glowing" v-model="user.rooms[0].light">
-                                <span>Glowing</span>
-
+                                <span v-for="light in configurable.light">
+                                    <input type="radio" name="theme" value="{{ $key }}" v-model="user.rooms[0].light">
+                                    <span>{{ light.name }}</span>
+                                </span>
                           </fieldset>
                           <fieldset>
                               <legend>Add a scare</legend>
 
                                 <label>Monster</label>
+
                                 <input type="radio" name="monster" value="zombie" v-model="user.rooms[0].scares[0].monster">
                                 <span>Zombie</span>
 
