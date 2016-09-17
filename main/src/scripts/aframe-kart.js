@@ -162,6 +162,11 @@
             value = Math.radians(value);
 
             this.rotation = new THREE.Vector3(0, value, 0);
+          } else {
+            if (!this.el.is('finished')) {
+              this.el.addState('finished');
+              this.el.emit('finished');
+            }
           }
         }
       }
