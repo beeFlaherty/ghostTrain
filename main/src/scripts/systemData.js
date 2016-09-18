@@ -24,6 +24,7 @@
 		},
 		'track': {
 			'showPoints': false,
+			'speed': 3,
 			'points': [
 				'17 4 0',
 				'18 4 -5',

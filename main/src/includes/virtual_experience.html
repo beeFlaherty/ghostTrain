@@ -43,7 +43,7 @@
 			<!--	<a-box position="0 0 0" color="blue"></a-box> -->
 		</a-entity>
 
-		<a-entity position="16 4 15" kart="">
+		<a-entity position="16 4 15" kart=" {{ system.track.speed }}"><!-- Need this space before the {{ for some reason -->
 			<a-entity obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" roughness="1"></a-entity>
 			<a-entity rotation="0 180 0">
 				<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="false"></a-camera>
