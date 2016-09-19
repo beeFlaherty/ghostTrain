@@ -6,3 +6,5 @@
 * Add end screen
 * Componentize rooms more
 * Improve performance on mobile
+* Finish lights - James
+* Update form for James' lights - Bee
