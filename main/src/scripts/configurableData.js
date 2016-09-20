@@ -44,20 +44,42 @@
 				}
 			}
 		},
-		'light': {
-			'dark': {
-				'name': 'Dark'
-			},
-			'bright': {
-				'name': 'Bright'
-			},
-			'flickering': {
-				'name': 'Flickering'
-			},
-			'glowing': {
-				'name': 'Glowing'
-			}
-		},
+		'light': [{
+			'style':[{
+				'dark': {
+					'name': 'Dark'
+				},
+				'bright': {
+					'name': 'Bright'
+				},
+				'flickering': {
+					'name': 'Flickering'
+				},
+				'glowing': {
+					'name': 'Glowing'
+				}
+			}],
+			'color': [{
+				"red": {
+
+				},
+				"purple": {
+
+				},
+				"blue": {
+
+				},
+				"green": {
+
+				},
+				"white": {
+
+				},
+				"yellow": {
+
+				}
+			}]
+		}],
 		'monsters': {
 			'zombie': {
 				'name': 'Zombie',

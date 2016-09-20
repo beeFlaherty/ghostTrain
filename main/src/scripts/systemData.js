@@ -8,10 +8,18 @@
 		'sound': {
 			'chain': true
 		},
-		'room': {
-			'width': 5,
-			'height': 10
-		},
+		'rooms': [
+			{
+				'lights': [{
+					//positions
+				}]
+			},
+			{
+				'lights': [{
+
+				}]
+			}
+		],
 		'monster': {
 			'width': 1,
 			'height': 0.1,
