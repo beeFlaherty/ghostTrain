@@ -44,8 +44,8 @@
 				}
 			}
 		},
-		'light': [{
-			'style':[{
+		'light': {
+			'style': {
 				'dark': {
 					'name': 'Dark'
 				},
@@ -58,28 +58,28 @@
 				'glowing': {
 					'name': 'Glowing'
 				}
-			}],
-			'color': [{
+			},
+			'color': {
 				"red": {
-
+					'name': 'red'
 				},
 				"purple": {
-
+					'name': 'purple'
 				},
 				"blue": {
-
+					'name': 'blue'
 				},
 				"green": {
-
+					'name': 'green'
 				},
 				"white": {
-
+					'name': 'white'
 				},
 				"yellow": {
-
+					'name': 'yellow'
 				}
-			}]
-		}],
+			}
+		},
 		'monsters': {
 			'zombie': {
 				'name': 'Zombie',

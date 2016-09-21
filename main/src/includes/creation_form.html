@@ -33,12 +33,22 @@
                                     <span>{{ theme.name }}</span>
                                 </span>
 
-                                <label>Lighting effect</label>
-
-                                <span v-for="light in configurable.light">
-                                    <input type="radio" name="theme" value="{{ $key }}" v-model="room.light">
-                                    <span>{{ light.name }}</span>
-                                </span>
+                                <div v-for="light in room.lights">
+                                    <label>Lighting effect {{ $index }}</label>
+                                    <span>Style</span>
+                                    <br/>
+                                    <span v-for="style in configurable.light.style">
+                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.style">
+                                        <span>{{ style.name }}</span>
+                                    </span>
+                                    <br/>
+                                    <span>Colour</span>
+                                    <br/>
+                                    <span v-for="color in configurable.light.color">
+                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.color">
+                                        <span>{{ color.name }}</span>
+                                    </span>
+                                </div>
                           </fieldset>
                           <fieldset>
                               <legend>Add a scare</legend>
