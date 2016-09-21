@@ -3,7 +3,7 @@
 * Have multiple rooms on the creation form - Bee - DONE - may need to change form layout.
 * Preview images on creation form - Bee - IN PROGRESS
 * Solution required for Aframe hijacking page height - BEE (temp solution put in place)
-* Add end screen - David
+DONE * Add end screen - David
 * Componentize rooms more
 * Improve performance on mobile
 * Finish lights - James
