@@ -1,10 +1,10 @@
-* Add a loading screen - Bee 
+* Add a loading screen - Bee
 * Make creation form completely driven by configurableData.js - Bee - DONE
-* Have multiple rooms on the creation form - Bee - DONE - may need to change form layout. 
+* Have multiple rooms on the creation form - Bee - DONE - may need to change form layout.
 * Preview images on creation form - Bee - IN PROGRESS
 * Solution required for Aframe hijacking page height - BEE (temp solution put in place)
 * Add end screen
 * Componentize rooms more
 * Improve performance on mobile
 * Finish lights - James
-* Update form for James' lights - Bee
+* Update form for James' lights - Bee - DONE
