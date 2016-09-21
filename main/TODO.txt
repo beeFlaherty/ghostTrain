@@ -8,5 +8,5 @@
 * Improve performance on mobile
 * Finish lights - James
 * Update form for James' lights - Bee
-* Switch between screens with Vue - David
+DONE * Switch between screens with Vue - David
 * Break up code into smaller files - David

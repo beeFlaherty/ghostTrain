@@ -14,7 +14,7 @@
       user: userData,
       system: systemData,
       configurable: configurableData,
-      section: 'ride'
+      section: 'form'
     }
   });
 }());

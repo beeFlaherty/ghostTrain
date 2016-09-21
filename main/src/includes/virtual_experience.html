@@ -1,7 +1,5 @@
-<gt-ride v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-ride>
-
 <script id="ride_template" type="x-template">
-	<a-scene v-if="user.active" stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
+	<a-scene stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
 		<a-assets>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
