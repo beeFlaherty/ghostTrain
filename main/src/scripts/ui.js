@@ -8,7 +8,7 @@
         props: ['user', 'system', 'configurable'],
         methods: {
           activate: function(event) {
-            this.user.active = true;
+            this.$root.section = 'ride';
             event.preventDefault();
           },
           next: function(event){
