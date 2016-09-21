@@ -4,7 +4,7 @@
 * Preview images on creation form - Bee - IN PROGRESS
 * Solution required for Aframe hijacking page height - BEE (temp solution put in place)
 * Add end screen
-* Componentize rooms more
+* Componentize rooms more and get into a template - James/David/Bee
 * Improve performance on mobile
-* Finish lights - James
+* Finish lights - James - DONE 
 * Update form for James' lights - Bee - DONE

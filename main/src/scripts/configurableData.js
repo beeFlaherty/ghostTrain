@@ -60,23 +60,29 @@
 				}
 			},
 			'color': {
-				"red": {
-					'name': 'red'
+				'red': {
+					'name': 'red',
+					'hex': '#F00'
 				},
-				"purple": {
-					'name': 'purple'
+				'purple': {
+					'name': 'purple',
+					'hex': '#a106db'
 				},
-				"blue": {
-					'name': 'blue'
+				'blue': {
+					'name': 'blue',
+					'hex': '#160dc6'
 				},
-				"green": {
-					'name': 'green'
+				'green': {
+					'name': 'green',
+					'hex': '#0F0'
 				},
-				"white": {
-					'name': 'white'
+				'white': {
+					'name': 'white',
+					'hex': '#fff'
 				},
-				"yellow": {
-					'name': 'yellow'
+				'yellow': {
+					'name': 'yellow',
+					'hex': '#fbf813'
 				}
 			}
 		},

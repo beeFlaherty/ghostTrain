@@ -10,14 +10,24 @@
 		},
 		'rooms': [
 			{
-				'lights': [{
-					//positions
-				}]
+				'roomData': 'room1',
+				'lights': [
+					{
+						'position': '0.5 3 -2'
+					},
+					{
+						'position': '22 3 -2',
+					},
+					{
+						'position': '22 3 -10',
+					},
+					{
+						'position': '0.5 3 -10'
+					}
+				]
 			},
 			{
-				'lights': [{
-
-				}]
+				'roomData': 'room2',
 			}
 		],
 		'monster': {

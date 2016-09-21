@@ -1,4 +1,5 @@
 <script id="ride_template" type="x-template">
+
 	<a-scene stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
 		<a-assets>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
@@ -65,13 +66,15 @@
 		<a-sky color="{{ system.sky.colour }}"></a-sky>
 
 		<gt-room v-bind:room="user.rooms"></gt-room>
+
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
+
 	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
 
-		<gt-light v-for="light in room[0].lights" v-bind:color="light.color" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
+		<gt-light v-for="light in $root.system.rooms[0].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
 
 
 		<a-entity id="floor">
@@ -229,13 +232,9 @@
 </script>
 
 <script id="light_template" type="x-template">
-		<a-light v-if="style !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="{{ position }}" color="{{ color }}" id="test-search">
+		<a-light v-if="style !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="{{ position }}" color="{{   $root.configurable.light.color[$root.user.rooms[0].lights[index].color].hex }}" id="test-search">
 			<a-animation v-if="style === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
 			<a-animation v-if="style === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-		<a-light v-if="room[0].light !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
-			<a-animation v-if="room[0].light === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="room[0].light === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
 		</a-light>
 </script>
 
