@@ -1,0 +1,7 @@
+<script id="scare_template" type="x-template">
+	<a-entity v-if="monster !== 'none'" id="monster_{{ animation }}" position="{{ pos }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="0.9 0.9 0.9" src="#monster_{{ monster }}_model" material="src: #monster_{{ monster }}_texture; shader: standard;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" sound="src: {{ $root.configurable.sounds[sound].mp3 }}; on:hit;">
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+</script>
