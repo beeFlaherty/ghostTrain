@@ -5,10 +5,17 @@
     var aframeKart = require('./aframe-kart')();
     var aframeCollider = require('./aframe-collider')();
 
+
+    Vue.partial('room0-partial', document.getElementById('room_0-partial').innerHTML);
+
+
+
+
+
     var RoomComponent =
       Vue.extend({
         template: '#room_template',
-        props: ['index', 'room']
+        props: ['roomNum', 'room', 'position', 'theme']
       });
     Vue.component('gt-room', RoomComponent);
 

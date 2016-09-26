@@ -48,8 +48,7 @@
 				<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="false"></a-camera>
 				<a-entity
 					v-if="$root.system.sound.chain"
-					sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"
-				></a-entity>
+					sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
 				<a-entity
 					v-if="$root.user.trainsettings.music !== 'none'"
 					sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"
@@ -65,170 +64,19 @@
 
 		<a-sky color="{{ system.sky.colour }}"></a-sky>
 
-		<gt-room v-bind:room="user.rooms"></gt-room>
+
+		<gt-room v-for="room in system.rooms" v-bind:roomNum="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
 
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
+	<a-entity id="room_{{ roomNum }}" position="{{ position }}" rotation: "0 90 0">
+		<partial name="room0-partial"></partial>
+		<gt-light v-for="light in $root.system.rooms[roomNum].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
 
-	<a-entity id="room_0" position="0 0 0" rotation: "0 90 0">
-
-		<gt-light v-for="light in $root.system.rooms[0].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
-
-
-		<a-entity id="floor">
-			<a-entity mixin="floor generic-floor" position="8 0 2"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 2"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 2"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 2"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 2"></a-entity>
-			<a-entity mixin="floor generic-floor" position="8 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="8 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -14" roughness="1"></a-entity>
-		</a-entity>
-
-		<a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
-			<a-entity mixin="ceiling generic-ceiling" position="8 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="8 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="8 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
-		</a-entity>
-
-		<a-entity id="inner-wall-1">
-			<a-entity mixin="wall-lg {{ room[0].theme }}-wall" position="16 0 -6" rotation="0 90 0"></a-entity>
-		</a-entity>
-
-		<a-entity id="west-wall">
-			<a-entity mixin="wall-lg {{ room[0].theme }}-wall" position="0 0 0"></a-entity>
-			<a-entity mixin="corner-sm {{ room[0].theme }}-wall" position="0 0 -16"></a-entity>
-			<a-entity mixin="corner-sm {{ room[0].theme }}-wall" position="2 0 2" rotation="0 90 0"></a-entity>
-		</a-entity>
-
-		<a-entity id="south-wall">
-			<a-entity mixin="wall-md {{ room[0].theme }}-wall" position="6 0 -18" rotation="0 90 0"></a-entity>
-			<a-entity mixin="doorframe {{ room[0].theme }}-wall" position="24 0 -18" rotation="0 90 0"></a-entity>
-			<a-entity mixin="wall-md {{ room[0].theme }}-wall" position="28 0 -18" rotation="0 90 0"></a-entity>
-		</a-entity>
-
-		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-			<a-entity mixin="wall-lg {{ room[0].theme }}-wall" position="0 0 0"></a-entity>
-			<a-entity mixin="corner-sm {{ room[0].theme }}-wall" position="-2 0 -18" rotation="0 -90 0"></a-entity>
-			<a-entity mixin="corner-sm {{ room[0].theme }}-wall" position="0 0 0" rotation="0 -180 0"></a-entity>
-		</a-entity>
-
-		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
-
-			<a-entity mixin="wall-md {{ room[0].theme }}-wall" position="6 0 0" rotation="0 270 0"></a-entity>
-			<a-entity mixin="doorframe {{ room[0].theme }}-wall" position="10 0 0" rotation="0 270 0"></a-entity>
-			<a-entity mixin="wall-md {{ room[0].theme }}-wall" position="28 0 0" rotation="0 270 0"></a-entity>
-		</a-entity>
-
-		<gt-scare v-for="scare in room[0].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
+		<gt-scare v-for="scare in $root.user.rooms[roomNum].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
 	</a-entity>
-
-
-	<a-entity id="room_1" position="0 0 -20.5" rotation: "0 90 0">
-		<a-light v-if="type !== 'dark'" type="point" intensity="5" distance="25" decay="2" position="0.5 3 -2" color="{{ lightcolor }}">
-			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -2" color="green">
-			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="type !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="0.5 3 -16" color="red">
-			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-light v-if="type !== 'dark'" type="point" intensity="1" distance="25" decay="2" position="27.5 3 -16" color="white">
-			<a-animation v-if="type === 'flickering'" attribute="intensity" dur="1300" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-			<a-animation v-if="type === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-		</a-light>
-
-		<a-entity id="floor">
-			<a-entity mixin="floor generic-floor" position="8 0 2" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 2" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 2" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 2" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 2" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="8 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -6" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="8 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="16 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="24 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="32 0 -14" roughness="1"></a-entity>
-			<a-entity mixin="floor generic-floor" position="40 0 -14" roughness="1"></a-entity>
-		</a-entity>
-
-		<a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
-			<a-entity mixin="floor" position="8 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 2"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="8 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 -6"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="8 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="16 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="24 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="32 0 -14"></a-entity>
-			<a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
-		</a-entity>
-
-		<a-entity id="west-wall">
-			<a-entity mixin="wall-sm {{ room[1].theme }}-wall" position="0 0 -2"></a-entity>
-			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="2 0 2" rotation="0 90 0"></a-entity>
-			<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="0 0 -4"></a-entity>
-		</a-entity>
-
-		<a-entity id="south-wall">
-			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="16 0 -6" rotation="0 90 0"></a-entity>
-			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 -6" rotation="0 90 0"></a-entity>
-			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="32 0 -6" rotation="0 90 0"></a-entity>
-			<a-entity mixin="wall-sm {{ room[1].theme }}-wall" position="34 0 -6" rotation="0 90 0"></a-entity>
-		</a-entity>
-
-		<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-			<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="0 0 5"></a-entity>
-		</a-entity>
-
-		<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
-			<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="6 0 0" rotation="0 270 0"></a-entity>
-			<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="10 0 0" rotation="0 270 0"></a-entity>
-			<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 0" rotation="0 270 0"></a-entity>
-		</a-entity>
-
-		<gt-scare v-for="scare in room[1].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position" v-bind:rotation="scare.rotation"></gt-scare>
-	</a-entity>
-
 </script>
 
 <script id="light_template" type="x-template">
@@ -266,3 +114,133 @@
 <script id="light_template" type="x-template">
 
 </script>
+
+
+<div id="room_0-partial">
+<span id="room0"></span>
+<a-entity id="floor">
+      <a-entity mixin="floor generic-floor" position="8 0 2"></a-entity>
+      <a-entity mixin="floor generic-floor" position="16 0 2"></a-entity>
+      <a-entity mixin="floor generic-floor" position="24 0 2"></a-entity>
+      <a-entity mixin="floor generic-floor" position="32 0 2"></a-entity>
+      <a-entity mixin="floor generic-floor" position="40 0 2"></a-entity>
+      <a-entity mixin="floor generic-floor" position="8 0 -6" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="16 0 -6" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="24 0 -6" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="32 0 -6" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="40 0 -6" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="8 0 -14" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="16 0 -14" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="24 0 -14" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="32 0 -14" roughness="1"></a-entity>
+      <a-entity mixin="floor generic-floor" position="40 0 -14" roughness="1"></a-entity>
+    </a-entity>
+
+    <a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
+      <a-entity mixin="ceiling generic-ceiling" position="8 0 2"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="16 0 2"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="24 0 2"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="32 0 2"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="40 0 2"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="8 0 -6"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="16 0 -6"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="24 0 -6"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="32 0 -6"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="40 0 -6"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="8 0 -14"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="16 0 -14"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="24 0 -14"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="32 0 -14"></a-entity>
+      <a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
+    </a-entity>
+
+    <a-entity id="inner-wall-1">
+      <a-entity mixin="wall-lg {{ theme }}-wall" position="16 0 -6" rotation="0 90 0"></a-entity>
+    </a-entity>
+
+    <a-entity id="west-wall">
+      <a-entity mixin="wall-lg {{ theme }}-wall" position="0 0 0"></a-entity>
+      <a-entity mixin="corner-sm {{ theme }}-wall" position="0 0 -16"></a-entity>
+      <a-entity mixin="corner-sm {{ theme }}-wall" position="2 0 2" rotation="0 90 0"></a-entity>
+    </a-entity>
+
+    <a-entity id="south-wall">
+      <a-entity mixin="wall-md {{ theme }}-wall" position="6 0 -18" rotation="0 90 0"></a-entity>
+      <a-entity mixin="doorframe {{ theme }}-wall" position="24 0 -18" rotation="0 90 0"></a-entity>
+      <a-entity mixin="wall-md {{ theme }}-wall" position="28 0 -18" rotation="0 90 0"></a-entity>
+    </a-entity>
+
+    <a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
+      <a-entity mixin="wall-lg {{ theme }}-wall" position="0 0 0"></a-entity>
+      <a-entity mixin="corner-sm {{ theme }}-wall" position="-2 0 -18" rotation="0 -90 0"></a-entity>
+      <a-entity mixin="corner-sm {{ theme }}-wall" position="0 0 0" rotation="0 -180 0"></a-entity>
+    </a-entity>
+
+    <a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
+
+      <a-entity mixin="wall-md {{ theme }}-wall" position="6 0 0" rotation="0 270 0"></a-entity>
+      <a-entity mixin="doorframe {{ theme }}-wall" position="10 0 0" rotation="0 270 0"></a-entity>
+      <a-entity mixin="wall-md {{ theme }}-wall" position="28 0 0" rotation="0 270 0"></a-entity>
+    </a-entity>
+</div>
+
+<div id="room1-partial" style="display: none;">
+	<a-entity id="floor">
+		<a-entity mixin="floor generic-floor" position="8 0 2" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="16 0 2" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="24 0 2" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="32 0 2" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="40 0 2" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="8 0 -6" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="16 0 -6" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="24 0 -6" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="32 0 -6" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="40 0 -6" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="8 0 -14" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="16 0 -14" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="24 0 -14" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="32 0 -14" roughness="1"></a-entity>
+		<a-entity mixin="floor generic-floor" position="40 0 -14" roughness="1"></a-entity>
+	</a-entity>
+
+	<a-entity id="ceiling" position="36 8 0" rotation="0 0 180">
+		<a-entity mixin="floor" position="8 0 2"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="16 0 2"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="24 0 2"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="32 0 2"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="40 0 2"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="8 0 -6"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="16 0 -6"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="24 0 -6"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="32 0 -6"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="40 0 -6"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="8 0 -14"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="16 0 -14"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="24 0 -14"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="32 0 -14"></a-entity>
+		<a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
+	</a-entity>
+
+	<a-entity id="west-wall">
+		<a-entity mixin="wall-sm {{ theme }}-wall" position="0 0 -2"></a-entity>
+		<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="2 0 2" rotation="0 90 0"></a-entity>
+		<a-entity mixin="corner-sm {{ room[1].theme }}-wall" position="0 0 -4"></a-entity>
+	</a-entity>
+
+	<a-entity id="south-wall">
+		<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="16 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="32 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-sm {{ room[1].theme }}-wall" position="34 0 -6" rotation="0 90 0"></a-entity>
+	</a-entity>
+
+	<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
+		<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="0 0 5"></a-entity>
+	</a-entity>
+
+	<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
+		<a-entity mixin="wall-md {{ room[1].theme }}-wall" position="6 0 0" rotation="0 270 0"></a-entity>
+		<a-entity mixin="doorframe {{ room[1].theme }}-wall" position="10 0 0" rotation="0 270 0"></a-entity>
+		<a-entity mixin="wall-lg {{ room[1].theme }}-wall" position="24 0 0" rotation="0 270 0"></a-entity>
+	</a-entity>
+</div>

@@ -10,7 +10,7 @@
 		},
 		'rooms': [
 			{
-				'roomData': 'room1',
+				'position': '0 0 0',
 				'lights': [
 					{
 						'position': '0.5 3 -2'
@@ -26,9 +26,9 @@
 					}
 				]
 			},
-			{
-				'roomData': 'room2',
-			}
+			// {
+			// 	'roomData': 'room2',
+			// }
 		],
 		'monster': {
 			'width': 1,
