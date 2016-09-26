@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function() {
+  module.exports = function(AFRAME) {
     function distanceVector(v1, v2) {
       var dx = v1.x - v2.x;
       var dy = v1.y - v2.y;

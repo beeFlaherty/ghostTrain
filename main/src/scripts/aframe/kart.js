@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function() {
+  module.exports = function(AFRAME) {
     function lerp(a, b, f) {
       return (a * (1 - f)) + (b * f);
     }
