@@ -5,13 +5,8 @@
     var aframeKart = require('./aframe-kart')();
     var aframeCollider = require('./aframe-collider')();
 
-
     Vue.partial('room0-partial', document.getElementById('room0-partial').innerHTML);
     Vue.partial('room1-partial', document.getElementById('room1-partial').innerHTML);
-
-
-
-
 
     var RoomComponent =
       Vue.extend({
@@ -38,18 +33,8 @@
     var LightComponent = Vue.extend({
       template: '#light_template',
       props: ['index', 'color', 'style', 'position']
-      // methods: {
-      //   getPosition: function(index) {
-      //     return (this.$root.system.room.height *
-      //         0.5) - // Offset from center of room
-      //       ((this.$root.system.room.height /
-      //           (this.$root.system.monster.perroom + 1)) *
-      //         (index + 1));
-      //   }
-      // }
     });
     Vue.component('gt-light', LightComponent);
-
 
     var AnimationComponent =
       Vue.extend({
@@ -57,13 +42,6 @@
         props: ['type']
       });
     Vue.component('gt-animation', AnimationComponent);
-
-    // var LightComponent =
-    //   Vue.extend({
-    //     template: '#light_template',
-    //     props: ['type']
-    //   });
-    // Vue.component('gt-light', LightComponent);
 
     var RideComponent =
       Vue.extend({
