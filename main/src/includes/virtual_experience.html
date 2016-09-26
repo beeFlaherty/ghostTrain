@@ -64,18 +64,16 @@
 
 		<a-sky color="{{ system.sky.colour }}"></a-sky>
 
-
-		<gt-room v-for="room in system.rooms" v-bind:roomNum="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
-
+		<gt-room v-for="room in system.rooms" v-bind:index="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
 	</a-scene>
 </script>
 
 <script id="room_template" type="x-template">
-	<a-entity id="room_{{ roomNum }}" position="{{ position }}" rotation: "0 90 0">
-		<partial name="room0-partial"></partial>
-		<gt-light v-for="light in $root.system.rooms[roomNum].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
+	<a-entity id="room_{{ index }}" position="{{ position }}" rotation: "0 90 0">
+		<partial v-bind:name="'room' + index + '-partial'"></partial>
+		<gt-light v-for="light in $root.system.rooms[index].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
 
-		<gt-scare v-for="scare in $root.user.rooms[roomNum].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
+		<gt-scare v-for="scare in $root.user.rooms[index].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
 	</a-entity>
 </script>
 
@@ -111,12 +109,7 @@
 	<a-animation v-if="type === 'slideleft'" begin="hit" attribute="position" from="0 0 0" to="3 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 </script>
 
-<script id="light_template" type="x-template">
-
-</script>
-
-
-<div id="room_0-partial">
+<div id="room0-partial">
 <span id="room0"></span>
 <a-entity id="floor">
       <a-entity mixin="floor generic-floor" position="8 0 2"></a-entity>
