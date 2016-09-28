@@ -21,6 +21,9 @@
 		<!-- build:include includes/header.html -->Header will go here<!-- /build -->
 
 		<div id="app">
+			<div v-if="section == 'start'">
+				<h1>THIS IS THE START</h1>
+			</div>
 			<div v-if="section == 'form'">
 				<gt-form v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-form>
 			</div>

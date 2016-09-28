@@ -15,6 +15,22 @@
       system: systemData,
       configurable: configurableData,
       section: 'form'
+    },
+    created: function() {
+      this.pauseOnStartScreen();
+    },
+    methods: {
+      pauseOnStartScreen: function() {
+        if (this.section === 'start') {
+          var self = this;
+
+          setTimeout(function() {
+            self.section = 'form';
+          }, 3000);
+        }
+      }
     }
   });
+
+  app.bob();
 }());
