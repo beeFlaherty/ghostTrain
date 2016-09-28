@@ -1,9 +1,9 @@
 (function() {
   'use strict';
 
-  var userData = require('./userData');
-  var systemData = require('./systemData');
-  var configurableData = require('./configurableData');
+  var userData = require('./data/userData');
+  var systemData = require('./data/systemData');
+  var configurableData = require('./data/configurableData');
 
   var ui = require('./ui')();
   var ride = require('./ride')();
