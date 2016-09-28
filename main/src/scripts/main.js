@@ -8,6 +8,8 @@
   var ui = require('./ui')();
   var ride = require('./ride')();
 
+  var startScreenDelay = 3000;
+
   var app = new Vue({
     el: '#app',
     data: {
@@ -26,7 +28,7 @@
 
           setTimeout(function() {
             self.section = 'form';
-          }, 3000);
+          }, startScreenDelay);
         }
       }
     }
