@@ -61,27 +61,27 @@
 			},
 			'color': {
 				'red': {
-					'name': 'red',
+					'name': 'Red',
 					'hex': '#F00'
 				},
 				'purple': {
-					'name': 'purple',
+					'name': 'Purple',
 					'hex': '#a106db'
 				},
 				'blue': {
-					'name': 'blue',
+					'name': 'Blue',
 					'hex': '#160dc6'
 				},
 				'green': {
-					'name': 'green',
+					'name': 'Green',
 					'hex': '#0F0'
 				},
 				'white': {
-					'name': 'white',
+					'name': 'White',
 					'hex': '#fff'
 				},
 				'yellow': {
-					'name': 'yellow',
+					'name': 'Yellow',
 					'hex': '#fbf813'
 				}
 			}
