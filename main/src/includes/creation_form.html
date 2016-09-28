@@ -18,54 +18,59 @@
                             </span>
                         </fieldset>
 
-                        <fieldset v-for="room in user.rooms">
-                            <!-- select -->
-                            <legend>Design your room {{ room.number }}</legend>
+                        <div v-for="room in user.rooms">
+                            <fieldset>
+                                <!-- select -->
+                                <legend>Design your room {{ room.number }}</legend>
 
-                            <label>Theme</label>
-                            <span v-for="theme in configurable.themes">
-                                <input type="radio" name="theme" value="{{ $key }}" v-model="room.theme">
-                                <span>{{ theme.name }}</span>
-                            </span>
-
-                            <div v-for="light in room.lights">
-                            <label>Lighting effect {{ $index }}</label>
-                            <span>Style</span>
-                            <br/>
-                            <span v-for="style in configurable.light.style">
-                                <input type="radio" name="theme" value="{{ $key }}" v-model="light.style">
-                                <span>{{ style.name }}</span>
-                            </span>
-                            <br/>
-                            <span>Colour</span>
-                            <br/>
-                            <span v-for="color in configurable.light.color">
-                                <input type="radio" name="theme" value="{{ $key }}" v-model="light.color">
-                                <span>{{ color.name }}</span>
-                            </span>
-                            </div>
+                                <label>Theme</label>
+                                <span v-for="theme in configurable.themes">
+                                    <input type="radio" name="theme" value="{{ $key }}" v-model="room.theme">
+                                    <span>{{ theme.name }}</span>
+                                </span>
                             </fieldset>
                             <fieldset>
-                            <legend>Add a scare</legend>
+                                <div v-for="light in room.lights">
+                                    <label>Lighting effect {{ $index }}</label>
 
-                            <label>Monster</label>
-                            <span v-for="monster in configurable.monsters">
-                            <input type="radio" name="monster" value="{{ $key }}" v-model="room.scares[0].monster">
-                            <span>{{ monster.name }}</span>
-                            </span>
+                                    <span>Style</span>
+                                    <br/>
+                                    <span v-for="style in configurable.light.style">
+                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.style">
+                                        <span>{{ style.name }}</span>
+                                    </span>
+                                    <br/>
 
-                            <label>Sound</label>
-                            <span v-for="sound in configurable.sounds">
-                            <input type="radio" name="sound" value="{{ $key }}" v-model="room.sound">
-                            <span>{{ sound.name }}</span>
-                            </span>
+                                    <span>Colour</span>
+                                    <br/>
+                                    <span v-for="color in configurable.light.color">
+                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.color">
+                                        <span>{{ color.name }}</span>
+                                    </span>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Add a scare</legend>
 
-                            <label>Animation</label>
-                            <span v-for="animation in configurable.animations">
-                            <input type="radio" name="animation" value="{{ $key }}" v-model="room.scares[0].animation">
-                            <span>{{ animation.name }}</span>
-                            </span>
-                        </fieldset>
+                                <label>Monster</label>
+                                <span v-for="monster in configurable.monsters">
+                                    <input type="radio" name="monster" value="{{ $key }}" v-model="room.scares[0].monster">
+                                    <span>{{ monster.name }}</span>
+                                </span>
+
+                                <label>Sound</label>
+                                <span v-for="sound in configurable.sounds">
+                                    <input type="radio" name="sound" value="{{ $key }}" v-model="room.sound">
+                                    <span>{{ sound.name }}</span>
+                                </span>
+
+                                <label>Animation</label>
+                                <span v-for="animation in configurable.animations">
+                                    <input type="radio" name="animation" value="{{ $key }}" v-model="room.scares[0].animation">
+                                    <span>{{ animation.name }}</span>
+                                </span>
+                            </fieldset>
+                        </div>
 
                         <fieldset>
                             <p><button v-on:click="activate">Scare Me</button></p>
