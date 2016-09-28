@@ -2,17 +2,37 @@
 	'use strict';
 
 	module.exports = {
-		'active': true,
+		'active': false,
 		'trainsettings': {
 			'music':'none',
-			'name':'train name'
+			'name':'Your spooky train name'
 		},
 		'rooms': [
 			{
-				'number': 1,
+				'number': 0,
 				'theme': 'castle', // castle, forest, graveyard
-				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
-				'lightcolor': 'purple',
+				'lights': [
+					{
+						// 'style': 'bright', // dark, bright, flickering, glowing
+						//'color': 'red', //red, green, purple
+
+					},
+					{
+						// 'style': 'bright', // dark, bright, flickering, glowing
+						// 'color': 'purple', //red, green, purple
+
+					},
+					{
+						// 'style': 'flickering', // dark, bright, flickering, glowing
+						// 'color': 'green', //red, green, purple
+
+					},
+					{
+						// 'style': 'flickering', // dark, bright, flickering, glowing
+						// 'color': 'white', //red, green, purple
+					}
+				],
+
 				'scares': [
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
@@ -29,7 +49,7 @@
 				]
 			},
 			{
-				'number': 2,
+				'number': 1,
 				'theme': 'forest', // castle, forest, graveyard
 				'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
 				'lightcolor': 'purple',

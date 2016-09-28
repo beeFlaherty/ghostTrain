@@ -3,6 +3,9 @@
 
 	module.exports = {
 		'music': {
+			'none': {
+				'name': 'None'
+			},
 			'creepymusicbox': {
 				'name': 'Creepy Music Box',
 				'mp3': '/assets/music/creepy.mp3'
@@ -42,17 +45,45 @@
 			}
 		},
 		'light': {
-			'dark': {
-				'name': 'Dark'
+			'style': {
+				'dark': {
+					'name': 'Dark'
+				},
+				'bright': {
+					'name': 'Bright'
+				},
+				'flickering': {
+					'name': 'Flickering'
+				},
+				'glowing': {
+					'name': 'Glowing'
+				}
 			},
-			'bright': {
-				'name': 'Bright'
-			},
-			'flickering': {
-				'name': 'Flickering'
-			},
-			'glowing': {
-				'name': 'Glowing'
+			'color': {
+				'red': {
+					'name': 'red',
+					'hex': '#F00'
+				},
+				'purple': {
+					'name': 'purple',
+					'hex': '#a106db'
+				},
+				'blue': {
+					'name': 'blue',
+					'hex': '#160dc6'
+				},
+				'green': {
+					'name': 'green',
+					'hex': '#0F0'
+				},
+				'white': {
+					'name': 'white',
+					'hex': '#fff'
+				},
+				'yellow': {
+					'name': 'yellow',
+					'hex': '#fbf813'
+				}
 			}
 		},
 		'monsters': {
@@ -87,7 +118,7 @@
 				'texture': '/assets/monsters/devil.png'
 			},
 			'ghoul': {
-				'name': 'ghoul',
+				'name': 'Ghoul',
 				'colour': '#FFF',
 				'model': '/assets/monsters/zombie.obj',
 				'texture': '/assets/monsters/ghoul.png'

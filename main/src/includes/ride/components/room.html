@@ -1,0 +1,9 @@
+<script id="room_template" type="x-template">
+	<a-entity id="room_{{ index }}" position="{{ position }}" rotation: "0 90 0">
+		<partial v-bind:name="'room' + index + '-partial'"></partial>
+
+		<gt-light v-for="light in $root.system.rooms[index].lights" v-bind:index="$index" v-bind:style="light.style" v-bind:position="light.position"></gt-light>
+
+		<gt-scare v-for="scare in $root.user.rooms[index].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:animation="scare.animation" v-bind:pos="scare.position"></gt-scare>
+	</a-entity>
+</script>

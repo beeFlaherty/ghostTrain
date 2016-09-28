@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function() {
+  module.exports = function(AFRAME) {
     function lerp(a, b, f) {
       return (a * (1 - f)) + (b * f);
     }
@@ -71,6 +71,10 @@
         this.element.lookAt(this.endPosition);
         this.percentComplete = 0;
         this.speed = 1.5;
+        if (this.el.getAttribute("kart")[""]) {
+          this.speed = parseFloat(this.el.getAttribute("kart")[""]);
+        }
+
         var duration =
           distanceVector(this.startPosition, this.endPosition) / this.speed;
 
@@ -162,6 +166,11 @@
             value = Math.radians(value);
 
             this.rotation = new THREE.Vector3(0, value, 0);
+          } else {
+            if (!this.el.is('finished')) {
+              this.el.addState('finished');
+              this.el.emit('finished');
+            }
           }
         }
       }

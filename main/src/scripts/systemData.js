@@ -6,12 +6,30 @@
 			'colour': '#000000'
 		},
 		'sound': {
-			'chain': false
+			'chain': true
 		},
-		'room': {
-			'width': 5,
-			'height': 10
-		},
+		'rooms': [
+			{
+				'position': '0 0 0',
+				'lights': [
+					{
+						'position': '0.5 3 -2'
+					},
+					{
+						'position': '22 3 -2',
+					},
+					{
+						'position': '22 3 -10',
+					},
+					{
+						'position': '0.5 3 -10'
+					}
+				]
+			},
+			// {
+			// 	'roomData': 'room2',
+			// }
+		],
 		'monster': {
 			'width': 1,
 			'height': 0.1,
@@ -23,7 +41,8 @@
 			'repeat': 0
 		},
 		'track': {
-			'showPoints': true,
+			'showPoints': false,
+			'speed': 3,
 			'points': [
 				'17 4 0',
 				'18 4 -5',

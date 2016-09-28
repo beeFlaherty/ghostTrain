@@ -9,8 +9,11 @@
 
 		<meta name="description" content="">
 
+		<link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+
 		<!-- build:css:build ./styles/main.min.css -->
 		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/ui.css">
 		<!-- /build -->
 	</head>
 
@@ -18,8 +21,28 @@
 		<!-- build:include includes/header.html -->Header will go here<!-- /build -->
 
 		<div id="app">
-		<!-- build:include includes/virtual_experience.html -->Virtual experience will go here<!-- /build -->
-		<!-- build:include includes/end_screen.html -->End screen go here<!-- /build -->
+			<div v-if="section == 'form'">
+				<gt-form v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-form>
+			</div>
+			<div v-if="section == 'ride'">
+				<gt-ride v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-ride>
+			</div>
+			<div v-if="section == 'end'">
+				<h1>THIS IS THE END</h1>
+			</div>
+
+			<!-- build:include includes/creation_form.html  -->Form will go here<!-- /build -->
+
+			<!-- build:include includes/ride/components/ride.html --><!-- /build -->
+			<!-- build:include includes/ride/components/room.html --><!-- /build -->
+			<!-- build:include includes/ride/components/light.html --><!-- /build -->
+			<!-- build:include includes/ride/components/scare.html --><!-- /build -->
+			<!-- build:include includes/ride/components/animation.html --><!-- /build -->
+
+			<!-- build:include includes/ride/partials/room0.html --><!-- /build -->
+			<!-- build:include includes/ride/partials/room1.html --><!-- /build -->
+
+			<!-- build:include includes/end_screen.html -->End screen go here<!-- /build -->
 		</div>
 
 		<!-- build:include includes/footer.html -->Footer will go here<!-- /build -->

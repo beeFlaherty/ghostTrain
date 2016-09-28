@@ -1,10 +1,16 @@
 {"settings": {
   "stages": 5,
-  "trainsettings" : [["name","text"], ["music", "select"]],
+  "trainsettings" : [["name","text"], ["music", "select", "music"]],
   "room" :["monster", "position", "sound"]
 },
 
 "options": {
+"music":{
+  "aa": ["music 1", "path/to/file"],
+  "ab": ["music 2", "path/to/file"],
+  "ac": ["music 3", "path/to/file"],
+  "ad": ["music 4", "path/to/file"]
+},
   "monsters":{
     "ma": ["monster 1", "path/to/file"],
     "mb": ["monster 2", "path/to/file"],

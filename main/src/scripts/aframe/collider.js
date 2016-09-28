@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  module.exports = function(triggerDistance) {
+  module.exports = function(AFRAME) {
     function distanceVector(v1, v2) {
       var dx = v1.x - v2.x;
       var dy = v1.y - v2.y;
@@ -36,6 +36,7 @@
         this.others.forEach(function(other) {
           var otherPosition = getGlobalPosition(other.object3D);
           var distance = distanceVector(thisPosition, otherPosition);
+          var triggerDistance = other.getAttribute('collidable');
 
           if (distance < triggerDistance &&
             !other.is('hit')) {

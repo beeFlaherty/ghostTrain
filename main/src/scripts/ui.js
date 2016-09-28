@@ -1,30 +1,23 @@
 (function() {
   'use strict';
 
-  var userData = new Vue({
-  el: '#settings',
-  data: {
-    'trainsettings': {
-     'music':'creepymusicbox',
-     'name':'train name'
-   },
-   'rooms': [
-     {
-       'number': 1,
-       'theme': 'castle', // castle, forest, graveyard
-       'light': 'bright', // dark, bright, flickering, glowing, red, green, purple
-       'lightcolor': 'purple',
-       'scares': [
-         {
-           'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-           'sound': 'zombie', // moan, scream, snarl, manic laughter
-           'animation': 'fromleft', // popup, dropdown, fromleft, fromright
-           'position': "18 0 -8.5"
-         },
-       ]
-     }
-   ]
- }
-});
+  module.exports = function() {
+    var FormComponent =
+      Vue.extend({
+        template: '#form_template',
+        props: ['user', 'system', 'configurable'],
+        methods: {
+          activate: function(event) {
+            this.$root.section = 'ride';
+            event.preventDefault();
+          },
+          next: function(event){
+            event.preventDefault();
+            console.log(this);
+          }
+        },
+      });
+    Vue.component('gt-form', FormComponent);
 
+  };
 }());

@@ -1,0 +1,30 @@
+body {
+  background:#040707;
+  color:#bdbdbd;
+}
+.data-debug {
+  display:none;
+}
+
+legend {
+  font-family: 'Creepster', cursive;
+  color: #4CBB17;
+  font-size: 2em;
+}
+
+label {
+    color: #4CBB17;
+}
+
+button {
+  font-family: 'Creepster', cursive;
+  color: #4CBB17;
+  font-size: 2em;
+  float:right;
+  border-color:#4CBB17;
+}
+
+form {
+    height: 500px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,68 @@
+<script id="ride_template" type="x-template">
+	<a-scene stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
+		<a-assets>
+			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
+			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
+
+			<a-asset-item id="floor-material" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></a-asset-item>
+
+			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
+			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
+			<img id="dark" src="assets/textures/dark/walls.jpg"></img>
+			<img id="generic-ceiling" src="assets/textures/ceiling.jpg"></img>
+			<img id="floor" src="assets/textures/floor_18.png"></img>
+
+			<!-- walls -->
+			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
+			<a-mixin id="wall-md" obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"></a-mixin>
+			<a-mixin id="wall-sm" obj-model="obj: url(assets/model-buildkit/walls/wall_default_2x4.obj);"></a-mixin>
+
+			<!-- corners -->
+			<a-mixin id="corner-sm" obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"></a-mixin>
+
+			<!-- doorframe -->
+			<a-mixin id="doorframe" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
+
+			<!-- door -->
+			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);"></a-mixin>
+
+			<!-- floor -->
+			<a-mixin id="floor" obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
+			<a-mixin id="generic-floor" material="src:#floor; roughness:1;"></a-mixin>
+			<a-mixin id="ceiling" obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
+			<a-mixin id="generic-ceiling" material="src:#generic-ceiling; roughness:1;"></a-mixin>
+			<a-mixin id="castle-wall" material="src:#castle; roughness:1;"></a-mixin>
+			<a-mixin id="forest-wall" material="src:#forest; roughness:1;"></a-mixin>
+			<a-mixin id="dark-wall" material="src:#dark; roughness:1;"></a-mixin>
+			<a-mixin id="generic-door" mtl="assets/assets/model-buildkit/interactive/door-1.mtl"></a-mixin>
+		</a-assets>
+
+		<a-entity id="rotation-helper" position="0 0 0" rotation="0 0 0">
+			<!--	<a-box position="0 0 0" color="blue"></a-box> -->
+		</a-entity>
+
+		<a-entity position="16 4 15" kart=" {{ system.track.speed }}"><!-- Need this space before the {{ for some reason -->
+			<a-entity obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" roughness="1"></a-entity>
+			<a-entity rotation="0 180 0">
+				<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="false"></a-camera>
+				<a-entity
+					v-if="$root.system.sound.chain"
+					sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
+				<a-entity
+					v-if="$root.user.trainsettings.music !== 'none'"
+					sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"
+				></a-entity>
+			</a-entity>
+		</a-entity>
+
+		<!-- <a-camera collider  position="10 4 -18" rotation="0 0 0" wasd-controls-enabled="true"></a-camera> -->
+
+		<a-entity v-for="point in system.track.points" track position="{{ point }}" order="{{ $index }}">
+			<a-sphere v-if="system.track.showPoints" position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
+		</a-entity>
+
+		<a-sky color="{{ system.sky.colour }}"></a-sky>
+
+		<gt-room v-for="room in system.rooms" v-bind:index="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
+	</a-scene>
+</script>
