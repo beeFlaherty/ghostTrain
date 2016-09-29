@@ -37,10 +37,8 @@
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
-						'animation': 'fromleft', // popup, dropdown, fromleft, fromright
-						'position': '18 0 -8.5',
-						'rotation': '0 0 0'
-					},
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					}
 					// {
 					// 	'monster': 'mummy', // none, zombie, mummy, vampire, skeleton
 					// 	'sound': 'cackle', // moan, scream, snarl, manic laughter
