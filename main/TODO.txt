@@ -1,10 +1,19 @@
-* Add a loading screen - Bee
+* Add a loading screen - Bee - DONE
 * Make creation form completely driven by configurableData.js - Bee - DONE
 * Have multiple rooms on the creation form - Bee - DONE - may need to change form layout.
-* Preview images on creation form - Bee - IN PROGRESS
 * Solution required for Aframe hijacking page height - BEE (temp solution put in place)
-* Add end screen
-* Componentize rooms more and get into a template - James/David/Bee
-* Improve performance on mobile
-* Finish lights - James - DONE 
+* Add end screen - David - DONE
+* Componentize rooms more and get into a template - James/David/Bee - DONE
+* Improve performance on mobile - Joe
+* Finish lights - James - DONE - DONE
 * Update form for James' lights - Bee - DONE
+
+* Preview images on creation form - Bee - IN PROGRESS
+
+* Build a second-room - James
+* Style rooms with Fed's hotel skin - Joe/James
+* Style a monster with one of Fed's designs - Joe/James
+* Form isn't reflecting initial values? - Bee/David
+* Split the form into seperate stage/screens - Bee/David
+* Add analytics events
+* Integrate with database - David
