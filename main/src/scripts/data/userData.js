@@ -13,23 +13,23 @@
 				'theme': 'castle', // castle, forest, graveyard
 				'lights': [
 					{
-						// 'style': 'bright', // dark, bright, flickering, glowing
-						//'color': 'red', //red, green, purple
+						'style': 'bright', // dark, bright, flickering, glowing
+						'color': 'red', //red, green, purple
 
 					},
 					{
-						// 'style': 'bright', // dark, bright, flickering, glowing
-						// 'color': 'purple', //red, green, purple
+						'style': 'bright', // dark, bright, flickering, glowing
+						'color': 'purple', //red, green, purple
 
 					},
 					{
-						// 'style': 'flickering', // dark, bright, flickering, glowing
-						// 'color': 'green', //red, green, purple
+						'style': 'flickering', // dark, bright, flickering, glowing
+						'color': 'green', //red, green, purple
 
 					},
 					{
-						// 'style': 'flickering', // dark, bright, flickering, glowing
-						// 'color': 'white', //red, green, purple
+						'style': 'flickering', // dark, bright, flickering, glowing
+						'color': 'purple', //red, green, purple
 					}
 				],
 
