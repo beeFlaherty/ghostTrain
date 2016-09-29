@@ -8,6 +8,9 @@
       Vue.extend({
         template: '#ride_template',
         props: ['user', 'system', 'configurable'],
+        data: {
+          loaded: false
+        },
         ready: function() {
           var self = this;
 
@@ -15,6 +18,10 @@
             setTimeout(function() { // This timeout is intentional, add a pause before the ride disappears
               self.$root.section = 'end';
             }, endScreenDelay);
+          });
+
+          document.querySelectorAll('a-assets')[0].addEventListener('loaded', function() {
+            self.loaded = true;
           });
         }
       });
