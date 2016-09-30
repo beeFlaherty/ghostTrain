@@ -32,9 +32,23 @@
 					}
 				]
 			},
-			// {
-			// 	'roomData': 'room2',
-			// }
+			{
+				'position': '0 0 -22',
+				'lights': [
+					{
+						'position': '0.5 3 -2'
+					},
+					{
+						'position': '22 3 -2',
+					},
+					{
+						'position': '22 3 -10',
+					},
+					{
+						'position': '0.5 3 -10'
+					}
+				]
+			},
 		],
 		'monster': {
 			'width': 1,
