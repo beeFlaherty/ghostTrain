@@ -19,29 +19,17 @@
 			'castle': {
 				'name': 'Castle',
 				'colour': '#808080',
-				'textures': {
-					'floor': '',
-					'walls': '',
-					'roof': ''
-				}
+				'texture': '/assets/textures/castle.jpg'
 			},
-			'forest': {
-				'name': 'Forest',
+			'hotel': {
+				'name': 'Hotel',
 				'colour': '#007F46',
-				'textures': {
-					'floor': '',
-					'walls': '',
-					'roof': ''
-				}
+				'texture': '/assets/textures/hotel.jpg'
 			},
 			'graveyard': {
 				'name': 'Graveyard',
 				'colour': '#682900',
-				'textures': {
-					'floor': '',
-					'walls': '',
-					'roof': ''
-				}
+				'texture': '/assets/textures/graveyard.jpg'
 			}
 		},
 		'light': {

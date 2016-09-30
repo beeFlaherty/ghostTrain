@@ -12,6 +12,9 @@
 			<img id="generic-ceiling" src="assets/textures/ceiling.jpg"></img>
 			<img id="floor" src="assets/textures/floor_18.png"></img>
 
+			<!-- atlas -->
+			<img v-for="theme in configurable.themes" id="{{ $key }}-atlas" src="{{ theme.texture }}"></img>
+
 			<!-- walls -->
 			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
 			<a-mixin id="wall-md" obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"></a-mixin>
