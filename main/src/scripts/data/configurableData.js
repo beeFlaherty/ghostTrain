@@ -77,58 +77,16 @@
 		'monsters': {
 			'zombie': {
 				'name': 'Zombie',
-				'colour': '#0F0',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/zombie.png'
+				'model': '/assets/monsters/monster-zombie.obj'
 			},
-			'mummy': {
-				'name': 'Mummy',
-				'colour': '#F00',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/mummy.png'
+			'ghost': {
+				'name': 'Ghost',
+				'model': '/assets/monsters/monster-ghost.obj'
 			},
 			'vampire': {
 				'name': 'Vampire',
-				'colour': '#000',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/vampire.png'
-			},
-			'skeleton': {
-				'name': 'Skeleton',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/skeleton.png'
-			},
-			'devil': {
-				'name': 'Devil',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/devil.png'
-			},
-			'ghoul': {
-				'name': 'Ghoul',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/ghoul.png'
-			},
-			'frankenstein': {
-				'name': 'Frankenstein',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/frankenstein.png'
-			},
-			'reaper': {
-				'name': 'Reaper',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/reaper.png'
-			},
-			'scarecrow': {
-				'name': 'Scarecrow',
-				'colour': '#FFF',
-				'model': '/assets/monsters/zombie.obj',
-				'texture': '/assets/monsters/scarecrow.png'
-			},
+				'model': '/assets/monsters/monster-vampire.obj'
+			}
 		},
 		'sounds': {
 			'zombie': {

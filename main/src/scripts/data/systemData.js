@@ -54,7 +54,8 @@
 			'width': 1,
 			'height': 0.1,
 			'perroom': 2,
-			'triggerDistance': 8
+			'triggerDistance': 8,
+			'scale': 0.9
 		},
 		'animation': {
 			'duration': 2000,

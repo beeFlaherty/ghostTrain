@@ -1,6 +1,7 @@
 <script id="ride_template" type="x-template">
 	<a-scene stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
 		<a-assets>
+			<img id="monsters_texture" src="assets/monsters/monsters.jpg"></img>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
 
@@ -11,6 +12,7 @@
 			<img id="dark" src="assets/textures/dark/walls.jpg"></img>
 			<img id="generic-ceiling" src="assets/textures/ceiling.jpg"></img>
 			<img id="floor" src="assets/textures/floor_18.png"></img>
+
 
 			<!-- atlas -->
 			<img v-for="theme in configurable.themes" id="{{ $key }}-atlas" src="{{ theme.texture }}"></img>
