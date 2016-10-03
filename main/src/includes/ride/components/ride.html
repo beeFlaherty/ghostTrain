@@ -15,7 +15,7 @@
 
 
 			<!-- atlas -->
-			<img v-for="theme in configurable.themes" id="{{ $key }}-atlas" src="{{ theme.texture }}"></img>
+			<img v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture }}"></img>
 
 			<!-- walls -->
 			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
@@ -40,6 +40,10 @@
 			<a-mixin id="forest-wall" material="src:#forest; roughness:1;"></a-mixin>
 			<a-mixin id="dark-wall" material="src:#dark; roughness:1;"></a-mixin>
 			<a-mixin id="generic-door" mtl="assets/assets/model-buildkit/interactive/door-1.mtl"></a-mixin>
+
+
+
+			<a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
 		</a-assets>
 
 		<a-entity v:if="!loaded">
