@@ -1,0 +1,16 @@
+# Blender v2.77 (sub 0) OBJ File: 'ghost-train-build-kit.blend'
+# www.blender.org
+mtllib decal-1.mtl
+o decal-1_Plane.040
+v -7.746310 3.384191 -23.226877
+v -7.746310 3.384191 -24.773123
+v -7.746310 4.930438 -23.226877
+v -7.746310 4.930438 -24.773123
+vt 0.0000 0.8129
+vt 0.1885 0.8129
+vt 0.1885 1.0000
+vt 0.0000 1.0000
+vn 1.0000 0.0000 0.0000
+usemtl Signs
+s off
+f 1/1/1 2/2/1 4/3/1 3/4/1

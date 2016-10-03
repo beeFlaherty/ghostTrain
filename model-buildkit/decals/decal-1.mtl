@@ -1,0 +1,15 @@
+# Blender MTL File: 'ghost-train-build-kit.blend'
+# Material Count: 1
+
+newmtl Signs
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 1
+map_Kd  C:\\Users\\Joe\\Pictures\\Textures\\signs\\signs.png
+map_Tr  C:\\Users\\Joe\\Pictures\\Textures\\signs\\signs.png
+map_d  C:\\Users\\Joe\\Pictures\\Textures\\signs\\signs.png
