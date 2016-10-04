@@ -1,0 +1,1 @@
+xcopy ".\dist" "\\real-dev-web.realise.com\files\ghosttrain" /Y /S

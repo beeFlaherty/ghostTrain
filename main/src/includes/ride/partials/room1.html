@@ -35,26 +35,26 @@
 		<a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
 	</a-entity>
 
-	<a-entity id="west-wall">
-		<a-entity mixin="wall-sm {{ theme }}-wall" position="0 0 -2"></a-entity>
-		<a-entity mixin="corner-sm {{ theme }}-wall" position="2 0 2" rotation="0 90 0"></a-entity>
-		<a-entity mixin="corner-sm {{ theme }}-wall" position="0 0 -4"></a-entity>
+	 <a-entity id="west-wall">
+		<a-entity mixin="wall-sm {{ theme }}" position="0 0 -2"></a-entity>
+		<a-entity mixin="corner-sm {{ theme }}" position="2 0 2" rotation="0 90 0"></a-entity>
+		<a-entity mixin="corner-sm {{ theme }}" position="0 0 -4"></a-entity>
 	</a-entity>
 
 	<a-entity id="south-wall">
-		<a-entity mixin="wall-lg {{ theme }}-wall" position="16 0 -6" rotation="0 90 0"></a-entity>
-		<a-entity mixin="wall-lg {{ theme }}-wall" position="24 0 -6" rotation="0 90 0"></a-entity>
-		<a-entity mixin="wall-lg {{ theme }}-wall" position="32 0 -6" rotation="0 90 0"></a-entity>
-		<a-entity mixin="wall-sm {{ theme }}-wall" position="34 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-lg {{ theme }}" position="16 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-lg {{ theme }}" position="24 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-lg {{ theme }}" position="32 0 -6" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-sm {{ theme }}" position="34 0 -6" rotation="0 90 0"></a-entity>
 	</a-entity>
 
 	<a-entity id="east-wall" rotation="0 0 0" position="34 0 0">
-		<a-entity mixin="doorframe {{ theme }}-wall" position="0 0 5"></a-entity>
+		<a-entity mixin="doorframe {{ theme }}" position="0 0 5 rotation="0 90 0""></a-entity>
 	</a-entity>
 
 	<a-entity id="north-wall" position="0 0 2" rotation="0 0 0">
-		<a-entity mixin="wall-md {{ theme }}-wall" position="6 0 0" rotation="0 270 0"></a-entity>
-		<a-entity mixin="doorframe {{ theme }}-wall" position="10 0 0" rotation="0 270 0"></a-entity>
-		<a-entity mixin="wall-lg {{ theme }}-wall" position="24 0 0" rotation="0 270 0"></a-entity>
+		<a-entity mixin="wall-md {{ theme }}" position="6 0 0" rotation="0 90 0"></a-entity>
+		<a-entity mixin="doorframe {{ theme }}" position="20 0 0" rotation="0 270 0"></a-entity>
+		<a-entity mixin="wall-lg {{ theme }}" position="36 0 0" rotation="0 90 0"></a-entity>
 	</a-entity>
 </script>
