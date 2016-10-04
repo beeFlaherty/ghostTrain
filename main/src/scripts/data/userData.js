@@ -26,10 +26,6 @@
 						'style': 'bright', // dark, bright, flickering, glowing
 						'color': 'white', //red, green, purple
 
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
 					}
 				],
 
@@ -64,10 +60,6 @@
 						'style': 'bright', // dark, bright, flickering, glowing
 						'color': 'white', //red, green, purple
 
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
 					}
 				],
 
@@ -76,14 +68,10 @@
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
-					},
-					{
-					 	'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-						'sound': 'zombie', // moan, scream, snarl, manic laughter
-						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
 					}
 				]
 			}
+
 		]
 	};
 }());
