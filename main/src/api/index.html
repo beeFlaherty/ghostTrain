@@ -1,0 +1,35 @@
+<p>This is just a test interface for testing the API - look in the console! test</p>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+		function get(action, params) {
+			params = params || {};
+			params.action = action;
+			params.session = Math.round(Math.random() * 1000000000000);
+
+			console.log(action, params);
+
+			$.ajax({
+				url: 'api.php',
+				method: 'post',
+				data: params
+			})
+			.done(function(data) {
+				console.log(data);
+
+				if (action === 'get_ride' && data.status === 'success') {
+					console.log(JSON.parse(data.message));
+				}
+			});
+		}
+
+		var testObj = {
+			'name': 'Bob',
+			'Age': 17
+		};
+
+		get('get_ride', { key: '6db543d0' });
+		get('set_ride', { data: JSON.stringify(testObj) });
+	});
+</script>
