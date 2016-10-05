@@ -13,7 +13,8 @@
           },
           next: function(event){
             event.preventDefault();
-            console.log(this);
+            this.$root.formPart ++;
+            console.log(this.$root.formPart );
           }
         },
       });

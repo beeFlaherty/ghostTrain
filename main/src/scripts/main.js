@@ -16,20 +16,15 @@
       user: userData,
       system: systemData,
       configurable: configurableData,
-      section: 'form'
+      section: 'start',
+      formPart: 0
     },
-    created: function() {
-      this.pauseOnStartScreen();
-    },
-    methods: {
-      pauseOnStartScreen: function() {
-        if (this.section === 'start') {
-          var self = this;
 
-          setTimeout(function() {
+    methods: {
+      gotoForm: function() {
+          var self = this;
             self.section = 'form';
-          }, startScreenDelay);
-        }
+
       }
     }
   });

@@ -2,9 +2,12 @@
     <div class="container">
         <!-- columns should be the immediate child of a .row -->
         <div class="row">
-            <div class="six columns">
+            <div class="eight columns offset-by-two">
                 <div id="settings" class="userInterface">
                     <form>
+
+                    <div v-if="$root.formPart == 0">
+
                         <fieldset>
                             <legend>Build your train</legend>
 
@@ -16,12 +19,15 @@
                                 <input type="radio" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                 <span>{{ music.name }}</span>
                             </span>
+                            <button v-on:click="next">Next</button>
                         </fieldset>
-
+                    </div>
                         <div v-for="room in user.rooms">
+                        <div v-if="$root.formPart == $index+1">
+                        {{ $index+1 }}
                             <fieldset>
                                 <!-- select -->
-                                <legend>Design your room {{ room.number }}</legend>
+                                <legend>Design your room {{ $index+1 }}</legend>
 
                                 <label>Theme</label>
                                 <span v-for="theme in configurable.themes">
@@ -70,16 +76,19 @@
                                     <span>{{ animation.name }}</span>
                                 </span>
                             </fieldset>
+                            <p v-if="$root.formPart != user.rooms.length">
+                              <button v-on:click="next">Next</button>
+                            </p>
+                        </div>
                         </div>
 
+                      <div v-if="$root.formPart == user.rooms.length">
                         <fieldset>
                             <p><button v-on:click="activate">Scare Me</button></p>
                         </fieldset>
+                      </div>
                     </form>
                 </div>
-            </div>
-            <div class="six columns">
-                <img src="http://placehold.it/350x150?text=Preview+here"/>
             </div>
         </div>
     </div>
