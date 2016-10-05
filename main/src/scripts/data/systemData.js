@@ -13,43 +13,46 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						'position': '18 3 -5'
+						'position': '4 3 -3'
 					},
 					{
-						'position': '18 3 -22',
+						'position': '4 3 -23.5',
 					},
 					{
-						'position': '30 3 -22',
+						'position': '20 3 -22',
 					}
 				],
 				'scares': [
 					{
-						'position': '18 0 -10',
-						'rotation': '0 0 0'
+						'position': '3 0 -8',
+						'rotation': '0 0 0',
+						'animation': 'fromright'
 					},
 					{
-						'position': '30 0 -22',
-						'rotation': '0 90 0'
+						'position': '20 0 -22',
+						'rotation': '0 90 0',
+						'animation': 'fromleft'
 					}
 				]
 			},
 			{
-				'position': '24 0 -18',
+				'position': '24 0 -16',
 				'lights': [
 					{
-						'position': '18 3 0'
+						'position': '4 3 0'
 					},
 					{
-						'position': '18 3 -22',
+						'position': '6 3 10',
 					},
 					{
-						'position': '32 3 -22',
+						'position': '6 3 -16',
 					}
 				],
 				'scares': [
 					{
-						'position': '18 0 -16',
-						'rotation': '0 0 0'
+						'position': '4 0 13',
+						'rotation': '0 0 0',
+						'animation': 'popup'
 					}
 				]
 			},
@@ -69,11 +72,11 @@
 			'showPoints': false,
 			'speed': 3,
 			'points': [
-				'18 4 0',
-				'18 4 -20',
-				'40 4 -20',
-				'40 4 -38',
-				'50 4 -38',
+				'4 4 0',
+				'4 4 -20',
+				'28 4 -20',
+				'28 4 -6',
+				'28 4 -28',
 			]
 		}
 	};

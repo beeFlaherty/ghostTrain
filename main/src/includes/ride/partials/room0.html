@@ -34,9 +34,11 @@
 		<a-entity mixin="ceiling generic-ceiling" position="24 0 -14"></a-entity>
 		<a-entity mixin="ceiling generic-ceiling" position="32 0 -14"></a-entity>
 		<a-entity mixin="ceiling generic-ceiling" position="40 0 -14"></a-entity>
-	</a-entity> -->
+	</a-entity>
 
 	<a-entity data-name="north-wall" position="0 0 0" rotation="0 0 0">
+	<a-entity mixin="doorframe {{ theme }}" position="20 0 0" rotation="0 90 0"></a-entity>
+
 		<a-entity mixin="wall-lg {{ theme }}" position="36 0 -16" rotation="0 90 0"></a-entity>
 	</a-entity>
 
@@ -56,13 +58,25 @@
 	</a-entity>
 
 	<a-entity id="end-wall" position="36 0 -24" rotation="0 0 0">
-		<a-entity mixin="wall-md {{ theme }}" rotation="0 180 0"></a-entity>
+		<a-entity mixin="doorframe {{ theme }}" rotation="0 180 0"></a-entity>
+	</a-entity> -->
+
+
+	<a-entity data-name="east-wall" position="0 0 0" rotation="0 0 0">
+		<a-entity mixin="wall-lg {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="corner-inner {{ theme }}" position="0 0 -16"></a-entity>
 	</a-entity>
 
+	<a-entity data-name="south-wall" position="0 0 -24" rotation="0 0 0">
+		<a-entity mixin="wall-lg {{ theme }}" position="8 0 0" rotation="0 270 0"></a-entity>
+	</a-entity>
 
-
-
-
+	<a-entity data-name="west-wall" position="8 0 0" rotation="0 0 0">
+		<a-entity mixin="wall-md {{ theme }}" position="0 0 -8" rotation="0 180 0"></a-entity>
+		<a-entity mixin="corner-outer {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="wall-md {{ theme }}" position="16 0 -16" rotation="0 90 0"></a-entity>
+		<a-entity mixin="wall-md {{ theme }}" position="16 0 -24" rotation="0 180 0"></a-entity>
+	</a-entity>
 
 
 </script>

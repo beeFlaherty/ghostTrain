@@ -8,12 +8,14 @@
 * Finish lights - James - DONE - DONE
 * Update form for James' lights - Bee - DONE
 * Style a monster with one of Fed's designs - Joe/James - DONE
+* Build a second-room - James - DONE
+* Style rooms with Fed's hotel skin - Joe/James* - DONE
+
 
 * Preview images on creation form - Bee - IN PROGRESS
 
-* Build a second-room - James
-* Style rooms with Fed's hotel skin - Joe/James
-* Form isn't reflecting initial values? - Bee/David
+
+Form isn't reflecting initial values? - Bee/David
 * Split the form into seperate stage/screens - Bee/David
 * Add analytics events
 * Integrate with database - David
