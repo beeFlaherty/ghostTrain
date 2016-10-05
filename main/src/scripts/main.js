@@ -17,7 +17,9 @@
       system: systemData,
       configurable: configurableData,
       section: 'start',
-      formPart: 0
+      formPart: 0,
+      roomPart: 'theme',
+      stageCounter:1
     },
 
     methods: {

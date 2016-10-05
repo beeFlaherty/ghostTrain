@@ -13,8 +13,21 @@
           },
           next: function(event){
             event.preventDefault();
+            if (this.$root.formPart > 0){
+              if (this.$root.roomPart == "theme") {
+                this.$root.roomPart = "lights"
+              }else if (this.$root.roomPart == "lights") {
+                this.$root.roomPart = "scare"
+              } else if (this.$root.roomPart == "scare") {
+                this.$root.roomPart = "theme"
+                this.$root.formPart ++;
+              }
+
+            }else {
             this.$root.formPart ++;
-            console.log(this.$root.formPart );
+
+            }
+            this.$root.stageCounter++;
           }
         },
       });

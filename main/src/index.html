@@ -21,8 +21,8 @@
 
 		<div id="app">
 
-			<div v-if="section == 'start'">
-				<!-- build:include includes/splash_screen.html  -->Form will go here<!-- /build -->
+			<div v-if="section == 'start'" v-bind:user="user">
+				<!-- build:include includes/splash_screen.html  -->Splash Screen<!-- /build -->
 			</div>
 
 			<div v-if="section == 'form'">
