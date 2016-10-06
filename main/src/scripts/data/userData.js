@@ -12,7 +12,7 @@
 				'number': 0,
 				'theme': 'hotel', // castle, forest, graveyard
 				'lights': {
-					'style' : 'neon'
+					'style' : 'crypt'
 				},
 
 				'scares': [

@@ -50,7 +50,7 @@
 					'candlelight': {
 						'name': 'Candlelight',
 						'light_1': '#fff',
-						'light_2': '#fbf813',
+						'light_2': '#fceba7',
 						'light_3': '#fff'
 					},
 					'moonlight': {
@@ -79,9 +79,9 @@
 					},
 					'crypt': {
 						'name': 'Crypt',
-						'light_1': '#acacac',
-						'light_2': '#acacac',
-						'light_3': '#acacac'
+						'light_1': '#535353',
+						'light_2': '#535353',
+						'light_3': '#535353'
 					}
 				},
 			// 'color': {

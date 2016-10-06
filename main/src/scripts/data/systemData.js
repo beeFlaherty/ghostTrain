@@ -39,40 +39,18 @@
 				'position': '24 0 -16',
 				'lights': [
 					{
-						'position': '4 3 0'
+						'position': '5 3 8'
 					},
 					{
-						'position': '6 3 10',
+						'position': '5 3 0',
 					},
 					{
-						'position': '6 3 -16',
+						'position': '5 3 -16',
 					}
 				],
 				'scares': [
 					{
 						'position': '4 0 13',
-						'rotation': '0 0 0',
-						'animation': 'popup'
-					}
-				]
-			},
-			{
-				'position': '24 0 -32',
-				'lights': [
-					{
-						'position': '-2 3 0'
-					}
-					// },
-					// {
-					// 	'position': '6 3 10',
-					// },
-					// {
-					// 	'position': '6 3 -16',
-					// }
-				],
-				'scares': [
-					{
-						'position': '-6 0 13',
 						'rotation': '0 0 0',
 						'animation': 'popup'
 					}
