@@ -24,7 +24,7 @@
 				],
 				'scares': [
 					{
-						'position': '3 0 -8',
+						'position': '3 0 -16',
 						'rotation': '0 0 0',
 						'animation': 'fromright'
 					},
