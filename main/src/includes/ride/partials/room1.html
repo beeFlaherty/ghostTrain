@@ -1,4 +1,17 @@
 <script id="room1-partial" type="x-partial">
+	<a-entity data-name="floor">
+		<a-entity mixin="floor {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="0 0 8"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="0 0 16"></a-entity>
+	</a-entity>
+
+	<a-entity data-name="ceiling">
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 8"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 16"></a-entity>
+	</a-entity>
 
 	<!--<a-entity data-name="north-wall" position="0 0 0" rotation="0 0 0">
 		<a-entity mixin="wall-lg {{ theme }}" position="36 0 -16" rotation="0 90 0"></a-entity>
