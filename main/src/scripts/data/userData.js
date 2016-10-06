@@ -10,24 +10,10 @@
 		'rooms': [
 			{
 				'number': 0,
-				'theme': 'castle', // castle, forest, graveyard
-				'lights': [
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					}
-				],
+				'theme': 'hotel', // castle, forest, graveyard
+				'lights': {
+					'style' : 'neon'
+				},
 
 				'scares': [
 					{
@@ -36,32 +22,18 @@
 						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
 					},
 					{
-					 	'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-						'sound': 'zombie', // moan, scream, snarl, manic laughter
+					 	'monster': 'ghost', // none, zombie, mummy, vampire, skeleton
+						'sound': 'scream', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
 					}
 				]
 			},
 			{
-				'number': 0,
+				'number': 1,
 				'theme': 'castle', // castle, forest, graveyard
-				'lights': [
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					}
-				],
+				'lights': {
+					'style' : 'candlelight'
+				},
 
 				'scares': [
 					{
@@ -71,7 +43,6 @@
 					}
 				]
 			}
-
 		]
 	};
 }());

@@ -2,9 +2,12 @@
     <div class="container">
         <!-- columns should be the immediate child of a .row -->
         <div class="row">
-            <div class="six columns">
+            <div class="eight columns offset-by-two">
                 <div id="settings" class="userInterface">
                     <form>
+                    <div class="background"></div>
+					<div class="inner">
+                    <div v-if="$root.formPart == 0">
                         <fieldset>
                             <legend>Build your train</legend>
 
@@ -16,43 +19,39 @@
                                 <input type="radio" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                 <span>{{ music.name }}</span>
                             </span>
+                            <p><button v-on:click="next">Next</button></p>
                         </fieldset>
-
+                    </div>
                         <div v-for="room in user.rooms">
-                            <fieldset>
-                                <!-- select -->
-                                <legend>Design your room {{ room.number }}</legend>
-
-                                <label>Theme</label>
-                                <span v-for="theme in configurable.themes">
-                                    <input type="radio" name="theme" value="{{ $key }}" v-model="room.theme">
+                        <div v-if="$root.formPart == $index+1">
+                            <fieldset v-if="$root.roomPart == 'theme'">
+                                  <legend>Select your room </legend>
+                                  <span v-for="theme in configurable.themes">
+                                      <input type="radio" name="theme" value="{{ $key }}" v-model="room.theme">
                                     <span>{{ theme.name }}</span>
-                                </span>
+                                  </span>
+                                  <button v-on:click="next">Next</button>
                             </fieldset>
-                            <fieldset>
-                                <div v-for="light in room.lights">
+
+                            <fieldset  v-if="$root.roomPart == 'lights'">
+                                <div v-for="(light, thisindex) in room.lights">
                                     <label>Lighting effect {{ $index }}</label>
 
                                     <span>Style</span>
                                     <br/>
                                     <span v-for="style in configurable.light.style">
-                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.style">
+                                        <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style">
                                         <span>{{ style.name }}</span>
                                     </span>
                                     <br/>
 
-                                    <span>Colour</span>
-                                    <br/>
-                                    <span v-for="color in configurable.light.color">
-                                        <input type="radio" name="theme" value="{{ $key }}" v-model="light.color">
-                                        <span>{{ color.name }}</span>
-                                    </span>
-                                </div>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Add a scare</legend>
 
-                                <label>Monster</label>
+                                </div>
+                                <button v-on:click="next">Next</button>
+                            </fieldset>
+                            <fieldset v-if="$root.roomPart == 'scare'">
+                                <legend>Select your Monster</legend>
+
                                 <span v-for="monster in configurable.monsters">
                                     <input type="radio" name="monster" value="{{ $key }}" v-model="room.scares[0].monster">
                                     <span>{{ monster.name }}</span>
@@ -69,17 +68,20 @@
                                     <input type="radio" name="animation" value="{{ $key }}" v-model="room.scares[0].animation">
                                     <span>{{ animation.name }}</span>
                                 </span>
+
+
+                            <p v-if="$root.formPart != user.rooms.length" >
+                              <button v-on:click="next">Next</button>
+                            </p>
+                            <p v-if="$root.formPart == user.rooms.length">
+                              <button v-on:click="activate">Scare Me</button>
+                            </p>
                             </fieldset>
                         </div>
-
-                        <fieldset>
-                            <p><button v-on:click="activate">Scare Me</button></p>
-                        </fieldset>
+                        </div>
+						</div>
                     </form>
                 </div>
-            </div>
-            <div class="six columns">
-                <img src="http://placehold.it/350x150?text=Preview+here"/>
             </div>
         </div>
     </div>

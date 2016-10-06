@@ -1,6 +1,14 @@
 body {
   background:#040707;
+  background-image: url(/img/background.png);
+  background-size: cover;
+  background-position: bottom;
   color:#bdbdbd;
+}
+
+.homepage-img {
+    display:block;
+    margin:10px auto;
 }
 .data-debug {
   display:none;
@@ -8,23 +16,43 @@ body {
 
 legend {
   font-family: 'Creepster', cursive;
-  color: #4CBB17;
+  color: #00ff6f;
   font-size: 2em;
 }
 
 label {
-    color: #4CBB17;
+    color: #00ff6f;
 }
 
-button {
+button, button:hover {
   font-family: 'Creepster', cursive;
-  color: #4CBB17;
+  background: #00ff6f;
+  color:black;
   font-size: 2em;
-  float:right;
-  border-color:#4CBB17;
+  border-color:#00ff6f;
+  display:block;
+  margin:30px auto;
+  border-radius:0;
 }
+
+
 
 form {
-    height: 500px;
-    overflow-y: scroll;
+    padding:50px;
+    position:relative;
+	text-align:center;
+    .background {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#000;
+        opacity:0.5;
+        z-index:1;
+    }
+	.inner {
+		position:relative;
+		z-index: 100;
+	}
 }

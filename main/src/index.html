@@ -18,15 +18,18 @@
 	</head>
 
 	<body>
-		<!-- build:include includes/header.html -->Header will go here<!-- /build -->
 
 		<div id="app">
-			<div v-if="section == 'start'">
-				<h1>THIS IS THE START</h1>
+
+			<div v-if="section == 'start'" v-bind:user="user">
+				<!-- build:include includes/splash_screen.html  -->Splash Screen<!-- /build -->
 			</div>
+
 			<div v-if="section == 'form'">
-				<gt-form v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-form>
+				<!-- build:include includes/header.html -->Header will go here<!-- /build -->
+				<gt-form v-bind:app="app"  v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-form>
 			</div>
+
 			<div v-if="section == 'ride'">
 				<gt-ride v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-ride>
 			</div>

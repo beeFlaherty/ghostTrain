@@ -25,6 +25,9 @@
 			<!-- corners -->
 			<a-mixin id="corner-sm" obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"></a-mixin>
 
+			<a-mixin id="corner-inner" obj-model="obj: url(assets/model-buildkit/walls/corner_default_flipped_4x4.obj);"></a-mixin>
+			<a-mixin id="corner-outer" obj-model="obj: url(assets/model-buildkit/walls/corner_default_4x4.obj);"></a-mixin>
+
 			<!-- doorframe -->
 			<a-mixin id="doorframe" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
 
@@ -34,7 +37,7 @@
 			<!-- floor -->
 			<a-mixin id="floor" obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
 			<a-mixin id="generic-floor" material="src:#floor; roughness:1;"></a-mixin>
-			<a-mixin id="ceiling" obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
+			<a-mixin id="ceiling" obj-model="obj: url(assets/model-buildkit/floors/ceiling-default-4x4.obj);"></a-mixin>
 			<a-mixin id="generic-ceiling" material="src:#generic-ceiling; roughness:1;"></a-mixin>
 			<a-mixin id="castle-wall" material="src:#castle; roughness:1;"></a-mixin>
 			<a-mixin id="forest-wall" material="src:#forest; roughness:1;"></a-mixin>
@@ -58,10 +61,10 @@
 			</a-entity>
 
 			<!--  old kart position 16 4 15 -->
-			<a-entity position="20 0 0" kart=" {{ system.track.speed }}"><!-- Need this space before the {{ for some reason -->
+			<a-entity position="5 4 0" rotation="0 0 0" kart=" {{ system.track.speed }}"> <!-- Need this space before the {{ for some reason -->
 				<a-entity obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
-					<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="false"></a-camera>
+					<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="ture"></a-camera>
 					<a-entity
 						v-if="$root.system.sound.chain"
 						sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
