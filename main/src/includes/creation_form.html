@@ -5,7 +5,7 @@
             <div class="eight columns offset-by-two">
                 <div id="settings" class="userInterface">
                     <form>
-                    <div class="background"></div>
+					<div class="background"></div>
 					<div class="inner">
                     <div v-if="$root.formPart == 0">
                         <fieldset>
@@ -34,11 +34,9 @@
                             </fieldset>
 
                             <fieldset  v-if="$root.roomPart == 'lights'">
+							<legend>Select your lighting effect</legend>
                                 <div v-for="(light, thisindex) in room.lights">
-                                    <label>Lighting effect {{ $index }}</label>
 
-                                    <span>Style</span>
-                                    <br/>
                                     <span v-for="style in configurable.light.style">
                                         <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style">
                                         <span>{{ style.name }}</span>
@@ -79,10 +77,11 @@
                             </fieldset>
                         </div>
                         </div>
-						</div>
+
                     </form>
                 </div>
             </div>
         </div>
+		</div>
     </div>
 </script>
