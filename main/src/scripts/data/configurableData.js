@@ -33,46 +33,83 @@
 			}
 		},
 		'light': {
-			'style': {
-				'dark': {
-					'name': 'Dark'
+			'style':
+				{
+					'normal': {
+						'name': 'Normal',
+						'light_1': '#fff',
+						'light_2': '#fff',
+						'light_3': '#fff'
+					},
+					'neon': {
+						'name': 'Neon Disco',
+						'light_1': '#a106db',
+						'light_2': '#160dc6',
+						'light_3': '#F00'
+					},
+					'candlelight': {
+						'name': 'Candlelight',
+						'light_1': '#fff',
+						'light_2': '#fbf813',
+						'light_3': '#fff'
+					},
+					'moonlight': {
+						'name': 'Moonlight',
+						'light_1': '#fff',
+						'light_2': '',
+						'light_3': '#fff'
+					},
+					'nuclear': {
+						'name': 'Nuclear Apocolypse',
+						'light_1': '#0F0',
+						'light_2': '#fbf813',
+						'light_3': '#0F0'
+					},
+					'redalert': {
+						'name': 'Red Alert',
+						'light_1': '#F00',
+						'light_2': '',
+						'light_3': '#F00'
+					},
+					'basement': {
+						'name': 'Haunted Basement',
+						'light_1': '#160dc6',
+						'light_2': '#0F0',
+						'light_3': '#160dc6'
+					},
+					'crypt': {
+						'name': 'Crypt',
+						'light_1': '#acacac',
+						'light_2': '#acacac',
+						'light_3': '#acacac'
+					}
 				},
-				'bright': {
-					'name': 'Bright'
-				},
-				'flickering': {
-					'name': 'Flickering'
-				},
-				'glowing': {
-					'name': 'Glowing'
-				}
-			},
-			'color': {
-				'red': {
-					'name': 'Red',
-					'hex': '#F00'
-				},
-				'purple': {
-					'name': 'Purple',
-					'hex': '#a106db'
-				},
-				'blue': {
-					'name': 'Blue',
-					'hex': '#160dc6'
-				},
-				'green': {
-					'name': 'Green',
-					'hex': '#0F0'
-				},
-				'white': {
-					'name': 'White',
-					'hex': '#fff'
-				},
-				'yellow': {
-					'name': 'Yellow',
-					'hex': '#fbf813'
-				}
-			}
+			// 'color': {
+			// 	'red': {
+			// 		'name': 'Red',
+			// 		'hex': '#F00'
+			// 	},
+			// 	'purple': {
+			// 		'name': 'Purple',
+			// 		'hex': '#a106db'
+			// 	},
+			// 	'blue': {
+			// 		'name': 'Blue',
+			// 		'hex': '#160dc6'
+			// 	},
+			// 	'green': {
+			// 		'name': 'Green',
+			// 		'hex': '#0F0'
+			// 	},
+			// 	'white': {
+			// 		'name': 'White',
+			// 		'hex': '#fff'
+			// 	},
+			// 	'yellow': {
+			// 		'name': 'Yellow',
+			// 		'hex': '#fbf813'
+			// 	}
+			// }
 		},
 		'monsters': {
 			'zombie': {

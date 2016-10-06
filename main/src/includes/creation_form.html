@@ -39,17 +39,12 @@
                                     <span>Style</span>
                                     <br/>
                                     <span v-for="style in configurable.light.style">
-                                        <input type="radio" name="lightstyle{{ thisindex }}" value="{{ $key }}" v-model="light.style">
+                                        <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style">
                                         <span>{{ style.name }}</span>
                                     </span>
                                     <br/>
 
-                                    <span>Colour</span>
-                                    <br/>
-                                    <span v-for="color in configurable.light.color">
-                                        <input type="radio" name="lightcolor{{ thisindex }}" value="{{ $key }}" v-model="light.color">
-                                        <span>{{ color.name }}</span>
-                                    </span>
+
                                 </div>
                                 <button v-on:click="next">Next</button>
                             </fieldset>

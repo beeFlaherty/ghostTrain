@@ -1,8 +1,25 @@
 <script id="light_template" type="x-template">
-	<a-light v-if="style !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="{{ position }}" color="{{ color }}">
-		<a-animation v-if="style === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
-		<a-animation v-if="style === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+	<a-light type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[index].lights[0].position }}" color="{{ light1 }}">
+
+		<!--<a-animation v-if="style === 'neon'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation> -->
 	</a-light>
 
-	<a-sphere position="{{ position }}"" color="{{ color }}" radius="3"></a-sphere>
+	<a-light type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[index].lights[1].position }}" color="{{ light2 }}">
+
+	</a-light>
+
+	<a-light type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[index].lights[2].position }}" color="{{ light3 }}">
+
+	</a-light>
+
+
+
+	<!-- <a-light v-if="style !== 'dark'" type="point" intensity="3" distance="25" decay="2" position="{{ position }}" color="{{ color }}">
+		<a-animation v-if="style === 'flickering'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+		<a-animation v-if="style === 'glowing'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
+	</a-light> -->
+
+	<a-sphere position="{{ $root.system.rooms[index].lights[0].position }}" color="{{ color }}" radius="3"></a-sphere>
+	<a-sphere position="{{ $root.system.rooms[index].lights[1].position }}" color="{{ color }}" radius="3"></a-sphere>
+	<a-sphere position="{{ $root.system.rooms[index].lights[2].position }}" color="{{ color }}" radius="3"></a-sphere>
 </script>

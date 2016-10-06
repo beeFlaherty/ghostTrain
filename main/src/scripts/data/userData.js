@@ -11,23 +11,9 @@
 			{
 				'number': 0,
 				'theme': 'hotel', // castle, forest, graveyard
-				'lights': [
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					}
-				],
+				'lights': {
+					'style' : 'neon'
+				},
 
 				'scares': [
 					{
@@ -45,23 +31,9 @@
 			{
 				'number': 1,
 				'theme': 'castle', // castle, forest, graveyard
-				'lights': [
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					},
-					{
-						'style': 'bright', // dark, bright, flickering, glowing
-						'color': 'white', //red, green, purple
-
-					}
-				],
+				'lights': {
+					'style' : 'candlelight'
+				},
 
 				'scares': [
 					{

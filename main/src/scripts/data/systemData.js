@@ -19,7 +19,7 @@
 						'position': '4 3 -23.5',
 					},
 					{
-						'position': '15 3 -22',
+						'position': '17 3 -22',
 					}
 				],
 				'scares': [
