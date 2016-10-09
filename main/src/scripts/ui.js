@@ -2,6 +2,8 @@
   'use strict';
 
   module.exports = function() {
+
+
     var FormComponent =
       Vue.extend({
         template: '#form_template',

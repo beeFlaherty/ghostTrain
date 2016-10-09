@@ -1,19 +1,49 @@
 <script id="room2-partial" type="x-partial">
-
-	<a-entity data-name="north-wall" position="0 0 0" rotation="0 0 0">
-		<a-entity mixin="wall-lg {{ theme }}" position="0 0 0" rotation="0 0 0"></a-entity>
-
-		<a-entity mixin="wall-lg {{ theme }}" position="0 0 -16" rotation="0 0 0"></a-entity>
-
-		<a-entity mixin="wall-lg {{ theme }}" position="8 0 -16" rotation="0 180 0"></a-entity>
-
-		<a-entity mixin="wall-lg {{ theme }}" position="8 0 -32" rotation="0 180 0"></a-entity>
-
-
-		<a-entity mixin="wall-md {{ theme }}" position="8 0 -32" rotation="0 270 0"></a-entity>
-
+	<a-entity data-name="floor">
+		<a-entity mixin="floor {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="0 0 -16"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="8 0 -16"></a-entity>
+		<a-entity mixin="floor {{ theme }}" position="16 0 -16"></a-entity>
 	</a-entity>
 
+	<a-entity data-name="ceiling">
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="0 0 -16"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="8 0 -16"></a-entity>
+		<a-entity mixin="ceiling {{ theme }}" position="16 0 -16"></a-entity>
+	</a-entity>
+
+
+
+
+	<a-entity data-name="east-wall" position="0 0 0" rotation="0 0 0">
+		<a-entity mixin="wall-lg {{ theme }}" position="0 0 0"></a-entity>
+		<a-entity mixin="corner-inner {{ theme }}" position="0 0 -16"></a-entity>
+	</a-entity>
+
+	<a-entity data-name="south-wall" position="0 0 -24" rotation="0 0 0">
+		<a-entity mixin="wall-lg {{ theme }}" position="8 0 0" rotation="0 270 0"></a-entity>
+	</a-entity>
+
+	<a-entity data-name="west-wall" position="8 0 0" rotation="0 0 0">
+		<a-entity mixin="wall-md {{ theme }}" position="0 0 -8" rotation="0 180 0"></a-entity>
+		<a-entity mixin="corner-outer {{ theme }}" position="0 0 -8"></a-entity>
+		<a-entity mixin="wall-md {{ theme }}" position="16 0 -16" rotation="0 90 0"></a-entity>
+
+
+		<a-entity mixin="doorframe {{ theme }}" position="0 0 -0" rotation="0 90 0"></a-entity>
+		<a-entity mixin="door {{ theme }}" position="0 0 0" rotation="0 90 0"></a-entity>
+		<a-entity mixin="door {{ theme }}" position="-8 0 0" rotation="0 270 0"></a-entity>
+
+		<a-entity mixin="doorframe {{ theme }}" position="16 0 -24" rotation="0 180 0"></a-entity>
+	<a-entity mixin="door {{ theme }}" position="16 0 -24" rotation="0 180 0"></a-entity>
+	<a-entity mixin="door {{ theme }}" position="16 0 -16" rotation="0 0 0"></a-entity>
+
+
+
+	</a-entity>
 
 
 </script>
