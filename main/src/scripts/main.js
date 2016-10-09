@@ -7,6 +7,7 @@
 
   var ui = require('./ui')();
   var ride = require('./ride')();
+  var api = require('./api')(Vue);
 
   var startScreenDelay = 3000;
 

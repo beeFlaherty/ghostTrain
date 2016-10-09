@@ -82,6 +82,8 @@ function session_check() {
 
 // Check for the presence of an API key - allow us to slow down rogue users of the API
 function api_key_check() {
+	global $config;
+
 	if (!isset($_POST['api_key'])) {
 		send_message('error', array('reason' => 'no_api_key','message' => 'No API key passed'));
 	} else if ($_POST['api_key'] != $config['api_key']) {
