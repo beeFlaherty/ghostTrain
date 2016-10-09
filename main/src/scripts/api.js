@@ -5,22 +5,22 @@
   var apiUrl = '/api/api.php';
 
   module.exports = function(Vue) {
-    function get(key) {
+    function get(key, callback) {
       callApi(
         'get_ride',
         { key: key },
         function(data) {
-          console.log('Got', JSON.parse(data));
+          callback(JSON.parse(data));
         }
       );
     }
 
-    function set(data) {
+    function set(data, callback) {
       callApi(
         'set_ride',
         { data: JSON.stringify(data) },
         function(key) {
-          console.log('Set', key);
+          callback(key);
         }
       );
     }

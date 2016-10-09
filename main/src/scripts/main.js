@@ -20,15 +20,37 @@
       section: 'start',
       formPart: 0,
       roomPart: 'theme',
-      stageCounter:1
+      stageCounter: 1
     },
-
     methods: {
-      gotoForm: function() {
-          var self = this;
-            self.section = 'form';
+      getFromDatabase: function() {
+        if (window.location.hash) {
+          var key = window.location.hash.replace('#', '');
 
+          var self = this;
+
+          api.get(key, function(data) {
+            self.user = data;
+            self.goto('ride');
+          });
+        }
+      },
+
+      saveToDatabase: function() {
+          api.set(this.user, function(key) {
+            window.location.hash = key;
+          });
+      },
+
+      goto: function(section) {
+        if (this.section === 'form' && section === 'ride') {
+          this.saveToDatabase();
+        }
+
+        this.section = section;
       }
     }
   });
+
+  app.getFromDatabase();
 }());

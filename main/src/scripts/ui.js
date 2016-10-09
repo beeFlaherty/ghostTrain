@@ -8,7 +8,7 @@
         props: ['user', 'system', 'configurable'],
         methods: {
           activate: function(event) {
-            this.$root.section = 'ride';
+            this.$root.goto('ride');
             event.preventDefault();
           },
           next: function(event){
