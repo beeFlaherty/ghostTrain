@@ -8,6 +8,7 @@ date_default_timezone_set('GMT');
 function init_call() {
 	// domain_check();
 	session_check();
+	api_key_check();
 
 	$db = connect_database(); // Connect... to the... database...
 	create_structure(); // Ensure the data tables exist
@@ -76,6 +77,15 @@ function get_post($name) {
 function session_check() {
 	if (!isset($_POST['session'])) {
 		send_message('error', array('reason' => 'no_session_token','message' => 'No session token passed'));
+	}
+}
+
+// Check for the presence of an API key - allow us to slow down rogue users of the API
+function api_key_check() {
+	if (!isset($_POST['api_key'])) {
+		send_message('error', array('reason' => 'no_api_key','message' => 'No API key passed'));
+	} else if ($_POST['api_key'] != $config['api_key']) {
+		send_message('error', array('reason' => 'invalid_api_key','message' => 'Invalid API key passed'));
 	}
 }
 

@@ -2,6 +2,7 @@
 
 $config = array();
 
+$config['api_key'] = '8cdc94a2-b53f-4ac6-81ea-76aeeb5a2063';
 
 // ---- Local ---------------------------------------
 

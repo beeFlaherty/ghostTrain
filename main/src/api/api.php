@@ -16,6 +16,11 @@ function create_structure() {
 	');
 }
 
+function empty_database() {
+	run_query('
+		DROP TABLE `rides`;
+	');
+}
 
 function get_ride($key) {
 	$key = str_replace('\\', '', $key);
