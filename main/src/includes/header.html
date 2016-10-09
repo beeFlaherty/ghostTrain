@@ -4,4 +4,16 @@
   </div>
   <p style="text-align:center">part {{ $root.stageCounter }} of {{ (user.rooms.length)*3+1}}</p>
 
+  <div class="progress-bar">
+  <ul>
+    <li id="1" v-bind:class="$root.classObject()">1</li>
+    <li id="2" class="room"><span>Room 1</span></li>
+    <li id="3">3</li>
+    <li id="4">4</li>
+    <li id="5" class="room"><span>Room 2</span></li>
+    <li id="6">6</li>
+    <li id="7">7</li>
+  </ul>
+</div>
+
 </header>

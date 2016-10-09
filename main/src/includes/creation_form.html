@@ -11,13 +11,12 @@
                         <fieldset>
                             <legend>Build your train</legend>
 
-                            <label>name</label>
-                            <input type="text" v-model="user.trainsettings.name">
-
-                            <label>Background music</label>
+                            <p>Background music</p>
                             <span v-for="music in configurable.music">
-                                <input type="radio" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
+                              <label for="music{{ $key }}">
+                                <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                 <span>{{ music.name }}</span>
+                             <label>
                             </span>
                             <p><button v-on:click="next">Next</button></p>
                         </fieldset>
@@ -27,8 +26,8 @@
                             <fieldset v-if="$root.roomPart == 'theme'">
                                   <legend>Select your room </legend>
                                   <span v-for="theme in configurable.themes">
-                                      <input type="radio" name="theme" value="{{ $key }}" v-model="room.theme">
-                                    <span>{{ theme.name }}</span>
+                                      <label for="theme{{ $key }}"><input type="radio" id="theme{{ $key }}"name="theme" value="{{ $key }}" v-model="room.theme">
+                                    {{ theme.name }}</label>
                                   </span>
                                   <button v-on:click="next">Next</button>
                             </fieldset>

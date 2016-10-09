@@ -9,6 +9,7 @@ body {
 .homepage-img {
     display:block;
     margin:10px auto;
+    max-width:80%;
 }
 .data-debug {
   display:none;
@@ -40,7 +41,7 @@ button, button:hover {
 form {
     padding:50px;
     position:relative;
-	text-align:center;
+	  text-align:center;
     .background {
         position:absolute;
         top:0;
@@ -55,4 +56,69 @@ form {
 		position:relative;
 		z-index: 100;
 	}
+/*  label {
+    display:block;
+    background:#ccc;
+    height:20px;
+    margin-bottom:10px;
+
+    span {display:none;}
+    input[type="radio"] {display:none;}
+
+  }*/
+}
+.progress-bar {
+  text-align: center;
+}
+.progress-bar ul{
+  list-style-type: none;
+  border-top: #00ff6f 2px solid;
+  display:inline-block;
+  margin: 0 auto;
+  li{
+    display:block;
+    float:left;
+    background:#ccc;
+    border: #00ff6f 2px solid;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    overflow:hdden;
+    margin-top:-12px;
+    margin-right:20px;
+    margin-bottom:50px;
+    position:relative;
+    &.active {
+      background:#00ff6f;
+      border: #00ff6f 2px solid;
+
+      &:before {
+        content:"";
+        background:#ccc;
+        position:absolute;
+        width:20px;
+        height:20px;
+        top:-35px;
+        left:50%;
+        margin-left:-10px;
+      }
+    }
+    &:last-of-type {
+      margin-right:0px;
+    }
+    &.room {
+      width:30px;
+      height:30px;
+      margin-top:-17px;
+      position:relative;
+       span {
+        position:absolute;
+        display:block;
+        width:70px;
+        left:-20px;
+        bottom: -30px;
+        text-align:center;
+      }
+    }
+  }
 }
