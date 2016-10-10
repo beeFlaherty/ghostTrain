@@ -34,15 +34,23 @@
         var thisPosition = getGlobalPosition(this.el.object3D);
 
         this.others.forEach(function(other) {
-          var otherPosition = getGlobalPosition(other.object3D);
-          var distance = distanceVector(thisPosition, otherPosition);
-          var triggerDistance = other.getAttribute('collidable');
+          if (!other.is('left')) {
+            var otherPosition = getGlobalPosition(other.object3D);
+            var distance = distanceVector(thisPosition, otherPosition);
+            var triggerDistance = other.getAttribute('collidable');
 
-          if (distance < triggerDistance &&
-            !other.is('hit')) {
-            other.addState('hit');
-            other.emit('hit');
-            other.setAttribute('visible', 'true');
+            if (!other.is('hit')) {
+              if (distance < triggerDistance) {
+                other.addState('hit');
+                other.emit('hit');
+                other.setAttribute('visible', 'true');
+              }
+            } else {
+              if (distance >= triggerDistance) {
+                other.addState('left');
+                other.emit('left');
+              }
+            }
           }
         });
       }
