@@ -34,21 +34,28 @@
         var thisPosition = getGlobalPosition(this.el.object3D);
 
         this.others.forEach(function(other) {
-          if (!other.is('left')) {
+          if (!other.is('exit')) {
             var otherPosition = getGlobalPosition(other.object3D);
             var distance = distanceVector(thisPosition, otherPosition);
             var triggerDistance = other.getAttribute('collidable');
+            var impactDistance = 5;
 
-            if (!other.is('hit')) {
+            if (!other.is('enter') && !other.is('impact')) {
               if (distance < triggerDistance) {
-                other.addState('hit');
-                other.emit('hit');
+                other.addState('enter');
+                other.emit('enter');
                 other.setAttribute('visible', 'true');
               }
             } else {
+              if (!other.is('impact')) {
+                if (distance < impactDistance) {
+                  other.addState('impact');
+                  other.emit('impact');
+                }
+              }
               if (distance >= triggerDistance) {
-                other.addState('left');
-                other.emit('left');
+                other.addState('exit');
+                other.emit('exit');
               }
             }
           }
