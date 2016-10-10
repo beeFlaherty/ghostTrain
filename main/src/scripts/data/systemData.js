@@ -72,6 +72,7 @@
 		'track': {
 			'showPoints': false,
 			'speed': 2,
+			'kart': true,
 			'points': [
 				'4 4 0',
 				'4 4 -20',
