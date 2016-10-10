@@ -13,6 +13,10 @@
 			'mountainking': {
 				'name': 'Hall of the Mountain King',
 				'mp3': '/assets/music/mountainking.mp3'
+			},
+			'dansemacabre': {
+				'name': 'Danse Macabre',
+				'mp3': '/assets/music/dansemacabre.mp3'
 			}
 		},
 		'themes': {
