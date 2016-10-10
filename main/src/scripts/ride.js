@@ -4,6 +4,7 @@
   module.exports = function() {
     require('./aframe/kart')(AFRAME);
     require('./aframe/collider')(AFRAME);
+    require('./aframe/roomswitch')(AFRAME);
 
     require('./components/room')(Vue);
     require('./components/scare')(Vue);
