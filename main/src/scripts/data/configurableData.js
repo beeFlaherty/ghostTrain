@@ -17,6 +17,14 @@
 			'dansemacabre': {
 				'name': 'Danse Macabre',
 				'mp3': '/assets/music/dansemacabre.mp3'
+			},
+			'choirofdoom': {
+				'name': 'Choir of Doom',
+				'mp3': '/assets/music/choirofdoom.mp3'
+			},
+			'abandonedcemetery': {
+				'name': 'Abandoned Cemetery',
+				'mp3': '/assets/music/abandonedcemetery.mp3'
 			}
 		},
 		'themes': {
