@@ -1,0 +1,435 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+
+        <a-mixin id="axis" obj-model="obj: url(/walls/axis.obj); mtl: url(/walls/axis.mtl);"></a-mixin>
+        <a-mixin id="grid" obj-model="obj: url(grid.obj); mtl: url(grid.mtl);"></a-mixin>
+
+        <a-mixin id="door-left-NS" obj-model="obj: url(/interactive/door-left-NS.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-right-NS" obj-model="obj: url(/interactive/door-right-NS.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-left-EW" obj-model="obj: url(/interactive/door-left-EW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-right-EW" obj-model="obj: url(/interactive/door-right-EW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="door-frame-4-N" obj-model="obj: url(/walls/door-frame_4x4_N.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-4-E" obj-model="obj: url(/walls/door-frame_4x4_E.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-4-S" obj-model="obj: url(/walls/door-frame_4x4_S.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-4-W" obj-model="obj: url(/walls/door-frame_4x4_W.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="door-frame-8-N" obj-model="obj: url(/walls/door-frame_8x4_N.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-8-E" obj-model="obj: url(/walls/door-frame_8x4_E.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-8-S" obj-model="obj: url(/walls/door-frame_8x4_S.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="door-frame-8-W" obj-model="obj: url(/walls/door-frame_8x4_W.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="wall-N" obj-model="obj: url(/walls/wall_default_4x4_N.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-E" obj-model="obj: url(/walls/wall_default_4x4_E.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-S" obj-model="obj: url(/walls/wall_default_4x4_S.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-W" obj-model="obj: url(/walls/wall_default_4x4_W.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="wall-divider-N" obj-model="obj: url(/walls/wall_divider_4x8_N.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-divider-S" obj-model="obj: url(/walls/wall_divider_4x8_S.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="wall-u-N" obj-model="obj: url(/walls/wall_u_4x4_N.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-u-E" obj-model="obj: url(/walls/wall_u_4x4_E.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-u-S" obj-model="obj: url(/walls/wall_u_4x4_S.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="wall-u-W" obj-model="obj: url(/walls/wall_u_4x4_W.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="corner-inner-NW" obj-model="obj: url(/walls/corner_inner_4x4_NW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-inner-NE" obj-model="obj: url(/walls/corner_inner_4x4_NE.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-inner-SW" obj-model="obj: url(/walls/corner_inner_4x4_SW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-inner-SE" obj-model="obj: url(/walls/corner_inner_4x4_SE.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="corner-outer-NW" obj-model="obj: url(/walls/corner_outer_4x4_NW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-outer-NE" obj-model="obj: url(/walls/corner_outer_4x4_NE.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-outer-SW" obj-model="obj: url(/walls/corner_outer_4x4_SW.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="corner-outer-SE" obj-model="obj: url(/walls/corner_outer_4x4_SE.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+        <a-mixin id="floor" obj-model="obj: url(/floors/floor-default-4x4.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+        <a-mixin id="ceiling" obj-model="obj: url(/floors/ceiling-default-4x4.obj); mtl: url(/material/hotel.mtl);"></a-mixin>
+
+
+       </a-assets>
+
+       <a-sky color="#333333"></a-sky>
+
+
+       <a-entity light="type: ambient; color: #BBB"></a-entity>
+       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+
+
+        <!--<a-entity mixin="axis" position="0 0.05 0"></a-entity>
+        <a-entity mixin="grid" position="0 0.02 0"></a-entity>-->
+
+        <!-- starter room -->
+        <a-entity position="0 0 0">
+          <!-- walls -->
+          <a-entity mixin="wall-E" position="0 0 0"></a-entity>
+          <a-entity mixin="wall-E" position="4 0 0"></a-entity>
+          <a-entity mixin="wall-E" position="8 0 0"></a-entity>
+
+          <a-entity mixin="door-frame-8-N" position="0 0 0"></a-entity>
+
+          <a-entity position="0 0 2.5">
+            <a-entity mixin="door-left-NS" position="0 0 0"></a-entity>
+            <a-entity mixin="door-right-NS" position="0 0 3"></a-entity>
+          </a-entity>
+
+          <a-entity mixin="wall-W" position="0 0 8"></a-entity>
+          <a-entity mixin="wall-W" position="4 0 8"></a-entity>
+          <a-entity mixin="wall-W" position="8 0 8"></a-entity>
+
+          <a-entity mixin="door-frame-8-S" position="12 0 0"></a-entity>
+
+          <a-entity position="12 0 2.5">
+            <a-entity mixin="door-left-NS" position="0 0 0"></a-entity>
+            <a-entity mixin="door-right-NS" position="0 0 3"></a-entity>
+          </a-entity>
+
+          <!-- floor -->
+          <a-entity mixin="floor" position="0 0 0"></a-entity>
+          <a-entity mixin="floor" position="4 0 0"></a-entity>
+          <a-entity mixin="floor" position="4 0 4"></a-entity>
+          <a-entity mixin="floor" position="0 0 4"></a-entity>
+          <a-entity mixin="floor" position="8 0 0"></a-entity>
+          <a-entity mixin="floor" position="8 0 4"></a-entity>
+
+          <!-- ceiling -->
+          <a-entity mixin="ceiling" position="0 0 0"></a-entity>
+          <a-entity mixin="ceiling" position="4 0 0"></a-entity>
+          <a-entity mixin="ceiling" position="4 0 4"></a-entity>
+          <a-entity mixin="ceiling" position="0 0 4"></a-entity>
+          <a-entity mixin="ceiling" position="8 0 0"></a-entity>
+          <a-entity mixin="ceiling" position="8 0 4"></a-entity>
+
+        </a-entity>
+        <!-- starter room  end-->
+
+
+
+        <!-- room 1 -->
+        <a-entity position="0 0 0">
+          <!-- walls -->
+          <a-entity mixin="wall-E" position="12 0 2"></a-entity>
+          <a-entity mixin="wall-E" position="16 0 2"></a-entity>
+          <a-entity mixin="wall-E" position="20 0 2"></a-entity>
+
+          <a-entity mixin="corner-inner-SE" position="24 0 2"></a-entity>
+
+          <a-entity mixin="wall-S" position="28 0 6"></a-entity>
+          <a-entity mixin="wall-u-S" position="28 0 10"></a-entity>
+          <a-entity mixin="wall-S" position="28 0 14"></a-entity>
+
+            <a-entity mixin="door-frame-4-W" position="24 0 18"></a-entity>
+
+            <a-entity position="24 0 18">
+              <a-entity mixin="door-left-EW" position="0.5 0 0"></a-entity>
+              <a-entity mixin="door-right-EW" position="3.5 0 0"></a-entity>
+            </a-entity>
+
+          <a-entity mixin="wall-N" position="24 0 6"></a-entity>
+          <a-entity mixin="wall-N" position="24 0 10"></a-entity>
+          <a-entity mixin="wall-N" position="24 0 14"></a-entity>
+
+          <a-entity mixin="door-frame-4-N" position="12 0 2"></a-entity>
+
+          <a-entity mixin="wall-W" position="12 0 6"></a-entity>
+          <a-entity mixin="wall-u-W" position="16 0 6"></a-entity>
+          <a-entity mixin="wall-W" position="20 0 6"></a-entity>
+
+          <!-- floor -->
+          <a-entity mixin="floor" position="12 0 2"></a-entity>
+          <a-entity mixin="floor" position="16 0 2"></a-entity>
+          <a-entity mixin="floor" position="20 0 2"></a-entity>
+          <a-entity mixin="floor" position="24 0 2"></a-entity>
+          <a-entity mixin="floor" position="24 0 6"></a-entity>
+          <a-entity mixin="floor" position="24 0 10"></a-entity>
+          <a-entity mixin="floor" position="24 0 14"></a-entity>
+
+          <!-- ceiling -->
+          <a-entity mixin="ceiling" position="12 0 2"></a-entity>
+          <a-entity mixin="ceiling" position="16 0 2"></a-entity>
+          <a-entity mixin="ceiling" position="20 0 2"></a-entity>
+          <a-entity mixin="ceiling" position="24 0 2"></a-entity>
+          <a-entity mixin="ceiling" position="24 0 6"></a-entity>
+          <a-entity mixin="ceiling" position="24 0 10"></a-entity>
+          <a-entity mixin="ceiling" position="24 0 14"></a-entity>
+
+        </a-entity>
+        <!-- room 1 end-->
+
+
+
+        <!-- room 2 -->
+        <a-entity position="0 0 0">
+
+
+          <a-entity mixin="door-frame-4-E" position="24 0 18"></a-entity>
+          <a-entity mixin="door-frame-4-S" position="32 0 18"></a-entity>
+          <a-entity mixin="door-frame-4-N" position="32 0 18"></a-entity>
+          <a-entity mixin="door-frame-4-E" position="32 0 6"></a-entity>
+          <a-entity mixin="door-frame-4-S" position="44 0 6"></a-entity>
+
+          <a-entity position="32 0 6">
+            <a-entity mixin="door-left-EW" position="0.5 0 0"></a-entity>
+            <a-entity mixin="door-right-EW" position="3.5 0 0"></a-entity>
+          </a-entity>
+
+          <a-entity position="44 0 6">
+            <a-entity mixin="door-left-NS" position="0 0 0.5w"></a-entity>
+            <a-entity mixin="door-right-NS" position="0 0 3.5"></a-entity>
+          </a-entity>
+
+          <!-- walls -->
+          <a-entity mixin="wall-E" position="12 0 18"></a-entity>
+          <a-entity mixin="wall-E" position="16 0 18"></a-entity>
+          <a-entity mixin="wall-E" position="20 0 18"></a-entity>
+          <a-entity mixin="wall-E" position="28 0 18"></a-entity>
+
+          <a-entity mixin="wall-u-E" position="36 0 6"></a-entity>
+          <a-entity mixin="wall-E" position="36 0 6"></a-entity>
+          <a-entity mixin="wall-E" position="40 0 6"></a-entity>
+
+
+          <a-entity mixin="wall-W" position="12 0 22"></a-entity>
+          <a-entity mixin="wall-W" position="16 0 22"></a-entity>
+          <a-entity mixin="wall-W" position="20 0 22"></a-entity>
+          <a-entity mixin="wall-W" position="24 0 22"></a-entity>
+          <a-entity mixin="wall-u-W" position="28 0 22"></a-entity>
+          <a-entity mixin="wall-u-W" position="32 0 22"></a-entity>
+
+          <a-entity mixin="wall-W" position="36 0 10"></a-entity>
+          <a-entity mixin="wall-W" position="40 0 10"></a-entity>
+
+
+          <a-entity mixin="wall-N" position="12 0 18"></a-entity>
+          <a-entity mixin="wall-N" position="32 0 14"></a-entity>
+          <a-entity mixin="wall-N" position="32 0 10"></a-entity>
+          <a-entity mixin="wall-N" position="32 0 6"></a-entity>
+
+          <a-entity mixin="wall-S" position="36 0 18"></a-entity>
+          <a-entity mixin="wall-S" position="36 0 14"></a-entity>
+          <a-entity mixin="wall-S" position="36 0 10"></a-entity>
+
+          <!-- floor -->
+          <a-entity mixin="floor" position="12 0 18"></a-entity>
+          <a-entity mixin="floor" position="16 0 18"></a-entity>
+          <a-entity mixin="floor" position="20 0 18"></a-entity>
+          <a-entity mixin="floor" position="24 0 18"></a-entity>
+          <a-entity mixin="floor" position="28 0 18"></a-entity>
+          <a-entity mixin="floor" position="32 0 18"></a-entity>
+          <a-entity mixin="floor" position="32 0 14"></a-entity>
+          <a-entity mixin="floor" position="32 0 10"></a-entity>
+          <a-entity mixin="floor" position="32 0 6"></a-entity>
+          <a-entity mixin="floor" position="36 0 6"></a-entity>
+          <a-entity mixin="floor" position="40 0 6"></a-entity>
+
+
+          <!-- ceiling -->
+          <a-entity mixin="ceiling" position="12 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="16 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="20 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="24 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="28 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="32 0 18"></a-entity>
+          <a-entity mixin="ceiling" position="32 0 14"></a-entity>
+          <a-entity mixin="ceiling" position="32 0 10"></a-entity>
+          <a-entity mixin="ceiling" position="32 0 6"></a-entity>
+          <a-entity mixin="ceiling" position="36 0 6"></a-entity>
+          <a-entity mixin="ceiling" position="40 0 6"></a-entity>
+
+
+        </a-entity>
+        <!-- room 2 end-->
+
+        <!-- room 3-->
+      <a-entity>
+        <a-entity mixin="door-frame-4-N" position="44 0 6"></a-entity>
+        <a-entity mixin="door-frame-4-W" position="48 0 30"></a-entity>
+
+        <a-entity position="48 0 30">
+          <a-entity mixin="door-left-EW" position="0.5 0 0"></a-entity>
+          <a-entity mixin="door-right-EW" position="3.5 0 0"></a-entity>
+        </a-entity>
+
+        <!-- walls -->
+        <a-entity mixin="wall-N" position="44 0 2"></a-entity>
+        <a-entity mixin="wall-N" position="44 0 6"></a-entity>
+        <a-entity mixin="wall-divider-N" position="44 0 10"></a-entity>
+        <a-entity mixin="wall-N" position="44 0 14"></a-entity>
+        <a-entity mixin="wall-N" position="44 0 18"></a-entity>
+        <a-entity mixin="wall-N" position="44 0 22"></a-entity>
+        <a-entity mixin="wall-N" position="44 0 26"></a-entity>
+
+        <a-entity mixin="wall-S" position="56 0 2"></a-entity>
+        <a-entity mixin="wall-S" position="56 0 6"></a-entity>
+        <a-entity mixin="wall-S" position="56 0 10"></a-entity>
+        <a-entity mixin="wall-S" position="56 0 14"></a-entity>
+        <a-entity mixin="wall-divider-S" position="48 0 18"></a-entity>
+        <a-entity mixin="wall-S" position="56 0 22"></a-entity>
+        <a-entity mixin="wall-S" position="56 0 26"></a-entity>
+
+        <a-entity mixin="wall-E" position="44 0 2"></a-entity>
+        <a-entity mixin="wall-E" position="48 0 2"></a-entity>
+        <a-entity mixin="wall-E" position="52 0 2"></a-entity>
+
+        <a-entity mixin="wall-W" position="44 0 30"></a-entity>
+        <a-entity mixin="wall-W" position="52 0 30"></a-entity>
+
+        <!-- floor -->
+        <a-entity mixin="floor" position="44 0 2"></a-entity>
+        <a-entity mixin="floor" position="48 0 2"></a-entity>
+        <a-entity mixin="floor" position="52 0 2"></a-entity>
+        <a-entity mixin="floor" position="44 0 6"></a-entity>
+        <a-entity mixin="floor" position="48 0 6"></a-entity>
+        <a-entity mixin="floor" position="52 0 6"></a-entity>
+
+        <a-entity mixin="floor" position="52 0 10"></a-entity>
+        <a-entity mixin="floor" position="44 0 14"></a-entity>
+        <a-entity mixin="floor" position="48 0 14"></a-entity>
+        <a-entity mixin="floor" position="52 0 14"></a-entity>
+
+        <a-entity mixin="floor" position="44 0 18"></a-entity>
+
+        <a-entity mixin="floor" position="44 0 22"></a-entity>
+        <a-entity mixin="floor" position="48 0 22"></a-entity>
+        <a-entity mixin="floor" position="52 0 22"></a-entity>
+
+        <a-entity mixin="floor" position="44 0 26"></a-entity>
+        <a-entity mixin="floor" position="48 0 26"></a-entity>
+        <a-entity mixin="floor" position="52 0 26"></a-entity>
+
+
+        <!-- ceiling -->
+        <a-entity mixin="ceiling" position="44 0 2"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 2"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 2"></a-entity>
+        <a-entity mixin="ceiling" position="44 0 6"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 6"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 6"></a-entity>
+        <a-entity mixin="ceiling" position="44 0 10"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 10"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 10"></a-entity>
+        <a-entity mixin="ceiling" position="44 0 14"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 14"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 14"></a-entity>
+        <a-entity mixin="ceiling" position="44 0 18"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 18"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 18"></a-entity>
+
+        <a-entity mixin="ceiling" position="44 0 22"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 22"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 22"></a-entity>
+
+        <a-entity mixin="ceiling" position="44 0 26"></a-entity>
+        <a-entity mixin="ceiling" position="48 0 26"></a-entity>
+        <a-entity mixin="ceiling" position="52 0 26"></a-entity>
+      </a-entity>
+      <!-- room 3 end-->
+
+
+      <!-- room 4-->
+    <a-entity>
+      <a-entity mixin="door-frame-4-E" position="48 0 30"></a-entity>
+      <a-entity mixin="door-frame-4-W" position="48 0 58"></a-entity>
+
+
+
+
+      <!-- walls -->
+      <a-entity mixin="wall-N" position="48 0 30"></a-entity>
+      <a-entity mixin="wall-u-N" position="48 0 34"></a-entity>
+      <a-entity mixin="wall-N" position="48 0 38"></a-entity>
+      <a-entity mixin="wall-u-N" position="48 0 42"></a-entity>
+      <a-entity mixin="wall-N" position="48 0 46"></a-entity>
+      <a-entity mixin="wall-u-N" position="48 0 50"></a-entity>
+      <a-entity mixin="wall-N" position="48 0 54"></a-entity>
+
+      <a-entity mixin="wall-S" position="52 0 30"></a-entity>
+      <a-entity mixin="wall-u-S" position="52 0 34"></a-entity>
+      <a-entity mixin="wall-S" position="52 0 38"></a-entity>
+      <a-entity mixin="wall-u-S" position="52 0 42"></a-entity>
+      <a-entity mixin="wall-S" position="52 0 46"></a-entity>
+      <a-entity mixin="wall-u-S" position="52 0 50"></a-entity>
+      <a-entity mixin="wall-S" position="52 0 54"></a-entity>
+
+
+
+
+      <!-- floor -->
+
+      <a-entity mixin="floor" position="48 0 30"></a-entity>
+      <a-entity mixin="floor" position="48 0 34"></a-entity>
+      <a-entity mixin="floor" position="48 0 38"></a-entity>
+      <a-entity mixin="floor" position="48 0 42"></a-entity>
+      <a-entity mixin="floor" position="48 0 46"></a-entity>
+      <a-entity mixin="floor" position="48 0 50"></a-entity>
+      <a-entity mixin="floor" position="48 0 54"></a-entity>
+
+      <!-- ceiling -->
+
+      <a-entity mixin="ceiling" position="48 0 30"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 34"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 38"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 42"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 46"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 50"></a-entity>
+      <a-entity mixin="ceiling" position="48 0 54"></a-entity>
+
+    </a-entity>
+    <!-- room 4 end-->
+
+
+
+    <!-- starter room -->
+    <a-entity position="54 0 58" rotation="0 -90 0">
+      <!-- walls -->
+      <a-entity mixin="wall-E" position="0 0 0"></a-entity>
+      <a-entity mixin="wall-E" position="4 0 0"></a-entity>
+      <a-entity mixin="wall-E" position="8 0 0"></a-entity>
+
+      <a-entity mixin="door-frame-8-N" position="0 0 0"></a-entity>
+
+      <a-entity position="0 0 2.5">
+        <a-entity mixin="door-left-NS" position="0 0 0"></a-entity>
+        <a-entity mixin="door-right-NS" position="0 0 3"></a-entity>
+      </a-entity>
+
+      <a-entity mixin="wall-W" position="0 0 8"></a-entity>
+      <a-entity mixin="wall-W" position="4 0 8"></a-entity>
+      <a-entity mixin="wall-W" position="8 0 8"></a-entity>
+
+      <a-entity mixin="door-frame-8-S" position="12 0 0"></a-entity>
+
+      <a-entity position="12 0 2.5">
+        <a-entity mixin="door-left-NS" position="0 0 0"></a-entity>
+        <a-entity mixin="door-right-NS" position="0 0 3"></a-entity>
+      </a-entity>
+
+      <!-- floor -->
+      <a-entity mixin="floor" position="0 0 0"></a-entity>
+      <a-entity mixin="floor" position="4 0 0"></a-entity>
+      <a-entity mixin="floor" position="4 0 4"></a-entity>
+      <a-entity mixin="floor" position="0 0 4"></a-entity>
+      <a-entity mixin="floor" position="8 0 0"></a-entity>
+      <a-entity mixin="floor" position="8 0 4"></a-entity>
+
+      <!-- ceiling -->
+      <a-entity mixin="ceiling" position="0 0 0"></a-entity>
+      <a-entity mixin="ceiling" position="4 0 0"></a-entity>
+      <a-entity mixin="ceiling" position="4 0 4"></a-entity>
+      <a-entity mixin="ceiling" position="0 0 4"></a-entity>
+      <a-entity mixin="ceiling" position="8 0 0"></a-entity>
+      <a-entity mixin="ceiling" position="8 0 4"></a-entity>
+
+    </a-entity>
+    <!-- starter room  end-->
+
+
+        <a-entity camera="userHeight: 2" look-controls wasd-controls="acceleration:250;" position="60 0 60" rotation="0 -270 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
