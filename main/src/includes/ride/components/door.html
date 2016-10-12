@@ -1,6 +1,6 @@
 <script id="door_template" type="x-template">
 	<a-entity position="{{ position }}" rotation="{{ rotation }}">
-		<a-entity mixin="doorframe {{ theme }}" position="0 0 0" rotation="0 0 0"></a-entity>
+		<a-entity mixin="doorframe {{ theme }}" position="0 0 0" rotation="0 0 0" collidable="{{ $root.system.door.triggerDistance }}" roomswitch data-showonenter="{{ next }}" data-hideonexit="{{ current }}"></a-entity>
 
 		<a-entity mixin="door {{ theme }}" position="0 0 0" rotation="0 0 0" collidable="{{ $root.system.door.triggerDistance }}" sound="src: /assets/sounds/door.mp3; on:enter;">
 			<a-animation v-if="triggerable" begin="enter" attribute="rotation" from="0 0 0" to="0 -90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
