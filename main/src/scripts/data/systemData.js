@@ -13,30 +13,41 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						'position': '4 3 -3'
+						'position': '5 3 3'
+					}
+				],
+				'scares': [
+					{}
+				]
+			},
+			{
+				'position': '0 0 0',
+				'lights': [
+					{
+						'position': '16 2 3.5'
 					},
 					{
-						'position': '4 3 -23.5',
+						'position': '26 2 3.5',
 					},
 					{
-						'position': '17 3 -22',
+						'position': '26 1 16',
 					}
 				],
 				'scares': [
 					{
-						'position': '3 0 -16',
-						'rotation': '0 0 0',
-						'animation': 'fromright'
-					},
-					{
-						'position': '20 0 -22',
+						'position': '18 0 5',
 						'rotation': '0 90 0',
 						'animation': 'fromleft'
+					},
+					{
+						'position': '26 0 13',
+						'rotation': '0 180 0',
+						'animation': 'popup'
 					}
 				]
 			},
 			{
-				'position': '24 0 -16',
+				'position': '0 0 0',
 				'lights': [
 					{
 						'position': '5 3 8'
@@ -64,7 +75,7 @@
 			'height': 0.1,
 			'perroom': 2,
 			'triggerDistance': 8,
-			'scale': 1
+			'scale': 0.75
 		},
 		'animation': {
 			'duration': 2000,
