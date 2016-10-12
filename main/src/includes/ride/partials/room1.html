@@ -57,9 +57,5 @@
 
 	<a-entity mixin="doorframe {{ theme }}" position="0 0 0" rotation="0 0 0"></a-entity>
 
-
-	<a-entity mixin="doorframe {{ theme }}" position="0 0 -16" rotation="0 270 0"></a-entity>
-		<a-entity mixin="door {{ theme }}" position="5 0 -16" rotation="0 90 0"></a-entity>
-		<a-entity mixin="door {{ theme }}" position="3 0 -16" rotation="0 270 0"></a-entity>
-
+	<gt-door v-bind:theme="theme" position="0 0 -16" rotation="0 270 0" triggerable></gt-door>
 </script>
