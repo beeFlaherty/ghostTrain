@@ -5,51 +5,68 @@
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
 
-			<a-asset-item id="floor-material" src="assets/model-buildkit/floors/floor-default-4x4.mtl"></a-asset-item>
-
 			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
 			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
 			<img id="dark" src="assets/textures/dark/walls.jpg"></img>
 			<img id="generic-ceiling" src="assets/textures/ceiling.jpg"></img>
 			<img id="floor" src="assets/textures/floor_18.png"></img>
+			<img id="intro" src="assets/textures/intro.jpg"></img>
 
+
+			<a-mixin id="door-left-NS" obj-model="obj: url(/assets/model-buildkit/interactive/door-left-NS.obj); "></a-mixin>
+	        <a-mixin id="door-right-NS" obj-model="obj: url(/assets/model-buildkit/interactive/door-right-NS.obj); "></a-mixin>
+	        <a-mixin id="door-left-EW" obj-model="obj: url(/assets/model-buildkit/interactive/door-left-EW.obj); "></a-mixin>
+	        <a-mixin id="door-right-EW" obj-model="obj: url(/assets/model-buildkit/interactive/door-right-EW.obj); "></a-mixin>
+
+	        <a-mixin id="door-frame-4-N" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_4x4_N.obj); "></a-mixin>
+	        <a-mixin id="door-frame-4-E" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_4x4_E.obj); "></a-mixin>
+	        <a-mixin id="door-frame-4-S" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_4x4_S.obj); "></a-mixin>
+	        <a-mixin id="door-frame-4-W" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_4x4_W.obj); "></a-mixin>
+
+	        <a-mixin id="door-frame-8-N" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_8x4_N.obj); "></a-mixin>
+	        <a-mixin id="door-frame-8-E" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_8x4_E.obj); "></a-mixin>
+	        <a-mixin id="door-frame-8-S" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_8x4_S.obj); "></a-mixin>
+	        <a-mixin id="door-frame-8-W" obj-model="obj: url(/assets/model-buildkit/walls/door-frame_8x4_W.obj); "></a-mixin>
+
+	        <a-mixin id="wall-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_default_4x4_N.obj); "></a-mixin>
+	        <a-mixin id="wall-E" obj-model="obj: url(/assets/model-buildkit/walls/wall_default_4x4_E.obj); "></a-mixin>
+	        <a-mixin id="wall-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_default_4x4_S.obj); "></a-mixin>
+	        <a-mixin id="wall-W" obj-model="obj: url(/assets/model-buildkit/walls/wall_default_4x4_W.obj); "></a-mixin>
+
+	        <a-mixin id="wall-divider-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_divider_4x8_N.obj); "></a-mixin>
+	        <a-mixin id="wall-divider-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_divider_4x8_S.obj); "></a-mixin>
+
+	        <a-mixin id="wall-u-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_N.obj); "></a-mixin>
+	        <a-mixin id="wall-u-E" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_E.obj); "></a-mixin>
+	        <a-mixin id="wall-u-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_S.obj); "></a-mixin>
+	        <a-mixin id="wall-u-W" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_W.obj); "></a-mixin>
+
+	        <a-mixin id="corner-inner-NW" obj-model="obj: url(/assets/model-buildkit/walls/corner_inner_4x4_NW.obj); "></a-mixin>
+	        <a-mixin id="corner-inner-NE" obj-model="obj: url(/assets/model-buildkit/walls/corner_inner_4x4_NE.obj); "></a-mixin>
+	        <a-mixin id="corner-inner-SW" obj-model="obj: url(/assets/model-buildkit/walls/corner_inner_4x4_SW.obj); "></a-mixin>
+	        <a-mixin id="corner-inner-SE" obj-model="obj: url(/assets/model-buildkit/walls/corner_inner_4x4_SE.obj); "></a-mixin>
+
+	        <a-mixin id="corner-outer-NW" obj-model="obj: url(/assets/model-buildkit/walls/corner_outer_4x4_NW.obj); "></a-mixin>
+	        <a-mixin id="corner-outer-NE" obj-model="obj: url(/assets/model-buildkit/walls/corner_outer_4x4_NE.obj); "></a-mixin>
+	        <a-mixin id="corner-outer-SW" obj-model="obj: url(/assets/model-buildkit/walls/corner_outer_4x4_SW.obj); "></a-mixin>
+	        <a-mixin id="corner-outer-SE" obj-model="obj: url(/assets/model-buildkit/walls/corner_outer_4x4_SE.obj); "></a-mixin>
+
+	        <a-mixin id="floor" obj-model="obj: url(/assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
+        <a-mixin id="ceiling" obj-model="obj: url(/assets/model-buildkit/floors/ceiling-default-4x4.obj);"></a-mixin>
 
 			<!-- atlas -->
 			<img v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture }}"></img>
 
-			<!-- walls -->
-			<a-mixin id="wall-lg" obj-model="obj: url(assets/model-buildkit/walls/wall_default_8x4.obj);"></a-mixin>
-			<a-mixin id="wall-md" obj-model="obj: url(assets/model-buildkit/walls/wall_default_4x4.obj);"></a-mixin>
-			<a-mixin id="wall-sm" obj-model="obj: url(assets/model-buildkit/walls/wall_default_2x4.obj);"></a-mixin>
-
-			<!-- corners -->
-			<a-mixin id="corner-sm" obj-model="obj: url(assets/model-buildkit/walls/corner_default_1x1-1.obj);"></a-mixin>
-
-			<a-mixin id="corner-inner" obj-model="obj: url(assets/model-buildkit/walls/corner_default_flipped_4x4.obj);"></a-mixin>
-			<a-mixin id="corner-outer" obj-model="obj: url(assets/model-buildkit/walls/corner_default_4x4.obj);"></a-mixin>
-
-			<!-- doorframe -->
-			<a-mixin id="doorframe" obj-model="obj: url(assets/model-buildkit/walls/wall_door-frame.obj);"></a-mixin>
-
-			<!-- door -->
-			<a-mixin id="door" obj-model="obj: url(assets/model-buildkit/interactive/door-1.obj);"></a-mixin>
-
-			<!-- floor -->
-			<a-mixin id="floor" obj-model="obj: url(assets/model-buildkit/floors/floor-default-4x4.obj);"></a-mixin>
-			<a-mixin id="generic-floor" material="src:#floor; roughness:1;"></a-mixin>
-			<a-mixin id="ceiling" obj-model="obj: url(assets/model-buildkit/floors/ceiling-default-4x4.obj);"></a-mixin>
-			<a-mixin id="generic-ceiling" material="src:#generic-ceiling; roughness:1;"></a-mixin>
-			<a-mixin id="castle-wall" material="src:#castle; roughness:1;"></a-mixin>
-			<a-mixin id="forest-wall" material="src:#forest; roughness:1;"></a-mixin>
-			<a-mixin id="dark-wall" material="src:#dark; roughness:1;"></a-mixin>
-			<a-mixin id="generic-door" mtl="assets/assets/model-buildkit/interactive/door-1.mtl"></a-mixin>
-
-
-
-			<a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
+	        <a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="hotel" material="src:#hotel_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="graveyard" material="src:#graveyard_atlas; roughness:1;"></a-mixin>
+			<a-mixin id="hauntedhouse" material="src:#hauntedhouse_atlas; roughness:1;"></a-mixin>
+			<a-mixin id="asylum" material="src:#asylum_atlas; roughness:1;"></a-mixin>
+			<a-mixin id="intro" material="src:#intro; roughness:1;"></a-mixin>
+
+
 		</a-assets>
+
 
 		<a-entity v:if="!loaded">
 			<img class="homepage-img" src="/img/Loading-1.gif"/>
@@ -62,10 +79,10 @@
 			</a-entity>
 
 			<!--  old kart position 16 4 15 -->
-			<a-entity position="5 4 0" rotation="0 0 0" kart=" {{ system.track.speed }}"> <!-- Need this space before the {{ for some reason -->
+			<a-entity position="3.5 2.5 3.75" rotation="0 90 0" kart=" {{ system.track.speed }}"> <!-- Need this space before the {{ for some reason -->
 				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
-					<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="ture"></a-camera> 
+					<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="ture"></a-camera>
 					<a-entity
 						v-if="$root.system.sound.chain"
 						sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>

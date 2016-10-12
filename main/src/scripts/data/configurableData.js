@@ -42,6 +42,16 @@
 				'name': 'Graveyard',
 				'colour': '#682900',
 				'texture': '/assets/textures/graveyard.jpg'
+			},
+			'asylum': {
+				'name': 'Asylum',
+				'colour': '#682900',
+				'texture': '/assets/textures/asylum.jpg'
+			},
+			'hauntedhouse': {
+				'name': 'Haunted House',
+				'colour': '#682900',
+				'texture': '/assets/textures/hauntedhouse.jpg'
 			}
 		},
 		'light': {
