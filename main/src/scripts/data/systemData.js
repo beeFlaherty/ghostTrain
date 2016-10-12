@@ -77,6 +77,9 @@
 			'triggerDistance': 8,
 			'scale': 0.75
 		},
+		'door': {
+			'triggerDistance': 10
+		},
 		'animation': {
 			'duration': 2000,
 			'repeat': 0
