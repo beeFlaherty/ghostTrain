@@ -106,7 +106,7 @@ function process_action() {
 
 	switch($action) {
 		case 'get_ride':
-			$params = array(get_post('key'));
+			$params = array(get_post('id'));
 			break;
 		case 'set_ride':
 			$params = array(get_post('data'));
