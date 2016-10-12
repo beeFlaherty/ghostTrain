@@ -66,6 +66,9 @@
 			'triggerDistance': 8,
 			'scale': 1
 		},
+		'door': {
+			'triggerDistance': 10
+		},
 		'animation': {
 			'duration': 2000,
 			'repeat': 0

@@ -15,7 +15,7 @@
 		<a-entity mixin="ceiling {{ theme }}" position="16 0 -16"></a-entity>
 	</a-entity>
 
-	
+
 
 
 	<a-entity data-name="east-wall" position="0 0 0" rotation="0 0 0">
@@ -32,18 +32,10 @@
 		<a-entity mixin="corner-outer {{ theme }}" position="0 0 -8"></a-entity>
 		<a-entity mixin="wall-md {{ theme }}" position="16 0 -16" rotation="0 90 0"></a-entity>
 
-
 		<a-entity mixin="doorframe {{ theme }}" position="0 0 -0" rotation="0 90 0"></a-entity>
 		<a-entity mixin="door {{ theme }}" position="0 0 0" rotation="0 90 0"></a-entity>
 		<a-entity mixin="door {{ theme }}" position="-8 0 0" rotation="0 270 0"></a-entity>
 
-		<a-entity mixin="doorframe {{ theme }}" position="16 0 -24" rotation="0 180 0"></a-entity>
-	<a-entity mixin="door {{ theme }}" position="16 0 -24" rotation="0 180 0"></a-entity>
-	<a-entity mixin="door {{ theme }}" position="16 0 -16" rotation="0 0 0"></a-entity>
-
-
-
+		<gt-door v-bind:theme="theme" position="16 0 -24" rotation="0 180 0"></gt-door>
 	</a-entity>
-
-
 </script>

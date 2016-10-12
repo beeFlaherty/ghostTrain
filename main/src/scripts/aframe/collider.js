@@ -24,7 +24,7 @@
 
       init: function() {
         this.el.sceneEl.addBehavior(this);
-        this.others = document.querySelectorAll('a-obj-model[collidable]');
+        this.others = document.querySelectorAll('a-obj-model[collidable], a-entity[collidable]');
       },
 
       tick: function() {
