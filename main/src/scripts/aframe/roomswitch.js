@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-// roomswitch data-showonenter="room_1" data-hideonexit="room_0"
+// roomswitch showonenter="room_1" hideonexit="room_0"
 
   module.exports = function(AFRAME) {
     AFRAME.registerComponent('roomswitch', {
@@ -10,8 +10,8 @@
       init: function() {
         this.el.sceneEl.addBehavior(this);
 
-        var showOnEnter = document.getElementById(this.el.getAttribute('data-showonenter'));
-        var hideOnExit = document.getElementById(this.el.getAttribute('data-hideonexit'));
+        var showOnEnter = document.getElementById(this.el.getAttribute('showonenter'));
+        var hideOnExit = document.getElementById(this.el.getAttribute('hideonexit'));
 
         this.el.addEventListener('enter', function (evt) {
           showOnEnter.setAttribute('visible', 'true');

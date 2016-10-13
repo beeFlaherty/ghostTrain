@@ -4,7 +4,7 @@
   module.exports = function(Vue) {
     var DoorComponent = Vue.extend({
       template: '#door_template',
-      props: ['position', 'rotation', 'theme', 'triggerable', 'from', 'to']
+      props: ['position', 'rotation', 'theme', 'frame', 'door', 'triggerable', 'from', 'to']
     });
     Vue.component('gt-door', DoorComponent);
   };
