@@ -16,23 +16,14 @@
 				},
 
 				'scares': [
-					{
-						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-						'sound': 'zombie', // moan, scream, snarl, manic laughter
-						'animation': 'dropdown' // popup, dropdown, fromleft, fromright
-					},
-					{
-					 	'monster': 'ghost', // none, zombie, mummy, vampire, skeleton
-						'sound': 'scream', // moan, scream, snarl, manic laughter
-						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
-					}
+
 				]
 			},
 			{
 				'number': 1,
 				'theme': 'hauntedhouse', // castle, forest, graveyard
 				'lights': {
-					'style' : 'candlelight'
+					'style' : 'neon'
 				},
 
 				'scares': [
@@ -52,10 +43,45 @@
 				'number': 2,
 				'theme': 'asylum', // castle, forest, graveyard
 				'lights': {
-					'style' : 'candlelight'
+					'style' : 'redalert'
 				},
 
 				'scares': [
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					}
+				]
+			},
+			{
+				'number': 3,
+				'theme': 'castle', // castle, forest, graveyard
+				'lights': {
+					'style' : 'crypt'
+				},
+
+				'scares': [
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
 					{
 						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
 						'sound': 'zombie', // moan, scream, snarl, manic laughter

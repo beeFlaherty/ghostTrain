@@ -50,21 +50,40 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						'position': '5 3 8'
+						'position': '20 2 20'
 					},
 					{
-						'position': '5 3 0',
+						'position': '30 2 20',
 					},
 					{
-						'position': '5 3 -16',
+						'position': '38 3 8',
 					}
 				],
 				'scares': [
 					{
-						'position': '4 0 13',
-						'rotation': '0 0 0',
+						'position': '15 0 20',
+						'rotation': '0 90 0',
 						'animation': 'popup'
+					},
+					{
+						'position': '33 0 20.5',
+						'rotation': '0 270 0',
+						'animation': 'fromright'
+					},
+					{
+						'position': '41 0 8',
+						'rotation': '0 270 0',
+						'animation': 'popdown'
 					}
+				]
+			},
+			{
+				'position': '0 0 0',
+				'lights': [
+					{}
+				],
+				'scares': [
+					{}
 				]
 			}
 
@@ -75,7 +94,7 @@
 			'height': 0.1,
 			'perroom': 2,
 			'triggerDistance': 8,
-			'scale': 0.75
+			'scale': 0.65
 		},
 		'door': {
 			'triggerDistance': 10
@@ -89,12 +108,9 @@
 			'speed': 2,
 			'kart': true,
 			'points': [
-				'4 4 0',
-				'4 4 -20',
-				'28 4 -20',
-				'28 4 -6',
-				'28 4 -28',
-				'28 4 -50',
+				'2 2 3.5',
+				'26 2 3.5',
+				'26 2 20',
 			]
 		}
 	};

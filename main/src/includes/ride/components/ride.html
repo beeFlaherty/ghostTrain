@@ -79,7 +79,7 @@
 			</a-entity>
 
 			<!--  old kart position 16 4 15 -->
-			<a-entity position="3.5 2.5 3.75" rotation="0 90 0" kart=" {{ system.track.speed }}"> <!-- Need this space before the {{ for some reason -->
+			<a-entity position="3.5 2.5 3.75" rotation="0 90 0" kart=" {{ system.track.speed }}"> <!--Need this space before the {{ for some reason -->
 				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart.obj); mtl: url(assets/model-buildkit/props/kart.mtl)" position="0 -3.5 0" scale="2 2 2" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="-0.75 -0.5 0.3" rotation="0 0 0" wasd-controls-enabled="ture"></a-camera>
@@ -93,7 +93,7 @@
 				</a-entity>
 			</a-entity>
 
-			<!-- <a-light type="ambient" color="#fff"></a-light> USE THIS FOR TESTING -->
+			<a-light type="ambient" color="#fff"></a-light><!--  USE THIS FOR TESTING -->
 
 			<!-- <a-camera collider  position="10 4 -18" rotation="0 0 0" wasd-controls-enabled="true"></a-camera>-->
 
