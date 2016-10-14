@@ -38,7 +38,7 @@
             var otherPosition = getGlobalPosition(other.object3D);
             var distance = distanceVector(thisPosition, otherPosition);
             var triggerDistance = other.getAttribute('collidable');
-            var impactDistance = 5;
+            var impactDistance = 3.5;
 
             if (!other.is('enter') && !other.is('impact')) {
               if (distance < triggerDistance) {

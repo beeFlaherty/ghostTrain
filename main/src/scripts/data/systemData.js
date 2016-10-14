@@ -85,6 +85,15 @@
 				'scares': [
 					{}
 				]
+			},
+			{
+				'position': '0 0 0',
+				'lights': [
+					{}
+				],
+				'scares': [
+					{}
+				]
 			}
 
 
@@ -93,11 +102,11 @@
 			'width': 1,
 			'height': 0.1,
 			'perroom': 2,
-			'triggerDistance': 8,
-			'scale': 0.65
+			'triggerDistance': 6,
+			'scale': 0.5
 		},
 		'door': {
-			'triggerDistance': 10
+			'triggerDistance': 5
 		},
 		'animation': {
 			'duration': 2000,
@@ -108,9 +117,9 @@
 			'speed': 2,
 			'kart': true,
 			'points': [
-				'2 2 3.5',
-				'26 2 3.5',
-				'26 2 20',
+				'6 2 4',
+				'26 2 4',
+				'26 2 20'
 			]
 		}
 	};
