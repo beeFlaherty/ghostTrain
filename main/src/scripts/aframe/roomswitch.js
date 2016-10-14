@@ -14,11 +14,15 @@
         var hideOnExit = document.getElementById(this.el.getAttribute('hideonexit'));
 
         this.el.addEventListener('enter', function (evt) {
-          showOnEnter.setAttribute('visible', 'true');
+          if (showOnEnter) {
+            showOnEnter.setAttribute('visible', 'true');
+          }
         });
 
         this.el.addEventListener('exit', function (evt) {
-          hideOnExit.setAttribute('visible', 'false');
+          if (hideOnExit) {
+            hideOnExit.setAttribute('visible', 'false');
+          }
         });
       },
 
