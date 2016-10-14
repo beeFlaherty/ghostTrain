@@ -148,8 +148,8 @@
 			}
 		},
 		'sounds': {
-			'zombie': {
-				'name': 'Zombie',
+			'groan': {
+				'name': 'Groan',
 				'mp3': '/assets/sounds/zombie.mp3'
 			},
 			'scream': {
@@ -159,6 +159,30 @@
 			'cackle': {
 				'name': 'Cackle',
 				'mp3': '/assets/sounds/cackle.mp3'
+			},
+			'snarl': {
+				'name': 'Snarl',
+				'mp3': '/assets/sounds/snarl.mp3'
+			},
+			'giggle': {
+				'name': 'Giggle',
+				'mp3': '/assets/sounds/giggle.mp3'
+			},
+			'laugh': {
+				'name': 'Laugh',
+				'mp3': '/assets/sounds/laugh.mp3'
+			},
+			'roar': {
+				'name': 'Roar',
+				'mp3': '/assets/sounds/roar.mp3'
+			},
+			'howl': {
+				'name': 'Howl',
+				'mp3': '/assets/sounds/howl.mp3'
+			},
+			'hiss': {
+				'name': 'Hiss',
+				'mp3': '/assets/sounds/hiss.mp3'
 			}
 		},
 		'animations': {
