@@ -17,7 +17,7 @@
       user: userData,
       system: systemData,
       configurable: configurableData,
-      section: 'ride',
+      section: 'form',
       formPart: 0,
       roomPart: 'theme',
       stageCounter: 1

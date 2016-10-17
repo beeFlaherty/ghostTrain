@@ -1,9 +1,15 @@
+html {
+  position: relative!important;
+}
+
 body {
   background:#040707;
   background-image: url(/img/background.png);
   background-size: cover;
   background-position: bottom;
   color:#bdbdbd;
+  height: auto!important;
+  overflow: visible!important;
 }
 
 .homepage-img {
