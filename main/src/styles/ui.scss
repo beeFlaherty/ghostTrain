@@ -80,7 +80,7 @@ label {
     line-height:12px;
     color:#000;
   }
-  
+
    input[type="radio"] {display:none;}
 
   }
@@ -93,7 +93,7 @@ label {
   list-style-type: none;
   border-top: #00ff6f 2px solid;
   display:inline-block;
-  margin: 0 auto;
+  margin: 30px auto;
   li{
     display:block;
     float:left;
@@ -107,9 +107,24 @@ label {
     margin-right:20px;
     margin-bottom:50px;
     position:relative;
+
+    span {
+     position:absolute;
+     display:block;
+     width:70px;
+     left:-20px;
+     bottom: -30px;
+     text-align:center;
+     display:none;
+   }
+
     &.active {
       background:#00ff6f;
       border: #00ff6f 2px solid;
+
+      span {
+        display:block;
+      }
 
       &:before {
         content:"";
@@ -122,22 +137,13 @@ label {
         margin-left:-10px;
       }
     }
+    &.activated{
+      background:#00ff6f;
+      border: #00ff6f 2px solid;
+    }
     &:last-of-type {
       margin-right:0px;
     }
-    &.room {
-      width:30px;
-      height:30px;
-      margin-top:-17px;
-      position:relative;
-       span {
-        position:absolute;
-        display:block;
-        width:70px;
-        left:-20px;
-        bottom: -30px;
-        text-align:center;
-      }
-    }
+
   }
 }

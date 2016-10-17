@@ -20,7 +20,7 @@
       section: 'form',
       formPart: 0,
       roomPart: 'theme',
-      stageCounter: 1
+      stageCounter: 0
     },
     methods: {
       getFromDatabase: function() {

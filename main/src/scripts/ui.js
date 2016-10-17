@@ -23,13 +23,13 @@
               } else if (this.$root.roomPart == "scare") {
                 this.$root.roomPart = "theme";
                 this.$root.formPart ++;
+                this.$root.stageCounter++;
               }
 
             }else {
             this.$root.formPart ++;
-
-            }
             this.$root.stageCounter++;
+            }
           }
         },
       });
