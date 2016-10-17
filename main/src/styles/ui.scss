@@ -62,16 +62,29 @@ form {
 		position:relative;
 		z-index: 100;
 	}
-/*  label {
-    display:block;
+label {
+    display:inline-block;
     background:#ccc;
-    height:20px;
-    margin-bottom:10px;
+    height:50px;
+    width:50px;
+    margin:0 5px 10px;
+    float:left;
 
-    span {display:none;}
-    input[type="radio"] {display:none;}
+    &.active {
+      background:yellow;
+    }
 
-  }*/
+  span {
+    //display:none;
+    font-size:10px;
+    line-height:12px;
+    color:#000;
+  }
+  
+   input[type="radio"] {display:none;}
+
+  }
+
 }
 .progress-bar {
   text-align: center;

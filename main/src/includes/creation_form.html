@@ -12,60 +12,59 @@
                             <legend>Build your train</legend>
 
                             <p>Background music</p>
-                            <span v-for="music in configurable.music">
-                              <label for="music{{ $key }}">
+                            <div class="carousel clearfix">
+                              <label v-for="music in configurable.music" for="music{{ $key }}"  v-bind:class="{'active': user.trainsettings.music == $key }">
                                 <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                 <span>{{ music.name }}</span>
-                             <label>
-                            </span>
+                             </label>
+                             </div>
                             <p><button v-on:click="next">Next</button></p>
                         </fieldset>
                     </div>
-                        <div v-for="room in user.rooms">
+                    <div v-for="room in user.rooms">
+
                         <div v-if="$root.formPart == $index+1">
+                        {{ room.editable }}
+                        <div v-if="{ room.editable == 'true'}"> test </div>
                             <fieldset v-if="$root.roomPart == 'theme'">
                                   <legend>Select your room </legend>
-                                  <span v-for="theme in configurable.themes">
-                                      <label for="theme{{ $key }}"><input type="radio" id="theme{{ $key }}"name="theme" value="{{ $key }}" v-model="room.theme">
-                                    {{ theme.name }}</label>
-                                  </span>
+                                  <div class="carousel clearfix">
+                                      <label v-for="theme in configurable.themes" for="theme{{ $key }}" v-bind:class="{'active': room.theme == $key }">
+                                        <input type="radio" id="theme{{ $key }}"name="theme" value="{{ $key }}" v-model="room.theme">
+                                        <span>{{ theme.name }}</span>
+                                      </label>
+                                  </div>
                                   <button v-on:click="next">Next</button>
                             </fieldset>
 
                             <fieldset  v-if="$root.roomPart == 'lights'">
-							<legend>Select your lighting effect</legend>
-                                <div v-for="(light, thisindex) in room.lights">
-
-                                    <span v-for="style in configurable.light.style">
+							                  <legend>Select your lighting effect</legend>
+                                <div class="carousel clearfix" v-for="(light, thisindex) in room.lights">
+                                    <label v-for="style in configurable.light.style" v-bind:class="{'active': room.lights.style == $key }">
                                         <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style">
                                         <span>{{ style.name }}</span>
-                                    </span>
-                                    <br/>
-
-
+                                    </label>
                                 </div>
                                 <button v-on:click="next">Next</button>
                             </fieldset>
                             <fieldset v-if="$root.roomPart == 'scare'">
-                                <legend>Select your Monster</legend>
 
-                                <span v-for="monster in configurable.monsters">
-                                    <input type="radio" name="monster" value="{{ $key }}" v-model="room.scares[0].monster">
-                                    <span>{{ monster.name }}</span>
-                                </span>
-
-                                <label>Sound</label>
-                                <span v-for="sound in configurable.sounds">
-                                    <input type="radio" name="sound" value="{{ $key }}" v-model="room.sound">
+                                <div class="clearfix" v-for="scare in room.scares">
+                                <legend>Select Monster {{ $index+1 }}</legend>
+                                <div class="clearfix carousel">
+                                    <label v-for="monster in configurable.monsters" v-bind:class="{'active': scare.monster == $key }">
+                                        <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster">
+                                        <span>{{ monster.name }}</span>
+                                    </label>
+                                </div>
+                                <div class="clearfix carousel">
+                                  <legend>add a sound effect</legend>
+                                <label v-for="sound in configurable.sounds" v-bind:class="{'active': scare.sound == $key }">
+                                    <input type="radio" name="sound" value="{{ $key }}" v-model="scare.sound">
                                     <span>{{ sound.name }}</span>
-                                </span>
-
-                                <label>Animation</label>
-                                <span v-for="animation in configurable.animations">
-                                    <input type="radio" name="animation" value="{{ $key }}" v-model="room.scares[0].animation">
-                                    <span>{{ animation.name }}</span>
-                                </span>
-
+                                </label>
+                                </div>
+                                </div>
 
                             <p v-if="$root.formPart != user.rooms.length" >
                               <button v-on:click="next">Next</button>
