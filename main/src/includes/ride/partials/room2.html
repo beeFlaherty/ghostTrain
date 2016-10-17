@@ -6,16 +6,6 @@
           <a-entity mixin="door-frame-4-E {{ theme }}" position="32 0 6"></a-entity>
           <a-entity mixin="door-frame-4-S {{ theme }}" position="44 0 6"></a-entity>
 
-          <a-entity position="32 0 6">
-            <a-entity mixin="door-left-EW {{ theme }}" position="0.5 0 0"></a-entity>
-            <a-entity mixin="door-right-EW {{ theme }}" position="3.5 0 0"></a-entity>
-          </a-entity>
-
-          <a-entity position="44 0 6">
-            <a-entity mixin="door-left-NS {{ theme }}" position="0 0 0.5"></a-entity>
-            <a-entity mixin="door-right-NS {{ theme }}" position="0 0 3.5"></a-entity>
-          </a-entity>
-
           <!-- walls -->
           <a-entity mixin="wall-E {{ theme }}" position="12 0 18"></a-entity>
           <a-entity mixin="wall-E {{ theme }}" position="16 0 18"></a-entity>
@@ -77,5 +67,5 @@
 
         </a-entity>
 
-
+        <gt-door v-bind:theme="theme" size="4" position="44 0 6" triggerable="true" frame="N" door="NS" current="room_2" next="room_3"></gt-door>
 </script>
