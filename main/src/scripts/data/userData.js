@@ -90,7 +90,32 @@
 				]
 			},
 			{
-				'number': 3,
+				'number': 4,
+				'theme': 'castle', // castle, forest, graveyard
+				'lights': {
+					'style' : 'crypt'
+				},
+
+				'scares': [
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					},
+					{
+						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'sound': 'zombie', // moan, scream, snarl, manic laughter
+						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
+					}
+				]
+			},
+			{
+				'number': 5,
 				'theme': 'castle', // castle, forest, graveyard
 				'lights': {
 					'style' : 'crypt'
@@ -114,7 +139,6 @@
 					}
 				]
 			}
-
 		]
 	};
 }());
