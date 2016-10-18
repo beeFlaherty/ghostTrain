@@ -73,7 +73,7 @@
 					{
 						'position': '41 0 8',
 						'rotation': '0 270 0',
-						'animation': 'popdown'
+						'animation': 'dropdown'
 					}
 				]
 			},
@@ -92,8 +92,14 @@
 				],
 				'scares': [
 					{
-
-
+						'position': '48 0 8',
+						'rotation': '0 90 0',
+						'animation': 'dropdown'
+					},
+					{
+						'position': '46 0 20',
+						'rotation': '0 180 0',
+						'animation': 'fromleft'
 					}
 				]
 			},
@@ -111,7 +117,21 @@
 					}
 				],
 				'scares': [
-					{}
+					{
+						'position': '50 0 32',
+						'rotation': '0 180 0',
+						'animation': 'fromleft'
+					},
+					{
+						'position': '49 0 42',
+						'rotation': '0 180 0',
+						'animation': 'fromright'
+					},
+					{
+						'position': '49 0 54',
+						'rotation': '0 180 0',
+						'animation': 'popup'
+					}
 				]
 			},
 			{
@@ -154,8 +174,9 @@
 				'54 2 8',
 				'54 2 16',
 				'46 2 16',
+				'46 2 24',
 				'50 2 24',
-				'50 2 45'
+				'50 2 56'
 			]
 		}
 	};
