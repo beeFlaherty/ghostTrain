@@ -12,6 +12,15 @@ body {
   overflow: visible!important;
 }
 
+html.aframe {
+	position:fixed!important;
+
+	body {
+		height: 100%!important;
+		overflow: hidden!important;
+	}
+}
+
 .homepage-img {
     display:block;
     margin:10px auto;

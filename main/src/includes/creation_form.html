@@ -24,8 +24,7 @@
                     <div v-for="room in user.rooms">
 
                         <div v-if="$root.formPart == $index+1">
-                        {{ room.editable }}
-                        <div v-if="{ room.editable == 'true'}"> test </div>
+                        <div v-if="room.editable === 'true'">
                             <fieldset v-if="$root.roomPart == 'theme'">
                                   <legend>Select your room </legend>
                                   <div class="carousel clearfix">
@@ -57,25 +56,19 @@
                                         <span>{{ monster.name }}</span>
                                     </label>
                                 </div>
-                                <div class="clearfix carousel">
-                                  <legend>add a sound effect</legend>
-                                <label v-for="sound in configurable.sounds" v-bind:class="{'active': scare.sound == $key }">
-                                    <input type="radio" name="sound" value="{{ $key }}" v-model="scare.sound">
-                                    <span>{{ sound.name }}</span>
-                                </label>
-                                </div>
+
                                 </div>
 
-                            <p v-if="$root.formPart != user.rooms.length" >
+                            <p v-if="$root.formPart != 5" >
                               <button v-on:click="next">Next</button>
                             </p>
-                            <p v-if="$root.formPart == user.rooms.length">
+                            <p v-if="$root.formPart == 5">
                               <button v-on:click="activate">Scare Me</button>
                             </p>
                             </fieldset>
                         </div>
                         </div>
-
+</div>
                     </form>
                 </div>
             </div>

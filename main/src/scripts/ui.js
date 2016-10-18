@@ -10,12 +10,14 @@
         props: ['user', 'system', 'configurable'],
         methods: {
           activate: function(event) {
+
+			document.getElementsByTagName('html')[0].className += " aframe";
             this.$root.goto('ride');
             event.preventDefault();
           },
           next: function(event){
             event.preventDefault();
-            if (this.$root.formPart > 0){
+            if (this.$root.formPart > 1){
               if (this.$root.roomPart == "theme") {
                 this.$root.roomPart = "lights";
               }else if (this.$root.roomPart == "lights") {
@@ -28,7 +30,10 @@
 
             }else {
             this.$root.formPart ++;
-            this.$root.stageCounter++;
+			if (this.$root.formPart == 1){
+				this.$root.formPart ++;
+				this.$root.stageCounter++;
+			}
             }
           }
         },

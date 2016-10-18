@@ -10,7 +10,7 @@
 		'rooms': [
 			{
 				'number': 0,
-				'editable': false,
+				'editable': 'false',
 				'theme': 'hotel', // castle, forest, graveyard
 				'lights': {
 					'style' : 'crypt'
