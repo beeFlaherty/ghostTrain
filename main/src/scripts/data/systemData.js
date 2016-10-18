@@ -80,16 +80,35 @@
 			{
 				'position': '0 0 0',
 				'lights': [
-					{}
+					{
+						'position': '46 2 6'
+					},
+					{
+						'position': '50 2 14'
+					},
+					{
+						'position': '50 2 26'
+					}
 				],
 				'scares': [
-					{}
+					{
+
+
+					}
 				]
 			},
 			{
 				'position': '0 0 0',
 				'lights': [
-					{}
+					{
+						'position': '51 2 30'
+					},
+					{
+						'position': '51 2 38'
+					},
+					{
+						'position': '51 2 46'
+					}
 				],
 				'scares': [
 					{}
