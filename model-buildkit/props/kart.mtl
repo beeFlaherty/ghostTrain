@@ -1,4 +1,4 @@
-# Blender MTL File: 'kart.blend'
+# Blender MTL File: 'kart-low.blend'
 # Material Count: 1
 
 newmtl kart
@@ -10,4 +10,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd C:\Users\Joe\Pictures\Textures\signs\train texture.psd
+map_Kd kart-texture.png

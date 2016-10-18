@@ -93,7 +93,7 @@
         if (value > 360) {
            value = 360 - value;
         }
-
+        console.log(value);
         value = Math.radians(value);
 
         this.rotation = new THREE.Vector3(0, value, 0);
@@ -122,7 +122,6 @@
             (this.percentComplete * 3) > 1 ? 1 : this.percentComplete * 3);
 
           value = Math.degrees(value);
-
           if (value < 0) {
              value = 360 + value;
           }
