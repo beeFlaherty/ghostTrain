@@ -25,7 +25,7 @@
 				'editable': 'true',
 				'theme': 'hauntedhouse', // castle, forest, graveyard
 				'lights': {
-					'style' : 'neon'
+					'style' : 'moonlight'
 				},
 
 				'scares': [
@@ -46,7 +46,7 @@
 				'editable': 'true',
 				'theme': 'asylum', // castle, forest, graveyard
 				'lights': {
-					'style' : 'redalert'
+					'style' : 'candlelight'
 				},
 
 				'scares': [

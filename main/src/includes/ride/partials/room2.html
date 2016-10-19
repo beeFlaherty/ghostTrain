@@ -3,38 +3,38 @@
           <a-entity mixin="door-frame-4-E {{ theme }}" position="24 0 18"></a-entity>
           <a-entity mixin="door-frame-4-S {{ theme }}" position="32 0 18"></a-entity>
           <a-entity mixin="door-frame-4-N {{ theme }}" position="32 0 18"></a-entity>
-          <a-entity mixin="door-frame-4-E {{ theme }}" position="32 0 6"></a-entity>
-          <a-entity mixin="door-frame-4-S {{ theme }}" position="44 0 6"></a-entity>
+          <gt-door v-bind:theme="theme" size="4" position="32 0 6"" frame="E" door="EW"></gt-door>
+          <!-- <a-entity mixin="door-frame-4-S {{ theme }}" position="44 0 6"></a-entity> -->
 
           <!-- walls -->
           <a-entity mixin="wall-E {{ theme }}" position="12 0 18"></a-entity>
-          <a-entity mixin="wall-E {{ theme }}" position="16 0 18"></a-entity>
+          <a-entity mixin="wall-detail-E {{ theme }}" position="16 0 18"></a-entity>
           <a-entity mixin="wall-E {{ theme }}" position="20 0 18"></a-entity>
-          <a-entity mixin="wall-E {{ theme }}" position="28 0 18"></a-entity>
+          <a-entity mixin="wall-detail-E {{ theme }}" position="28 0 18"></a-entity>
 
           <a-entity mixin="wall-u-E {{ theme }}" position="36 0 6"></a-entity>
           <a-entity mixin="wall-E {{ theme }}" position="36 0 6"></a-entity>
           <a-entity mixin="wall-E {{ theme }}" position="40 0 6"></a-entity>
 
 
-          <a-entity mixin="wall-W {{ theme }}" position="12 0 22"></a-entity>
+          <a-entity mixin="wall-detail-W {{ theme }}" position="12 0 22"></a-entity>
           <a-entity mixin="wall-W {{ theme }}" position="16 0 22"></a-entity>
-          <a-entity mixin="wall-W {{ theme }}" position="20 0 22"></a-entity>
+          <a-entity mixin="wall-detail-W {{ theme }}" position="20 0 22"></a-entity>
           <a-entity mixin="wall-W {{ theme }}" position="24 0 22"></a-entity>
           <a-entity mixin="wall-u-W {{ theme }}" position="28 0 22"></a-entity>
           <a-entity mixin="wall-u-W {{ theme }}" position="32 0 22"></a-entity>
 
           <a-entity mixin="wall-W {{ theme }}" position="36 0 10"></a-entity>
-          <a-entity mixin="wall-W {{ theme }}" position="40 0 10"></a-entity>
+          <a-entity mixin="wall-detail-W {{ theme }}" position="40 0 10"></a-entity>
 
 
           <a-entity mixin="wall-N {{ theme }}" position="12 0 18"></a-entity>
-          <a-entity mixin="wall-N {{ theme }}" position="32 0 14"></a-entity>
+          <a-entity mixin="wall-detail-N {{ theme }}" position="32 0 14"></a-entity>
           <a-entity mixin="wall-N {{ theme }}" position="32 0 10"></a-entity>
           <a-entity mixin="wall-N {{ theme }}" position="32 0 6"></a-entity>
 
           <a-entity mixin="wall-S {{ theme }}" position="36 0 18"></a-entity>
-          <a-entity mixin="wall-S {{ theme }}" position="36 0 14"></a-entity>
+          <a-entity mixin="wall-detail-S {{ theme }}" position="36 0 14"></a-entity>
           <a-entity mixin="wall-S {{ theme }}" position="36 0 10"></a-entity>
 
           <!-- floor -->
@@ -67,5 +67,5 @@
 
         </a-entity>
 
-        <gt-door v-bind:theme="theme" size="4" position="44 0 6" triggerable="true" frame="N" door="NS" current="room_2" next="room_3"></gt-door>
+        <gt-door v-bind:theme="theme" size="4" position="44 0 6" triggerable="true" frame="S" door="NS" current="room_2" next="room_3"></gt-door>
 </script>

@@ -36,6 +36,11 @@
 	        <a-mixin id="wall-divider-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_divider_4x8_N.obj); "></a-mixin>
 	        <a-mixin id="wall-divider-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_divider_4x8_S.obj); "></a-mixin>
 
+			<a-mixin id="wall-detail-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_detail_4x4_N.obj); "></a-mixin>
+	        <a-mixin id="wall-detail-E" obj-model="obj: url(/assets/model-buildkit/walls/wall_detail_4x4_E.obj); "></a-mixin>
+	        <a-mixin id="wall-detail-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_detail_4x4_S.obj); "></a-mixin>
+	        <a-mixin id="wall-detail-W" obj-model="obj: url(/assets/model-buildkit/walls/wall_detail_4x4_W.obj); "></a-mixin>
+
 	        <a-mixin id="wall-u-N" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_N.obj); "></a-mixin>
 	        <a-mixin id="wall-u-E" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_E.obj); "></a-mixin>
 	        <a-mixin id="wall-u-S" obj-model="obj: url(/assets/model-buildkit/walls/wall_u_4x4_S.obj); "></a-mixin>
@@ -79,7 +84,7 @@
 			</a-entity>
 
 			<!--  old kart position 16 4 15 -->
-			<a-entity position="3 3.5 4.5" rotation="0 90 0" kart=" {{ system.track.speed }}"> <!--  Need this space before the {{ for some reason -->
+			<a-entity position="3 3.5 4.5" rotation="0 90 0"> <!-- kart=" {{ system.track.speed }}">  Need this space before the {{ for some reason -->
 				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart-low.obj); mtl: url(assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="ture" near="0.1"></a-camera>
@@ -104,6 +109,14 @@
 			<a-sky color="{{ system.sky.colour }}"></a-sky>
 
 			<gt-room v-for="room in system.rooms" v-bind:index="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
+
+			<!-- <gt-door theme="intro" position="12 0 0" frame="S" door="NS" triggerable="true" size="8" current="room_0" next="room_1"></gt-door>
+
+			<gt-door theme="{{ user.rooms[1].theme }}" position="24 0 18" frame="S" door="NS" triggerable="true" size="8" current="room_1" next="room_2"></gt-door>
+
+			<gt-door theme="{{ user.rooms[2].theme }}" position="44 0 6" frame="S" door="NS" triggerable="true" size="8" current="room_2" next="room_3"></gt-door>
+
+			<gt-door theme="{{ user.rooms[3].theme }}" position="48 0 30" frame="S" door="NS" triggerable="true" size="8" current="room_3" next="room_4"></gt-door> -->
 		</a-entity>
 	</a-scene>
 </script>
