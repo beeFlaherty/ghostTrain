@@ -9,7 +9,12 @@
 
 		<meta name="description" content="">
 
-		<link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+		<meta property="og:url" content="" />
+		<meta property="og:type"  content="article" />
+		<meta property="og:title"  content="" />
+		<meta property="og:description"content="" />
+		<meta property="og:image" content="" />
+
 
 		<!-- build:css:build ./styles/main.min.css -->
 		<link rel="stylesheet" href="styles/main.css">
@@ -33,8 +38,9 @@
 			<div v-if="section == 'ride'">
 				<gt-ride v-bind:user="user" v-bind:system="system" v-bind:configurable="configurable"></gt-ride>
 			</div>
+
 			<div v-if="section == 'end'">
-				<h1>The End</h1>
+				<!-- build:include includes/end_screen.html  -->Splash Screen<!-- /build -->
 			</div>
 
 			<!-- build:include includes/creation_form.html  -->Form will go here<!-- /build -->
@@ -54,8 +60,6 @@
 			<!-- build:include includes/ride/partials/room5.html --><!-- /build -->
 			<!-- build:include includes/ride/partials/doors.html --><!-- /build -->
 
-			<!-- build:include includes/end_screen.html -->End screen go here<!-- /build -->
-		</div>
 
 		<!-- build:include includes/footer.html -->Footer will go here<!-- /build -->
 
