@@ -161,9 +161,9 @@
 			'repeat': 0
 		},
 		'track': {
-			'showPoints': true,
+			'showPoints': false,
 			'speed': 2,
-			'kart': true,
+			'kart': false,
 			'points': [
 				'6 3.5 4.5',
 				'26 3.5 4.5',
