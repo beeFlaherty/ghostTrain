@@ -78,20 +78,20 @@ form {
 		z-index: 100;
 	}
 label {
-    display:inline-block;
-
-    height:50px;
-    width:50px;
+    display:block;
+	background-size: cover;
+    height:100px;
+    width:100px;
     margin:0 5px 10px;
     float:left;
 
     &.active {
-      height:75px;
-      width:75px;
+      height:150px;
+      width:150px;
     }
 
   span {
-    //display:none;
+    display:none;
     font-size:10px;
     line-height:12px;
     color:#000;
@@ -208,27 +208,27 @@ label {
 }
 
 
-label[for="musicnone"] { background-image:url("/assets/UI/_music/nosound.png")}
-label[for="musiccreepymusicbox"]{ background-image:url("/assets/UI/_music/musicbox.png")}
-label[for="musicmountainking"]{ background-image:url("/assets/UI/_music/hallofthe.png")}
-label[for="musicdansemacabre"]{ background-image:url("/assets/UI/_music/danse-macabre.png")}
-label[for="musicchoirofdoom"]{ background-image:url("/assets/UI/_music/choir-of-doom.png")}
-label[for="musicabandonedcemetery"]{ background-image:url("/assets/UI/_music/cemetery.png")}
+label[for="musicnone"] { background-image:url("/assets/UI/music/nosound.png")}
+label[for="musiccreepymusicbox"]{ background-image:url("/assets/UI/music/musicbox.png")}
+label[for="musicmountainking"]{ background-image:url("/assets/UI/music/hallofthe.png")}
+label[for="musicdansemacabre"]{ background-image:url("/assets/UI/music/danse-macabre.png")}
+label[for="musicchoirofdoom"]{ background-image:url("/assets/UI/music/choir-of-doom.png")}
+label[for="musicabandonedcemetery"]{ background-image:url("/assets/UI/music/cemetery.png")}
 
-label[for="themecastle"]  {background-image:url("/assets/UI/_location/castle.png")}
-label[for="themehotel"] {background-image:url("/assets/UI/_location/hotel.png")}
-label[for="themegraveyard"] {background-image:url("/assets/UI/_location/cgraveyard.png")}
-label[for="themeasylum"] {background-image:url("/assets/UI/_location/casylum.png")}
-label[for="themehauntedhouse"] {background-image:url("/assets/UI/_location/graveyard.png")}
+label[for="themecastle"]  {background-image:url("/assets/UI/location/castle.png")}
+label[for="themehotel"] {background-image:url("/assets/UI/location/hotel.png")}
+label[for="themegraveyard"] {background-image:url("/assets/UI/location/cgraveyard.png")}
+label[for="themeasylum"] {background-image:url("/assets/UI/location/casylum.png")}
+label[for="themehauntedhouse"] {background-image:url("/assets/UI/location/graveyard.png")}
 
-label[for="normal"]  {background-image:url("/assets/UI/_light/normal.png")}
-label[for="neon"] {background-image:url("/assets/UI/_light//neon.png")}
-label[for="candlelight"] {background-image:url("/assets/UI/_light/candelight.png")}
-label[for="moonlight"] {background-image:url("/assets/UI/_light/moonlight.png")}
-label[for="nuclear"] {background-image:url("/assets/UI/_light/nuclear.png")}
-label[for="basement"] {background-image:url("/assets/UI/_light/basement.png")}
-label[for="crypt"] {background-image:url("/assets/UI/_light/crypt.png")}
+label[for="normal"]  {background-image:url("/assets/UI/light/normal.png")}
+label[for="neon"] {background-image:url("/assets/UI/light//neon.png")}
+label[for="candlelight"] {background-image:url("/assets/UI/light/candelight.png")}
+label[for="moonlight"] {background-image:url("/assets/UI/light/moonlight.png")}
+label[for="nuclear"] {background-image:url("/assets/UI/light/nuclear.png")}
+label[for="basement"] {background-image:url("/assets/UI/light/basement.png")}
+label[for="crypt"] {background-image:url("/assets/UI/light/crypt.png")}
 
-label[for="zombie"] {background-image:url("/assets/UI/_monster/zombie.png")}
-label[for="ghost"] {background-image:url("/assets/UI/_monster/ghost.png")}
-label[for="vampire"] {background-image:url("/assets/UI/_light/vampire.png")}
+label[for="zombie"] {background-image:url("/assets/UI/monster/zombie.png")}
+label[for="ghost"] {background-image:url("/assets/UI/monster/ghost.png")}
+label[for="vampire"] {background-image:url("/assets/UI/light/vampire.png")}
