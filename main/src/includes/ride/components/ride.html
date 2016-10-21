@@ -82,12 +82,12 @@
 			<a-entity id="rotation-helper" position="0 0 0" rotation="0 0 0">
 				<!--	<a-box position="0 0 0" color="blue"></a-box> -->
 			</a-entity>
-
+			<!---->
 			<!--  old kart position 16 4 15 -->
-			<a-entity position="3 3.5 4.5" rotation="0 90 0" kart=" {{ system.track.speed }}">  <!--   Need this space before the {{ for some reason -->
+			<a-entity position="7 3.5 4" rotation="0 90 0" kart=" {{ system.track.speed }}" >  <!--   Need this space before the {{ for some reason -->
 				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart-low.obj); mtl: url(assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
-					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="ture" near="0.1"></a-camera>
+					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="false" near="0.1"></a-camera>
 					<a-entity
 						v-if="$root.system.sound.chain"
 						sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
@@ -102,7 +102,7 @@
 
 			<!-- <a-camera collider  position="10 4 -18" rotation="0 0 0" wasd-controls-enabled="true"></a-camera>-->
 
-			<a-entity v-for="point in system.track.points" track position="{{ point }}" order="{{ $index }}">
+			<a-entity v-for="point in system.track.points" track position="{{ point.position }}" v-bind:duration="point.duration ? point.duration : -1" v-bind:rotationDuration="point.rotationDuration ? point.rotationDuration : -1" v-bind:allowMovement="point.allowMovement ? point.allowMovement : true" order="{{ $index }}">
 				<a-sphere v-if="system.track.showPoints" position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 			</a-entity>
 

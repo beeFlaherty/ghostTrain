@@ -162,21 +162,43 @@
 		},
 		'track': {
 			'showPoints': false,
-			'speed': 2,
-			'kart': false,
+			'speed': 1,
+			'kart': true,
 			'points': [
-				'6 3.5 4.5',
-				'26 3.5 4.5',
-				'26 3.5 20',
-				'16 3.5 20',
-				'34 3.5 20',
-				'34 3.5 8',
-				'54 3.5 8',
-				'54 3.5 16',
-				'46 3.5 16',
-				'46 3.5 24',
-				'50 3.5 24',
-				'50 3.5 56'
+				{ 'position':'7 3.5 4', 'duration':'10', 'rotationDuration':'-1', 'allowMovement':'false' },
+
+				{ 'position':'26 3.5 4', 'duration':'-1', 'rotationDuration':'-1' },
+				{ 'position':'26 3.5 5', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false' },
+
+				{ 'position':'26 3.5 20', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'25 3.5 20', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+				{ 'position':'16 3.5 20', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'17 3.5 20', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+				{ 'position':'34 3.5 20', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'34 3.5 19', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+
+				{ 'position':'34 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'35 3.5 8', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+				{ 'position':'54 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'54 3.5 9', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+				{ 'position':'54 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
+				/*{ 'position':'53 3.5 16', 'duration':'3', 'rotationDuration':'-1'},*/
+
+				{ 'position':'46 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
+				/*{ 'position':'46 3.5 17', 'duration':'3', 'rotationDuration':'-1'},*/
+
+				{ 'position':'46 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
+			/*	{ 'position':'47 3.5 24', 'duration':'3', 'rotationDuration':'-1'},*/
+
+				{ 'position':'50 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
+			/*	{ 'position':'50 3.5 25', 'duration':'3', 'rotationDuration':'-1'},*/
+
+				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'}
 			]
 		}
 	};
