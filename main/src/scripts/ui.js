@@ -10,8 +10,6 @@
         props: ['user', 'system', 'configurable'],
         methods: {
           activate: function(event) {
-
-			document.getElementsByTagName('html')[0].className += " aframe";
             this.$root.goto('ride');
             event.preventDefault();
           },

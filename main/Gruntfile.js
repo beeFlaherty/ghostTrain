@@ -74,7 +74,8 @@ module.exports = function(grunt) {
 		// Run JShint on all of JS files (but not on vendor files)
 		jshint: {
 			options: {
-				reporter: require('jshint-stylish')
+				reporter: require('jshint-stylish'),
+				debug:true
 			},
 			all: ['src/scripts/**/*.js', '!src/scripts/vendor/**/*.js']
 		},
