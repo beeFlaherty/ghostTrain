@@ -14,7 +14,7 @@
                             <p>Background music</p>
                             <div class="carousel clearfix">
                               <label v-for="music in configurable.music" for="music{{ $key }}"   v-bind:class="{'active': user.trainsettings.music == $key }">
-                                <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
+                                <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}"  v-model="user.trainsettings.music">
                                 <span>{{ music.name }}</span>
                              </label>
                              </div>
@@ -40,7 +40,7 @@
 							                  <legend>Select your lighting effect</legend>
                                 <div class="carousel clearfix" v-for="(light, thisindex) in room.lights">
                                     <label v-for="style in configurable.light.style" for="{{ $key }}" v-bind:class="{'active': room.lights.style == $key }">
-                                        <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style">
+                                        <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style" id="{{ $key }}">
                                         <span>{{ style.name }}</span>
                                     </label>
                                 </div>
@@ -51,8 +51,8 @@
                                 <div class="clearfix" v-for="scare in room.scares">
                                 <legend>Select Monster {{ $index+1 }}</legend>
                                 <div class="clearfix carousel">
-                                    <label v-for="monster in configurable.monsters" for="{{ $key }}" v-bind:class="{'active': scare.monster == $key }">
-                                        <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster">
+                                    <label v-for="monster in configurable.monsters" for="{{ $key $index }}" v-bind:class="{'active': scare.monster == $key }">
+                                        <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster"  id="{{ $key $index }}">
                                         <span>{{ monster.name }}</span>
                                     </label>
                                 </div>
