@@ -43,6 +43,11 @@
       },
 
       goto: function(section) {
+
+        if(section === 'ride'){
+          	document.getElementsByTagName('html')[0].className += " aframe";
+        }
+
         if (this.section === 'form' && section === 'ride') {
           this.saveToDatabase();
         }
