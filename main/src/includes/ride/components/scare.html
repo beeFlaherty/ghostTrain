@@ -1,4 +1,5 @@
 <script id="scare_template" type="x-template">
+<a-entity v-if="$root.system.sound.mute === false">
 	<a-entity v-if="monster === 'zombie'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
 		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" sound="src: /assets/sounds/zombie.mp3; on:enter;">
 			<gt-animation v-bind:type="animation"></gt-animation>
@@ -28,6 +29,41 @@
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
+</a-entity>
+
+<a-entity v-if="$root.system.sound.mute === true">
+	<a-entity v-if="monster === 'zombie'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" >
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+
+	<a-entity v-if="monster === 'vampire'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false">
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+
+	<a-entity v-if="monster === 'ghost'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false">
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+
+	<a-entity v-if="monster === 'ballerina'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false">
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+
+	<a-entity v-if="monster === 'pyro'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false">
+			<gt-animation v-bind:type="animation"></gt-animation>
+		</a-obj-model>
+	</a-entity>
+</a-entity>
+
+
 
 	<a-octahedron color="#FF926B" radius="5"></a-octahedron>
 </script>

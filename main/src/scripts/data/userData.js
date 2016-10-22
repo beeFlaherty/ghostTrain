@@ -3,7 +3,7 @@
 
 	module.exports = {
 		'active': false,
-		'sound' : true,
+
 		'trainsettings': {
 			'music':'none',
 			'name':'Your spooky train name'

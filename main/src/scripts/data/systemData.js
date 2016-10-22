@@ -2,11 +2,13 @@
 	'use strict';
 
 	module.exports = {
+
 		'sky': {
 			'colour': '#000000'
 		},
 		'sound': {
-			'chain': true
+			'chain': true,
+			'mute': false
 		},
 		'rooms': [
 			{
@@ -97,7 +99,7 @@
 						'animation': 'dropdown'
 					},
 					{
-						'position': '46 0 20',
+						'position': '44 0 20',
 						'rotation': '0 180 0',
 						'animation': 'fromleft'
 					}
@@ -123,7 +125,7 @@
 						'animation': 'fromleft'
 					},
 					{
-						'position': '49 0 44',
+						'position': '48 0 42',
 						'rotation': '0 180 0',
 						'animation': 'fromright'
 					},

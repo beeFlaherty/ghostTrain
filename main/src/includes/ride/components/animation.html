@@ -6,10 +6,10 @@
 	<a-animation v-if="type === 'dropdown'" begin="enter" attribute="rotation" from="0 0 30" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
 	<a-animation v-if="type === 'fromleft'" begin="enter" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
-	<a-animation v-if="type === 'fromleft'" begin="enter" attribute="position" from="{{ $root.system.monster.width * -8 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+	<a-animation v-if="type === 'fromleft'" begin="enter" attribute="position" from="{{ $root.system.monster.width * -8 }} 0 0" to="1.5 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
 	<a-animation v-if="type === 'fromright'" begin="enter" attribute="rotation" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
-	<a-animation v-if="type === 'fromright'" begin="enter" attribute="position" from="{{ $root.system.monster.width * 1 }} 0 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+	<a-animation v-if="type === 'fromright'" begin="enter" attribute="position" from="{{ $root.system.monster.width * 1 }} 0 0" to="-1.5 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 
 	<a-animation v-if="type === 'slideleft'" begin="enter" attribute="position" from="0 0 0" to="3 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 

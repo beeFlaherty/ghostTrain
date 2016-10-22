@@ -57,12 +57,6 @@
 		'light': {
 			'style':
 				{
-					'normal': {
-						'name': 'Normal',
-						'light_1': '#fff',
-						'light_2': '#fff',
-						'light_3': '#fff'
-					},
 					'neon': {
 						'name': 'Neon Disco',
 						'light_1': '#a106db',
@@ -101,9 +95,9 @@
 					},
 					'crypt': {
 						'name': 'Crypt',
-						'light_1': '#535353',
-						'light_2': '#535353',
-						'light_3': '#535353'
+						'light_1': '#161616',
+						'light_2': '#161616',
+						'light_3': '#161616'
 					}
 				},
 			// 'color': {

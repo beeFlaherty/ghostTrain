@@ -88,16 +88,20 @@
 				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart-low.obj); mtl: url(assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="false" near="0.1"></a-camera>
-					<a-entity
-						v-if="$root.system.sound.chain"
-						sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
-					<a-entity
-						v-if="$root.user.trainsettings.music !== 'none'"
-						sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"
-					></a-entity>
+
+						<a-entity
+							v-if="$root.system.sound.chain && $root.system.sound.mute === false"
+							sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
+
+							<a-entity
+								v-if="$root.user.trainsettings.music !== 'none' && $root.system.sound.mute === false"
+								sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"
+							></a-entity>
 				</a-entity>
 			</a-entity>
+<!--<a entity v-if="$root.system.sound.mute === false">
 
+</a-entity>-->
 			<!--a-entity <a-light type="ambient" color="#fff"></a-light>  USE THIS FOR TESTING -->
 
 			<!-- <a-camera collider  position="10 4 -18" rotation="0 0 0" wasd-controls-enabled="true"></a-camera>-->

@@ -3,7 +3,7 @@
           <a-entity mixin="door-frame-4-E {{ theme }}" position="24 0 18"></a-entity>
           <a-entity mixin="door-frame-4-S {{ theme }}" position="32 0 18"></a-entity>
           <a-entity mixin="door-frame-4-N {{ theme }}" position="32 0 18"></a-entity>
-          <gt-door v-bind:theme="theme" size="4" position="32 0 6"" frame="E" door="EW"></gt-door>
+          <gt-door v-bind:theme="theme" size="4" position="32 0 6"" frame="E" door="EW" triggerable="true"></gt-door>
           <!-- <a-entity mixin="door-frame-4-S {{ theme }}" position="44 0 6"></a-entity> -->
 
           <!-- walls -->
@@ -28,7 +28,7 @@
           <a-entity mixin="wall-detail-W {{ theme }}" position="40 0 10"></a-entity>
 
 
-          <a-entity mixin="wall-N {{ theme }}" position="12 0 18"></a-entity>
+          <a-entity mixin="wall-detail-N {{ theme }}" position="12 0 18"></a-entity>
           <a-entity mixin="wall-detail-N {{ theme }}" position="32 0 14"></a-entity>
           <a-entity mixin="wall-N {{ theme }}" position="32 0 10"></a-entity>
           <a-entity mixin="wall-N {{ theme }}" position="32 0 6"></a-entity>
@@ -64,7 +64,10 @@
           <a-entity mixin="ceiling {{ theme }}" position="36 0 6"></a-entity>
           <a-entity mixin="ceiling {{ theme }}" position="40 0 6"></a-entity>
 
-
+          <!-- <a-entity id="monster_fromleft" position="44 0 4 rotation="0 0 0">
+        		<a-obj-model rotation="0 0 0" material="src: #monsters_texture; shader: standard; roughness:1;" visible="true" sound="src: /assets/sounds/zombie.mp3; on:enter;" scale="0.5 0.5 0.5" src="#monster_zombie_model" obj-model="obj:#monster_zombie_model" collidable="5" position="1.5 0 0">
+        		</a-obj-model>
+          </a-entity> -->
         </a-entity>
 
         <gt-door v-bind:theme="theme" size="4" position="44 0 6" triggerable="true" frame="S" door="NS" current="room_2" next="room_3"></gt-door>

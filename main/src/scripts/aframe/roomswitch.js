@@ -35,13 +35,13 @@ function removeElement(child, delay){
 
         this.el.addEventListener('enter', function (evt) {
           if (showOnEnter) {
-            showOnEnter.setAttribute('visible', 'true');
+            // showOnEnter.setAttribute('visible', 'true');
           }
         });
 
         this.el.addEventListener('exit', function (evt) {
           if (hideOnExit) {
-            hideOnExit.setAttribute('visible', 'false');
+            // hideOnExit.setAttribute('visible', 'false');
           //  removeChildrens(hideOnExit, 0);
           }
         });

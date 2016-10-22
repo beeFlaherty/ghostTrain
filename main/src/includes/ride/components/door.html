@@ -5,7 +5,7 @@
 		<a-entity v-if="triggerable" position="0 0 2.5" collidable="{{ $root.system.door.triggerDistance }}" roomswitch="true" showonenter="{{ next }}" hideonexit="{{ current }}">
 
 
-
+		<a-entity v-if="$root.system.sound.mute === false">
 			<a-entity v-if="size === '4' && (door === 'NS' || door === 'SN')" mixin="door-left-{{ door }} {{ theme }}" position="0 0 -2" collidable="{{ $root.system.door.triggerDistance }}" sound="src: /assets/sounds/door.mp3; on:enter;">
 
 				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 -90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
@@ -37,7 +37,41 @@
 				<a-animation begin="exit" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
 			</a-entity>
 
+			</a-entity>
 
+			<a-entity v-if="$root.system.sound.mute === true">
+			<a-entity v-if="size === '4' && (door === 'NS' || door === 'SN')" mixin="door-left-{{ door }} {{ theme }}" position="0 0 -2" collidable="{{ $root.system.door.triggerDistance }}">
+
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 -90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+			<a-entity v-if="size === '4' && (door === 'NS' || door === 'SN')" mixin="door-right-{{ door }} {{ theme }}" position="0 0 1" collidable="{{ $root.system.door.triggerDistance}}">
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+
+			<a-entity v-if="size === '8' && (door === 'NS' || door === 'SN')" mixin="door-left-{{ door }} {{ theme }}" position="0 0 0" collidable="{{ $root.system.door.triggerDistance }}">
+
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 -90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+			<a-entity v-if="size === '8' && (door === 'NS' || door === 'SN')" mixin="door-right-{{ door }} {{ theme }}" position="0 0 3" collidable="{{ $root.system.door.triggerDistance}}">
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+
+
+			<a-entity v-if="door === 'EW' || door === 'WE'" mixin="door-left-{{ door }} {{ theme }}" position="0.5 0 -2.5" collidable="{{ $root.system.door.triggerDistance }}">
+
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 -90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 -90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+			<a-entity v-if="door === 'EW' || door === 'WE'" mixin="door-right-{{ door }} {{ theme }}" position="3.5 0 -2.5" collidable="{{ $root.system.door.triggerDistance}}">
+				<a-animation begin="enter" attribute="rotation" from="0 0 0" to="0 90 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+				<a-animation begin="exit" attribute="rotation" from="0 90 0" to="0 0 0" dur="{{ $root.system.animation.duration }}" fill="both" easing="ease-out-bounce" repeat="{{ $root.system.animation.repeat }}"></a-animation>
+			</a-entity>
+
+			</a-entity>
 
 
 		</a-entity>
