@@ -207,7 +207,7 @@ label {
   .vol {
 
   //   background:  url('/assets/UI/icons-info/sound-on.svg');
-     &.off {
+     &.active {
        background: url('/assets/UI/icons-info/sound-off.svg');
        background:yellow;
      }
