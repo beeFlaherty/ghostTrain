@@ -30,13 +30,13 @@
 
 				'scares': [
 					{
-						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
+						'monster': 'pyro', // none, zombie, mummy, vampire, skeleton
 						'sound': 'groan', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
 					},
 					{
-						'monster': 'zombie', // none, zombie, mummy, vampire, skeleton
-						'sound': 'groan', // moan, scream, snarl, manic laughter
+						'monster': 'ballerina', // none, zombie, mummy, vampire, skeleton
+						'sound': 'scream', // moan, scream, snarl, manic laughter
 						'animation': 'fromleft' // popup, dropdown, fromleft, fromright
 					}
 				]
