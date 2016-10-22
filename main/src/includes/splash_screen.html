@@ -1,10 +1,15 @@
     <div class="container">
       <div class="row">
-        <div class="eight columns offset-by-two">
+        <div class="col-md-8 col-md-offset-2">
           <img class="homepage-img" src="/img/homepage-logo.png"/>
-          <p class="info"> Info paragraph goes here </p>
-          <button class="homepage-button" v-on:click="goto('random')">Ride</button>
-          <button class="homepage-button" v-on:click="goto('form')">Build</button>
+          <p class="info"> Dim the lights, pick a scary soundtrack and release the monsters!<br/>
+            Build your very own Halloween ride with our spooky Ghost Train Builder.</p>
+          <p class="info"> <strong>BEWARE! This experimental project is best brought to life on the
+            latest browsers and devices.</strong></p>
+          <p class="text-center info">
+            <a class="button" v-on:click="goto('random')">Ride</a>
+            <a class="button" v-on:click="goto('form')">Build</a>
+          </p>
         </div>
       </div>
       <!-- build:include realise.html --><!-- /build -->

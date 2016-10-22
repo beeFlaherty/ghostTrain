@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="eight columns offset-by-two">
+    <div class="col-md-8 col-md-offset-2">
       <img class="homepage-img" src="/img/homepage-logo.png"/>
-      <p class="share-txt">Share text</p>
-      
-      <button class="homepage-button" v-on:click="goto('ride')">Ride Again</button>
-      <button class="homepage-button" v-on:click="goto('form')">Build another</button>
+      <p class="info">Think your ride was the ultimate in Halloween thrills?</p>
+      <p class="info">Scare your friends and challenge them to build their own Ghost Train.</p>
+
+      <p class="info share-buttons"><a href="#">Facebook</a> <a href="twitter">twitter</a></p>
+      <p class="info">
+        <a class="button" v-on:click="goto('ride')">Ride Again</a>
+        <a class="button" v-on:click="goto('form')">Build another</a>
+      </p>
     </div>
   </div>
   <!-- build:include realise.html --><!-- /build -->
