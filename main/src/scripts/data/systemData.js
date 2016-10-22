@@ -150,7 +150,7 @@
 			'width': 1,
 			'height': 0.1,
 			'perroom': 2,
-			'triggerDistance': 6,
+			'triggerDistance': 4,
 			'scale': 0.5
 		},
 		'door': {
@@ -162,10 +162,10 @@
 		},
 		'track': {
 			'showPoints': false,
-			'speed': 1,
+			'speed': 1.5,
 			'kart': true,
 			'points': [
-				{ 'position':'7 3.5 4', 'duration':'10', 'rotationDuration':'-1', 'allowMovement':'false' },
+				{ 'position':'7 3.5 4', 'duration':'5', 'rotationDuration':'-1', 'allowMovement':'false' },
 
 				{ 'position':'26 3.5 4', 'duration':'-1', 'rotationDuration':'-1' },
 				{ 'position':'26 3.5 5', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false' },

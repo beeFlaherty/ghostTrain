@@ -66,6 +66,8 @@
         AFRAME.registerComponent('kart', {
             schema: {},
             init: function() {
+
+
                 this.element = this.el.object3D;
                 this.rotationHelper =
                     document.getElementById('rotation-helper').object3D;
@@ -141,6 +143,8 @@
 
                 //  this.rotation = new THREE.Vector3(0, value, 0);
                 window.doRotation = false;
+
+
             },
             tick: function(time) {
                 var value;

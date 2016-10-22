@@ -145,6 +145,14 @@
 			'vampire': {
 				'name': 'Vampire',
 				'model': '/assets/monsters/monster-vampire.obj'
+			},
+			'pyro': {
+				'name': 'Pyro',
+				'model': '/assets/monsters/monster-flame-zombie.obj'
+			},
+			'ballerina': {
+				'name': 'Zombie Ballerina',
+				'model': '/assets/monsters/monster-ballerina.obj'
 			}
 		},
 		'sounds': {
