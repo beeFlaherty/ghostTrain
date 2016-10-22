@@ -123,7 +123,7 @@
 						'animation': 'fromleft'
 					},
 					{
-						'position': '49 0 42',
+						'position': '49 0 44',
 						'rotation': '0 180 0',
 						'animation': 'fromright'
 					},
@@ -150,7 +150,7 @@
 			'width': 1,
 			'height': 0.1,
 			'perroom': 2,
-			'triggerDistance': 4,
+			'triggerDistance': 5,
 			'scale': 0.5
 		},
 		'door': {

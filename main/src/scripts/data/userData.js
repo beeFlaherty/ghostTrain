@@ -14,7 +14,7 @@
 				'editable': 'false',
 				'theme': 'hotel', // castle, forest, graveyard
 				'lights': {
-					'style' : 'crypt'
+					'style' : 'basement'
 				},
 
 				'scares': [
