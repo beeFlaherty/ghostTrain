@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+  'use strict';
 
     var userData = require('./data/userData');
     var systemData = require('./data/systemData');
@@ -62,16 +62,16 @@
                         _lights.push(name);
                     }
 
-                    for (var name in this.configurable.themes) {
-                        _themes.push(name);
+                    for (var name2 in this.configurable.themes) {
+                        _themes.push(name2);
                     }
 
-                    for (var name in this.configurable.monsters) {
-                        _monsters.push(name);
+                    for (var name3 in this.configurable.monsters) {
+                        _monsters.push(name3);
                     }
 
-                    for (var name in this.configurable.music) {
-                        _music.push(name);
+                    for (var name4 in this.configurable.music) {
+                        _music.push(name4);
                     }
 
 
