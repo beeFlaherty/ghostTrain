@@ -23,7 +23,7 @@
             user: userData,
             system: systemData,
             configurable: configurableData,
-            section: 'end',
+            section: 'start',
             formPart: 0,
             roomPart: 'theme',
             stageCounter: 0
@@ -109,7 +109,7 @@
                 this.section = section;
               },
               mute: function(event) {
-                  this.system.sound.mute = !this.user.sound;  
+                  this.system.sound.mute = !this.user.sound;
                   event.preventDefault();
               }
 

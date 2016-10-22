@@ -10,7 +10,7 @@
                                 <fieldset>
                                     <legend>Build your train</legend>
                                     <p>Background music</p>
-                                    <div class="clearfix">
+                                    <div class="carousel clearfix">
                                         <label v-for="music in configurable.music" for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }">
                                             <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                             <span>{{ music.name }}</span>
@@ -49,7 +49,7 @@
 
                                             <div class="clearfix" v-for="scare in room.scares">
                                                 <legend>Select Monster {{ $index+1 }}</legend>
-                                                <div class="clearfix">
+                                                <div class="clearfix carousel">
                                                     <label v-for="monster in configurable.monsters" for="{{ $key }}_{{ $parent.$index }}" v-bind:class="{'active': scare.monster == $key }">
                                                         <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster" id="{{ $key }}_{{ $parent.$index }}">
                                                         <span>{{ monster.name }}</span>
