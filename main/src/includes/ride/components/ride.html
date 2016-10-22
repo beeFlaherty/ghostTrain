@@ -106,7 +106,7 @@
 				<a-sphere v-if="system.track.showPoints" position="0 -3.75 0" radius="0.25" width="1" height="1" depth="1" color="#ffffff"></a-box>
 			</a-entity>
 
-			<a-sky color="{{ system.sky.colour }}"></a-sky>
+			<!-- <a-sky color="{{ system.sky.colour }}"></a-sky> -->
 
 			<gt-room v-for="room in system.rooms" v-bind:index="$index" v-bind:position="room.position" v-bind:theme="$root.user.rooms[$index].theme" ></gt-room>
 

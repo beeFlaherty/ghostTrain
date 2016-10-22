@@ -17,17 +17,6 @@
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-
-<<<<<<< HEAD
-        this.section = section;
-      },
-      mute: function(event) {
-          this.user.sound = !this.user.sound;
-          event.preventDefault();
-      }
-    }
-  });
-=======
     var app = new Vue({
         el: '#app',
         data: {
@@ -118,10 +107,15 @@
                 }
 
                 this.section = section;
-            }
+              },
+              mute: function(event) {
+                  this.user.sound = !this.user.sound;
+                  event.preventDefault();
+              }
+
         }
     });
->>>>>>> origin/master
+
 
     app.getFromDatabase();
 }());
