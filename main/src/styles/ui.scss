@@ -91,10 +91,10 @@ label {
     }
 
   span {
-    display:none;
+    //display:none;
     font-size:10px;
     line-height:12px;
-    color:#000;
+    color:red;
   }
 
    input[type="radio"] {display:none;}
@@ -170,39 +170,46 @@ label {
 }
 
 .realise {
-  background:#00ff6f;
-  color:#000;
+  border:#00ff6f 1px solid;
+  color:#00ff6f;
   padding: 10px;
   font-size:20px;
 
   .fb, .twitter, .vol {
+    border:0;
     display:block;
     float:left;
-    width:24px;
-    height:0;
-    padding-top:24px;
+    width:124px;
+    height:24px;
     margin-right:5px;
     overflow:hidden;
+    background:#00ff6f;
+    color:black;
   }
   .fb {
-    background: url('/assets/UI/icons-info/facebook-over.svg');
+
+  //  background: url('/assets/UI/icons-info/facebook.svg');
 
     &:hover {
-      background:  url('/assets/UI/icons-info/facebook.svg');
+  //    background:  url('/assets/UI/icons-info/facebook.svg');
+      background:yellow;
     }
   }
   .twitter {
-    background: url('/assets/UI/icons-info/twitter-over.svg');
+  //  background: url('/assets/UI/icons-info/twitter.svg');
 
     &:hover {
-      background: url('/assets/UI/icons-info/twitter.svg');
+
+  //    background: url('/assets/UI/icons-info/twitter.svg');
+      background:yellow;
     }
   }
   .vol {
 
-     background:  url('/assets/UI/icons-info/sound-off.svg');
-     &.on {
-       background: url('/assets/UI/icons-info/sound-on.svg');
+  //   background:  url('/assets/UI/icons-info/sound-on.svg');
+     &.off {
+       background: url('/assets/UI/icons-info/sound-off.svg');
+       background:yellow;
      }
   }
 }
@@ -217,18 +224,18 @@ label[for="musicabandonedcemetery"]{ background-image:url("/assets/UI/music/ceme
 
 label[for="themecastle"]  {background-image:url("/assets/UI/location/castle.png")}
 label[for="themehotel"] {background-image:url("/assets/UI/location/hotel.png")}
-label[for="themegraveyard"] {background-image:url("/assets/UI/location/cgraveyard.png")}
-label[for="themeasylum"] {background-image:url("/assets/UI/location/casylum.png")}
-label[for="themehauntedhouse"] {background-image:url("/assets/UI/location/graveyard.png")}
+label[for="themegraveyard"] {background-image:url("/assets/UI/location/graveyard.png")}
+label[for="themeasylum"] {background-image:url("/assets/UI/location/asylum.png")}
+label[for="themehauntedhouse"] {background-image:url("/assets/UI/location/hhouse.png")}
 
 label[for="normal"]  {background-image:url("/assets/UI/light/normal.png")}
-label[for="neon"] {background-image:url("/assets/UI/light//neon.png")}
+label[for="neon"] {background-image:url("/assets/UI/light/red.png")}
 label[for="candlelight"] {background-image:url("/assets/UI/light/candelight.png")}
 label[for="moonlight"] {background-image:url("/assets/UI/light/moonlight.png")}
 label[for="nuclear"] {background-image:url("/assets/UI/light/nuclear.png")}
 label[for="basement"] {background-image:url("/assets/UI/light/basement.png")}
 label[for="crypt"] {background-image:url("/assets/UI/light/crypt.png")}
 
-label[for="zombie"] {background-image:url("/assets/UI/monster/zombie.png")}
-label[for="ghost"] {background-image:url("/assets/UI/monster/ghost.png")}
-label[for="vampire"] {background-image:url("/assets/UI/light/vampire.png")}
+label[for^="zombie_"] {background-image:url("/assets/UI/monster/zombie.png")}
+label[for^="ghost"] {background-image:url("/assets/UI/monster/ghost.png")}
+label[for^="vampire"] {background-image:url("/assets/UI/monster/vampire.png")}

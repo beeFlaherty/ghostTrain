@@ -1,8 +1,8 @@
 <div class="row">
-  <div class="two columns realise">
-      <p>A <span class="branding">Realise</span> experiment</p>
-    <a class="vol on" >Volume</a>
-    <a class="fb" href="https://www.facebook.com/realisedigital/">facebook</a>
-    <a class="twitter" href="https://twitter.com/realisetweets">twitter</a>
+  <div class="two columns realise clearfix">
+      <p>A <a href="http://www.realise.com/" class="branding">Realise</a> experiment</p>
+    <a v-on:click="mute" class="vol" v-bind:class="{'active': user.sound }">Volume</a>
+    <a class="fb" target="_blank" href="https://www.facebook.com/realisedigital/">facebook</a>
+    <a class="twitter" target="_blank" href="https://twitter.com/realisetweets">twitter</a>
   </div>
 </div>

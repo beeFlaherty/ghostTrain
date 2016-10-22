@@ -51,8 +51,8 @@
                                 <div class="clearfix" v-for="scare in room.scares">
                                 <legend>Select Monster {{ $index+1 }}</legend>
                                 <div class="clearfix carousel">
-                                    <label v-for="monster in configurable.monsters" for="{{ $key $index }}" v-bind:class="{'active': scare.monster == $key }">
-                                        <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster"  id="{{ $key $index }}">
+                                    <label v-for="monster in configurable.monsters" for="{{ $key }}_{{ $parent.$index }}" v-bind:class="{'active': scare.monster == $key }">
+                                        <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster"  id="{{ $key }}_{{ $parent.$index }}">
                                         <span>{{ monster.name }}</span>
                                     </label>
                                 </div>

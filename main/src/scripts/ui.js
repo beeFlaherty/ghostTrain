@@ -13,6 +13,7 @@
             this.$root.goto('ride');
             event.preventDefault();
           },
+          
           next: function(event){
             event.preventDefault();
             if (this.$root.formPart > 1){

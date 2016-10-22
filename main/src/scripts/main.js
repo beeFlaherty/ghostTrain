@@ -53,6 +53,10 @@
         }
 
         this.section = section;
+      },
+      mute: function(event) {
+          this.user.sound = !this.user.sound;
+          event.preventDefault();
       }
     }
   });

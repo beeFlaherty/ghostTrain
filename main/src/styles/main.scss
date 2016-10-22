@@ -3,34 +3,4 @@
 @import 'common/_fonts';
 @import 'common/_variables';
 @import 'common/_mixins';
-@import 'vendor/skeleton';
-
-html,
-body {
-
-}
-
-body {
-
-}
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-
-}
-
-.width-50 {
-  width:50%;
-  padding:20px;
-  float:left;
-}
-
-h1 {
-  font-family: 'Creepster', cursive;
-  color: #4CBB17;
-  font-size: 4em;
-  text-align: center;
-}
+@import 'vendor/bootstrap';
