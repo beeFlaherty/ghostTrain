@@ -22,6 +22,12 @@
 
           document.querySelectorAll('a-assets')[0].addEventListener('loaded', function() {
             self.loaded = true;
+          
+            var removeImg = document.getElementsByClassName('homepage-img');
+            while (removeImg.length > 0) {
+                removeImg[0].remove();
+                debugger;
+            }
           });
         }
       });

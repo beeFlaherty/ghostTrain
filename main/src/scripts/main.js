@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  var rideLoaded = false;
+
   var userData = require('./data/userData');
   var systemData = require('./data/systemData');
   var configurableData = require('./data/configurableData');
