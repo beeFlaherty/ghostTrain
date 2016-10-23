@@ -152,7 +152,7 @@
 			'width': 1,
 			'height': 0.1,
 			'perroom': 2,
-			'triggerDistance': 5,
+			'triggerDistance': 6,
 			'scale': 0.5
 		},
 		'door': {
