@@ -189,16 +189,16 @@
 				{ 'position':'54 3.5 9', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
 
 				{ 'position':'54 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
-				/*{ 'position':'53 3.5 16', 'duration':'3', 'rotationDuration':'-1'},*/
+
 
 				{ 'position':'46 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
-				/*{ 'position':'46 3.5 17', 'duration':'3', 'rotationDuration':'-1'},*/
+
 
 				{ 'position':'46 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
-			/*	{ 'position':'47 3.5 24', 'duration':'3', 'rotationDuration':'-1'},*/
+
 
 				{ 'position':'50 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
-			/*	{ 'position':'50 3.5 25', 'duration':'3', 'rotationDuration':'-1'},*/
+
 
 				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'}
 			]

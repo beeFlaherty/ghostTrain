@@ -1,37 +1,22 @@
 <script id="room0-partial" type="x-partial">
 
-<!-- starter room -->
-        <a-entity position="0 0 0">
-          <!-- walls -->
-          <a-entity mixin="wall-E intro" position="0 0 0"></a-entity>
-          <a-entity mixin="wall-E intro" position="4 0 0"></a-entity>
-          <a-entity mixin="wall-E intro" position="8 0 0"></a-entity>
+    <!-- starter room -->
+    <a-entity position="0 0 0">
+        <!-- walls -->
+        <a-entity mixin="wall-E intro" position="0 0 0"></a-entity>
+        <a-entity mixin="wall-E intro" position="4 0 0"></a-entity>
+        <a-entity mixin="wall-E intro" position="8 0 0"></a-entity>
 
-          <gt-door theme="intro" position="0 0 0" frame="N" door="NS"></gt-door>
+        <gt-door theme="intro" position="0 0 0" frame="N" door="NS"></gt-door>
 
-          <a-entity mixin="wall-W intro" position="0 0 8"></a-entity>
-          <a-entity mixin="wall-W intro" position="4 0 8"></a-entity>
-          <a-entity mixin="wall-W intro" position="8 0 8"></a-entity>
+        <a-entity mixin="wall-W intro" position="0 0 8"></a-entity>
+        <a-entity mixin="wall-W intro" position="4 0 8"></a-entity>
+        <a-entity mixin="wall-W intro" position="8 0 8"></a-entity>
 
+        <a-entity mixin="floor-set-room-0 intro" position="0 0 0"></a-entity>
+        <a-entity mixin="ceiling-set-room-0 intro" position="0 0 0"></a-entity>
 
-
-          <!-- floor -->
-          <a-entity mixin="floor intro" position="0 0 0"></a-entity>
-          <a-entity mixin="floor intro" position="4 0 0"></a-entity>
-          <a-entity mixin="floor intro" position="4 0 4"></a-entity>
-          <a-entity mixin="floor intro" position="0 0 4"></a-entity>
-          <a-entity mixin="floor intro" position="8 0 0"></a-entity>
-          <a-entity mixin="floor intro" position="8 0 4"></a-entity>
-
-          <!-- ceiling -->
-          <a-entity mixin="ceiling intro" position="0 0 0"></a-entity>
-          <a-entity mixin="ceiling intro" position="4 0 0"></a-entity>
-          <a-entity mixin="ceiling intro" position="4 0 4"></a-entity>
-          <a-entity mixin="ceiling intro" position="0 0 4"></a-entity>
-          <a-entity mixin="ceiling intro" position="8 0 0"></a-entity>
-          <a-entity mixin="ceiling intro" position="8 0 4"></a-entity>
-
-        </a-entity>
-        <!-- starter room  end-->
-        <gt-door theme="intro" position="12 0 0" frame="S" door="NS" triggerable="true" size="8" current="room_0" next="room_1"></gt-door>
+    </a-entity>
+    <!-- starter room  end-->
+    <gt-door theme="intro" position="12 0 0" frame="S" door="NS" triggerable="true" size="8" current="room_0" next="room_1"></gt-door>
 </script>

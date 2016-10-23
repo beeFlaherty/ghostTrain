@@ -28,54 +28,12 @@
         <a-entity mixin="wall-W {{ theme }}" position="44 0 30"></a-entity>
         <a-entity mixin="wall-W {{ theme }}" position="52 0 30"></a-entity>
 
+
         <!-- floor -->
-        <a-entity mixin="floor {{ theme }}" position="44 0 2"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="48 0 2"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="52 0 2"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="44 0 6"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="48 0 6"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="52 0 6"></a-entity>
-
-        <a-entity mixin="floor {{ theme }}" position="52 0 10"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="44 0 14"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="48 0 14"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="52 0 14"></a-entity>
-
-        <a-entity mixin="floor {{ theme }}" position="44 0 18"></a-entity>
-
-        <a-entity mixin="floor {{ theme }}" position="44 0 22"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="48 0 22"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="52 0 22"></a-entity>
-
-        <a-entity mixin="floor {{ theme }}" position="44 0 26"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="48 0 26"></a-entity>
-        <a-entity mixin="floor {{ theme }}" position="52 0 26"></a-entity>
-
-
+        <a-entity mixin="floor-set-room-3 {{ theme }}" position="44 0 2"></a-entity>
         <!-- ceiling -->
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 2"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 2"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 2"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 6"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 6"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 6"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 10"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 10"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 10"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 14"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 14"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 14"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 18"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 18"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 18"></a-entity>
+        <a-entity mixin="ceiling-set-room-3 {{ theme }}" position="44 0 2"></a-entity>
 
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 22"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 22"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 22"></a-entity>
-
-        <a-entity mixin="ceiling {{ theme }}" position="44 0 26"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="48 0 26"></a-entity>
-        <a-entity mixin="ceiling {{ theme }}" position="52 0 26"></a-entity>
       </a-entity>
 
       <gt-door v-bind:theme="theme" size="4" position="48 0 30" triggerable="true" frame="W" door="EW" current="room_3" next="room_4"></gt-door>
