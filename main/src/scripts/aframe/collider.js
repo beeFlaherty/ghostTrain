@@ -46,13 +46,12 @@
                 other.emit('enter');
                 other.setAttribute('visible', 'true');
               }
-            } else {
-              if (!other.is('impact')) {
-                if (distance < impactDistance) {
-                  other.addState('impact');
-                  other.emit('impact');
-                }
+            } else if (!other.is('impact')) {
+              if (distance < impactDistance) {
+                other.addState('impact');
+                other.emit('impact');
               }
+            } else {
               if (distance >= triggerDistance) {
                 other.addState('exit');
                 other.emit('exit');
