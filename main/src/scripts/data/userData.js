@@ -120,7 +120,7 @@
 				'editable': false,
 				'theme': 'castle', // castle, forest, graveyard
 				'lights': {
-					'style' : 'crypt'
+					'style' : 'moonlight'
 				},
 
 				'scares': [

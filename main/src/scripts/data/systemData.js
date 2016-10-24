@@ -95,12 +95,12 @@
 				'scares': [
 					{
 						'position': '48 0 8',
-						'rotation': '0 90 0',
+						'rotation': '0 270 0',
 						'animation': 'dropdown'
 					},
 					{
-						'position': '44 0 20',
-						'rotation': '0 180 0',
+						'position': '47 0 20',
+						'rotation': '0 0 0',
 						'animation': 'fromleft'
 					}
 				]
@@ -121,7 +121,7 @@
 				'scares': [
 					{
 						'position': '50 0 32',
-						'rotation': '0 180 0',
+						'rotation': '0 0 0',
 						'animation': 'fromleft'
 					},
 					{
@@ -139,7 +139,9 @@
 			{
 				'position': '0 0 0',
 				'lights': [
-					{}
+					{
+						position: '56 0 58'
+					}
 				],
 				'scares': [
 					{}
@@ -200,7 +202,10 @@
 				{ 'position':'50 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
 
 
-				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'}
+				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'},
+
+
+				{ 'position':'50 3.5 60', 'duration':'5', 'rotationDuration':'3', 'allowMovement':'false'}
 			]
 		}
 	};
