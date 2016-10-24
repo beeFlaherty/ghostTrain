@@ -70,40 +70,65 @@ button:hover {
     padding: 10px;
     font-size: 20px;
     margin-bottom: 30px;
+	p {
+		margin-bottom:15px;
+		font-size: 0.8em;
+		line-height:15px;
+	}
     .fb,
     .twitter,
     .vol {
         border: 0;
         display: block;
         float: left;
-        width: 124px;
-        height: 24px;
-        margin-right: 5px;
-        overflow: hidden;
-        background: $green;
+        width: 16px;
+		height:0;
+        padding-top: 16px;
+		overflow:hidden;
+        margin-right: 10px;
+		background-repeat: no-repeat;
+		background-size:contain;
         color: black;
     }
     .fb {
-        //  background: url('/assets/UI/icons-info/facebook.svg');
+		width:8px;
+          background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x.png');
         &:hover {
-            //    background:  url('/assets/UI/icons-info/facebook.svg');
-            background: yellow;
+         background-image:  url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_HOVER.png');
+
         }
     }
     .twitter {
-        //  background: url('#{$cdnUrl}/assets/UI/icons-info/twitter.svg');
+		 width:26px;
+          background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x.png');
         &:hover {
-            //    background: url('#{$cdnUrl}/assets/UI/icons-info/twitter.svg');
-            background: yellow;
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x_HOVER.png');
+
         }
     }
     .vol {
-        //   background:  url('#{$cdnUrl}/assets/UI/icons-info/sound-on.svg');
-        &.active {
-            background: url('#{$cdnUrl}/assets/UI/icons-info/sound-off.svg');
-            background: yellow;
+        	background-image:  url('#{$cdnUrl}/assets/ui/icons-info/volume@2x.png');
+        &:hover {
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x_HOVER.png');
         }
     }
+
+	.branding {
+		display:inline-block;
+		width:80px;
+		height:0;
+		padding-top:15px;
+		overflow:hidden;
+		background-repeat: no-repeat;
+		background-size:contain;
+		background-image:  url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x.png');
+		top: 2px;
+		position: relative;
+		margin:0 5px;
+		&:hover {
+			background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x_HOVER.png');
+		}
+	}
 }
 /*Train builder form */
 form {
@@ -216,67 +241,67 @@ form {
     }
 }
 label[for="musicnone"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/nosound.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/nosound.png");
 }
 label[for="musiccreepymusicbox"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/musicbox.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/musicbox.png");
 }
 label[for="musicmountainking"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/hallofthe.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/hallofthe.png");
 }
 label[for="musicdansemacabre"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/danse-macabre.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/danse-macabre.png");
 }
 label[for="musicchoirofdoom"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/choir-of-doom.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/choir-of-doom.png");
 }
 label[for="musicabandonedcemetery"] {
-    background-image: url("#{$cdnUrl}/assets/UI/music/cemetery.png");
+    background-image: url("#{$cdnUrl}/assets/ui/music/cemetery.png");
 }
 label[for="themecastle"] {
-    background-image: url("#{$cdnUrl}/assets/UI/location/castle.png");
+    background-image: url("#{$cdnUrl}/assets/ui/location/castle.png");
 }
 label[for="themehotel"] {
-    background-image: url("#{$cdnUrl}/assets/UI/location/hotel.png");
+    background-image: url("#{$cdnUrl}/assets/ui/location/hotel.png");
 }
 label[for="themegraveyard"] {
-    background-image: url("#{$cdnUrl}/assets/UI/location/graveyard.png");
+    background-image: url("#{$cdnUrl}/assets/ui/location/graveyard.png");
 }
 label[for="themeasylum"] {
-    background-image: url("#{$cdnUrl}/assets/UI/location/asylum.png");
+    background-image: url("#{$cdnUrl}/assets/ui/location/asylum.png");
 }
 label[for="themehauntedhouse"] {
-    background-image: url("#{$cdnUrl}/assets/UI/location/hhouse.png");
+    background-image: url("#{$cdnUrl}/assets/ui/location/hhouse.png");
 }
 label[for="normal"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/normal.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/normal.png");
 }
 label[for="neon"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/red.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/red.png");
 }
 label[for="candlelight"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/candelight.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/candelight.png");
 }
 label[for="moonlight"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/moonlight.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/moonlight.png");
 }
 label[for="nuclear"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/nuclear.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/nuclear.png");
 }
 label[for="basement"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/basement.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/basement.png");
 }
 label[for="crypt"] {
-    background-image: url("#{$cdnUrl}/assets/UI/light/crypt.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/crypt.png");
 }
 label[for^="zombie_"] {
-    background-image: url("#{$cdnUrl}/assets/UI/monster/zombie.png");
+    background-image: url("#{$cdnUrl}/assets/ui/monster/zombie.png");
 }
 label[for^="ghost"] {
-    background-image: url("#{$cdnUrl}/assets/UI/monster/ghost.png");
+    background-image: url("#{$cdnUrl}/assets/ui/monster/ghost.png");
 }
 label[for^="vampire"] {
-    background-image: url("#{$cdnUrl}/assets/UI/monster/vampire.png");
+    background-image: url("#{$cdnUrl}/assets/ui/monster/vampire.png");
 }
 label[for^="pyro"] {
     background: orange;
