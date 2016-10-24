@@ -1,16 +1,16 @@
 <script id="ride_template" type="x-template">
 	<a-scene stats fog="type: exponential; color: {{ system.sky.colour }}; density: 0.02;">
 		<a-assets>
-			<img id="monsters_texture" src="assets/monsters/monsters.jpg"></img>
+			<img id="monsters_texture" src="/assets/monsters/monsters.jpg"></img>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
 
-			<img id="castle" src="assets/textures/castle/walls.jpg"></img>
-			<img id="forest" src="assets/textures/forest/walls.jpg"></img>
-			<img id="dark" src="assets/textures/dark/walls.jpg"></img>
-			<img id="generic-ceiling" src="assets/textures/ceiling.jpg"></img>
-			<img id="floor" src="assets/textures/floor_18.png"></img>
-			<img id="intro" src="assets/textures/intro.jpg"></img>
+			<img id="castle" src="/assets/textures/castle/walls.jpg"></img>
+			<img id="forest" src="/assets/textures/forest/walls.jpg"></img>
+			<img id="dark" src="/assets/textures/dark/walls.jpg"></img>
+			<img id="generic-ceiling" src="/assets/textures/ceiling.jpg"></img>
+			<img id="floor" src="/assets/textures/floor_18.png"></img>
+			<img id="intro" src="/assets/textures/intro.jpg"></img>
 
 
 			<a-mixin id="door-left-NS" obj-model="obj: url(/assets/model-buildkit/interactive/door-left-NS.obj); "></a-mixin>
@@ -99,7 +99,7 @@
 			<!--  old kart position 16 4 15 -->
 			<a-entity position="7 3.5 4" rotation="0 90 0" kart=" {{ system.track.speed }}">
 				   <!--Need this space before the {{ for some reason -->
-				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(assets/model-buildkit/props/kart-low.obj); mtl: url(assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
+				<a-entity v-if="$root.system.track.kart" obj-model="obj: url(/assets/model-buildkit/props/kart-low.obj); mtl: url(/assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="true" near="0.1"></a-camera>
 
