@@ -75,7 +75,7 @@ button, .button {
     margin-bottom: 20px;
 }
 /* realise block */
-.realise {
+.realise, .credits  {
     border: $green 1px solid;
     color: $green;
 	padding:0;
@@ -152,6 +152,33 @@ button, .button {
 			background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x_HOVER.png');
 		}
 	}
+}
+
+.credits  {
+  span {
+    padding:10px 10px 0;
+    margin:0;
+  }
+  ul {
+    padding: 5px 10px 10px;
+    li {
+      display:inline;
+      a {
+        display:inline-block;
+        padding:0 10px 0 0;
+        color:$green;
+        text-decoration:underline;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.at-resp-share-element .at-share-btn {
+  background:$green!important;
+  &:hover {
+    background: #b6f973!important;
+  }
 }
 /*Train builder form */
 form {
