@@ -38,8 +38,8 @@
 				'scares': [
 					{
 						'position': '18 0 5',
-						'rotation': '0 90 0',
-						'animation': 'fromleft'
+						'rotation': '0 270 0',
+						'animation': 'fromright'
 					},
 					{
 						'position': '26 0 13',
@@ -100,7 +100,7 @@
 					},
 					{
 						'position': '47 0 20',
-						'rotation': '0 0 0',
+						'rotation': '0 180 0',
 						'animation': 'fromleft'
 					}
 				]
@@ -121,7 +121,7 @@
 				'scares': [
 					{
 						'position': '50 0 32',
-						'rotation': '0 0 0',
+						'rotation': '0 180 0',
 						'animation': 'fromleft'
 					},
 					{
@@ -205,7 +205,7 @@
 				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'},
 
 
-				{ 'position':'50 3.5 60', 'duration':'5', 'rotationDuration':'3', 'allowMovement':'false'}
+				{ 'position':'50 3.5 64', 'duration':'5', 'rotationDuration':'3', 'allowMovement':'false'}
 			]
 		}
 	};

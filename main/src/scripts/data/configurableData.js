@@ -147,6 +147,10 @@
 			'ballerina': {
 				'name': 'Zombie Ballerina',
 				'model': '/assets/monsters/monster-ballerina.obj'
+			},
+			'wolf': {
+				'name': 'Wolfman',
+				'model': '/assets/monsters/monster-wolf.obj'
 			}
 		},
 		'sounds': {
