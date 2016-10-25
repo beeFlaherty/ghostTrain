@@ -48,7 +48,7 @@
 			slickInit: function() {
 				$('.carousel').slick({
   				infinite: false,
-				variableWidth: true,
+				  variableWidth: true,
   				slidesToShow: 3,
   				slidesToScroll: 1
 				});
