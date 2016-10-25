@@ -6,7 +6,8 @@
 
 		'trainsettings': {
 			'music':'none',
-			'name':'Your spooky train name'
+			'name':'Your spooky train name',
+			'highQuality': false
 		},
 		'rooms': [
 			{

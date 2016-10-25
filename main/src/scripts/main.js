@@ -23,7 +23,7 @@
             user: userData,
             system: systemData,
             configurable: configurableData,
-            section: 'form',
+            section: 'start',
             formPart: 0,
             roomPart: 'theme',
             stageCounter: 0
