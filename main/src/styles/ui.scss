@@ -211,13 +211,13 @@ form {
         display: block;
         color: #00ff6f;
         background-size: cover;
-        height: 100px;
-        width: 100px;
+        height: 100px!important;
+        width: 100px!important;
         margin: 0 5px 10px;
         float: left;
         &.active {
-            height: 150px;
-            width: 150px;
+            height: 150px!important;
+            width: 150px!important;
         }
         span {
             display:none;
@@ -232,7 +232,10 @@ form {
 }
 
 /*carousel */
-
+.carousel {
+	width:500px;
+	margin:0 auto;
+}
 
 /*Progress Bar*/
 .progress-bar {
