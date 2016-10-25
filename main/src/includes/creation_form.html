@@ -10,11 +10,14 @@
                                 <fieldset>
                                     <legend>Build your train</legend>
                                     <p>Background music</p>
-                                    <div class="carousel clearfix">
-                                        <label v-for="music in configurable.music" for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }">
-                                            <input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
-                                            <span>{{ music.name }}</span>
-                                        </label>
+                                    <div class="carousel">
+
+										<div v-for="music in configurable.music" >
+                                        	<label for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }">
+                                            	<input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
+                                            	<span>{{ music.name }}</span>
+                                        	</label>
+										</div>
                                     </div>
                                     <p>
                                         <button v-on:click="next">Next</button>
