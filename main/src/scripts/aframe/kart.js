@@ -102,7 +102,7 @@
                 //this.element.lookAt(this.endPosition);
                 this.percentComplete = 0;
                 this.rotationPercentComplete = 0;
-                this.speed = 1.75;
+                this.speed = 1.65;
                 if (this.el.getAttribute("kart")[""]) {
                     this.speed = parseFloat(this.el.getAttribute("kart")[""]);
                 }
