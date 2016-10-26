@@ -2,7 +2,9 @@
 	<a-entity id="room_{{ index }}" position="{{ position }}" rotation: "0 0 0"> <!-- v-bind:visible="( index === 0 ) ? 'true' : 'false'"> -->
 		<partial v-bind:name="'room' + index + '-partial'"></partial>
 
-		<gt-light v-for="light in $root.user.rooms[index].lights" v-bind:index="$index" v-bind:roomnum="$parent.index" v-bind:style="$root.user.rooms[$parent.index].lights.style" v-bind:light1="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_1" v-bind:light2="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_2" v-bind:light3="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_3"></gt-light>
+		<a-entity v-if="$root.system.highquality">
+			<gt-light v-for="light in $root.user.rooms[index].lights" v-bind:index="$index" v-bind:roomnum="$parent.index" v-bind:style="$root.user.rooms[$parent.index].lights.style" v-bind:light1="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_1" v-bind:light2="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_2" v-bind:light3="$root.configurable.light.style[$root.user.rooms[$parent.index].lights.style].light_3"></gt-light>
+		</a-entity>
 
 		<gt-scare v-for="scare in $root.user.rooms[index].scares" v-bind:index="$index" v-bind:monster="scare.monster" v-bind:sound="scare.sound" v-bind:position="$root.system.rooms[index].scares[$index].position" v-bind:rotation="$root.system.rooms[index].scares[$index].rotation" v-bind:animation="$root.system.rooms[index].scares[$index].animation"></gt-scare>
 	</a-entity>

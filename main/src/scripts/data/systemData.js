@@ -39,7 +39,7 @@
 					{
 						'position': '18 0 5',
 						'rotation': '0 270 0',
-						'animation': 'fromleft'
+						'animation': 'fromright'
 					},
 					{
 						'position': '26 0 13',
@@ -83,28 +83,54 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						'position': '48 2 8'
+						'position': '46 2 6'
 					},
 					{
-						'position': '54 2 8'
+						'position': '50 2 14'
 					},
 					{
-						'position': '68 2 8'
+						'position': '50 2 26'
 					}
 				],
 				'scares': [
 					{
-						'position': '50 0 6',
+						'position': '48 0 8',
 						'rotation': '0 270 0',
+						'animation': 'dropdown'
+					},
+					{
+						'position': '47 0 20',
+						'rotation': '0 180 0',
+						'animation': 'fromleft'
+					}
+				]
+			},
+			{
+				'position': '0 0 0',
+				'lights': [
+					{
+						'position': '51 2 30'
+					},
+					{
+						'position': '51 2 38'
+					},
+					{
+						'position': '51 2 46'
+					}
+				],
+				'scares': [
+					{
+						'position': '50 0 32',
+						'rotation': '0 180 0',
 						'animation': 'fromleft'
 					},
 					{
-						'position': '56 0 10',
-						'rotation': '0 270 0',
+						'position': '48 0 42',
+						'rotation': '0 180 0',
 						'animation': 'fromright'
 					},
 					{
-						'position': '60 0 10',
+						'position': '49 0 54',
 						'rotation': '0 180 0',
 						'animation': 'popup'
 					}
@@ -114,7 +140,7 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						position: '78 0 8'
+						position: '56 0 58'
 					}
 				],
 				'scares': [
@@ -161,10 +187,25 @@
 				{ 'position':'34 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
 				{ 'position':'35 3.5 8', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
 
-				{ 'position':'79 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
-					{ 'position':'79.5 3.5 8', 'duration':'5', 'rotationDuration':'-1', 'allowMovement':'false'}
+				{ 'position':'54 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'54 3.5 9', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
+
+				{ 'position':'54 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
 
 
+				{ 'position':'46 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
+
+
+				{ 'position':'46 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
+
+
+				{ 'position':'50 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
+
+
+				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'},
+
+
+				{ 'position':'50 3.5 64', 'duration':'5', 'rotationDuration':'3', 'allowMovement':'false'}
 			]
 		}
 	};

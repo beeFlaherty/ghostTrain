@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var endScreenDelay = 1000;
+  var endScreenDelay = 3500;
 
   module.exports = function(Vue) {
     var RideComponent =
@@ -23,9 +23,9 @@
           document.querySelectorAll('a-assets')[0].addEventListener('loaded', function() {
             self.loaded = true;
 
-            var removeImg = document.getElementsByClassName('homepage-img');
-            while (removeImg.length > 0) {
-                removeImg[0].remove();
+            var loadingContainer = document.getElementsByClassName('loadingContainer');
+            while (loadingContainer.length > 0) {
+                loadingContainer[0].remove();
             }
           });
         }
