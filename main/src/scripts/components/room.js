@@ -7,9 +7,6 @@
     Vue.partial('room2-partial', document.getElementById('room2-partial').innerHTML);
     Vue.partial('room3-partial', document.getElementById('room3-partial').innerHTML);
     Vue.partial('room4-partial', document.getElementById('room4-partial').innerHTML);
-    //Vue.partial('doors', document.getElementById('doors').innerHTML);
-
-
 
     var RoomComponent =
       Vue.extend({
