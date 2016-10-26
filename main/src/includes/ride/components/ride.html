@@ -96,7 +96,7 @@
 
 					<a-entity v-if="$root.system.sound.chain && $root.system.sound.mute === false" sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
 
-					<a-entity v-if="$root.user.trainsettings.music !== 'none' && $root.system.sound.mute === false" sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"></a-entity>
+					<a-entity v-if="$root.user.trainsettings.music !== 'none' && $root.system.sound.mute === false" sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: false; volume: 0.6;"></a-entity>
 
 
 					<a-entity v-if="$root.system.highquality === false">
