@@ -236,7 +236,6 @@ form {
 }
 /*carousel */
 .carousel {
-    max-width: 500px;
     margin: 0 auto;
 
 	.slick-prev, .slick-next{
@@ -364,7 +363,7 @@ label[for="normal"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/normal.png");
 }
 label[for="neon"] {
-    background-image: url("#{$cdnUrl}/assets/ui/light/red.png");
+    background-image: url("#{$cdnUrl}/assets/ui/light/disco.png");
 }
 label[for="candlelight"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/candelight.png");
@@ -374,6 +373,9 @@ label[for="moonlight"] {
 }
 label[for="nuclear"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/nuclear.png");
+}
+label[for="redalert"] {
+    background-image: url("#{$cdnUrl}/assets/ui/light/red.png");
 }
 label[for="basement"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/basement.png");
@@ -395,6 +397,9 @@ label[for^="pyro"] {
 }
 label[for^="ballerina"] {
     background-image: url("#{$cdnUrl}/assets/ui/monster/zombie-ballerina.png");
+}
+label[for^="wolf"] {
+	background-image: url("#{$cdnUrl}/assets/ui/monster/wolf.png");
 }
 
 .loading-img {

@@ -4,13 +4,12 @@
             <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
                 <div id="settings" class="userInterface">
                     <form>
-                        <div class="background"></div>
                         <div class="inner">
                             <div v-if="$root.formPart == 0">
                                 <fieldset>
                                     <legend>Build your train</legend>
                                     <p>Background music</p>
-                                    <div class="carousel">
+                                    <div class="carousel responsive">
 
                                         <div v-for="music in configurable.music">
                                             <label for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }">
