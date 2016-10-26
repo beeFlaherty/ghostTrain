@@ -2,7 +2,7 @@
 	'use strict';
 
 	module.exports = {
-
+		'highquality': true,
 		'sky': {
 			'colour': '#000000'
 		},
@@ -187,25 +187,8 @@
 				{ 'position':'34 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
 				{ 'position':'35 3.5 8', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
 
-				{ 'position':'54 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
-				{ 'position':'54 3.5 9', 'duration':'3', 'rotationDuration':'-1', 'allowMovement':'false'},
-
-				{ 'position':'54 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
-
-
-				{ 'position':'46 3.5 16', 'duration':'-1', 'rotationDuration':'3'},
-
-
-				{ 'position':'46 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
-
-
-				{ 'position':'50 3.5 24', 'duration':'-1', 'rotationDuration':'3'},
-
-
-				{ 'position':'50 3.5 56', 'duration':'-1', 'rotationDuration':'3'},
-
-
-				{ 'position':'50 3.5 64', 'duration':'5', 'rotationDuration':'3', 'allowMovement':'false'}
+				{ 'position':'79 3.5 8', 'duration':'-1', 'rotationDuration':'-1'},
+				{ 'position':'79.5 3.5 8', 'duration':'5', 'rotationDuration':'-1', 'allowMovement':'false'}
 			]
 		}
 	};

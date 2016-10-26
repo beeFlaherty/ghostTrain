@@ -99,7 +99,7 @@
 			<!--  old kart position 16 4 15 -->
 			<a-entity position="7 3.5 4" rotation="0 90 0" kart="{{ system.track.speed }}">
 				<!--Need this space before the {{ for some reason -->
-				<a-entity v-if="$root.system.track.kart && $root.user.trainsettings.highQuality" obj-model="obj: url(/assets/model-buildkit/props/kart-low.obj); mtl: url(/assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
+				<a-entity v-if="$root.system.track.kart && $root.system.highquality" obj-model="obj: url(/assets/model-buildkit/props/kart-low.obj); mtl: url(/assets/model-buildkit/props/kart-low.mtl)" position="0 -3.5 0" scale="1 1 1" rotation="0 0 0" roughness="1"></a-entity>
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="false" near="0.1"></a-camera>
 

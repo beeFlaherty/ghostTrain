@@ -8,6 +8,7 @@
     var ui = require('./ui')();
     var ride = require('./ride')();
     var api = require('./api')(Vue);
+    var is = require('./detectmobile');
 
     var startScreenDelay = 3000;
 
@@ -27,6 +28,10 @@
             formPart: 0,
             roomPart: 'theme',
             stageCounter: 0
+        },
+        ready: function() {
+            this.system.highquality = !is.mobileAndTablet();
+            this.getFromDatabase();
         },
 		watch: {
 			roomPart: function(value) {
@@ -144,7 +149,4 @@
 
         }
     });
-
-
-    app.getFromDatabase();
 }());
