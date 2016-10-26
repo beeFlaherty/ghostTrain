@@ -30,7 +30,7 @@
             stageCounter: 0
         },
         ready: function() {
-            this.system.highquality = false; //!is.mobileAndTablet();
+            this.system.highquality = !is.mobileAndTablet();
             this.getFromDatabase();
         },
 		watch: {
