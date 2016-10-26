@@ -10,6 +10,7 @@
     require('./components/scare')(Vue);
     require('./components/door')(Vue);
     require('./components/light')(Vue);
+    require('./components/lightMob')(Vue);
     require('./components/animation')(Vue);
     require('./components/ride')(Vue);
   };
