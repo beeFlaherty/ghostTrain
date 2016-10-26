@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var endScreenDelay = 3500;
+  var endScreenDelay = 2500;
 
   module.exports = function(Vue) {
     var RideComponent =
