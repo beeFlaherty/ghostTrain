@@ -3,6 +3,7 @@
 
 	module.exports = {
 		'highquality': true,
+		'currentroom': 0,
 		'sky': {
 			'colour': '#000000'
 		},

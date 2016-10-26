@@ -34,10 +34,12 @@
         this.el.sceneEl.addBehavior(this);
 
         var showOnEnter = document.getElementById(this.el.getAttribute('showonenter'));
+        var roomNumber = parseInt((this.el.getAttribute('showonenter') + '').replace(/\D/g, ''));
         var hideOnExit = document.getElementById(this.el.getAttribute('hideonexit'));
 
         this.el.addEventListener('enter', function (evt) {
           if (showOnEnter) {
+            showOnEnter.__vue__.$root.system.currentroom = roomNumber;
             // showOnEnter.setAttribute('visible', 'true');
           }
         });
