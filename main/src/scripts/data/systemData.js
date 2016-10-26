@@ -74,9 +74,9 @@
 						'animation': 'fromright'
 					},
 					{
-						'position': '41 0 8',
-						'rotation': '0 270 0',
-						'animation': 'dropdown'
+						'position': '34 0 5',
+						'rotation': '0 0 0',
+						'animation': 'popup'
 					}
 				]
 			},
