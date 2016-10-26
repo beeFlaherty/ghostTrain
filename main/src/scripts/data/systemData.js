@@ -80,59 +80,59 @@
 					}
 				]
 			},
+			// {
+			// 	'position': '0 0 0',
+			// 	'lights': [
+			// 		{
+			// 			'position': '46 2 6'
+			// 		},
+			// 		{
+			// 			'position': '50 2 14'
+			// 		},
+			// 		{
+			// 			'position': '50 2 26'
+			// 		}
+			// 	],
+			// 	'scares': [
+			// 		{
+			// 			'position': '48 0 8',
+			// 			'rotation': '0 270 0',
+			// 			'animation': 'dropdown'
+			// 		},
+			// 		{
+			// 			'position': '47 0 20',
+			// 			'rotation': '0 180 0',
+			// 			'animation': 'fromleft'
+			// 		}
+			// 	]
+			// },
 			{
 				'position': '0 0 0',
 				'lights': [
 					{
-						'position': '46 2 6'
+						'position': '48 2 8'
 					},
 					{
-						'position': '50 2 14'
+						'position': '54 2 8'
 					},
 					{
-						'position': '50 2 26'
+						'position': '58 2 8'
 					}
 				],
 				'scares': [
 					{
-						'position': '48 0 8',
+						'position': '49 0 8',
 						'rotation': '0 270 0',
-						'animation': 'dropdown'
-					},
-					{
-						'position': '47 0 20',
-						'rotation': '0 180 0',
-						'animation': 'fromleft'
-					}
-				]
-			},
-			{
-				'position': '0 0 0',
-				'lights': [
-					{
-						'position': '51 2 30'
-					},
-					{
-						'position': '51 2 38'
-					},
-					{
-						'position': '51 2 46'
-					}
-				],
-				'scares': [
-					{
-						'position': '50 0 32',
-						'rotation': '0 180 0',
 						'animation': 'fromleft'
 					},
 					{
-						'position': '48 0 42',
-						'rotation': '0 180 0',
+						'position': '58 0 10',
+						'rotation': '0 270 0',
 						'animation': 'fromright'
 					},
 					{
-						'position': '49 0 54',
-						'rotation': '0 180 0',
+						'position': '70 0 9',
+						'rotation': '0 270 0',
 						'animation': 'popup'
 					}
 				]
@@ -141,7 +141,7 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						position: '56 0 58'
+						position: '80 2 8'
 					}
 				],
 				'scares': [
