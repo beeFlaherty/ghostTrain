@@ -1,6 +1,5 @@
 <script id="light_template" type="x-template">
-	<a-entity v-if="$root.user.trainsettings.highQuality">
-
+	<a-entity v-if="$root.system.highquality">
 		<a-entity v-if="style === 'moonlight' || style === 'crypt'">
 			<a-light type="point" intensity="1" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[0].position }}" color="{{ light1 }}"></a-light>
 			<a-light type="point" intensity="1" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[1].position }}" color="{{ light2 }}"></a-light>
