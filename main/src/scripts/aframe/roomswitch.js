@@ -40,8 +40,13 @@
 
         this.el.addEventListener('enter', function (evt) {
           if (showOnEnter) {
-            showOnEnter.__vue__.$root.system.currentroom = roomNumber;
             // showOnEnter.setAttribute('visible', 'true');
+          }
+        });
+
+        this.el.addEventListener('impact', function (evt) {
+          if (showOnEnter) {
+            showOnEnter.__vue__.$root.system.currentroom = roomNumber;
           }
         });
 
