@@ -37,6 +37,7 @@
         var roomNumber = parseInt((this.el.getAttribute('showonenter') + '').replace(/\D/g, ''));
         var hideOnExit = document.getElementById(this.el.getAttribute('hideonexit'));
 
+
         this.el.addEventListener('enter', function (evt) {
           if (showOnEnter) {
             showOnEnter.__vue__.$root.system.currentroom = roomNumber;
