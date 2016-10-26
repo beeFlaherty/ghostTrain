@@ -103,12 +103,14 @@
 				<a-entity rotation="0 180 0">
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="false" near="0.1"></a-camera>
 
-					
+
 					<a-entity v-if="$root.system.sound.chain && $root.system.sound.mute === false" sound="src: assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
 
 					<a-entity v-if="$root.user.trainsettings.music !== 'none' && $root.system.sound.mute === false" sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: true; volume: 0.6;"></a-entity>
 
-					<gt-lightmob v-for="light in $root.user.rooms[1].lights" v-bind:index="$index" v-bind:style="$root.user.rooms[1].lights.style" v-bind:light1="$root.configurable.light.style[$root.user.rooms[1].lights.style].light_1" v-bind:light2="$root.configurable.light.style[$root.user.rooms[1].lights.style].light_2"></gt-light>
+					<a-entity v-if="!$root.user.trainsettings.highQuality">
+						<gt-lightmob v-for="light in $root.user.rooms[1].lights" v-bind:index="$index" v-bind:style="$root.user.rooms[1].lights.style" v-bind:light1="$root.configurable.light.style[$root.user.rooms[1].lights.style].light_1" v-bind:light2="$root.configurable.light.style[$root.user.rooms[1].lights.style].light_2"></gt-light>
+					</a-entity>
 				</a-entity>
 			</a-entity>
 
