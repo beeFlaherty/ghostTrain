@@ -167,6 +167,7 @@
 		},
 		'track': {
 			'showPoints': false,
+			'speed': 1.75,
 			'kart': true,
 			'points': [
 				{ 'position':'7 3.5 4', 'duration':'5', 'rotationDuration':'-1', 'allowMovement':'false' },
