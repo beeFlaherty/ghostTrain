@@ -28,7 +28,32 @@
             roomPart: 'theme',
             stageCounter: 0
         },
+		watch: {
+			roomPart: function(value) {
+				this.slickInit();
+			},
+			section: function(value) {
+				if (value === 'form'){
+					this.slickInit();
+				}
+			},
+			formPart: function(value) {
+				if (this.formPart == 2) {
+				this.slickInit();
+				}
+			},
+		},
+
         methods: {
+			slickInit: function() {
+				$('.carousel').slick({
+  				infinite: false,
+				  variableWidth: true,
+  				slidesToShow: 3,
+  				slidesToScroll: 1
+				});
+
+			},
             getFromDatabase: function() {
                 if (window.location.hash) {
                     var key = window.location.hash.replace('#', '');

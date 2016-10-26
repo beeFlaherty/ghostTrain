@@ -8,7 +8,6 @@
     Vue.partial('room3-partial', document.getElementById('room3-partial').innerHTML);
     Vue.partial('room4-partial', document.getElementById('room4-partial').innerHTML);
     //Vue.partial('doors', document.getElementById('doors').innerHTML);
-    Vue.partial('room5-partial', document.getElementById('room5-partial').innerHTML);
 
 
 

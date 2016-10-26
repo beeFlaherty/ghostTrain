@@ -1,5 +1,5 @@
 /* @import must be at top of file, otherwise CSS will not work */
-$cdnUrl:"";
+$cdnUrl: "";
 @import url("//hello.myfonts.net/count/323d42");
 @font-face {
     font-family: 'Smashing';
@@ -19,7 +19,7 @@ body {
     color: #bdbdbd;
     height: 100%;
     overflow: scroll!important;
-    font-size:18px;
+    font-size: 18px;
 }
 /*put the aframe styles back into effect*/
 html.aframe {
@@ -49,24 +49,24 @@ button:hover {
     background: $green;
     color: black;
     font-size: 2em;
-	line-height:1em;
+    line-height: 1em;
     border-color: $green;
     display: inline-block;
     margin: 30px 10px;
     border-radius: 0;
-	text-decoration:none;
+    text-decoration: none;
     padding: 15px 20px;
-    border:0;
-
-	&.small {
-		font-size: 1em;
-		line-height:1em;
-	}
+    border: 0;
+    &.small {
+        font-size: 1em;
+        line-height: 1em;
+    }
 }
-button, .button {
-	&:hover {
-		background: #b6f973;
-	}
+.button,
+button {
+    &:hover {
+        background: #b6f973;
+    }
 }
 .info {
     text-align: center;
@@ -75,110 +75,108 @@ button, .button {
     margin-bottom: 20px;
 }
 /* realise block */
-.realise, .credits  {
+.credits,
+.realise {
     border: $green 1px solid;
     color: $green;
-	padding:0;
-	font-size: 0.8em;
-	line-height:15px;
+    padding: 0;
+    font-size: 0.8em;
+    line-height: 15px;
     margin-bottom: 30px;
-	p {
-		font-size: 0.8em;
-		line-height:15px;
-		padding: 10px;
-		border-bottom: $green 1px solid;
-		&.controls {
-			margin-bottom:0;
-		}
-	}
-
-	span{
-		display:inline-block;
-		margin: 0 20px;
-	}
-
+    p {
+        font-size: 0.8em;
+        line-height: 15px;
+        padding: 10px;
+        border-bottom: $green 1px solid;
+        &.controls {
+            margin-bottom: 0;
+        }
+    }
+    span {
+        display: inline-block;
+        margin: 0 20px;
+    }
     .fb,
     .twitter,
     .vol {
         border: 0;
         display: inline-block;
         width: 16px;
-		height:0;
+        height: 0;
         padding-top: 16px;
-		overflow:hidden;
+        overflow: hidden;
         margin-right: 10px;
-		background-repeat: no-repeat;
-		background-size:contain;
+        background-repeat: no-repeat;
+        background-size: contain;
         color: black;
-		position:relative;
-		top:5px;
+        position: relative;
+        top: 5px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
     .fb {
-		width:8px;
-          background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x.png');
+        width: 8px;
+        background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x.png');
         &:hover {
-         background-image:  url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_HOVER.png');
-
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_HOVER.png');
         }
     }
     .twitter {
-		 width:26px;
-          background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x.png');
+        width: 26px;
+        background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x.png');
         &:hover {
             background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x_HOVER.png');
-
         }
     }
     .vol {
-        	background-image:  url('#{$cdnUrl}/assets/ui/icons-info/volume@2x.png');
+        background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x.png');
         &:hover {
             background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x_HOVER.png');
         }
     }
-
-	.branding {
-		display:inline-block;
-		width:80px;
-		height:0;
-		padding-top:15px;
-		overflow:hidden;
-		background-repeat: no-repeat;
-		background-size:contain;
-		background-image:  url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x.png');
-		top: 2px;
-		position: relative;
-		margin:0 5px;
-		&:hover {
-			background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x_HOVER.png');
-		}
-	}
-}
-
-.credits  {
-  span {
-    padding:10px 10px 0;
-    margin:0;
-  }
-  ul {
-    padding: 5px 10px 10px;
-    li {
-      display:inline;
-      a {
-        display:inline-block;
-        padding:0 10px 0 0;
-        color:$green;
-        text-decoration:underline;
-        line-height: 1.5;
-      }
+    .branding {
+        display: inline-block;
+        width: 80px;
+        height: 0;
+        padding-top: 15px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x.png');
+        top: 2px;
+        position: relative;
+        margin: 0 5px;
+        &:hover {
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x_HOVER.png');
+        }
     }
-  }
 }
-
+.credits {
+    span {
+        padding: 10px 10px 0;
+        margin: 0;
+    }
+    ul {
+        padding: 5px 10px 10px;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                padding: 0 10px 0 0;
+                color: $green;
+                text-decoration: underline;
+                line-height: 1.5;
+            }
+        }
+    }
+}
 .at-resp-share-element .at-share-btn {
-  background:$green!important;
-  &:hover {
-    background: #b6f973!important;
-  }
+    background: $green!important;
+    &:hover {
+        background: #b6f973!important;
+    }
 }
 /*Train builder form */
 form {
@@ -199,28 +197,34 @@ form {
         z-index: 100;
     }
     fieldset {
-      border:none;
+        border: none;
     }
     legend {
         font-family: 'Smashing', cursive;
         color: #00ff6f;
         font-size: 2em;
     }
-
     label {
         display: block;
         color: #00ff6f;
         background-size: cover;
-        height: 100px;
-        width: 100px;
-        margin: 0 5px 10px;
+        height: 100px!important;
+        width: 100px!important;
+        margin: 25px 5px 10px;
         float: left;
+        &:focus,
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            outline: none;
+        }
         &.active {
-            height: 150px;
-            width: 150px;
+            height: 150px!important;
+            width: 150px!important;
+            margin: 0 10px 10px;
         }
         span {
-            display:none;
+            display: none;
             font-size: 10px;
             line-height: 12px;
             color: red;
@@ -230,10 +234,11 @@ form {
         }
     }
 }
-
 /*carousel */
-
-
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+}
 /*Progress Bar*/
 .progress-bar {
     text-align: center;
@@ -354,23 +359,21 @@ label[for^="vampire"] {
     background-image: url("#{$cdnUrl}/assets/ui/monster/vampire.png");
 }
 label[for^="pyro"] {
-    background: orange;
-    border-radius: 50%;
+    background-image: url("#{$cdnUrl}/assets/ui/monster/pyro.png");
 }
 label[for^="ballerina"] {
-    background: pink;
-    border-radius: 50%;
+    background-image: url("#{$cdnUrl}/assets/ui/monster/zombie-ballerina.png");
 }
 
 .loading-img {
-	display:block;
-	margin:50px auto;
-	width:40%;
-	max-width:300px;
+    display: block;
+    margin: 50px auto;
+    width: 40%;
+    max-width: 300px;
 }
 .ghosts-img {
-	width:25%;
-	margin:50px auto;
-	width:40%;
-	max-width:150px;
+    width: 25%;
+    margin: 50px auto;
+    width: 40%;
+    max-width: 150px;
 }

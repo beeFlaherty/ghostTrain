@@ -13,12 +13,13 @@
             this.$root.goto('ride');
             event.preventDefault();
           },
-          
+
           next: function(event){
             event.preventDefault();
             if (this.$root.formPart > 1){
               if (this.$root.roomPart == "theme") {
                 this.$root.roomPart = "lights";
+
               }else if (this.$root.roomPart == "lights") {
                 this.$root.roomPart = "scare";
               } else if (this.$root.roomPart == "scare") {
