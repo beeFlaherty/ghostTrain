@@ -1,5 +1,5 @@
 <script id="door_template" type="x-template">
-	<a-entity position="{{ position }}">
+	<a-entity position="{{ position }}" class="door">
 		<a-entity mixin="door-frame-{{ size }}-{{ frame }} {{ theme }}" position="0 0 0"></a-entity>
 
 		<a-entity v-if="triggerable" position="0 0 2.5" collidable="{{ $root.system.door.triggerDistance }}" roomswitch="true" showonenter="{{ next }}" hideonexit="{{ current }}">
