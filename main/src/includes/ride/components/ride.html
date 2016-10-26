@@ -3,15 +3,6 @@
 		<a-assets>
 			<img id="monsters_texture" src="/assets/monsters/monsters.jpg"></img>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
-			<img v-for="monster in configurable.monsters" id="monster_{{ $key }}_texture" src="{{ monster.texture }}"></img>
-
-			<img id="castle" src="/assets/textures/castle/walls.jpg"></img>
-			<img id="forest" src="/assets/textures/forest/walls.jpg"></img>
-			<img id="dark" src="/assets/textures/dark/walls.jpg"></img>
-			<img id="generic-ceiling" src="/assets/textures/ceiling.jpg"></img>
-			<img id="floor" src="/assets/textures/floor_18.png"></img>
-			<img id="intro" src="/assets/textures/intro.jpg"></img>
-
 
 			<a-mixin id="door-left-NS" obj-model="obj: url(/assets/model-buildkit/interactive/door-left-NS.obj); "></a-mixin>
 			<a-mixin id="door-right-NS" obj-model="obj: url(/assets/model-buildkit/interactive/door-right-NS.obj); "></a-mixin>
@@ -74,15 +65,14 @@
 
 			<!-- atlas -->
 			<img v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture }}"></img>
+			<img id="intro_atlas" src="/assets/textures/intro.jpg"></img>
 
 			<a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="hotel" material="src:#hotel_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="graveyard" material="src:#graveyard_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="hauntedhouse" material="src:#hauntedhouse_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="asylum" material="src:#asylum_atlas; roughness:1;"></a-mixin>
-			<a-mixin id="intro" material="src:#intro; roughness:1;"></a-mixin>
-
-
+			<a-mixin id="intro" material="src:#intro_atlas; roughness:1;"></a-mixin>
 		</a-assets>
 
 
