@@ -95,9 +95,9 @@
 					},
 					'crypt': {
 						'name': 'Crypt',
-						'light_1': '#161616',
-						'light_2': '#161616',
-						'light_3': '#161616'
+						'light_1': '#dfe1df',
+						'light_2': '#dfe1df',
+						'light_3': '#dfe1df'
 					}
 				},
 			// 'color': {

@@ -2,7 +2,7 @@
 	'use strict';
 
 	module.exports = {
-		'highquality': true,
+		'highquality': false,
 		'currentroom': 0,
 		'sky': {
 			'colour': '#000000'
