@@ -69,7 +69,7 @@
 						'animation': 'popup'
 					},
 					{
-						'position': '33 0 20.5',
+						'position': '33 0 21.3',
 						'rotation': '0 270 0',
 						'animation': 'fromright'
 					},
@@ -121,17 +121,17 @@
 				],
 				'scares': [
 					{
-						'position': '49 0 8',
+						'position': '49 0 6',
 						'rotation': '0 270 0',
 						'animation': 'fromleft'
 					},
 					{
-						'position': '58 0 10',
+						'position': '57 0 10',
 						'rotation': '0 270 0',
 						'animation': 'fromright'
 					},
 					{
-						'position': '70 0 9',
+						'position': '79 0 8',
 						'rotation': '0 270 0',
 						'animation': 'popup'
 					}
@@ -141,7 +141,7 @@
 				'position': '0 0 0',
 				'lights': [
 					{
-						position: '80 2 8'
+						position: '78 2 8'
 					}
 				],
 				'scares': [
