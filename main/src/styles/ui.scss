@@ -35,7 +35,7 @@ html.aframe {
 .homepage-img {
     display: block;
     margin: 10px auto;
-    max-width: 80%;
+    max-width: 70%;
 }
 .data-debug {
     display: none;
@@ -207,7 +207,7 @@ form {
         @media (max-width:500px) {
             font-size: 1.5em;
         }
-        @media (max-width:300px) {
+        @media (max-width:380px) {
             font-size: 1.2em;
         }
     }
@@ -312,7 +312,7 @@ form {
     li {
         display: block;
         float: left;
-        background: #ccc;
+        background: #000;
         border: #00ff6f 2px solid;
         border-radius: 50%;
         width: 20px;
