@@ -121,20 +121,20 @@ button {
         width: 8px;
         background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x.png');
         &:hover {
-            background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_HOVER.png');
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_hover.png');
         }
     }
     .twitter {
         width: 26px;
         background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x.png');
         &:hover {
-            background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x_HOVER.png');
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x_hover.png');
         }
     }
     .vol {
         background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x.png');
         &:hover {
-            background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x_HOVER.png');
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/volume@2x_hover.png');
         }
     }
     .branding {
@@ -145,12 +145,12 @@ button {
         overflow: hidden;
         background-repeat: no-repeat;
         background-size: contain;
-        background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x.png');
+        background-image: url('#{$cdnUrl}/assets/ui/icons-info/realise-logo@2x.png');
         top: 2px;
         position: relative;
         margin: 0 5px;
         &:hover {
-            background-image: url('#{$cdnUrl}/assets/ui/icons-info/Realise-Logo@2x_HOVER.png');
+            background-image: url('#{$cdnUrl}/assets/ui/icons-info/realise-logo@2x_hover.png');
         }
     }
 }

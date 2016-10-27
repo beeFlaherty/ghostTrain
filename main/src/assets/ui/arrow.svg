@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00ff6f;
+        stroke-width: 8px;
+      }
+
+      .cls-2 {
+        fill: #00ff6f;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <ellipse class="cls-1" cx="99" cy="97.5" rx="94" ry="92.5"/>
+  <path class="cls-2" d="M113.249,72.252v50.5L67.671,98.276Z"/>
+</svg>
