@@ -306,7 +306,7 @@ form {
 }
 .progress-bar ul {
     list-style-type: none;
-    border-top: #00ff6f 2px solid;
+
     display: inline-block;
     margin: 30px auto 0;
     li {
@@ -319,36 +319,38 @@ form {
         height: 20px;
         overflow: hdden;
         margin-top: -12px;
-        margin-right: 20px;
+        margin-right: 40px;
         margin-bottom: 30px;
         position: relative;
         span {
-            position: absolute;
-            width: 70px;
-            left: -20px;
-            bottom: -30px;
+            width: 10px;
+			height:0;
+			margin-top:5px;
+			padding-top:10px;
+			background:#ffc600;
+			overflow:hidden;
+			margin:3px auto;
             text-align: center;
             display: none;
+			border-radius:50%;
         }
         &.active {
-            background: #00ff6f;
             border: #00ff6f 2px solid;
             span {
                 display: block;
             }
             &:before {
                 content: "";
-                background: #ccc;
+                background-image: url("#{$cdnUrl}/assets/ui/icons-info/pink-triangle.png");
                 position: absolute;
-                width: 20px;
-                height: 20px;
-                top: -35px;
+                width: 7px;
+                height: 5px;
+                top: -13px;
                 left: 50%;
-                margin-left: -10px;
+                margin-left: -3.5px;
             }
         }
         &.activated {
-            background: #00ff6f;
             border: #00ff6f 2px solid;
         }
         &:last-of-type {
