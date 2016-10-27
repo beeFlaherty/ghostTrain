@@ -75,6 +75,35 @@ button {
     font-size: 18px;
     margin-bottom: 20px;
 }
+
+.facebook-share span, .twitter-share span{
+	display:inline-block;
+	width:20px;
+	height:0;
+	margin:10px;
+	padding-top:20px;
+	overflow:hidden;
+	background-repeat: no-repeat;
+	background-size:contain;
+}
+
+.facebook-share, .twitter-share{
+	display:inline-block;
+	width:40px;
+	height:40px;
+	background-color: $green;
+	&:hover {
+		background-color: #b6f973;
+	}
+}
+.facebook-share span{
+	background-image: url('#{$cdnUrl}/assets/ui/icons-info/facebook@2x_hover.png');
+	margin-left:15px;
+}
+.twitter-share span{
+	background-image: url('#{$cdnUrl}/assets/ui/icons-info/twitter@2x_hover.png');
+
+}
 /* realise block */
 .credits,
 .realise {
@@ -95,7 +124,7 @@ button {
     }
     span {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 10px 0 0;
     }
     .fb,
     .twitter,

@@ -22,7 +22,7 @@
             user: userData,
             system: systemData,
             configurable: configurableData,
-            section: 'disclaimer',
+            section: 'end',
             formPart: 0,
             roomPart: 'theme',
             stageCounter: 0
