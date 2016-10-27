@@ -1,36 +1,36 @@
 <script id="scare_template" type="x-template">
 	<a-entity v-if="monster === 'zombie'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/snarl.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/snarl.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'vampire'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/cackle.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/cackle.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'ghost'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/scream.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/scream.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'ballerina'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/giggle.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/giggle.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'pyro'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/rarrr.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/rarrr.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'wolf'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/howl.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/howl.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>

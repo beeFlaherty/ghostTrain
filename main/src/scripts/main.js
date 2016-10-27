@@ -10,8 +10,6 @@
     var api = require('./api')(Vue);
     var is = require('./detectmobile');
 
-    var startScreenDelay = 3000;
-
     function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -30,8 +28,6 @@
             stageCounter: 0
         },
         ready: function() {
-            this.system.highquality = !is.mobileAndTablet();
-            this.getFromDatabase();
         },
 		watch: {
 			roomPart: function(value) {
@@ -107,9 +103,12 @@
             },
 
             goto: function(section) {
+                if (section === 'start') {
+                    this.system.highquality = !is.mobileAndTablet();
+                    this.getFromDatabase();
+                }
 
                 if (section === 'random') {
-
                     var _lights = [];
                     var _themes = [];
                     var _monsters = [];
@@ -157,11 +156,11 @@
                 }
 
                 if (section === 'ride') {
-                    document.getElementsByTagName('html')[0].className += " aframe";
+                    document.getElementsByTagName('html')[0].className += ' aframe';
                 }
 
 				if (section !== 'ride') {
-					document.getElementsByTagName('html')[0].className = "";
+					document.getElementsByTagName('html')[0].className = '';
 				}
 
                 if (this.section === 'form' && section === 'ride') {
