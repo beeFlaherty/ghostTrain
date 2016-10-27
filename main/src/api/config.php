@@ -22,7 +22,7 @@ $config['db_pass'] = 'root';
 // $config['db_pass'] = 'p9FLd9wpWNd';
 
 
-// ---- Stag ---------------------------------------
+// ---- Live ---------------------------------------
 
 // $config['db_host'] = 'd1f8f528521b0fa212d7ac38364a66e7b57dcab5.rackspaceclouddb.com';
 // $config['db_name'] = 'ghosttrain_live';
