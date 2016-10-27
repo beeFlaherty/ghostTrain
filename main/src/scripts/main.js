@@ -151,7 +151,7 @@
 
                     }
 
-
+                    this.saveToDatabase();
                     section = 'ride';
                     document.getElementsByTagName('html')[0].className += " aframe";
                 }
