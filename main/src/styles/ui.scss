@@ -9,6 +9,7 @@ $cdnUrl: "http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.r
 $green: #00ff6f;
 html {
     position: relative!important;
+    background-color: #000;
     background-image: url("#{$cdnUrl}/img/background.jpg");
     background-attachment: fixed;
     background-size: cover;
