@@ -1,10 +1,10 @@
 /* @import must be at top of file, otherwise CSS will not work */
-$cdnUrl: "";
+$cdnUrl: "http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2";
 @import url("//hello.myfonts.net/count/323d42");
 @font-face {
     font-family: 'Smashing';
-    src: url('/assets/webfonts/323D42_0_0.eot');
-    src: url('/assets/webfonts/323D42_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/webfonts/323D42_0_0.woff2') format('woff2'),url('#{$cdnUrl}/assets/webfonts/323D42_0_0.woff') format('woff'),url('#{$cdnUrl}/assets/webfonts/323D42_0_0.ttf') format('truetype');
+    src: url('#{$cdnUrl}/assets/webfonts/323D42_0_0.eot');
+    src: url('#{$cdnUrl}/assets/webfonts/323D42_0_0.eot?#iefix') format('embedded-opentype'),url('#{$cdnUrl}/assets/webfonts/323D42_0_0.woff2') format('woff2'),url('#{$cdnUrl}/assets/webfonts/323D42_0_0.woff') format('woff'),url('#{$cdnUrl}/assets/webfonts/323D42_0_0.ttf') format('truetype');
 }
 $green: #00ff6f;
 html {

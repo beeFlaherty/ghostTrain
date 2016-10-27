@@ -8,23 +8,23 @@
 			},
 			'creepymusicbox': {
 				'name': 'Creepy Music Box',
-				'mp3': '/assets/music/creepy.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/creepy.mp3'
 			},
 			'mountainking': {
 				'name': 'Hall of the Mountain King',
-				'mp3': '/assets/music/mountainking.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/mountainking.mp3'
 			},
 			'dansemacabre': {
 				'name': 'Danse Macabre',
-				'mp3': '/assets/music/dansemacabre.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/dansemacabre.mp3'
 			},
 			'choirofdoom': {
 				'name': 'Choir of Doom',
-				'mp3': '/assets/music/choirofdoom.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/choirofdoom.mp3'
 			},
 			'abandonedcemetery': {
 				'name': 'Abandoned Cemetery',
-				'mp3': '/assets/music/abandonedcemetery.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/abandonedcemetery.mp3'
 			}
 		},
 		'themes': {
@@ -130,65 +130,65 @@
 		'monsters': {
 			'zombie': {
 				'name': 'Zombie',
-				'model': '/assets/monsters/monster-zombie.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-zombie.obj'
 			},
 			'ghost': {
 				'name': 'Ghost',
-				'model': '/assets/monsters/monster-ghost.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-ghost.obj'
 			},
 			'vampire': {
 				'name': 'Vampire',
-				'model': '/assets/monsters/monster-vampire.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-vampire.obj'
 			},
 			'pyro': {
 				'name': 'Pyro',
-				'model': '/assets/monsters/monster-flame-zombie.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-flame-zombie.obj'
 			},
 			'ballerina': {
 				'name': 'Zombie Ballerina',
-				'model': '/assets/monsters/monster-ballerina.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-ballerina.obj'
 			},
 			'wolf': {
 				'name': 'Wolfman',
-				'model': '/assets/monsters/monster-wolf.obj'
+				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-wolf.obj'
 			}
 		},
 		'sounds': {
 			'groan': {
 				'name': 'Groan',
-				'mp3': '/assets/sounds/zombie.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/zombie.mp3'
 			},
 			'scream': {
 				'name': 'Scream',
-				'mp3': '/assets/sounds/scream.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/scream.mp3'
 			},
 			'cackle': {
 				'name': 'Cackle',
-				'mp3': '/assets/sounds/cackle.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/cackle.mp3'
 			},
 			'snarl': {
 				'name': 'Snarl',
-				'mp3': '/assets/sounds/snarl.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/snarl.mp3'
 			},
 			'giggle': {
 				'name': 'Giggle',
-				'mp3': '/assets/sounds/giggle.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/giggle.mp3'
 			},
 			'laugh': {
 				'name': 'Laugh',
-				'mp3': '/assets/sounds/laugh.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/laugh.mp3'
 			},
 			'roar': {
 				'name': 'Roar',
-				'mp3': '/assets/sounds/roar.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/roar.mp3'
 			},
 			'howl': {
 				'name': 'Howl',
-				'mp3': '/assets/sounds/howl.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/howl.mp3'
 			},
 			'hiss': {
 				'name': 'Hiss',
-				'mp3': '/assets/sounds/hiss.mp3'
+				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/hiss.mp3'
 			}
 		},
 		'animations': {
