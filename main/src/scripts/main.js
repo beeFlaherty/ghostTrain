@@ -90,6 +90,7 @@
                     var self = this;
 
                     api.get(key, function(data) {
+                        self.$root.system.key = key;
                         self.user = data;
                         self.goto('ride');
                     });
@@ -97,8 +98,11 @@
             },
 
             saveToDatabase: function() {
+                var self = this;
+
                 api.set(this.user, function(key) {
                     window.location.hash = key;
+                    self.$root.system.key = key;
                 });
             },
 

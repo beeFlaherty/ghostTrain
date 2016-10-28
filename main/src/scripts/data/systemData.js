@@ -2,6 +2,7 @@
 	'use strict';
 
 	module.exports = {
+		'key': '',
 		'highquality': false,
 		'currentroom': 0,
 		'sky': {
