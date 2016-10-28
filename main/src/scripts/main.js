@@ -97,7 +97,7 @@
 			},
             getFromDatabase: function() {
                 if (window.location.search) {
-                    var key = getQueryVariable('key');
+                    var key = getQueryVariable('ride');
 
                     var self = this;
 
