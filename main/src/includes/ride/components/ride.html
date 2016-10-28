@@ -94,7 +94,7 @@
 					<a-camera collider position="0 -2 0.2" rotation="0 0 0.1" wasd-controls-enabled="false" near="0.1"></a-camera>
 
 
-					<a-entity v-if="$root.system.sound.chain && $root.system.sound.mute === false" sound="src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
+					<a-entity v-if="$root.system.sound.chain && $root.system.sound.mute === false && $root.system.highquality" sound="src: http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/chain.mp3; autoplay: true; loop: true; volume: 0.3;"></a-entity>
 
 					<a-entity v-if="$root.user.trainsettings.music !== 'none' && $root.system.sound.mute === false" sound="src: {{ $root.configurable.music[$root.user.trainsettings.music].mp3 }}; autoplay: true; loop: false; volume: 0.6;"></a-entity>
 
