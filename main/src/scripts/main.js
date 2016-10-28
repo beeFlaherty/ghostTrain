@@ -11,10 +11,22 @@
     var is = require('./detectmobile');
 
     function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        console.log('Query variable %s not found', variable);
+    }
 
     var app = new Vue({
         el: '#app',
@@ -84,8 +96,8 @@
 
 			},
             getFromDatabase: function() {
-                if (window.location.hash) {
-                    var key = window.location.hash.replace('#', '');
+                if (window.location.search) {
+                    var key = getQueryVariable('key');
 
                     var self = this;
 
@@ -101,7 +113,6 @@
                 var self = this;
 
                 api.set(this.user, function(key) {
-                    window.location.hash = key;
                     self.$root.system.key = key;
                 });
             },
