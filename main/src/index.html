@@ -50,14 +50,14 @@
 		<div id="app">
 
 			<div v-if="section == 'disclaimer'">
-				<div class="container">
+				<div class="container disclaimer">
 			      <div class="row">
 			        <div class="col-md-8 col-md-offset-2">
-			          <img class="homepage-img" src="/img/homepage-logo.png"/>
-			          <p class="info">Please be aware that this experimental project will only work on the Chrome browser</p>
-			          <p class="info">Caution: rides contain flashing lights and moving images.</p>
+			          <h2>Beware!</h2>
+			          <p class="info">This experimental project is best brought to life on the Chrome browser and modern hardware.</p>
+			          <p class="info">he experience contains flashing lights and moving images which may potentially trigger seizures for those with photosensitive epilepsy.</p>
 			          <p class="text-center info">
-						<a class="button" v-on:click="goto('start')">I understand - begin</a>
+						<a class="button" v-on:click="goto('start')">I understand</a>
 			          </p>
 			        </div>
 			      </div>
