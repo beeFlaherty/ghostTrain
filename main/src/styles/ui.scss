@@ -497,3 +497,11 @@ label[for^="wolf"] {
     margin-top:1em;
     margin-bottom:2em;
 }
+@media (max-width:550px) {
+    .formheader .homepage-img{
+        display: none;
+    }
+    .formheader .row{
+        margin-top:30px;
+    }
+}
