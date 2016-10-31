@@ -9,6 +9,7 @@
     var ride = require('./ride')();
     var api = require('./api')(Vue);
     var is = require('./detectmobile');
+    var nosleep = require('./nosleep')();
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
