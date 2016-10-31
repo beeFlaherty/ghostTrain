@@ -31,27 +31,32 @@
 			'castle': {
 				'name': 'Castle',
 				'colour': '#808080',
-				'texture': '/assets/textures/castle.jpg'
+				'texture': '/assets/textures/castle.jpg',
+				'texture_mobile': '/assets/textures_mobile/castle.jpg'
 			},
 			'hotel': {
 				'name': 'Hotel',
 				'colour': '#007F46',
-				'texture': '/assets/textures/hotel.jpg'
+				'texture': '/assets/textures/hotel.jpg',
+				'texture_mobile': '/assets/textures_mobile/hotel.jpg'
 			},
 			'graveyard': {
 				'name': 'Graveyard',
 				'colour': '#682900',
-				'texture': '/assets/textures/graveyard.jpg'
+				'texture': '/assets/textures/graveyard.jpg',
+				'texture_mobile': '/assets/textures_mobile/graveyard.jpg'
 			},
 			'asylum': {
 				'name': 'Asylum',
 				'colour': '#682900',
-				'texture': '/assets/textures/asylum.jpg'
+				'texture': '/assets/textures/asylum.jpg',
+				'texture_mobile': '/assets/textures_mobile/asylum.jpg'
 			},
 			'hauntedhouse': {
 				'name': 'Haunted House',
 				'colour': '#682900',
-				'texture': '/assets/textures/hauntedhouse.jpg'
+				'texture': '/assets/textures/hauntedhouse.jpg',
+				'texture_mobile': '/assets/textures_mobile/hauntedhouse.jpg'
 			}
 		},
 		'light': {

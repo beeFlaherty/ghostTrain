@@ -64,8 +64,11 @@
 			<a-mixin id="ceiling-set-room-4" obj-model="obj: url(http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/model-buildkit/sets/ceiling-set-room-4.obj);"></a-mixin>
 
 			<!-- atlas -->
-			<img v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture }}"></img>
-			<img id="intro_atlas" src="/assets/textures/intro.jpg"></img>
+			<img v-if="$root.system.highquality === true" v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture }}"></img>
+			<img v-if="$root.system.highquality === true" id="intro_atlas" src="/assets/textures/intro.jpg"></img>
+
+			<img v-if="$root.system.highquality === false" v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture_mobile }}"></img>
+			<img v-if="$root.system.highquality === false" id="intro_atlas" src="/assets/textures_mobile/intro.jpg"></img>
 
 			<a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="hotel" material="src:#hotel_atlas; roughness:1;"></a-mixin>
