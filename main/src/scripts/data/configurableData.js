@@ -32,6 +32,12 @@
 			}
 		},
 		'themes': {
+			'industrial': {
+				'name': 'Industrial',
+				'colour': '#808080',
+				'texture': '/assets/textures/industrial.jpg',
+				'texture_mobile': '/assets/textures_mobile/industrial.jpg'
+			},
 			'castle': {
 				'name': 'Castle',
 				'colour': '#808080',

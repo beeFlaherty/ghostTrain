@@ -70,6 +70,7 @@
 			<img v-if="$root.system.highquality === false" v-for="theme in configurable.themes" id="{{ $key }}_atlas" src="{{ theme.texture_mobile }}"></img>
 			<img v-if="$root.system.highquality === false" id="intro_atlas" src="/assets/textures_mobile/intro.jpg"></img>
 
+			<a-mixin id="industrial" material="src:#industrial_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="castle" material="src:#castle_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="hotel" material="src:#hotel_atlas; roughness:1;"></a-mixin>
 			<a-mixin id="graveyard" material="src:#graveyard_atlas; roughness:1;"></a-mixin>
