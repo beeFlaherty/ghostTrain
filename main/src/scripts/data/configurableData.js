@@ -6,6 +6,10 @@
 			'none': {
 				'name': 'None'
 			},
+			'synthmadness': {
+				'name': 'Synth Madness',
+				'mp3': '/assets/music/synthmadness.mp3'
+			},
 			'creepymusicbox': {
 				'name': 'Creepy Music Box',
 				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/music/creepy.mp3'
