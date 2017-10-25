@@ -32,6 +32,12 @@
 			}
 		},
 		'themes': {
+			'static': {
+				'name': 'Static',
+				'colour': '#808080',
+				'texture': '/assets/textures/static.jpg',
+				'texture_mobile': '/assets/textures_mobile/static.jpg'
+			},
 			'industrial': {
 				'name': 'Industrial',
 				'colour': '#808080',
