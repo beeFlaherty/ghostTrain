@@ -6,6 +6,10 @@
 			'none': {
 				'name': 'None'
 			},
+			'humaninstitution': {
+				'name': 'Human Institution',
+				'mp3': '/assets/music/humaninstitution.mp3'
+			},
 			'synthmadness': {
 				'name': 'Synth Madness',
 				'mp3': '/assets/music/synthmadness.mp3'
