@@ -2,6 +2,7 @@
 	<a-scene>
 		<a-assets>
 			<img id="monsters_texture" src="/assets/monsters/monsters.jpg"></img>
+			<img id="monsters_texture_2" src="/assets/monsters/monsters-2.jpg"></img>
 			<a-asset-item v-for="monster in configurable.monsters" id="monster_{{ $key }}_model" src="{{ monster.model }}"></a-asset-item>
 
 			<a-mixin id="door-left-NS" obj-model="obj: url(http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/model-buildkit/interactive/door-left-NS.obj); "></a-mixin>

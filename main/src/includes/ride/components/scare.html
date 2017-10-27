@@ -1,12 +1,12 @@
 <script id="scare_template" type="x-template">
 	<a-entity v-if="monster === 'clown'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/clown.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture_2; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/clown.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
 
 	<a-entity v-if="monster === 'devil'" id="monster_{{ animation }}" position="{{ position }}" rotation="{{ rotation }}">
-		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/devil.mp3; on:enter;'">
+		<a-obj-model rotation="0 0 0" scale="{{ $root.system.monster.scale }} {{ $root.system.monster.scale }} {{ $root.system.monster.scale }}" src="#monster_{{ monster }}_model" material="src: #monsters_texture_2; shader: standard; roughness:1;" collidable="{{ $root.system.monster.triggerDistance }}" visible="false" v-bind:sound="($root.system.sound.mute === true) ? null : 'src: /assets/sounds/devil.mp3; on:enter;'">
 			<gt-animation v-bind:type="animation"></gt-animation>
 		</a-obj-model>
 	</a-entity>
