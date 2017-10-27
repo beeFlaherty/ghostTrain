@@ -467,6 +467,12 @@ label[for="basement"] {
 label[for="crypt"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/crypt.png");
 }
+label[for^="clown"] {
+    background-image: url("/assets/ui/monster/clown.png");
+}
+label[for^="devil"] {
+    background-image: url("/assets/ui/monster/devil.png");
+}
 label[for^="zombie_"] {
     background-image: url("#{$cdnUrl}/assets/ui/monster/zombie.png");
 }

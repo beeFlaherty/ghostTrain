@@ -149,6 +149,14 @@
 			// }
 		},
 		'monsters': {
+			'clown': {
+				'name': 'Clown',
+				'model': '/assets/monsters/monster-clown.obj'
+			},
+			'devil': {
+				'name': 'Devil',
+				'model': '/assets/monsters/monster-devil.obj'
+			},
 			'zombie': {
 				'name': 'Zombie',
 				'model': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/monsters/monster-zombie.obj'
@@ -175,6 +183,14 @@
 			}
 		},
 		'sounds': {
+			'clown': {
+				'name': 'Clown',
+				'mp3': '/assets/sounds/clown.mp3'
+			},
+			'devil': {
+				'name': 'Devil',
+				'mp3': '/assets/sounds/devil.mp3'
+			},
 			'groan': {
 				'name': 'Groan',
 				'mp3': 'http://c315bb0c25946f178c5e-6bfcbe96a30b5412ee4e39ee394627af.r87.cf3.rackcdn.com/prod2/assets/sounds/zombie.mp3'
