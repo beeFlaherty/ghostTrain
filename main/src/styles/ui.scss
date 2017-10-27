@@ -404,6 +404,9 @@ form {
 label[for="musicnone"] {
     background-image: url("#{$cdnUrl}/assets/ui/music/nosound.png");
 }
+label[for="musictheaquarium"] {
+    background-image: url("/assets/ui/music/theaquarium.png");
+}
 label[for="musichumaninstitution"] {
     background-image: url("/assets/ui/music/humaninstitution.png");
 }

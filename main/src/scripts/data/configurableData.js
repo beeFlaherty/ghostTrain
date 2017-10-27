@@ -6,6 +6,10 @@
 			'none': {
 				'name': 'None'
 			},
+			'theaquarium': {
+				'name': 'The Aquarium',
+				'mp3': '/assets/music/aquarium.mp3'
+			},
 			'humaninstitution': {
 				'name': 'Human Institution',
 				'mp3': '/assets/music/humaninstitution.mp3'
