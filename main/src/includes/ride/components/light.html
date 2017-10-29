@@ -6,33 +6,33 @@
 </a-entity>
 <a-entity v-else>
 	<a-light type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[0].position }}" color="{{ light1 }}">
-
 		<a-animation v-if="style === 'neon'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
 
-			<a-animation v-if="style === 'redalert'" attribute="intensity" dur="500" fill="forwards" from="1" to="0.2" direction="alternate" repeat="indefinite"></a-animation>
+		<a-animation v-if="style === 'police'" attribute="intensity" dur="500" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
+
+		<a-animation v-if="style === 'redalert'" attribute="intensity" dur="500" fill="forwards" from="1" to="0.2" direction="alternate" repeat="indefinite"></a-animation>
 
 		<a-animation v-if="style === 'candlelight'" attribute="intensity" dur="50" fill="forwards" from="1" to="0.9" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
 
 		<a-animation v-if="style === 'basement'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0.2" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
-
 	</a-light>
 
 	<a-light type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[1].position }}" color="{{ light2 }}">
-
 		<a-animation v-if="style === 'neon'" attribute="intensity" dur="100" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
 
-		<a-animation v-if="style === 'redalert'" attribute="intensity" dur="500" fill="forwards" from="1" to="0.2" direction="alternate" repeat="indefinite"></a-animation>
+		<a-animation v-if="style === 'police'" attribute="intensity" dur="500" fill="forwards" from="0" to="1" direction="alternate" repeat="indefinite"></a-animation>
 
+		<a-animation v-if="style === 'redalert'" attribute="intensity" dur="500" fill="forwards" from="1" to="0.2" direction="alternate" repeat="indefinite"></a-animation>
 
 		<a-animation v-if="style === 'candlelight'" attribute="intensity" dur="50" fill="forwards" from="1" to="0.9" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
 
 		<a-animation v-if="style === 'basement'" attribute="intensity" dur="1000" fill="forwards" from="1" to="0.2" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
 	</a-light>
 
-		<a-light data-style="{{ style }}" type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[2].position }}" color="{{ light3 }}">
+	<a-light data-style="{{ style }}" type="point" intensity="3" distance="25" decay="2" position="{{ $root.system.rooms[roomnum].lights[2].position }}" color="{{ light3 }}">
+		<a-animation v-if="style === 'police'" attribute="intensity" dur="500" fill="forwards" from="1" to="0" direction="alternate" repeat="indefinite"></a-animation>
 
 		<a-animation v-if="style === 'redalert'" attribute="intensity" dur="500" fill="forwards" from="1" to="0.2" direction="alternate" repeat="indefinite"></a-animation>
-
 
 		<a-animation v-if="style === 'candlelight'" attribute="intensity" dur="50" fill="forwards" from="1" to="0.9" direction="alternate" easing="ease" repeat="indefinite"></a-animation>
 

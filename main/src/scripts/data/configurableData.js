@@ -86,6 +86,12 @@
 		'light': {
 			'style':
 				{
+					'police': {
+						'name': 'Crime Scene',
+						'light_1': '#E02C2C',
+						'light_2': '#001DC1',
+						'light_3': '#E02C2C'
+					},
 					'neon': {
 						'name': 'Neon Disco',
 						'light_1': '#a106db',
