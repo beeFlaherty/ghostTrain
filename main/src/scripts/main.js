@@ -121,10 +121,7 @@
             goto: function(section) {
                 if (section === 'start') {
                     this.system.highquality = !is.mobileAndTablet();
-                    this.getFromDatabase();
-                }
 
-                if (section === 'random') {
                     var _lights = [];
                     var _themes = [];
                     var _monsters = [];
@@ -146,8 +143,6 @@
                         _music.push(name4);
                     }
 
-
-
                     var rand;
                     rand = getRandomInt(0, _music.length);
                     this.$root.user.trainsettings.music = _music[rand];
@@ -166,6 +161,10 @@
 
                     }
 
+                    this.getFromDatabase();
+                }
+
+                if (section === 'random') {
                     this.saveToDatabase();
                     section = 'ride';
                     document.getElementsByTagName('html')[0].className += " aframe";
