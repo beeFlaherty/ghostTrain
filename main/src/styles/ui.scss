@@ -453,10 +453,10 @@ label[for="normal"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/normal.png");
 }
 label[for="lightning"] {
-    background-image: url("#{$cdnUrl}/assets/ui/light/lightning.png");
+    background-image: url("/assets/ui/light/lightning.png");
 }
 label[for="police"] {
-    background-image: url("#{$cdnUrl}/assets/ui/light/police.png");
+    background-image: url("/assets/ui/light/police.png");
 }
 label[for="neon"] {
     background-image: url("#{$cdnUrl}/assets/ui/light/disco.png");
