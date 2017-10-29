@@ -86,6 +86,12 @@
 		'light': {
 			'style':
 				{
+					'lightning': {
+						'name': 'Lightning',
+						'light_1': '#A8FFFF',
+						'light_2': '#A8FFFF',
+						'light_3': '#A8FFFF'
+					},
 					'police': {
 						'name': 'Crime Scene',
 						'light_1': '#E02C2C',
