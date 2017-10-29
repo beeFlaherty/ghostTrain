@@ -11,7 +11,7 @@
 				'mp3': '/assets/music/aquarium.mp3'
 			},
 			'humaninstitution': {
-				'name': 'Human Institution',
+				'name': 'Human Institution DnB',
 				'mp3': '/assets/music/humaninstitution.mp3'
 			},
 			'synthmadness': {
@@ -41,7 +41,7 @@
 		},
 		'themes': {
 			'static': {
-				'name': 'Static',
+				'name': 'Video Dungeon',
 				'colour': '#808080',
 				'texture': '/assets/textures/static.jpg',
 				'texture_mobile': '/assets/textures_mobile/static.jpg'

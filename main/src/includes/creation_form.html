@@ -10,9 +10,8 @@
                                     <legend>Build your train</legend>
                                     <p>Background music</p>
                                     <div class="carousel">
-
                                         <div v-for="music in configurable.music">
-                                            <label for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }">
+                                            <label for="music{{ $key }}" v-bind:class="{'active': user.trainsettings.music == $key }" :title="music.name">
                                             	<input type="radio" id="music{{ $key }}" name="music" value="{{ $key }}" v-model="user.trainsettings.music">
                                             	<span>{{ music.name }}</span>
                                         	</label>
@@ -29,7 +28,7 @@
                                         <fieldset v-if="$root.roomPart == 'theme'">
                                             <legend>Select your room </legend>
                                             <div class="carousel clearfix">
-                                                <label v-for="theme in configurable.themes" for="theme{{ $key }}" v-bind:class="{'active': room.theme == $key }">
+                                                <label v-for="theme in configurable.themes" for="theme{{ $key }}" v-bind:class="{'active': room.theme == $key }"  :title="theme.name">
                                                     <input type="radio" id="theme{{ $key }}" name="theme" value="{{ $key }}" v-model="room.theme">
                                                     <span>{{ theme.name }}</span>
                                                 </label>
@@ -40,7 +39,7 @@
                                         <fieldset v-if="$root.roomPart == 'lights'">
                                             <legend>Select your lighting effect</legend>
                                             <div class="carousel clearfix" v-for="(light, thisindex) in room.lights">
-                                                <label v-for="style in configurable.light.style" for="{{ $key }}" v-bind:class="{'active': room.lights.style == $key }">
+                                                <label v-for="style in configurable.light.style" for="{{ $key }}" v-bind:class="{'active': room.lights.style == $key }"  :title="style.name">
                                                     <input type="radio" name="{{ room.lights.style }}" value="{{ $key }}" v-model="room.lights.style" id="{{ $key }}">
                                                     <span>{{ style.name }}</span>
                                                 </label>
@@ -52,7 +51,7 @@
                                             <div class="clearfix" v-for="scare in room.scares">
                                                 <legend>Select Monster {{ $index+1 }}</legend>
                                                 <div class="clearfix carousel">
-                                                    <label v-for="monster in configurable.monsters" for="{{ $key }}_{{ $parent.$index }}" v-bind:class="{'active': scare.monster == $key }">
+                                                    <label v-for="monster in configurable.monsters" for="{{ $key }}_{{ $parent.$index }}" v-bind:class="{'active': scare.monster == $key }"  :title="monster.name">
                                                         <input type="radio" name="monster" value="{{ $key }}" v-model="scare.monster" id="{{ $key }}_{{ $parent.$index }}">
                                                         <span>{{ monster.name }}</span>
                                                     </label>
